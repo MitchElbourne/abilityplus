@@ -4,3 +4,9 @@
   Author URI: https://craftapplied.com
   Description: Craft Applied Ability Plus Theme
 */
+footer.entry-meta {
+  display: none; }
+
+body a {
+  text-decoration: none;
+  color: #2578db; }

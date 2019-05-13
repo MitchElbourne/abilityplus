@@ -7,9 +7,8 @@
 function wp_recruitment_enqueue_styles()
 {
   $parent_style = 'wp-recruitment-style';
-  wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
+  // wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
   
-  $parent_style = 'wp-recruitment-style';
   wp_dequeue_script( 'bootstrap' );
   wp_deregister_script( 'bootstrap' );
   
@@ -17,13 +16,15 @@ function wp_recruitment_enqueue_styles()
   wp_deregister_style( 'bootstrap' );
   wp_dequeue_style( 'jobboard-responsive-css' );
   wp_deregister_style( 'jobboard-responsive-css' );
+  wp_dequeue_style( 'poppins-google-font' );
+  wp_deregister_style( 'poppins-google-font' );
+  wp_dequeue_style( 'wp-recruitment-style' );
+  wp_deregister_style( 'wp-recruitment-style' );
   
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
   
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.3.1');
-  wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.css', array(
-    $parent_style
-  ));
+  wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0');
 }
 
 add_action('wp_enqueue_scripts', 'wp_recruitment_enqueue_styles', 20);
