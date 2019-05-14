@@ -63,6 +63,9 @@ button,
 input {
   outline: none; }
 
+svg, svg g, svg g path {
+  transition: all 200ms; }
+
 .modal-open {
   padding-right: 0 !important;
   overflow: visible; }
@@ -78,7 +81,8 @@ body {
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "tkusual-bold", "system", "sans-serif";
     color: #1a2733;
-    margin: 0; }
+    margin: 0;
+    line-height: 1.25; }
     body h1.italic, body h2.italic, body h3.italic, body h4.italic, body h5.italic, body h6.italic {
       font-family: "tkusual-italicbd", "system", "sans-serif"; }
   body h1, body .h1 {
@@ -93,6 +97,8 @@ body {
     font-size: 1.5em; }
   body h6, body .h6 {
     font-size: 1.25em; }
+  body .bold {
+    font-family: "tkusual-bold", "system", "sans-serif"; }
   body .caption {
     font-size: 0.875em; }
     body .caption.bold {
@@ -106,52 +112,167 @@ body {
     padding: 0;
     margin-bottom: 0; }
   body p, body .p {
-    font-size: 1em; }
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.75; }
   body a {
     text-decoration: none;
     color: #2578db;
-    transition: color 150ms; }
+    transition: all 150ms; }
     body a:hover, body a:focus {
       color: #0a468f;
-      transition: color 220ms; }
+      text-decoration: none; }
+    body a.dark {
+      color: #1a2733; }
+      body a.dark:hover, body a.dark:focus {
+        color: #0a468f; }
+    body a.grey {
+      color: rgba(28, 43, 56, 0.5); }
+      body a.grey:hover, body a.grey:focus {
+        color: #5e5e5e; }
   body .italic {
     font-family: "tkususual-italic", "system", "sans-serif"; }
 
-#site-header {
+header#site-header {
   position: absolute;
   top: 0;
   width: 100%;
   align-self: center; }
-  #site-header nav {
+  header#site-header nav {
     padding: 2rem 0; }
-    #site-header nav .navbar-brand {
+    header#site-header nav .navbar-brand {
       padding-bottom: 0.85rem; }
-      #site-header nav .navbar-brand img {
+      header#site-header nav .navbar-brand img {
         width: 9.5rem; }
-    #site-header nav div#primary-menu ul {
+    header#site-header nav div#primary-menu ul {
       flex-grow: 1; }
-      #site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: auto; }
-      #site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         color: #2578db;
         background-color: rgba(37, 120, 219, 0.18);
         padding: 0.5rem 1rem;
         border-radius: 1.2rem; }
-        #site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, #site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
+        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
           background-color: rgba(37, 120, 219, 0.4); }
-      #site-header nav div#primary-menu ul li a {
+      header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
         color: #1a2733;
         transition: all 200ms;
         padding: 0.5rem 1.2rem; }
-        #site-header nav div#primary-menu ul li a:hover, #site-header nav div#primary-menu ul li a:focus {
+        header#site-header nav div#primary-menu ul li a:hover, header#site-header nav div#primary-menu ul li a:focus {
           color: #0a468f; }
   @media (max-width: 991px) {
-    #site-header nav div#primary-menu ul {
+    header#site-header nav div#primary-menu ul {
       text-align: center;
       border: 1px solid #2578db;
       padding: 2rem; }
-      #site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: 0; }
-      #site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         display: inline-block; } }
+
+footer#site-footer {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column; }
+  footer#site-footer .container img.footer-logo {
+    max-width: 16.5rem;
+    display: block;
+    margin-bottom: 3rem; }
+  footer#site-footer .container div.information-container {
+    display: flex; }
+    footer#site-footer .container div.information-container > div {
+      padding-right: 2rem; }
+      footer#site-footer .container div.information-container > div h5.p {
+        margin-bottom: 1.5rem; }
+    footer#site-footer .container div.information-container div.services {
+      flex: 1 1 calc(35%); }
+      footer#site-footer .container div.information-container div.services div.content {
+        display: flex;
+        padding: 1rem 0;
+        border: 1px solid #d2d5d7;
+        border-radius: 5px; }
+        footer#site-footer .container div.information-container div.services div.content div.find-jobs, footer#site-footer .container div.information-container div.services div.content div.find-talent {
+          padding: 0 1rem; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs p, footer#site-footer .container div.information-container div.services div.content div.find-talent p {
+            color: rgba(28, 43, 56, 0.5);
+            margin: 1rem 0; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-jobs a:focus svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:focus svg g path {
+            stroke: #0a468f; }
+        footer#site-footer .container div.information-container div.services div.content div.find-jobs {
+          border-right: 1px solid #d2d5d7; }
+    footer#site-footer .container div.information-container div.company {
+      flex: 1 1 calc(10%); }
+      footer#site-footer .container div.information-container div.company a {
+        display: block;
+        padding-bottom: 1rem; }
+        footer#site-footer .container div.information-container div.company a:last-of-type {
+          padding-bottom: none; }
+    footer#site-footer .container div.information-container div.resources {
+      flex: 1 1 calc(20%); }
+      footer#site-footer .container div.information-container div.resources a {
+        display: block;
+        padding-bottom: 1rem; }
+        footer#site-footer .container div.information-container div.resources a:last-of-type {
+          padding-bottom: none; }
+    footer#site-footer .container div.information-container div.contact-information {
+      flex: 1 1 calc(30%); }
+      footer#site-footer .container div.information-container div.contact-information a.email {
+        display: block;
+        width: 100%;
+        margin: 1rem 0; }
+      footer#site-footer .container div.information-container div.contact-information span.break {
+        color: rgba(28, 43, 56, 0.25);
+        margin: 0 0.5rem; }
+      footer#site-footer .container div.information-container div.contact-information a.social svg {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 0.25rem;
+        margin-right: 0.5rem; }
+      footer#site-footer .container div.information-container div.contact-information a.social:hover svg g path, footer#site-footer .container div.information-container div.contact-information a.social:focus svg g path {
+        fill: #0a468f; }
+  footer#site-footer .container div.legal-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(28, 43, 56, 0.25); }
+    footer#site-footer .container div.legal-row span.copyright {
+      color: rgba(28, 43, 56, 0.5); }
+    footer#site-footer .container div.legal-row a.terms-and-conditions {
+      color: #1a2733; }
+  @media (max-width: 991px) {
+    footer#site-footer .container div.information-container {
+      flex-wrap: wrap; }
+      footer#site-footer .container div.information-container div.services {
+        flex-basis: 100%; }
+      footer#site-footer .container div.information-container div.company {
+        flex-basis: 10%;
+        margin-top: 2rem; }
+      footer#site-footer .container div.information-container div.resources {
+        flex-basis: 10%;
+        margin-top: 2rem; }
+      footer#site-footer .container div.information-container div.contact-information {
+        margin-top: 2rem; } }
+  @media (max-width: 767px) {
+    footer#site-footer .container div.information-container {
+      flex-wrap: wrap; }
+      footer#site-footer .container div.information-container div.services {
+        flex-basis: 100%;
+        order: 0; }
+      footer#site-footer .container div.information-container div.company {
+        flex-basis: 10%;
+        margin-top: 2rem;
+        order: 2; }
+      footer#site-footer .container div.information-container div.resources {
+        flex-basis: 0%;
+        margin-top: 2rem;
+        order: 2; }
+      footer#site-footer .container div.information-container div.contact-information {
+        flex-basis: 100%;
+        margin-top: 2rem;
+        order: 1; }
+    footer#site-footer .container div.legal-row {
+      flex-direction: column; } }

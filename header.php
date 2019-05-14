@@ -32,7 +32,7 @@
 
           <!-- Logo -->
           <a class="navbar-brand" href="<?php echo esc_url(site_url('/')) ?>">
-            <img src="<?php echo get_theme_file_uri('/assets/svg/ap-logo.svg'); ?>" alt="Ability Plus Logo">
+            <img src="<?php echo get_theme_file_uri('/assets/svg/logo-ability-plus.svg'); ?>" alt="Ability Plus Logo">
           </a>
 
           <!-- Toggle button -->

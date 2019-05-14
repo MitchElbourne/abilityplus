@@ -8,6 +8,7 @@ body {
     font-family: $tkusualbd;
     color: $black;
     margin: 0;
+    line-height: 1.25;
     &.italic {
       font-family: $tkusualitalicbd;
     }
@@ -35,6 +36,9 @@ body {
   h6, .h6 {
     font-size: 1.25em;
   }
+  .bold {
+    font-family: $tkusualbd;
+  }
 
   .caption {
     font-size: 0.875em;
@@ -58,15 +62,29 @@ body {
 
   p, .p {
     font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.75;
   }
   
   a {
     text-decoration: none;
     color: $primary-blue;
-    transition: color 150ms;
+    transition: all 150ms;
     &:hover, &:focus {
       color: $dark-blue;
-      transition: color 220ms;
+      text-decoration: none;
+    }
+    &.dark {
+      color: $black;
+      &:hover, &:focus {
+        color: rgba($dark-blue, 1);
+      }
+    }
+    &.grey {
+      color: $middle-grey;
+      &:hover, &:focus {
+        color: $dark-grey;
+      }
     }
   }
 
