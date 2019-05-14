@@ -43,7 +43,8 @@ body {
   display: flex;
   flex-direction: column; }
   body .wrapper {
-    flex-grow: 1; }
+    flex-grow: 1;
+    padding-top: 10rem; }
 
 .wrapper {
   max-width: 1400px;
