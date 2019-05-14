@@ -1,3 +1,56 @@
-footer.entry-meta {
-  display: none;
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+
+header.primary,
+footer.primary {
+	.container {
+		max-width: 2000px;
+	}
+}
+
+
+// Set a sicky footer
+body {
+  padding-top: 10rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .wrapper {
+    flex-grow: 1;
+  }
+}
+
+.wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+main > header > .container,
+main > section > .container,
+main > article > .container,
+main > footer > .container {
+  max-width: 2000px;
+}
+
+main > section {
+  padding: 3.66rem 0 3.66rem 0;
+}
+
+// For controlling Modal open/close behaviour
+// Stops padding add and re-adds the scrollbar
+.modal-open {
+  padding-right: 0 !important;
+  overflow: visible;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
 }

@@ -1,16 +1,24 @@
-body {
-  header {
-    .container {
+#site-header {
+  max-width: 2000px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1.5rem 0 1.5rem 0;
+  z-index: 99;
+  border: 1px solid red;
+  margin: 0 auto;
+  .container {
+    nav {
       .navbar-brand {
         img {
-
+          
         }
       }
       button.navbar-toggler {
-
+        
       }
       div.navbar-collapse {
-
+        
       }
     }
   }
