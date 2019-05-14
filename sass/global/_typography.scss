@@ -1,0 +1,94 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $tkusualrg;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $tkusualbd;
+    color: $black;
+    margin: 0;
+    line-height: 1.25;
+    &.italic {
+      font-family: $tkusualitalicbd;
+    }
+  }
+  h1, .h1 {
+    font-size: 3em;
+  }
+  
+  h2, .h2 {
+    font-size: 2.625em;
+  }
+  
+  h3, .h3 {
+    font-size: 2.25em;
+  }
+  
+  h4, .h4 {
+    font-size: 2em;
+  }
+  
+  h5, .h5 {
+    font-size: 1.5em
+  }
+  
+  h6, .h6 {
+    font-size: 1.25em;
+  }
+  .bold {
+    font-family: $tkusualbd;
+  }
+
+  .caption {
+    font-size: 0.875em;
+    &.bold {
+      font-family: $tkusualbd;
+    }
+  }
+
+  .small {
+    font-size: 0.75em;
+    &.bold {
+      font-family: $tkusualbd;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  p, .p {
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.75;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $primary-blue;
+    transition: all 150ms;
+    &:hover, &:focus {
+      color: $dark-blue;
+      text-decoration: none;
+    }
+    &.dark {
+      color: $black;
+      &:hover, &:focus {
+        color: rgba($dark-blue, 1);
+      }
+    }
+    &.grey {
+      color: $middle-grey;
+      &:hover, &:focus {
+        color: $dark-grey;
+      }
+    }
+  }
+
+  .italic {
+    font-family: $tkusualitalic;
+  }
+}

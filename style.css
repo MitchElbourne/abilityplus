@@ -1,15 +1,278 @@
 /*
- Theme Name:   WP Recruitment Child
- Theme URI: http://demo.cmssuperheroes.com/themeforest/wp-recruitment
- Description: The 2018 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
- Author:       CMSSuperHeroes
- Author URI: http://themeforest.net/user/CMSSuperHeroes
- Template:     wp-recruitment
- Version:      1.1.2
- Tags: one-column, two-columns, left-sidebar, right-sidebar, grid-layout, accessibility-ready, custom-colors, custom-menu, editor-style, featured-images, footer-widgets, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
- Text Domain:  wp-recruitment-child
+  Theme Name: Craft Applied Ability Plus Child Theme
+  Author: Craft Applied
+  Author URI: https://craftapplied.com
+  Description: Craft Applied Ability Plus Theme
 */
+@import url("https://p.typekit.net/p.css?s=1&k=aqn5xlw&ht=tk&f=25629.25634.25637.25638&a=8622106&app=typekit&e=css");
+@font-face {
+  font-family: "tkusual-reg";
+  src: url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "tkusual-italic";
+  src: url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 400; }
+@font-face {
+  font-family: "tkusual-italicbd";
+  src: url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"), url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"), url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 700; }
+@font-face {
+  font-family: "tkusual-bold";
+  src: url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 700; }
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
 
+header .container,
+footer .container {
+  max-width: 1400px; }
 
-/*
--------------------------------------------------------------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  body .wrapper {
+    flex-grow: 1; }
+
+.wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto; }
+
+main > header > .container,
+main > section > .container,
+main > article > .container,
+main > footer > .container {
+  max-width: 1400px; }
+
+main > section {
+  padding: 7.5rem 0; }
+
+button,
+input {
+  outline: none; }
+
+svg, svg g, svg g path {
+  transition: all 200ms; }
+
+.modal-open {
+  padding-right: 0 !important;
+  overflow: visible; }
+
+.grecaptcha-badge {
+  visibility: hidden; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-family: "tkusual-reg", "system", "sans-serif"; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: "tkusual-bold", "system", "sans-serif";
+    color: #1a2733;
+    margin: 0;
+    line-height: 1.25; }
+    body h1.italic, body h2.italic, body h3.italic, body h4.italic, body h5.italic, body h6.italic {
+      font-family: "tkusual-italicbd", "system", "sans-serif"; }
+  body h1, body .h1 {
+    font-size: 3em; }
+  body h2, body .h2 {
+    font-size: 2.625em; }
+  body h3, body .h3 {
+    font-size: 2.25em; }
+  body h4, body .h4 {
+    font-size: 2em; }
+  body h5, body .h5 {
+    font-size: 1.5em; }
+  body h6, body .h6 {
+    font-size: 1.25em; }
+  body .bold {
+    font-family: "tkusual-bold", "system", "sans-serif"; }
+  body .caption {
+    font-size: 0.875em; }
+    body .caption.bold {
+      font-family: "tkusual-bold", "system", "sans-serif"; }
+  body .small {
+    font-size: 0.75em; }
+    body .small.bold {
+      font-family: "tkusual-bold", "system", "sans-serif"; }
+  body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0; }
+  body p, body .p {
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.75; }
+  body a {
+    text-decoration: none;
+    color: #2578db;
+    transition: all 150ms; }
+    body a:hover, body a:focus {
+      color: #0a468f;
+      text-decoration: none; }
+    body a.dark {
+      color: #1a2733; }
+      body a.dark:hover, body a.dark:focus {
+        color: #0a468f; }
+    body a.grey {
+      color: rgba(28, 43, 56, 0.5); }
+      body a.grey:hover, body a.grey:focus {
+        color: #5e5e5e; }
+  body .italic {
+    font-family: "tkususual-italic", "system", "sans-serif"; }
+
+header#site-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  align-self: center; }
+  header#site-header nav {
+    padding: 2rem 0; }
+    header#site-header nav .navbar-brand {
+      padding-bottom: 0.85rem; }
+      header#site-header nav .navbar-brand img {
+        width: 9.5rem; }
+    header#site-header nav div#primary-menu ul {
+      flex-grow: 1; }
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+        margin-left: auto; }
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+        color: #2578db;
+        background-color: rgba(37, 120, 219, 0.18);
+        padding: 0.5rem 1rem;
+        border-radius: 1.2rem; }
+        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
+          background-color: rgba(37, 120, 219, 0.4); }
+      header#site-header nav div#primary-menu ul li a {
+        font-size: 0.95rem;
+        color: #1a2733;
+        transition: all 200ms;
+        padding: 0.5rem 1.2rem; }
+        header#site-header nav div#primary-menu ul li a:hover, header#site-header nav div#primary-menu ul li a:focus {
+          color: #0a468f; }
+  @media (max-width: 991px) {
+    header#site-header nav div#primary-menu ul {
+      text-align: center;
+      border: 1px solid #2578db;
+      padding: 2rem; }
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+        margin-left: 0; }
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+        display: inline-block; } }
+
+footer#site-footer {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column; }
+  footer#site-footer .container img.footer-logo {
+    max-width: 16.5rem;
+    display: block;
+    margin-bottom: 3rem; }
+  footer#site-footer .container div.information-container {
+    display: flex; }
+    footer#site-footer .container div.information-container > div {
+      padding-right: 2rem; }
+      footer#site-footer .container div.information-container > div h5.p {
+        margin-bottom: 1.5rem; }
+    footer#site-footer .container div.information-container div.services {
+      flex: 1 1 calc(35%); }
+      footer#site-footer .container div.information-container div.services div.content {
+        display: flex;
+        padding: 1rem 0;
+        border: 1px solid #d2d5d7;
+        border-radius: 5px; }
+        footer#site-footer .container div.information-container div.services div.content div.find-jobs, footer#site-footer .container div.information-container div.services div.content div.find-talent {
+          padding: 0 1rem; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs p, footer#site-footer .container div.information-container div.services div.content div.find-talent p {
+            color: rgba(28, 43, 56, 0.5);
+            margin: 1rem 0; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-jobs a:focus svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:focus svg g path {
+            stroke: #0a468f; }
+        footer#site-footer .container div.information-container div.services div.content div.find-jobs {
+          border-right: 1px solid #d2d5d7; }
+    footer#site-footer .container div.information-container div.company {
+      flex: 1 1 calc(10%); }
+      footer#site-footer .container div.information-container div.company a {
+        display: block;
+        padding-bottom: 1rem; }
+        footer#site-footer .container div.information-container div.company a:last-of-type {
+          padding-bottom: none; }
+    footer#site-footer .container div.information-container div.resources {
+      flex: 1 1 calc(20%); }
+      footer#site-footer .container div.information-container div.resources a {
+        display: block;
+        padding-bottom: 1rem; }
+        footer#site-footer .container div.information-container div.resources a:last-of-type {
+          padding-bottom: none; }
+    footer#site-footer .container div.information-container div.contact-information {
+      flex: 1 1 calc(30%); }
+      footer#site-footer .container div.information-container div.contact-information a.email {
+        display: block;
+        width: 100%;
+        margin: 1rem 0; }
+      footer#site-footer .container div.information-container div.contact-information span.break {
+        color: rgba(28, 43, 56, 0.25);
+        margin: 0 0.5rem; }
+      footer#site-footer .container div.information-container div.contact-information a.social svg {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 0.25rem;
+        margin-right: 0.5rem; }
+      footer#site-footer .container div.information-container div.contact-information a.social:hover svg g path, footer#site-footer .container div.information-container div.contact-information a.social:focus svg g path {
+        fill: #0a468f; }
+  footer#site-footer .container div.legal-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(28, 43, 56, 0.25); }
+    footer#site-footer .container div.legal-row span.copyright {
+      color: rgba(28, 43, 56, 0.5); }
+    footer#site-footer .container div.legal-row a.terms-and-conditions {
+      color: #1a2733; }
+  @media (max-width: 991px) {
+    footer#site-footer .container div.information-container {
+      flex-wrap: wrap; }
+      footer#site-footer .container div.information-container div.services {
+        flex-basis: 100%; }
+      footer#site-footer .container div.information-container div.company {
+        flex-basis: 10%;
+        margin-top: 2rem; }
+      footer#site-footer .container div.information-container div.resources {
+        flex-basis: 10%;
+        margin-top: 2rem; }
+      footer#site-footer .container div.information-container div.contact-information {
+        margin-top: 2rem; } }
+  @media (max-width: 767px) {
+    footer#site-footer .container div.information-container {
+      flex-wrap: wrap; }
+      footer#site-footer .container div.information-container div.services {
+        flex-basis: 100%;
+        order: 0; }
+      footer#site-footer .container div.information-container div.company {
+        flex-basis: 10%;
+        margin-top: 2rem;
+        order: 2; }
+      footer#site-footer .container div.information-container div.resources {
+        flex-basis: 0%;
+        margin-top: 2rem;
+        order: 2; }
+      footer#site-footer .container div.information-container div.contact-information {
+        flex-basis: 100%;
+        margin-top: 2rem;
+        order: 1; }
+    footer#site-footer .container div.legal-row {
+      flex-direction: column; } }

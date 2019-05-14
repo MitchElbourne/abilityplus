@@ -1,0 +1,21 @@
+/*
+  Theme Name: Craft Applied Ability Plus Child Theme
+  Author: Craft Applied
+  Author URI: https://craftapplied.com
+  Description: Craft Applied Ability Plus Theme
+*/
+
+// Globals
+@import 'global/fonts';
+@import 'global/colours';
+@import 'global/gridpoints';
+@import 'global/globals';
+@import 'global/typography';
+
+// Components
+@import 'components/header';
+@import 'components/footer';
+
+// Templates
+@import 'templates/01-home';
+
