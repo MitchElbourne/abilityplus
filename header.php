@@ -26,22 +26,21 @@
   </head>
   
   <body <?php body_class(); ?>>
-
-
     <header id="site-header">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
 
           <!-- Logo -->
           <a class="navbar-brand" href="<?php echo esc_url(site_url('/')) ?>">
-            <img src="<?php echo get_theme_file_uri('/assets/logo.png'); ?>" alt="Ability Plus Logo">
+            <img src="<?php echo get_theme_file_uri('/assets/svg/ap-logo.svg'); ?>" alt="Ability Plus Logo">
           </a>
 
-
-
+          <!-- Toggle button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">Menu</span>
+            <span class="navbar-toggler-icon"></span>
           </button>
+
+
           <?php 
             wp_nav_menu( array(
               'theme_location'  => 'Navigation',
@@ -54,6 +53,9 @@
               'walker'          => new WP_Bootstrap_Navwalker(),
             ) );
           ?>
+
+
         </nav>
+      </div>
     </header><!--#site-header-->
     <div class="wrapper">

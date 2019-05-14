@@ -18,7 +18,6 @@ footer {
 
 // Set a sicky footer
 body {
-  padding-top: 10rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,6 +28,7 @@ body {
 
 .wrapper {
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -41,6 +41,11 @@ main > footer > .container {
 
 main > section {
   padding: 7.5rem 0;
+}
+
+button,
+input {
+  outline: none;
 }
 
 // For controlling Modal open/close behaviour
