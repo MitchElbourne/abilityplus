@@ -24,24 +24,26 @@ body {
   .wrapper {
     flex-grow: 1; 
     padding-top: 10rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    section {
+      padding: 3.75rem 0;
+      &:first-of-type {
+        padding-top: 0;
+      }
+    }
   }
 }
 
-.wrapper {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-}
+
+
 
 main > header > .container,
 main > section > .container,
 main > article > .container,
 main > footer > .container {
   max-width: 1400px;
-}
-
-main > section {
-  padding: 7.5rem 0;
 }
 
 button,
@@ -62,4 +64,8 @@ svg, svg g, svg g path {
 
 .grecaptcha-badge {
 	visibility: hidden;
+}
+
+#bitnami-banner {
+  display: none;
 }

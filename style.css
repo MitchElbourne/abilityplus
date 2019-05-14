@@ -44,21 +44,20 @@ body {
   flex-direction: column; }
   body .wrapper {
     flex-grow: 1;
-    padding-top: 10rem; }
-
-.wrapper {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto; }
+    padding-top: 10rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto; }
+    body .wrapper section {
+      padding: 3.75rem 0; }
+      body .wrapper section:first-of-type {
+        padding-top: 0; }
 
 main > header > .container,
 main > section > .container,
 main > article > .container,
 main > footer > .container {
   max-width: 1400px; }
-
-main > section {
-  padding: 7.5rem 0; }
 
 button,
 input {
@@ -73,6 +72,9 @@ svg, svg g, svg g path {
 
 .grecaptcha-badge {
   visibility: hidden; }
+
+#bitnami-banner {
+  display: none; }
 
 html {
   font-size: 16px; }
@@ -277,3 +279,6 @@ footer#site-footer {
         order: 1; }
     footer#site-footer .container div.legal-row {
       flex-direction: column; } }
+
+body.home section#introduction .container .row {
+  text-align: center; }
