@@ -1,0 +1,33 @@
+@import url("https://p.typekit.net/p.css?s=1&k=aqn5xlw&ht=tk&f=25629.25634.25637.25638&a=8622106&app=typekit&e=css");
+
+@font-face {
+font-family:"tkusual-reg";
+src:url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"tkusual-italic";
+src:url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+}
+
+@font-face {
+font-family:"tkusual-italicbd";
+src:url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-style:italic;font-weight:700;
+}
+
+@font-face {
+font-family:"tkusual-bold";
+src:url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+// Font variables
+$tkusualrg:     'tkusual-reg', 'system', 'sans-serif' !default;
+$tkusualbd:     'tkusual-bold', 'system', 'sans-serif' !default;
+$tkusualitalic: 'tkususual-italic', 'system', 'sans-serif' !default;
+$tkusualitalicbd: 'tkusual-italicbd', 'system', 'sans-serif' !default;
+// Font Path
+$fontPath: "../assets/fonts" !default;

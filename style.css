@@ -4,6 +4,27 @@
   Author URI: https://craftapplied.com
   Description: Craft Applied Ability Plus Theme
 */
+@import url("https://p.typekit.net/p.css?s=1&k=aqn5xlw&ht=tk&f=25629.25634.25637.25638&a=8622106&app=typekit&e=css");
+@font-face {
+  font-family: "tkusual-reg";
+  src: url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/4e8f1c/00000000000000000001771b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "tkusual-italic";
+  src: url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/a20d40/000000000000000000017720/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 400; }
+@font-face {
+  font-family: "tkusual-italicbd";
+  src: url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"), url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"), url("https://use.typekit.net/af/84cfc3/000000000000000000017723/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 700; }
+@font-face {
+  font-family: "tkusual-bold";
+  src: url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/625a3c/000000000000000000017724/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 700; }
 *,
 *:after,
 *:before {
@@ -36,7 +57,7 @@ main > footer > .container {
   max-width: 2000px; }
 
 main > section {
-  padding: 3.66rem 0 3.66rem 0; }
+  padding: 7.5rem 0; }
 
 .modal-open {
   padding-right: 0 !important;
@@ -45,9 +66,52 @@ main > section {
 .grecaptcha-badge {
   visibility: hidden; }
 
-body a {
-  text-decoration: none;
-  color: #2578db; }
+html {
+  font-size: 16px; }
+
+body {
+  font-family: "tkusual-reg", "system", "sans-serif"; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: "tkusual-bold", "system", "sans-serif";
+    color: #1a2733;
+    margin: 0; }
+    body h1.italic, body h2.italic, body h3.italic, body h4.italic, body h5.italic, body h6.italic {
+      font-family: "tkusual-italicbd", "system", "sans-serif"; }
+  body h1, body .h1 {
+    font-size: 3em; }
+  body h2, body .h2 {
+    font-size: 2.625em; }
+  body h3, body .h3 {
+    font-size: 2.25em; }
+  body h4, body .h4 {
+    font-size: 2em; }
+  body h5, body .h5 {
+    font-size: 1.5em; }
+  body h6, body .h6 {
+    font-size: 1.25em; }
+  body .caption {
+    font-size: 0.875em; }
+    body .caption.bold {
+      font-family: "tkusual-bold", "system", "sans-serif"; }
+  body .small {
+    font-size: 0.75em; }
+    body .small.bold {
+      font-family: "tkusual-bold", "system", "sans-serif"; }
+  body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0; }
+  body p, body .p {
+    font-size: 1em; }
+  body a {
+    text-decoration: none;
+    color: #2578db;
+    transition: color 150ms; }
+    body a:hover, body a:focus {
+      color: #0a468f;
+      transition: color 220ms; }
+  body .italic {
+    font-family: "tkususual-italic", "system", "sans-serif"; }
 
 #site-header {
   max-width: 2000px;
