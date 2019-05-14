@@ -30,7 +30,7 @@
 
     <header id="site-header">
       <div class="container">
-        <nav class="navbar navbar-expand-md">
+        <nav class="navbar navbar-expand-lg">
 
           <!-- Logo -->
           <a class="navbar-brand" href="<?php echo esc_url(site_url('/')) ?>">
@@ -55,6 +55,5 @@
             ) );
           ?>
         </nav>
-      </div><!--container-->
     </header><!--#site-header-->
     <div class="wrapper">

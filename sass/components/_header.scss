@@ -1,24 +1,29 @@
 #site-header {
-  max-width: 2000px;
-  width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  padding: 1.5rem 0 1.5rem 0;
-  z-index: 99;
+  width: 100%;
+  align-self: center;
   border: 1px solid red;
-  margin: 0 auto;
-  .container {
-    nav {
-      .navbar-brand {
-        img {
-          
+  nav {
+    .navbar-brand {
+      img {
+        
+      }
+    }
+    button.navbar-toggler {
+      
+    }
+    div#primary-menu {
+      ul {
+        flex-grow: 1;
+        li {
+          &:last-of-type {
+            margin-left: auto;
+          }
+          a {
+
+          }
         }
-      }
-      button.navbar-toggler {
-        
-      }
-      div.navbar-collapse {
-        
       }
     }
   }
