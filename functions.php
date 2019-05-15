@@ -22,6 +22,10 @@ function wp_recruitment_enqueue_styles()
   wp_deregister_style( 'wp-recruitment-style' );
   
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
+
+  wp_enqueue_script('lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', array('jquery'), '1.14.3', true); // Lodash
+
+  wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), microtime(), true);
   
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.3.1');
   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0');
@@ -64,3 +68,23 @@ if(!in_array('jobboard_role_jobs', (array) $user->roles)) {
 register_nav_menus( array(
 	'Navigation' => __( 'Navigation', 'abilityplus' ),
 ) );
+
+
+// Initiate the Sign up and log in menu item, this avoids having to grab it from the loop to alter the attributes to trigger the modal
+add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
+  $menu_name = $menu_object->menu->name;
+
+  // Only append the new li to the 'Primary Navigation' menu.
+  // Change 'Primary Navigation' for the name of the menu that you'd like to amend.
+  if ( 'Navigation' === $menu_name && !is_user_logged_in()) {
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Sign Up | Log In' href='#' class='nav-link' data-target='#LogInModal' data-toggle='modal'>Sign Up | Log In</a></li>";
+    
+    return $menu_items . $new_li;
+  } else {
+    $currentuser = wp_get_current_user();
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Your Profile' href='" . esc_url(site_url('/profile')) . "' class='nav-link modal-button'>" . "Hey " . $currentuser->user_firstname . "!" . "</a></li>";
+    
+    return $menu_items . $new_li;
+  }
+
+}, 10, 2 );

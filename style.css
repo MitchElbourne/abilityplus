@@ -41,7 +41,8 @@ footer .container {
 body {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-right: 0 !important; }
   body .wrapper {
     flex-grow: 1;
     padding-top: 10rem;
@@ -62,6 +63,10 @@ main > footer > .container {
 button,
 input {
   outline: none; }
+  button:hover, button:focus,
+  input:hover,
+  input:focus {
+    outline: none; }
 
 svg, svg g, svg g path {
   transition: all 200ms; }
@@ -137,11 +142,13 @@ body {
     font-family: "tkususual-italic", "system", "sans-serif"; }
 
 header#site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  align-self: center; }
+  align-self: center;
+  z-index: 199; }
   header#site-header nav {
+    background-color: white;
     padding: 2rem 0; }
     header#site-header nav .navbar-brand {
       padding-bottom: 0.85rem; }
@@ -151,12 +158,12 @@ header#site-header {
       flex-grow: 1; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: auto; }
-      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+      header#site-header nav div#primary-menu ul li:last-of-type a {
         color: #2578db;
         background-color: rgba(37, 120, 219, 0.18);
         padding: 0.5rem 1rem;
         border-radius: 1.2rem; }
-        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
+        header#site-header nav div#primary-menu ul li:last-of-type a:hover, header#site-header nav div#primary-menu ul li:last-of-type a:focus {
           background-color: rgba(37, 120, 219, 0.4); }
       header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
@@ -172,7 +179,7 @@ header#site-header {
       padding: 2rem; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: 0; }
-      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+      header#site-header nav div#primary-menu ul li:last-of-type a {
         display: inline-block; } }
 
 footer#site-footer {
@@ -282,3 +289,38 @@ footer#site-footer {
 
 body.home section#introduction .container .row {
   text-align: center; }
+
+#LogInModal, #SignUpModal {
+  z-index: 99999; }
+  #LogInModal button, #SignUpModal button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms; }
+    #LogInModal button span svg, #SignUpModal button span svg {
+      width: 2rem;
+      height: 2rem; }
+  #LogInModal .modal-dialog, #SignUpModal .modal-dialog {
+    max-width: 90%;
+    padding-left: 16px; }
+    #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+      padding: 7.5rem 10rem;
+      background-color: #f3f4f5;
+      border-radius: 0;
+      border: none; }
+      #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+        display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #a4aaaf; }
+        #LogInModal .modal-dialog .modal-content div.introduction h1, #SignUpModal .modal-dialog .modal-content div.introduction h1 {
+          display: inline-block; }
+        #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+          color: rgba(28, 43, 56, 0.5);
+          display: inline-block;
+          margin-left: auto;
+          align-self: flex-end; }
+          #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta a, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta a {
+            cursor: pointer;
+            color: #2578db; }
+      #LogInModal .modal-dialog .modal-content form, #SignUpModal .modal-dialog .modal-content form {
+        width: 100%; }

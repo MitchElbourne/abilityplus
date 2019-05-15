@@ -1,9 +1,11 @@
 header#site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   align-self: center;
+  z-index: 199;
   nav {
+    background-color: $white;
     padding: 2rem 0;
     .navbar-brand {
       padding-bottom: 0.85rem;
@@ -22,7 +24,7 @@ header#site-header {
             margin-left: auto;
           }
           &:last-of-type {
-            a[title="Sign Up | Log In"] {
+            a {
               color: $primary-blue;
               background-color: rgba($primary-blue, 0.18);
               padding: 0.5rem 1rem;
@@ -60,7 +62,7 @@ header#site-header {
               margin-left: 0;
             }
             &:last-of-type {
-              a[title="Sign Up | Log In"] {
+              a {
                 display: inline-block;
               }
             }
