@@ -24,7 +24,7 @@ header#site-header {
             margin-left: auto;
           }
           &:last-of-type {
-            a {
+            a[title="Sign Up | Log In"] {
               color: $primary-blue;
               background-color: rgba($primary-blue, 0.18);
               padding: 0.5rem 1rem;
@@ -62,7 +62,7 @@ header#site-header {
               margin-left: 0;
             }
             &:last-of-type {
-              a {
+              a[title="Sign Up | Log In"] {
                 display: inline-block;
               }
             }

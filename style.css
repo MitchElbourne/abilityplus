@@ -78,6 +78,9 @@ svg, svg g, svg g path {
 .grecaptcha-badge {
   visibility: hidden; }
 
+.jobboard-notices {
+  z-index: 9999999; }
+
 #bitnami-banner {
   display: none; }
 
@@ -158,12 +161,12 @@ header#site-header {
       flex-grow: 1; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: auto; }
-      header#site-header nav div#primary-menu ul li:last-of-type a {
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         color: #2578db;
         background-color: rgba(37, 120, 219, 0.18);
         padding: 0.5rem 1rem;
         border-radius: 1.2rem; }
-        header#site-header nav div#primary-menu ul li:last-of-type a:hover, header#site-header nav div#primary-menu ul li:last-of-type a:focus {
+        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
           background-color: rgba(37, 120, 219, 0.4); }
       header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
@@ -179,7 +182,7 @@ header#site-header {
       padding: 2rem; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: 0; }
-      header#site-header nav div#primary-menu ul li:last-of-type a {
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         display: inline-block; } }
 
 footer#site-footer {

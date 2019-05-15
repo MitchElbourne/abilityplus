@@ -68,6 +68,10 @@ svg, svg g, svg g path {
 	visibility: hidden;
 }
 
+.jobboard-notices {
+  z-index: 9999999;
+}
+
 #bitnami-banner {
   display: none;
 }
