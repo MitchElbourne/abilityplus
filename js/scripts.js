@@ -64,6 +64,15 @@
     }
     modalLogic();
 
+    $(document).ready(function() {
+      $("#job_specialisms").select2({
+        dropdownParent: $("#SignUpModal")
+      });
+      $("#user_type").select2({
+        dropdownParent: $("#SignUpModal")
+      });
+    });
+
 
 	});
 
