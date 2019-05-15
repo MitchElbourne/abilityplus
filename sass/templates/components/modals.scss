@@ -1,0 +1,53 @@
+#LogInModal, #SignUpModal {
+  z-index: 99999;
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    span {
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .modal-dialog {
+    max-width: 90%;
+    padding-left: 16px;
+    .modal-content {
+      padding: 7.5rem 10rem;
+      background-color: $lightest-grey;
+      border-radius: 0;
+      border: none;
+      div.introduction {
+        display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #a4aaaf;
+        h1 {
+          display: inline-block;
+        }
+        span.modal-cta {
+          color: $middle-grey;
+          display: inline-block;
+          margin-left: auto;
+          align-self: flex-end;
+          a {
+            cursor: pointer;
+            color: $primary-blue;
+          }
+        }
+      }
+      form {
+        width: 100%;
+        // border: 1px solid red;
+        label {
+
+        }
+        input {
+
+        }
+      }
+    }
+  }
+}

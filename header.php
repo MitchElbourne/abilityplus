@@ -52,10 +52,19 @@
               'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
               'walker'          => new WP_Bootstrap_Navwalker(),
             ) );
+            
           ?>
-
 
         </nav>
       </div>
+
     </header><!--#site-header-->
+    <?php 
+    
+    echo get_template_part('/templates/modal-login');
+    echo get_template_part('/templates/modal-sign-up');
+    
+    ?>
     <div class="wrapper">
+
+    
