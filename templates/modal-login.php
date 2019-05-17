@@ -6,7 +6,7 @@
         <span aria-hidden="true"><?php echo get_template_part('/assets/svg/icon-cancel.svg');?></span>
       </button>
       <div class="introduction">
-        <h1>Log In</h1>
+        <h2 class="h1">Log In</h2>
         <span class="modal-cta">Don't have an account? <a data-target="#SignUpModal" data-toggle="modal" class="bold sign-up-cta-modal">Sign up instead</a></span>
       </div>
 

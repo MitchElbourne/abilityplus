@@ -6,7 +6,7 @@
         <span aria-hidden="true"><?php echo get_template_part('/assets/svg/icon-cancel.svg');?></span>
       </button>
       <div class="introduction">
-        <h1>Sign Up</h1>
+        <h2 class="h1">Sign Up</h2>
         <span class="modal-cta">Already have an account? <a data-target="#LogInModal" data-toggle="modal" class="bold log-in-cta-modal">Log in instead</a></span>
       </div>
       <?php echo do_shortcode('[jobboard_register_account]'); ?>
