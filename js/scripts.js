@@ -73,12 +73,11 @@
       });
     });
 
-    // $(document).ready(setTimeout(function() {
-    //   if($('.messages').hasClass('.active')) {
-    //     $('#SignUpModal').modal('show');
-    //     console.log('WAKLCs')
-    //   }
-    // }), 3000);
+    $(document).ready(setTimeout(() => {
+      if($('.messages-error.active')) {
+        // $('#SignUpModal').modal('show');
+      }
+    }), 500);
 
 
 	});
