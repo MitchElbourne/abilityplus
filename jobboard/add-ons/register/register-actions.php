@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="form-actions register-actions">
     <?php wp_nonce_field( 'register_account' ); ?>
-    <input type="submit" class="button" id="create-my-account" value="<?php esc_html_e('Create my account ', JB_REGISTER_TEXT_DOMAIN); ?>">
+    <input type="submit" class="cta-blue bold" id="create-my-account" value="<?php esc_html_e('Create my account ', JB_REGISTER_TEXT_DOMAIN); ?>">
     <input type="hidden" name="action" value="register_account">
     <input type="hidden" name="form" value="jobboard-form">
 </div>

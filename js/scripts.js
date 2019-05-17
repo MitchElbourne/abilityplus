@@ -81,6 +81,7 @@
 
     SignUpHandler();
 
+    $('#SignUpModal').modal('show');
 
 	});
 

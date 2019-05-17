@@ -56,6 +56,10 @@ svg, svg g, svg g path {
   transition: all 200ms;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 // For controlling Modal open/close behaviour
 // Stops padding add and re-adds the scrollbar
 .modal-open, .modal {
