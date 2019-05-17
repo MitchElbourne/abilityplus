@@ -73,12 +73,13 @@
       });
     });
 
-    // $(document).ready(setTimeout(function() {
-    //   if($('.messages').hasClass('.active')) {
-    //     $('#SignUpModal').modal('show');
-    //     console.log('WAKLCs')
-    //   }
-    // }), 3000);
+    function SignUpHandler() {
+      if($("#JB_Validate_Modal").hasClass('Not-Validated')) {
+        $('#SignUpModal').modal('show');
+      }
+    }
+
+    SignUpHandler();
 
 
 	});

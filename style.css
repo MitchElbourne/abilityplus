@@ -71,7 +71,7 @@ input {
 svg, svg g, svg g path {
   transition: all 200ms; }
 
-.modal-open {
+.modal-open, .modal {
   padding-right: 0 !important;
   overflow: visible; }
 
@@ -83,6 +83,59 @@ svg, svg g, svg g path {
 
 #bitnami-banner {
   display: none; }
+
+div.remember {
+  display: flex; }
+  div.remember input {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(37, 120, 219, 0.12);
+    border-radius: 3px;
+    padding: 0.615rem;
+    cursor: pointer;
+    trasition: all 250ms; }
+    div.remember input:active {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:checked:active {
+      background-color: rgba(37, 120, 219, 0.2); }
+    div.remember input:checked {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:checked:after {
+      content: '';
+      position: absolute;
+      top: 5.5px;
+      left: 5px;
+      min-width: 11px;
+      min-height: 9px;
+      max-width: 11px;
+      max-height: 9px;
+      background-image: url("assets/svg/icon-checked.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    div.remember input:checked:hover {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:hover {
+      border-color: rgba(37, 120, 219, 0.18);
+      background-color: rgba(37, 120, 219, 0.17); }
+  div.remember span {
+    font-size: 0.875rem;
+    margin-left: 0.5rem; }
+
+.cta-blue {
+  flex: 1 1 auto;
+  display: inline-block;
+  max-height: 3rem;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 28px;
+  border: none;
+  color: white;
+  background-color: #2578db;
+  transition: all 200ms; }
+  .cta-blue:hover, .cta-blue:focus {
+    background-color: rgba(37, 120, 219, 0.85); }
 
 html {
   font-size: 16px; }
@@ -97,17 +150,23 @@ body {
     body h1.italic, body h2.italic, body h3.italic, body h4.italic, body h5.italic, body h6.italic {
       font-family: "tkusual-italicbd", "system", "sans-serif"; }
   body h1, body .h1 {
-    font-size: 3em; }
+    font-size: 3em;
+    margin-bottom: 0; }
   body h2, body .h2 {
-    font-size: 2.625em; }
+    font-size: 2.625em;
+    margin-bottom: 0; }
   body h3, body .h3 {
-    font-size: 2.25em; }
+    font-size: 2.25em;
+    margin-bottom: 0; }
   body h4, body .h4 {
-    font-size: 2em; }
+    font-size: 2em;
+    margin-bottom: 0; }
   body h5, body .h5 {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-bottom: 0; }
   body h6, body .h6 {
-    font-size: 1.25em; }
+    font-size: 1.25em;
+    margin-bottom: 0; }
   body .bold {
     font-family: "tkusual-bold", "system", "sans-serif"; }
   body .caption {
@@ -292,9 +351,68 @@ footer#site-footer {
 
 body.home section#introduction .container .row {
   text-align: center; }
+  body.home section#introduction .container .row p.text {
+    margin: 2.5rem auto; }
+  body.home section#introduction .container .row div.cta-container {
+    display: flex;
+    justify-content: center; }
+    body.home section#introduction .container .row div.cta-container a {
+      flex: 1 1 auto;
+      display: inline-block;
+      max-width: 12rem;
+      max-height: 3.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 28px;
+      transition: all 200ms; }
+      body.home section#introduction .container .row div.cta-container a:first-of-type {
+        margin-right: 1rem;
+        color: white;
+        background-color: #2578db; }
+        body.home section#introduction .container .row div.cta-container a:first-of-type:hover, body.home section#introduction .container .row div.cta-container a:first-of-type:focus {
+          background-color: rgba(37, 120, 219, 0.85); }
+      body.home section#introduction .container .row div.cta-container a:last-of-type {
+        background-color: rgba(37, 120, 219, 0.12); }
+        body.home section#introduction .container .row div.cta-container a:last-of-type:hover, body.home section#introduction .container .row div.cta-container a:last-of-type:focus {
+          background-color: rgba(37, 120, 219, 0.2); }
+  body.home section#introduction .container .row div.panel-container {
+    display: flex;
+    width: 100%;
+    margin-top: 6rem;
+    text-align: start; }
+    body.home section#introduction .container .row div.panel-container div.panel {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 calc(100%/3);
+      padding: 0 3rem;
+      border-right: 1px solid #e8eaeb; }
+      body.home section#introduction .container .row div.panel-container div.panel:last-of-type {
+        border-right: none; }
+      body.home section#introduction .container .row div.panel-container div.panel p.sub-text {
+        margin: 1rem 0 2rem; }
+      body.home section#introduction .container .row div.panel-container div.panel a {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        margin-top: auto;
+        padding: 1rem 1rem 0.95rem;
+        border-radius: 100%;
+        background-color: rgba(37, 120, 219, 0.12); }
+        body.home section#introduction .container .row div.panel-container div.panel a span.icon {
+          display: flex;
+          align-self: center; }
+        body.home section#introduction .container .row div.panel-container div.panel a:hover, body.home section#introduction .container .row div.panel-container div.panel a:focus {
+          background-color: rgba(37, 120, 219, 0.2); }
+@media (max-width: 767px) {
+  body.home section#introduction .container .row div.cta-container {
+    flex-direction: column; }
+    body.home section#introduction .container .row div.cta-container a:first-of-type {
+      margin: 0.5rem auto; }
+    body.home section#introduction .container .row div.cta-container a:last-of-type {
+      margin: 0.5rem auto; } }
 
 #LogInModal, #SignUpModal {
-  z-index: 99999; }
+  z-index: 99999;
+  overflow: scroll; }
   #LogInModal button, #SignUpModal button {
     position: absolute;
     top: 1rem;
@@ -305,7 +423,7 @@ body.home section#introduction .container .row {
       height: 2rem; }
   #LogInModal .modal-dialog, #SignUpModal .modal-dialog {
     max-width: 90%;
-    padding-left: 16px; }
+    padding-left: 8px; }
     #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
       padding: 7.5rem 10rem;
       background-color: #f3f4f5;
@@ -315,7 +433,7 @@ body.home section#introduction .container .row {
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf; }
-        #LogInModal .modal-dialog .modal-content div.introduction h1, #SignUpModal .modal-dialog .modal-content div.introduction h1 {
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
         #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
           color: rgba(28, 43, 56, 0.5);
@@ -327,3 +445,60 @@ body.home section#introduction .container .row {
             color: #2578db; }
       #LogInModal .modal-dialog .modal-content form, #SignUpModal .modal-dialog .modal-content form {
         width: 100%; }
+  @media (max-width: 991px) {
+    #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+      padding: 5rem; }
+      #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+        padding-bottom: 1rem;
+        flex-wrap: wrap; }
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
+          font-size: 2.85rem; }
+        #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+          font-size: 1rem; } }
+  @media (max-width: 767px) {
+    #LogInModal#LogInModal .modal-dialog, #SignUpModal#LogInModal .modal-dialog {
+      margin: 0;
+      padding-right: 0; }
+    #LogInModal#SignUpModal .modal-dialog, #SignUpModal#SignUpModal .modal-dialog {
+      margin: 0; }
+    #LogInModal button, #SignUpModal button {
+      transition: all 200ms; }
+      #LogInModal button span svg, #SignUpModal button span svg {
+        width: 1.5rem;
+        height: 1.5rem; }
+    #LogInModal .modal-dialog, #SignUpModal .modal-dialog {
+      max-width: 100%;
+      padding-left: 0; }
+      #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+        padding: 2rem; }
+        #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+          padding-bottom: 1rem;
+          flex-wrap: wrap; }
+          #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
+            font-size: 1.8rem; }
+          #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+            font-size: 0.8rem; } }
+
+#LogInModal .modal-dialog {
+  margin: 1rem auto; }
+  #LogInModal .modal-dialog .modal-content p.h5 {
+    margin: 2rem 0; }
+  #LogInModal .modal-dialog .modal-content form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px; }
+    #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password {
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      background-color: #f3f4f5;
+      border-radius: 4px; }
+      #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label {
+        width: 100%;
+        color: rgba(28, 43, 56, 0.5); }
+      #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input {
+        width: 100%;
+        border: none;
+        font-size: 2rem;
+        background-color: #f3f4f5; }
+    #LogInModal .modal-dialog .modal-content form div.remember {
+      margin-bottom: 2rem; }

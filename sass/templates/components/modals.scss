@@ -1,5 +1,6 @@
 #LogInModal, #SignUpModal {
   z-index: 99999;
+  overflow: scroll;
   button {
     position: absolute;
     top: 1rem;
@@ -14,7 +15,7 @@
   }
   .modal-dialog {
     max-width: 90%;
-    padding-left: 16px;
+    padding-left: 8px;
     .modal-content {
       padding: 7.5rem 10rem;
       background-color: $lightest-grey;
@@ -24,7 +25,7 @@
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf;
-        h1 {
+        h2.h1 {
           display: inline-block;
         }
         span.modal-cta {
@@ -42,10 +43,103 @@
         width: 100%;
         // border: 1px solid red;
         label {
-
+          // border: 1px solid red;
+          
         }
         input {
+          // border: 1px solid red;
 
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .modal-dialog {
+      .modal-content {
+        padding: 5rem;
+        div.introduction {
+          padding-bottom: 1rem;
+          flex-wrap: wrap;
+          h2.h1 {
+            font-size: 2.85rem;
+          }
+          span.modal-cta {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &#LogInModal {
+      .modal-dialog {
+        margin: 0;
+        padding-right: 0;
+      }
+    }
+    &#SignUpModal {
+      .modal-dialog {
+        margin: 0;
+      }
+    }
+    button {
+      transition: all 200ms;
+      span {
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+    .modal-dialog {
+      max-width: 100%;
+      padding-left: 0;
+      .modal-content {
+        padding: 2rem;
+        div.introduction {
+          padding-bottom: 1rem;
+          flex-wrap: wrap;
+          h2.h1 {
+            font-size: 1.8rem;
+          }
+          span.modal-cta {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#LogInModal {
+  .modal-dialog {
+    margin: 1rem auto;
+    .modal-content {
+      p.h5 {
+        margin: 2rem 0;
+      }
+      form {
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 8px;
+        div.login-username, div.login-password {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: $lightest-grey;
+          border-radius: 4px;
+          label {
+            width: 100%;
+            color: $middle-grey;
+          }
+          input {
+            width: 100%;
+            border: none;
+            font-size: 2rem;
+            background-color: $lightest-grey;
+          }
+        }
+        div.remember {
+          margin-bottom: 2rem;
         }
       }
     }

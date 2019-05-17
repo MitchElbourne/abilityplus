@@ -89,6 +89,33 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
 
 }, 10, 2 );
 
+add_filter('jb_template_login_form', 'custom_login_logic', 10);
+
+function custom_login_logic($args = array()) {
+  $dashboard = '';
+
+    if (is_jb_employer_dashboard()) {
+        $dashboard = 'employer';
+    } elseif (is_jb_candidate_dashboard()) {
+        $dashboard = 'candidate';
+    }
+
+    $defaults = array(
+        'form_id' => 'form-' . uniqid(),
+        'label_username' => esc_html__('Email Address', JB_TEXT_DOMAIN),
+        'label_password' => esc_html__('Password', JB_TEXT_DOMAIN),
+        'label_remember' => esc_html__('Remember Me', JB_TEXT_DOMAIN),
+        'label_log_in' => esc_html__('Login', JB_TEXT_DOMAIN),
+        'value_username' => '',
+        'value_remember' => false,
+        'redirect_to' => esc_url(site_url('/')),
+        'dashboard' => $dashboard,
+    );
+
+    $args = wp_parse_args($args, apply_filters('login_form_defaults', $defaults));
+
+    jb_get_template('global/login-form.php', array('args' => $args));
+}
 
 // add_filter('jobboard-register-fields', 'custom_form_fields');
 

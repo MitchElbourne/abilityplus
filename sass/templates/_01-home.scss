@@ -3,6 +3,89 @@ body.home {
     .container {
       .row {
         text-align: center;
+        p.text {
+          margin: 2.5rem auto;
+        }
+        div.cta-container {
+          display: flex;
+          justify-content: center;
+          a {
+            flex: 1 1 auto;
+            display: inline-block;
+            max-width: 12rem;
+            max-height: 3.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 28px;
+            transition: all 200ms;
+            &:first-of-type {
+              margin-right: 1rem;
+              color: $white;
+              background-color: $primary-blue;
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.85);
+              }
+            }
+            &:last-of-type {
+              background-color: rgba($primary-blue, 0.12);
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.2)
+              }
+            }
+          }
+        }
+        div.panel-container {
+          display: flex;
+          width: 100%;
+          margin-top: 6rem;
+          text-align: start;
+          div.panel {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(100%/3);
+            padding: 0 3rem;
+            border-right: 1px solid $lighter-grey;
+            &:last-of-type {
+              border-right: none;
+            }
+            p.sub-text {
+              margin: 1rem 0 2rem;
+            }
+            a {
+              display: flex;
+              width: 3rem;
+              height: 3rem;
+              margin-top: auto;
+              padding: 1rem 1rem 0.95rem;
+              border-radius: 100%;
+              background-color: rgba($primary-blue, 0.12);
+              span.icon {
+                display: flex;
+                align-self: center;
+              }
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.2);
+              }
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .container {
+        .row {
+          div.cta-container {
+            flex-direction: column;
+            a {
+              &:first-of-type {
+                margin: 0.5rem auto;
+
+              }
+              &:last-of-type {
+                margin: 0.5rem auto;
+              }
+            }
+          }
+        }
       }
     }
   }
