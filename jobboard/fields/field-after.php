@@ -1,8 +1,8 @@
 <?php
 /**
- * The Template for displaying before fields.
+ * The Template for displaying after fields.
  *
- * This template can be overridden by copying it to yourtheme/jobboard/fields/field-before.php.
+ * This template can be overridden by copying it to yourtheme/jobboard/fields/field-after.php.
  *
  * HOWEVER, on occasion JobBoard will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -19,9 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 ?>
-
-<div class="<?php echo esc_attr($class); ?>">
-    <label class="field-name caption" for="<?php echo esc_attr($id); ?>"><?php echo esc_html($title); ?></label>
-    <?php if(!empty($subtitle)): ?>
-        <span class="field-subtitle error-for-form"><?php echo $subtitle; ?></span>
+    <?php if(!empty($desc)): ?>
+        <div class="field-desc"><?php echo $desc; ?></div>
     <?php endif; ?>
+</div>
