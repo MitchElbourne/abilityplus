@@ -10,6 +10,7 @@
         <span class="modal-cta">Already have an account? <a data-target="#LogInModal" data-toggle="modal" class="bold log-in-cta-modal">Log in instead</a></span>
       </div>
       <?php echo do_shortcode('[jobboard_register_account]'); ?>
+      <span id="JB_Validate_Modal" class="sr-only <?php if(JB()->session->{'validate'}) echo "Not-Validated" ?>"></span>
     </div>
   </div>
 </div>

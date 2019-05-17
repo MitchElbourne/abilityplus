@@ -73,11 +73,13 @@
       });
     });
 
-    $(document).ready(setTimeout(() => {
-      if($('.messages-error.active')) {
-        // $('#SignUpModal').modal('show');
+    function SignUpHandler() {
+      if($("#JB_Validate_Modal").hasClass('Not-Validated')) {
+        $('#SignUpModal').modal('show');
       }
-    }), 500);
+    }
+
+    SignUpHandler();
 
 
 	});

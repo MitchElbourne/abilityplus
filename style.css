@@ -84,6 +84,45 @@ svg, svg g, svg g path {
 #bitnami-banner {
   display: none; }
 
+div.remember {
+  display: flex; }
+  div.remember input {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(37, 120, 219, 0.12);
+    border-radius: 3px;
+    padding: 0.615rem;
+    cursor: pointer;
+    trasition: all 250ms; }
+    div.remember input:active {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:checked:active {
+      background-color: rgba(37, 120, 219, 0.2); }
+    div.remember input:checked {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:checked:after {
+      content: '';
+      position: absolute;
+      top: 5.5px;
+      left: 5px;
+      min-width: 11px;
+      min-height: 9px;
+      max-width: 11px;
+      max-height: 9px;
+      background-image: url("assets/svg/icon-checked.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    div.remember input:checked:hover {
+      background-color: rgba(37, 120, 219, 0.25); }
+    div.remember input:hover {
+      border-color: rgba(37, 120, 219, 0.18);
+      background-color: rgba(37, 120, 219, 0.17); }
+  div.remember span {
+    font-size: 0.875rem;
+    margin-left: 0.5rem; }
+
 html {
   font-size: 16px; }
 
@@ -385,3 +424,8 @@ body.home section#introduction .container .row {
             color: #2578db; }
       #LogInModal .modal-dialog .modal-content form, #SignUpModal .modal-dialog .modal-content form {
         width: 100%; }
+
+#LogInModal .modal-dialog .modal-content p.h5 {
+  margin: 2rem 0; }
+#LogInModal .modal-dialog .modal-content form {
+  background-color: white; }

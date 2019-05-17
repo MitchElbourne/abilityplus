@@ -42,11 +42,27 @@
         width: 100%;
         // border: 1px solid red;
         label {
-
+          // border: 1px solid red;
+          
         }
         input {
+          // border: 1px solid red;
 
         }
+      }
+    }
+  }
+}
+
+#LogInModal {
+  .modal-dialog {
+    .modal-content {
+      p.h5 {
+        margin: 2rem 0;
+      }
+      form {
+        background-color: $white;
+
       }
     }
   }

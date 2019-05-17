@@ -44,7 +44,6 @@ main > footer > .container {
   max-width: 1400px;
 }
 
-
 button,
 input {
   outline: none;
@@ -74,4 +73,52 @@ svg, svg g, svg g path {
 
 #bitnami-banner {
   display: none;
+}
+
+div.remember {
+  display: flex;
+  input {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba($primary-blue, 0.12);
+    border-radius: 3px;
+    padding: 0.615rem;
+    cursor: pointer;
+    trasition: all 250ms;
+    &:active {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:checked:active {
+      background-color: rgba($primary-blue, 0.2);
+    }
+    &:checked {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:checked:after {
+      content: '';
+      position: absolute;
+      top: 5.5px;
+      left: 5px;
+      min-width: 11px;
+      min-height: 9px;
+      max-width: 11px;
+      max-height: 9px;
+      background-image: url('assets/svg/icon-checked.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &:checked:hover {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:hover {
+      border-color: rgba($primary-blue, 0.18);
+      background-color: rgba($primary-blue, 0.17)
+    }
+  }
+  span {
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+  }
 }
