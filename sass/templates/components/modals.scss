@@ -1,4 +1,4 @@
-#LogInModal, #SignUpModal {
+#LogInModal, #PasswordModal {
   z-index: 99999;
   overflow: scroll;
   button {
@@ -16,11 +16,15 @@
   .modal-dialog {
     max-width: 90%;
     padding-left: 8px;
+    margin: 1rem auto;
     .modal-content {
       padding: 7.5rem 10rem;
       background-color: $lightest-grey;
       border-radius: 0;
       border: none;
+      p.h5 {
+        margin: 2rem 0;
+      }
       div.introduction {
         display: flex;
         padding-bottom: 2rem;
@@ -28,7 +32,7 @@
         h2.h1 {
           display: inline-block;
         }
-        span.modal-cta {
+        span.sign-up-cta {
           color: $middle-grey;
           display: inline-block;
           margin-left: auto;
@@ -38,85 +42,6 @@
             color: $primary-blue;
           }
         }
-      }
-      form {
-        width: 100%;
-        // border: 1px solid red;
-        label {
-          // border: 1px solid red;
-          
-        }
-        input {
-          // border: 1px solid red;
-
-        }
-      }
-    }
-  }
-  @include media-breakpoint-down(md) {
-    .modal-dialog {
-      .modal-content {
-        padding: 5rem;
-        div.introduction {
-          padding-bottom: 1rem;
-          flex-wrap: wrap;
-          h2.h1 {
-            font-size: 2.85rem;
-          }
-          span.modal-cta {
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    &#LogInModal {
-      .modal-dialog {
-        margin: 0;
-        padding-right: 0;
-      }
-    }
-    &#SignUpModal {
-      .modal-dialog {
-        margin: 0;
-      }
-    }
-    button {
-      transition: all 200ms;
-      span {
-        svg {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
-      }
-    }
-    .modal-dialog {
-      max-width: 100%;
-      padding-left: 0;
-      .modal-content {
-        padding: 2rem;
-        div.introduction {
-          padding-bottom: 1rem;
-          flex-wrap: wrap;
-          h2.h1 {
-            font-size: 1.8rem;
-          }
-          span.modal-cta {
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-#LogInModal {
-  .modal-dialog {
-    margin: 1rem auto;
-    .modal-content {
-      p.h5 {
-        margin: 2rem 0;
       }
       form {
         background-color: $white;
@@ -141,89 +66,183 @@
         div.remember {
           margin-bottom: 2rem;
         }
+        p.login-submit {
+          a.forgot-password-cta-modal {
+            cursor: pointer;
+            &:hover, &:focus {
+              color: $dark-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .modal-dialog {
+      .modal-content {
+        padding: 5rem;
+        div.introduction {
+          padding-bottom: 1rem;
+          flex-wrap: wrap;
+          h2.h1 {
+            font-size: 2.85rem;
+          }
+          span.sign-up-cta {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &#LogInModal {
+      .modal-dialog {
+        margin: 0;
+        padding-right: 0;
+      }
+    }
+    button {
+      transition: all 200ms;
+      span {
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+    .modal-dialog {
+      max-width: 100%;
+      padding-left: 0;
+      .modal-content {
+        padding: 2rem;
+        div.introduction {
+          padding-bottom: 1rem;
+          flex-wrap: wrap;
+          h2.h1 {
+            font-size: 1.8rem;
+          }
+          span.sign-up-cta {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
   }
 }
 
-#SignUpModal {
+#PasswordModal {
   .modal-dialog {
+    max-width: 50%;
     .modal-content {
-      flex-wrap: wrap;
-      div.information-container {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 2rem 0 3.5rem;
-        div.information {
-          flex: 1 1 calc(100%/2);
-          padding-right: 2rem;
-          p.text {
-            margin: 1.5rem 0;
-          }
-        }
-        img.illustration {
-          background-color: $lighter-grey;
-          width: 27rem;
-          border-radius: 12px;
+      padding: 3rem;
+      div.introduction {
+        flex-wrap: wrap;
+        p.text {
+          width: 100%;
+          margin-top: 1rem;
         }
       }
       form {
-        background-color: $white;
-        border-radius: 8px;
-        padding: 2rem;
-        .form-fields {
-          .row {
-            .field {
-              
-              &.col-md-6 {
-                flex: 1 1 calc(100%/2 - 1rem);
-                &:nth-of-type(odd) {
-                  margin-right: 1rem;
-                }
-              }
-              margin-bottom: 1rem;
-              padding: 0 1rem;
-              background-color: $lightest-grey;
-              border-radius: 4px;
-              label {
-                color: $middle-grey;
-                margin-right: 0.2rem;
-              }
-              span {
-                font-size: 0.7rem;
-              }
-              input {
-                border: none;
-                font-size: 1.25rem;
-                background-color: $lightest-grey;
-              }
-            }
-            &:nth-last-of-type(1), &:nth-last-of-type(2) {
-              .field {
-                display: flex;
-                flex-wrap: wrap;
-                span.select2 {
-                  min-width: 100%;
-                  display: block;
-                  border: none;
-                  span.selection {
-                    span.select2-selection {
-                      border: none;
-                      background-color: $lightest-grey;
-                    }
-                  }
-                }
-              }
-            }
-          }
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: $lighter-grey;
+        border-radius: 4px;
+        label {
+          width: 100%;
+          color: $middle-grey;
         }
-        div.form-actions {
-          text-align: center;
-          input[type="submit"] {
-            padding: 0.75rem 1.25rem;
-          }
+        input#user_email {
+          width: 100%;
+          margin: 1rem 0;
+          border: none;
+          font-size: 1.25rem;
+          background-color: $lightest-grey;
         }
       }
     }
   }
 }
+
+
+// #SignUpModal {
+//   .modal-dialog {
+//     .modal-content {
+//       flex-wrap: wrap;
+//       div.information-container {
+//         display: flex;
+//         flex-wrap: nowrap;
+//         padding: 2rem 0 3.5rem;
+//         div.information {
+//           flex: 1 1 calc(100%/2);
+//           padding-right: 2rem;
+//           p.text {
+//             margin: 1.5rem 0;
+//           }
+//         }
+//         img.illustration {
+//           background-color: $lighter-grey;
+//           width: 27rem;
+//           border-radius: 12px;
+//         }
+//       }
+//       form {
+//         background-color: $white;
+//         border-radius: 8px;
+//         padding: 2rem;
+//         .form-fields {
+//           .row {
+//             .field {
+              
+//               &.col-md-6 {
+//                 flex: 1 1 calc(100%/2 - 1rem);
+//                 &:nth-of-type(odd) {
+//                   margin-right: 1rem;
+//                 }
+//               }
+//               margin-bottom: 1rem;
+//               padding: 0 1rem;
+//               background-color: $lightest-grey;
+//               border-radius: 4px;
+//               label {
+//                 color: $middle-grey;
+//                 margin-right: 0.2rem;
+//               }
+//               span {
+//                 font-size: 0.7rem;
+//               }
+//               input {
+//                 border: none;
+//                 font-size: 1.25rem;
+//                 background-color: $lightest-grey;
+//               }
+//             }
+//             &:nth-last-of-type(1), &:nth-last-of-type(2) {
+//               .field {
+//                 display: flex;
+//                 flex-wrap: wrap;
+//                 span.select2 {
+//                   min-width: 100%;
+//                   display: block;
+//                   border: none;
+//                   span.selection {
+//                     span.select2-selection {
+//                       border: none;
+//                       background-color: $lightest-grey;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         div.form-actions {
+//           text-align: center;
+//           input[type="submit"] {
+//             padding: 0.75rem 1.25rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

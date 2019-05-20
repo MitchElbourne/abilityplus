@@ -62,7 +62,8 @@
     <?php 
     
     echo get_template_part('/templates/modal-login');
-    echo get_template_part('/templates/modal-sign-up');
+    echo get_template_part('/templates/modal-password');
+    // echo get_template_part('/templates/modal-sign-up');
     
     ?>
     <div class="wrapper">

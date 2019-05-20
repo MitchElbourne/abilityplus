@@ -413,147 +413,221 @@ body.home section#introduction .container .row {
     body.home section#introduction .container .row div.cta-container a:last-of-type {
       margin: 0.5rem auto; } }
 
-#LogInModal, #SignUpModal {
+body.is-dashboard .wrapper div.introduction {
+  display: flex;
+  width: 100%;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #a4aaaf; }
+  body.is-dashboard .wrapper div.introduction h2.h1 {
+    display: inline-block; }
+  body.is-dashboard .wrapper div.introduction span.sign-up-cta {
+    color: rgba(28, 43, 56, 0.5);
+    display: inline-block;
+    margin-left: auto;
+    align-self: flex-end; }
+    body.is-dashboard .wrapper div.introduction span.sign-up-cta a {
+      cursor: pointer;
+      color: #2578db; }
+body.is-dashboard .wrapper p.h5 {
+  width: 100%;
+  margin: 2rem 0; }
+body.is-dashboard .wrapper form {
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px; }
+  body.is-dashboard .wrapper form div.login-username, body.is-dashboard .wrapper form div.login-password {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    background-color: #f3f4f5;
+    border-radius: 4px; }
+    body.is-dashboard .wrapper form div.login-username label, body.is-dashboard .wrapper form div.login-password label {
+      width: 100%;
+      color: rgba(28, 43, 56, 0.5); }
+    body.is-dashboard .wrapper form div.login-username input, body.is-dashboard .wrapper form div.login-password input {
+      width: 100%;
+      border: none;
+      font-size: 1.25rem;
+      background-color: #f3f4f5; }
+  body.is-dashboard .wrapper form div.remember {
+    margin-bottom: 2rem; }
+
+main[role="main"] section#sign-up-form .container div.introduction {
+  display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #a4aaaf; }
+  main[role="main"] section#sign-up-form .container div.introduction h2.h1 {
+    display: inline-block; }
+  main[role="main"] section#sign-up-form .container div.introduction span.modal-cta {
+    color: rgba(28, 43, 56, 0.5);
+    display: inline-block;
+    margin-left: auto;
+    align-self: flex-end; }
+    main[role="main"] section#sign-up-form .container div.introduction span.modal-cta a {
+      cursor: pointer;
+      color: #2578db; }
+main[role="main"] section#sign-up-form .container div.information-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2rem 0 3.5rem; }
+  main[role="main"] section#sign-up-form .container div.information-container div.information {
+    flex: 1 1 calc(100%/2);
+    padding-right: 2rem; }
+    main[role="main"] section#sign-up-form .container div.information-container div.information p.text {
+      margin: 1.5rem 0; }
+  main[role="main"] section#sign-up-form .container div.information-container img.illustration {
+    background-color: #e8eaeb;
+    width: 27rem;
+    border-radius: 12px; }
+main[role="main"] section#sign-up-form .container form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row .field {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    background-color: #f3f4f5;
+    border-radius: 4px; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row .field.col-md-6 {
+      flex: 1 1 calc(100%/2 - 1rem); }
+      main[role="main"] section#sign-up-form .container form .form-fields .row .field.col-md-6:nth-of-type(odd) {
+        margin-right: 1rem; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row .field label {
+      color: rgba(28, 43, 56, 0.5);
+      margin-right: 0.2rem; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row .field span {
+      font-size: 0.7rem; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row .field input {
+      border: none;
+      font-size: 1.25rem;
+      background-color: #f3f4f5; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field {
+    display: flex;
+    flex-wrap: wrap; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field span.select2, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field span.select2 {
+      min-width: 100%;
+      display: block;
+      border: none; }
+      main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field span.select2 span.selection span.select2-selection, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field span.select2 span.selection span.select2-selection {
+        border: none;
+        background-color: #f3f4f5; }
+  main[role="main"] section#sign-up-form .container form div.form-actions {
+    text-align: center; }
+    main[role="main"] section#sign-up-form .container form div.form-actions input[type="submit"] {
+      padding: 0.75rem 1.25rem; }
+
+#LogInModal, #PasswordModal {
   z-index: 99999;
   overflow: scroll; }
-  #LogInModal button, #SignUpModal button {
+  #LogInModal button, #PasswordModal button {
     position: absolute;
     top: 1rem;
     right: 1rem;
     transition: all 200ms; }
-    #LogInModal button span svg, #SignUpModal button span svg {
+    #LogInModal button span svg, #PasswordModal button span svg {
       width: 2rem;
       height: 2rem; }
-  #LogInModal .modal-dialog, #SignUpModal .modal-dialog {
+  #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
     max-width: 90%;
-    padding-left: 8px; }
-    #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+    padding-left: 8px;
+    margin: 1rem auto; }
+    #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
       padding: 7.5rem 10rem;
       background-color: #f3f4f5;
       border-radius: 0;
       border: none; }
-      #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+      #LogInModal .modal-dialog .modal-content p.h5, #PasswordModal .modal-dialog .modal-content p.h5 {
+        margin: 2rem 0; }
+      #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf; }
-        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
-        #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
           color: rgba(28, 43, 56, 0.5);
           display: inline-block;
           margin-left: auto;
           align-self: flex-end; }
-          #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta a, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta a {
+          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta a, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta a {
             cursor: pointer;
             color: #2578db; }
-      #LogInModal .modal-dialog .modal-content form, #SignUpModal .modal-dialog .modal-content form {
-        width: 100%; }
+      #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px; }
+        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: #f3f4f5;
+          border-radius: 4px; }
+          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #PasswordModal .modal-dialog .modal-content form div.login-username label, #PasswordModal .modal-dialog .modal-content form div.login-password label {
+            width: 100%;
+            color: rgba(28, 43, 56, 0.5); }
+          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input {
+            width: 100%;
+            border: none;
+            font-size: 1.25rem;
+            background-color: #f3f4f5; }
+        #LogInModal .modal-dialog .modal-content form div.remember, #PasswordModal .modal-dialog .modal-content form div.remember {
+          margin-bottom: 2rem; }
+        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+          cursor: pointer; }
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
+            color: #0a468f; }
   @media (max-width: 991px) {
-    #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+    #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
       padding: 5rem; }
-      #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+      #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
         padding-bottom: 1rem;
         flex-wrap: wrap; }
-        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           font-size: 2.85rem; }
-        #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
           font-size: 1rem; } }
   @media (max-width: 767px) {
-    #LogInModal#LogInModal .modal-dialog, #SignUpModal#LogInModal .modal-dialog {
+    #LogInModal#LogInModal .modal-dialog, #PasswordModal#LogInModal .modal-dialog {
       margin: 0;
       padding-right: 0; }
-    #LogInModal#SignUpModal .modal-dialog, #SignUpModal#SignUpModal .modal-dialog {
-      margin: 0; }
-    #LogInModal button, #SignUpModal button {
+    #LogInModal button, #PasswordModal button {
       transition: all 200ms; }
-      #LogInModal button span svg, #SignUpModal button span svg {
+      #LogInModal button span svg, #PasswordModal button span svg {
         width: 1.5rem;
         height: 1.5rem; }
-    #LogInModal .modal-dialog, #SignUpModal .modal-dialog {
+    #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
       max-width: 100%;
       padding-left: 0; }
-      #LogInModal .modal-dialog .modal-content, #SignUpModal .modal-dialog .modal-content {
+      #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
         padding: 2rem; }
-        #LogInModal .modal-dialog .modal-content div.introduction, #SignUpModal .modal-dialog .modal-content div.introduction {
+        #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
           padding-bottom: 1rem;
           flex-wrap: wrap; }
-          #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #SignUpModal .modal-dialog .modal-content div.introduction h2.h1 {
+          #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
             font-size: 1.8rem; }
-          #LogInModal .modal-dialog .modal-content div.introduction span.modal-cta, #SignUpModal .modal-dialog .modal-content div.introduction span.modal-cta {
+          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
             font-size: 0.8rem; } }
 
-#LogInModal .modal-dialog {
-  margin: 1rem auto; }
-  #LogInModal .modal-dialog .modal-content p.h5 {
-    margin: 2rem 0; }
-  #LogInModal .modal-dialog .modal-content form {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px; }
-    #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password {
+#PasswordModal .modal-dialog {
+  max-width: 50%; }
+  #PasswordModal .modal-dialog .modal-content {
+    padding: 3rem; }
+    #PasswordModal .modal-dialog .modal-content div.introduction {
+      flex-wrap: wrap; }
+      #PasswordModal .modal-dialog .modal-content div.introduction p.text {
+        width: 100%;
+        margin-top: 1rem; }
+    #PasswordModal .modal-dialog .modal-content form {
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      padding: 0 1rem;
-      background-color: #f3f4f5;
+      padding: 1rem;
+      background-color: #e8eaeb;
       border-radius: 4px; }
-      #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label {
+      #PasswordModal .modal-dialog .modal-content form label {
         width: 100%;
         color: rgba(28, 43, 56, 0.5); }
-      #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input {
+      #PasswordModal .modal-dialog .modal-content form input#user_email {
         width: 100%;
+        margin: 1rem 0;
         border: none;
         font-size: 1.25rem;
         background-color: #f3f4f5; }
-    #LogInModal .modal-dialog .modal-content form div.remember {
-      margin-bottom: 2rem; }
-
-#SignUpModal .modal-dialog .modal-content {
-  flex-wrap: wrap; }
-  #SignUpModal .modal-dialog .modal-content div.information-container {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 2rem 0 3.5rem; }
-    #SignUpModal .modal-dialog .modal-content div.information-container div.information {
-      flex: 1 1 calc(100%/2);
-      padding-right: 2rem; }
-      #SignUpModal .modal-dialog .modal-content div.information-container div.information p.text {
-        margin: 1.5rem 0; }
-    #SignUpModal .modal-dialog .modal-content div.information-container img.illustration {
-      background-color: #e8eaeb;
-      width: 27rem;
-      border-radius: 12px; }
-  #SignUpModal .modal-dialog .modal-content form {
-    background-color: white;
-    border-radius: 8px;
-    padding: 2rem; }
-    #SignUpModal .modal-dialog .modal-content form .form-fields .row .field {
-      margin-bottom: 1rem;
-      padding: 0 1rem;
-      background-color: #f3f4f5;
-      border-radius: 4px; }
-      #SignUpModal .modal-dialog .modal-content form .form-fields .row .field.col-md-6 {
-        flex: 1 1 calc(100%/2 - 1rem); }
-        #SignUpModal .modal-dialog .modal-content form .form-fields .row .field.col-md-6:nth-of-type(odd) {
-          margin-right: 1rem; }
-      #SignUpModal .modal-dialog .modal-content form .form-fields .row .field label {
-        color: rgba(28, 43, 56, 0.5);
-        margin-right: 0.2rem; }
-      #SignUpModal .modal-dialog .modal-content form .form-fields .row .field span {
-        font-size: 0.7rem; }
-      #SignUpModal .modal-dialog .modal-content form .form-fields .row .field input {
-        border: none;
-        font-size: 1.25rem;
-        background-color: #f3f4f5; }
-    #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(1) .field, #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(2) .field {
-      display: flex;
-      flex-wrap: wrap; }
-      #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(1) .field span.select2, #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(2) .field span.select2 {
-        min-width: 100%;
-        display: block;
-        border: none; }
-        #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(1) .field span.select2 span.selection span.select2-selection, #SignUpModal .modal-dialog .modal-content form .form-fields .row:nth-last-of-type(2) .field span.select2 span.selection span.select2-selection {
-          border: none;
-          background-color: #f3f4f5; }
-    #SignUpModal .modal-dialog .modal-content form div.form-actions {
-      text-align: center; }
-      #SignUpModal .modal-dialog .modal-content form div.form-actions input[type="submit"] {
-        padding: 0.75rem 1.25rem; }

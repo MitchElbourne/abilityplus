@@ -1,0 +1,52 @@
+body.is-dashboard {
+  .wrapper {
+    div.introduction {
+      display: flex;
+      width: 100%;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #a4aaaf;
+      h2.h1 {
+        display: inline-block;
+      }
+      span.sign-up-cta {
+        color: $middle-grey;
+        display: inline-block;
+        margin-left: auto;
+        align-self: flex-end;
+        a {
+          cursor: pointer;
+          color: $primary-blue;
+        }
+      }
+    }
+    p.h5 {
+      width: 100%;
+      margin: 2rem 0;
+    }
+    form {
+      width: 100%;
+      background-color: $white;
+      padding: 2rem;
+      border-radius: 8px;
+      div.login-username, div.login-password {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        background-color: $lightest-grey;
+        border-radius: 4px;
+        label {
+          width: 100%;
+          color: $middle-grey;
+        }
+        input {
+          width: 100%;
+          border: none;
+          font-size: 1.25rem;
+          background-color: $lightest-grey;
+        }
+      }
+      div.remember {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

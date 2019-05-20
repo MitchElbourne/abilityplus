@@ -19,9 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 ?>
+<div class="introduction">
+  <h2 class="h1">Log In</h2>
+  <span class="sign-up-cta">Don't have an account? <a href="<?php echo esc_url(site_url('/profile/sign-up')); ?>">Sign up instead</a></span>
+</div>
 
+  
 <p class="h5 bold">Welcome back to Ability Plus!</p>
-
 
 <form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
   <?php do_action('jobboard_form_login_before'); ?>
@@ -37,15 +41,15 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
 
   <div class="login-remember clearfix">
-      <div class="remember">
-          <input name="rememberme" type="checkbox" id="<?php echo esc_attr($args['form_id']) . '-rememberme'; ?>" value="forever"/>
-          <span><?php echo esc_html($args['label_remember']); ?></span>
-      </div>
+    <div class="remember">
+      <input name="rememberme" type="checkbox" id="<?php echo esc_attr($args['form_id']) . '-rememberme'; ?>" value="forever"/>
+      <span><?php echo esc_html($args['label_remember']); ?></span>
     </div>
+  </div>
     
   <p class="login-submit clearfix">
     <input type="submit" name="wp-submit" id="<?php echo esc_attr($args['form_id']) . '-submit'; ?>" class="cta-blue bold" value="Log in" />
-    <a class="right" href="<?php echo esc_url(jb_page_permalink('forgot-password')); ?>">Forget your password?</a>
+    <a class="forgot-password-cta-modal modal-button" data-toggle="modal" data-target="#PasswordModal">Forget your password?</a>
     <input type="hidden" name="redirect_to" value="<?php echo esc_url($args['redirect_to']); ?>" />
     <input type="hidden" name="dashboard" value="<?php echo esc_attr($args['dashboard']); ?>">
   </p>
