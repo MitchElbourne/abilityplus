@@ -403,6 +403,9 @@ body.home section#introduction .container .row {
       border-right: 1px solid #e8eaeb; }
       body.home section#introduction .container .row div.panel-container div.panel:last-of-type {
         border-right: none; }
+      body.home section#introduction .container .row div.panel-container div.panel img {
+        max-width: 9rem;
+        margin-bottom: 2.5rem; }
       body.home section#introduction .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0 2rem; }
       body.home section#introduction .container .row div.panel-container div.panel a {
@@ -424,7 +427,20 @@ body.home section#introduction .container .row {
     body.home section#introduction .container .row div.cta-container a:first-of-type {
       margin: 0.5rem auto; }
     body.home section#introduction .container .row div.cta-container a:last-of-type {
-      margin: 0.5rem auto; } }
+      margin: 0.5rem auto; }
+  body.home section#introduction .container .row div.panel-container {
+    flex-direction: column;
+    margin-top: 3rem; }
+    body.home section#introduction .container .row div.panel-container div.panel {
+      text-align: center;
+      border-right: none;
+      border-top: 1px solid #e8eaeb; }
+      body.home section#introduction .container .row div.panel-container div.panel:last-of-type {
+        border-bottom: 1px solid #e8eaeb; }
+      body.home section#introduction .container .row div.panel-container div.panel img {
+        margin: 2rem auto 1rem; }
+      body.home section#introduction .container .row div.panel-container div.panel a {
+        margin: 0 auto 3rem; } }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;
