@@ -46,13 +46,15 @@ body {
   body .wrapper {
     flex-grow: 1;
     padding-top: 10rem;
-    max-width: 1400px;
     width: 100%;
     margin: 0 auto; }
     body .wrapper section {
       padding: 3.75rem 0; }
       body .wrapper section:first-of-type {
         padding-top: 0; }
+
+.container {
+  max-width: 1440px; }
 
 main > header > .container,
 main > section > .container,
@@ -139,6 +141,14 @@ div.remember {
   transition: all 200ms; }
   .cta-blue:hover, .cta-blue:focus {
     background-color: rgba(37, 120, 219, 0.85); }
+
+.select2-dropdown {
+  position: relative; }
+
+span.error {
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  color: #bb0f00; }
 
 html {
   font-size: 16px; }
@@ -440,7 +450,9 @@ body.is-dashboard .wrapper form {
     margin-bottom: 1rem;
     padding: 0 1rem;
     background-color: #f3f4f5;
-    border-radius: 4px; }
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 200ms; }
     body.is-dashboard .wrapper form div.login-username label, body.is-dashboard .wrapper form div.login-password label {
       width: 100%;
       color: rgba(28, 43, 56, 0.5); }
@@ -449,8 +461,17 @@ body.is-dashboard .wrapper form {
       border: none;
       font-size: 1.25rem;
       background-color: #f3f4f5; }
+    body.is-dashboard .wrapper form div.login-username.focus, body.is-dashboard .wrapper form div.login-password.focus {
+      border-color: #2578db;
+      background-color: white; }
+      body.is-dashboard .wrapper form div.login-username.focus input, body.is-dashboard .wrapper form div.login-password.focus input {
+        background-color: white; }
   body.is-dashboard .wrapper form div.remember {
     margin-bottom: 2rem; }
+  body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal {
+    cursor: pointer; }
+    body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
+      color: #0a468f; }
 
 main[role="main"] section#sign-up-form .container div.introduction {
   display: flex;
@@ -487,7 +508,9 @@ main[role="main"] section#sign-up-form .container form {
     margin-bottom: 1rem;
     padding: 0 1rem;
     background-color: #f3f4f5;
-    border-radius: 4px; }
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: all 200ms; }
     main[role="main"] section#sign-up-form .container form .form-fields .row .field.col-md-6 {
       flex: 1 1 calc(100%/2 - 1rem); }
       main[role="main"] section#sign-up-form .container form .form-fields .row .field.col-md-6:nth-of-type(odd) {
@@ -501,6 +524,11 @@ main[role="main"] section#sign-up-form .container form {
       border: none;
       font-size: 1.25rem;
       background-color: #f3f4f5; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row .field.focus {
+      border-color: #2578db;
+      background-color: white; }
+      main[role="main"] section#sign-up-form .container form .form-fields .row .field.focus input {
+        background-color: white; }
   main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field {
     display: flex;
     flex-wrap: wrap; }
@@ -511,6 +539,9 @@ main[role="main"] section#sign-up-form .container form {
       main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field span.select2 span.selection span.select2-selection, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field span.select2 span.selection span.select2-selection {
         border: none;
         background-color: #f3f4f5; }
+        main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(1) .field span.select2 span.selection span.select2-selection span.select2-selection__rendered, main[role="main"] section#sign-up-form .container form .form-fields .row:nth-last-of-type(2) .field span.select2 span.selection span.select2-selection span.select2-selection__rendered {
+          font-size: 1rem;
+          margin-top: 0.75rem; }
   main[role="main"] section#sign-up-form .container form div.form-actions {
     text-align: center; }
     main[role="main"] section#sign-up-form .container form div.form-actions input[type="submit"] {
@@ -556,19 +587,30 @@ main[role="main"] section#sign-up-form .container form {
         background-color: white;
         padding: 2rem;
         border-radius: 8px; }
-        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password {
+        #LogInModal .modal-dialog .modal-content form span.error, #PasswordModal .modal-dialog .modal-content form span.error {
+          margin: 0 0 1rem 0;
+          display: inline-block;
+          color: #bb0f00; }
+        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #LogInModal .modal-dialog .modal-content form div.password-forget, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.password-forget {
           margin-bottom: 1rem;
           padding: 0 1rem;
           background-color: #f3f4f5;
-          border-radius: 4px; }
-          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #PasswordModal .modal-dialog .modal-content form div.login-username label, #PasswordModal .modal-dialog .modal-content form div.login-password label {
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms; }
+          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #LogInModal .modal-dialog .modal-content form div.password-forget label, #PasswordModal .modal-dialog .modal-content form div.login-username label, #PasswordModal .modal-dialog .modal-content form div.login-password label, #PasswordModal .modal-dialog .modal-content form div.password-forget label {
             width: 100%;
             color: rgba(28, 43, 56, 0.5); }
-          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input {
+          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #LogInModal .modal-dialog .modal-content form div.password-forget input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.password-forget input {
             width: 100%;
             border: none;
             font-size: 1.25rem;
             background-color: #f3f4f5; }
+          #LogInModal .modal-dialog .modal-content form div.login-username.focus, #LogInModal .modal-dialog .modal-content form div.login-password.focus, #LogInModal .modal-dialog .modal-content form div.password-forget.focus, #PasswordModal .modal-dialog .modal-content form div.login-username.focus, #PasswordModal .modal-dialog .modal-content form div.login-password.focus, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus {
+            border-color: #2578db;
+            background-color: white; }
+            #LogInModal .modal-dialog .modal-content form div.login-username.focus input, #LogInModal .modal-dialog .modal-content form div.login-password.focus input, #LogInModal .modal-dialog .modal-content form div.password-forget.focus input, #PasswordModal .modal-dialog .modal-content form div.login-username.focus input, #PasswordModal .modal-dialog .modal-content form div.login-password.focus input, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus input {
+              background-color: white; }
         #LogInModal .modal-dialog .modal-content form div.remember, #PasswordModal .modal-dialog .modal-content form div.remember {
           margin-bottom: 2rem; }
         #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
@@ -620,14 +662,5 @@ main[role="main"] section#sign-up-form .container form {
       margin-top: 2rem;
       margin-bottom: 1rem;
       padding: 1rem;
-      background-color: #e8eaeb;
+      background-color: white;
       border-radius: 4px; }
-      #PasswordModal .modal-dialog .modal-content form label {
-        width: 100%;
-        color: rgba(28, 43, 56, 0.5); }
-      #PasswordModal .modal-dialog .modal-content form input#user_email {
-        width: 100%;
-        margin: 1rem 0;
-        border: none;
-        font-size: 1.25rem;
-        background-color: #f3f4f5; }

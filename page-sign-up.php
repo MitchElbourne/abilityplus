@@ -21,9 +21,6 @@ get_header();
         <?php echo do_shortcode('[jobboard_register_account]'); ?>
     </div>
   </section>
-
-  <?php print_r(JB()->session->get('jb_notices', array())["error"][0]); ?>
-
 </main>
 
 <?php

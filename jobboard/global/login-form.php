@@ -18,6 +18,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
+$error = JB()->session->get('jb_notices', array());
 ?>
 <div class="introduction">
   <h2 class="h1">Log In</h2>
@@ -39,6 +40,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     <label for="pwd" class="caption">Password</label>
     <input type="password" name="pwd" id="<?php echo esc_attr($args['form_id']) . '-pwd'; ?>" class="input" value="" size="20" />
   </div>
+  
+  <?php
+    if($error) {?>
+      <span class="error">Email or password incorrect</span>
+<?php }?>
 
   <div class="login-remember clearfix">
     <div class="remember">
@@ -47,12 +53,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div>
   </div>
     
+
   <p class="login-submit clearfix">
     <input type="submit" name="wp-submit" id="<?php echo esc_attr($args['form_id']) . '-submit'; ?>" class="cta-blue bold" value="Log in" />
     <a class="forgot-password-cta-modal modal-button" data-toggle="modal" data-target="#PasswordModal">Forget your password?</a>
     <input type="hidden" name="redirect_to" value="<?php echo esc_url($args['redirect_to']); ?>" />
     <input type="hidden" name="dashboard" value="<?php echo esc_attr($args['dashboard']); ?>">
   </p>
+
 </form>
 
-<?php print_r(JB()->session->get('jb_notices', array())); ?>

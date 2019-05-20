@@ -21,8 +21,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <form class="jobboard-form forgot-password-form" method="POST">
-  <label for="user_email"><?php esc_html_e('Email address', JB_REGISTER_TEXT_DOMAIN); ?></label>
-  <input id="user_email" type="email" value="" name="email">
+  <div class="password-forget">
+    <label for="user_email"><?php esc_html_e('Email address', JB_REGISTER_TEXT_DOMAIN); ?></label>
+    <input id="user_email" type="email" value="" name="email">
+  </div>
   <input type="submit" value="<?php esc_attr_e('Reset Password', JB_REGISTER_TEXT_DOMAIN); ?>" class="cta-blue">
   <?php wp_nonce_field( 'forgot_password' ); ?>
   <input type="hidden" name="action" value="forgot_password">

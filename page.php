@@ -19,8 +19,6 @@ get_header(); ?>
 <main id="main" role="main" class="site-main">
   <div class="container">
   <!-- <div id="content" class="<?php recruitment_page_class(); ?> container"> -->
-    <!-- <section class="row"> -->
-
       
 
       <?php
@@ -38,7 +36,6 @@ get_header(); ?>
       endwhile;
       ?>
 
-    <!-- </section> -->
     <?php if($_get_page_sidebar != 'is-no-sidebar'):
     get_sidebar();
     endif; ?>

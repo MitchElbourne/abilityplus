@@ -53,6 +53,8 @@ main[role="main"] {
               padding: 0 1rem;
               background-color: $lightest-grey;
               border-radius: 4px;
+              border: 2px solid transparent;
+              transition: all 200ms;
               label {
                 color: $middle-grey;
                 margin-right: 0.2rem;
@@ -64,6 +66,13 @@ main[role="main"] {
                 border: none;
                 font-size: 1.25rem;
                 background-color: $lightest-grey;
+              }
+              &.focus {
+                border-color: $primary-blue;
+                background-color: $white;
+                input {
+                  background-color: $white;
+                }
               }
             }
             &:nth-last-of-type(1), &:nth-last-of-type(2) {
@@ -78,6 +87,10 @@ main[role="main"] {
                     span.select2-selection {
                       border: none;
                       background-color: $lightest-grey;
+                      span.select2-selection__rendered {
+                        font-size: 1rem;
+                        margin-top: 0.75rem;
+                      }
                     }
                   }
                 }

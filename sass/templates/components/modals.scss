@@ -47,11 +47,18 @@
         background-color: $white;
         padding: 2rem;
         border-radius: 8px;
-        div.login-username, div.login-password {
+        span.error {
+          margin: 0 0 1rem 0;
+          display: inline-block;
+          color: $error;
+        }
+        div.login-username, div.login-password, div.password-forget {
           margin-bottom: 1rem;
           padding: 0 1rem;
           background-color: $lightest-grey;
           border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms;
           label {
             width: 100%;
             color: $middle-grey;
@@ -61,6 +68,13 @@
             border: none;
             font-size: 1.25rem;
             background-color: $lightest-grey;
+          }
+          &.focus {
+            border-color: $primary-blue;
+            background-color: $white;
+            input {
+              background-color: $white;
+            }
           }
         }
         div.remember {
@@ -146,19 +160,8 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
         padding: 1rem;
-        background-color: $lighter-grey;
+        background-color: $white;
         border-radius: 4px;
-        label {
-          width: 100%;
-          color: $middle-grey;
-        }
-        input#user_email {
-          width: 100%;
-          margin: 1rem 0;
-          border: none;
-          font-size: 1.25rem;
-          background-color: $lightest-grey;
-        }
       }
     }
   }

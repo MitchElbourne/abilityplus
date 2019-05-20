@@ -76,13 +76,24 @@
       // });
     });
 
-    // function SignUpHandler() {
-    //   if($("#JB_Validate_Modal").hasClass('Not-Validated')) {
-    //     $('#SignUpModal').modal('show');
-    //   }
-    // }
+    function passwordResetHandler() {
+      if($("#Password_Validate_Modal").hasClass('Not-Validated')) {
+        $('#PasswordModal').modal('show');
+      }
+    }
+    passwordResetHandler();
 
-    // SignUpHandler();
+    function inputFocusHandler() {
+      $(document).ready(function() {
+        $('input').focus(function() {
+          $(this).parent().addClass("focus");
+        }).blur(function() {
+          $(this).parent().removeClass("focus");
+        })
+      });
+    } 
+
+    inputFocusHandler();
 
 	});
 
