@@ -22,6 +22,8 @@ get_header();
     </div>
   </section>
 
+  <?php print_r(JB()->session->get('jb_notices', array())["error"][0]); ?>
+
 </main>
 
 <?php

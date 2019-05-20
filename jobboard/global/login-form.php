@@ -54,3 +54,5 @@ if ( ! defined( 'ABSPATH' ) ) {
     <input type="hidden" name="dashboard" value="<?php echo esc_attr($args['dashboard']); ?>">
   </p>
 </form>
+
+<?php print_r(JB()->session->get('jb_notices', array())); ?>

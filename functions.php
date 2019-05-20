@@ -169,7 +169,7 @@ function custom_form_fields() {
         'title'         => esc_html__('Account Type', 'jobboard-register' ),
         'type'          => 'select',
         'require'       => true,
-        'value'         => '',
+        'value'         => 'candidate',
         'options'       => array(
             'candidate' => esc_html__('Candidate', 'jobboard-register'),
             'employer'  => esc_html__('Employer', 'jobboard-register'),
@@ -184,3 +184,64 @@ function custom_form_fields() {
     )
   );
 }
+
+if(!function_exists('jb_parse_custom_fields')) {
+
+}
+function jb_parse_custom_fields($field)
+{
+
+    if (!isset($field['type'])) {
+        return $field;
+    }
+
+    $notices = JB()->session->get('jb_notices', array());
+    // var_dump($notices);
+    $default = array(
+        'id' => '',
+        'name' => $field['id'],
+        'title' => esc_html__('Title', JB_TEXT_DOMAIN),
+        'subtitle' => '',
+        'placeholder' => '',
+        'desc' => '',
+        'col' => 12,
+        'require' => 0,
+        'notice' => esc_attr__('This is a required field.', JB_TEXT_DOMAIN),
+        'notice' => $notices['error'][0],
+        'value' => '',
+        'class' => ''
+    );
+
+    switch ($field['type']) {
+        case 'text':
+            $field = wp_parse_args($field, array_merge($default, array(
+                'input' => 'text',
+                'default' => ''
+            )));
+            break;
+        case 'media':
+            $field = wp_parse_args($field, array_merge($default, array(
+                'input' => 'file',
+                'button' => esc_html__('Select File', JB_TEXT_DOMAIN),
+                'require-types' => '',
+                'require-dimension' => 1000
+            )));
+            break;
+        case 'select':
+            $field = wp_parse_args($field, array_merge($default, array(
+                'multi' => false,
+                'options' => array()
+            )));
+            break;
+        case 'radio':
+            $field = wp_parse_args($field, array_merge($default, array(
+                'options' => array()
+            )));
+            break;
+        default :
+            $field = wp_parse_args($field, $default);
+            break;
+    }
+
+    return $field;
+  }

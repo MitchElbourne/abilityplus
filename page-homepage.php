@@ -1,5 +1,4 @@
 <?php
-
 get_header();
 ?>
 
@@ -36,7 +35,6 @@ get_header();
       </div><!--row-->
     </div><!--container-->
   </section><!--#introduction-->
-
 
 
 </main>
