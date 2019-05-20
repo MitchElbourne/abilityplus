@@ -76,9 +76,18 @@ label {
 .jobboard-notices {
   z-index: 9999999;
 }
+.jobboard-content {
+  .row {
+    margin: 0;
+  }
+}
 
 #bitnami-banner {
   display: none;
+}
+
+* {
+  // border: 1px solid red;
 }
 
 div.remember {

@@ -86,6 +86,9 @@ label {
 .jobboard-notices {
   z-index: 9999999; }
 
+.jobboard-content .row {
+  margin: 0; }
+
 #bitnami-banner {
   display: none; }
 
@@ -221,9 +224,9 @@ header#site-header {
   top: 0;
   width: 100%;
   align-self: center;
-  z-index: 199; }
+  z-index: 199;
+  background-color: white; }
   header#site-header nav {
-    background-color: white;
     padding: 2rem 0; }
     header#site-header nav .navbar-brand {
       padding-bottom: 0.85rem; }

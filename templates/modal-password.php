@@ -14,7 +14,7 @@
       <?php echo do_shortcode('[jobboard_register_forgot_password]'); ?>
       
       <?php if($error['error'][0] == "Error : You need to enter an email address.") { ?>
-        <span id="Password_Validate_Modal" class="Not-Validated error">Please Enter in an Email</span>
+        <span id="Password_Validate_Modal" class="Not-Validated error">Please enter in an Email</span>
         
       <?php } ?>
       

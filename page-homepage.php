@@ -9,7 +9,7 @@ get_header();
         <h1 class="col-12 col-lg-7 col-md-9 m-auto">Planning your next career journey?</h1>
         <p class="text col-12 col-lg-6 col-md-9">We understand a small step in a new direction is a giant leap. You may be unsure of the destination, so let us assist with your direction.</p>
         <div class="cta-container col-12">
-          <a title='Sign Up' href='#' data-target='#SignUpModal' data-toggle='modal' class="bold">Sign Up</a>
+          <a title='Sign Up' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">Sign Up</a>
           <a title="How we work" href="#how-we-work" class="bold">How We Work</a>
         </div>
         <div class="panel-container">
