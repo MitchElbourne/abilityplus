@@ -125,22 +125,22 @@ body.home {
           flex-direction: column;
           div.panel {
             display: flex;
-            margin: 3rem 0;
-            text-align: start;
-            &:nth-of-type(even) {
-              flex-direction: row-reverse;
-            }
+            // border: 1px solid red;
             div.content {
-              border: 1px solid red;
-              flex: 1 1 calc(10%/2);
+              text-align: start;
+              margin-right: 5.65rem;
+              padding: 3rem;
+              h3 {
+                margin: 1.25rem 0;
+              }
+              img.icon {
+                max-width: 2.5rem;
+              }
             }
-            div.image-wrapper {
-              border: 1px solid red;
+            img.illustration {
+              // border: 1px solid red;
               width: 30%;
-              padding-bottom: 30%;
-              background-repeat: no-repeat;
-              background-size: contain;
-              background-position: center;
+              height: 30%;
             }
           }
         }

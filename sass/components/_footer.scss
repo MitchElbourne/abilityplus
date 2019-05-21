@@ -105,12 +105,16 @@ footer#site-footer {
       }
     }
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     .container {
       div.information-container {
         flex-wrap: wrap;
         div.services {
           flex-basis: 100%;
+          padding-right: 0;
+          div.find-talent, div.find-jobs {
+            width: 50%;
+          }
         }
         div.company {
           flex-basis: 10%;
@@ -126,7 +130,7 @@ footer#site-footer {
       }
     }
   }
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     .container {
       div.information-container {
         flex-wrap: wrap;

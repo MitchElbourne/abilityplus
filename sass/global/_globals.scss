@@ -40,11 +40,21 @@ body {
 .container {
   max-width: 1440px;
 }
-main > header > .container,
+header > .container,
 main > section > .container,
 main > article > .container,
-main > footer > .container {
+footer > .container {
   max-width: 1400px;
+  padding: 0 7.8rem;
+  @include media-breakpoint-down(md) {
+    padding: 0 5rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 2rem;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 1rem;
+  }
 }
 
 button,

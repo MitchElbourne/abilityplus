@@ -28,7 +28,7 @@
   <body <?php body_class(); ?>>
     <header id="site-header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-xl">
 
           <!-- Logo -->
           <a class="navbar-brand" href="<?php echo esc_url(site_url('/')) ?>">

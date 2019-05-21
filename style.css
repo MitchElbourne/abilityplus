@@ -56,11 +56,30 @@ body {
 .container {
   max-width: 1440px; }
 
-main > header > .container,
+header > .container,
 main > section > .container,
 main > article > .container,
-main > footer > .container {
-  max-width: 1400px; }
+footer > .container {
+  max-width: 1400px;
+  padding: 0 7.8rem; }
+  @media (max-width: 991px) {
+    header > .container,
+    main > section > .container,
+    main > article > .container,
+    footer > .container {
+      padding: 0 5rem; } }
+  @media (max-width: 767px) {
+    header > .container,
+    main > section > .container,
+    main > article > .container,
+    footer > .container {
+      padding: 0 2rem; } }
+  @media (max-width: 575px) {
+    header > .container,
+    main > section > .container,
+    main > article > .container,
+    footer > .container {
+      padding: 1rem; } }
 
 button,
 input {
@@ -236,6 +255,8 @@ header#site-header {
       flex-grow: 1; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: auto; }
+        header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
+          padding-left: 0; }
       header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         color: #2578db;
         background-color: rgba(37, 120, 219, 0.18);
@@ -250,13 +271,14 @@ header#site-header {
         padding: 0.5rem 1.2rem; }
         header#site-header nav div#primary-menu ul li a:hover, header#site-header nav div#primary-menu ul li a:focus {
           color: #0a468f; }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     header#site-header nav div#primary-menu ul {
       text-align: center;
-      border: 1px solid #2578db;
       padding: 2rem; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: 0; }
+        header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
+          padding-left: 1.2rem; }
       header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         display: inline-block; } }
 
@@ -331,11 +353,14 @@ footer#site-footer {
       color: rgba(28, 43, 56, 0.5); }
     footer#site-footer .container div.legal-row a.terms-and-conditions {
       color: #1a2733; }
-  @media (max-width: 991px) {
+  @media (max-width: 1199px) {
     footer#site-footer .container div.information-container {
       flex-wrap: wrap; }
       footer#site-footer .container div.information-container div.services {
-        flex-basis: 100%; }
+        flex-basis: 100%;
+        padding-right: 0; }
+        footer#site-footer .container div.information-container div.services div.find-talent, footer#site-footer .container div.information-container div.services div.find-jobs {
+          width: 50%; }
       footer#site-footer .container div.information-container div.company {
         flex-basis: 10%;
         margin-top: 2rem; }
@@ -344,7 +369,7 @@ footer#site-footer {
         margin-top: 2rem; }
       footer#site-footer .container div.information-container div.contact-information {
         margin-top: 2rem; } }
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     footer#site-footer .container div.information-container {
       flex-wrap: wrap; }
       footer#site-footer .container div.information-container div.services {
@@ -450,21 +475,18 @@ body.home section#how-we-work .container .row {
     display: flex;
     flex-direction: column; }
     body.home section#how-we-work .container .row div.panel-container div.panel {
-      display: flex;
-      margin: 3rem 0;
-      text-align: start; }
-      body.home section#how-we-work .container .row div.panel-container div.panel:nth-of-type(even) {
-        flex-direction: row-reverse; }
+      display: flex; }
       body.home section#how-we-work .container .row div.panel-container div.panel div.content {
-        border: 1px solid red;
-        flex: 1 1 calc(10%/2); }
-      body.home section#how-we-work .container .row div.panel-container div.panel div.image-wrapper {
-        border: 1px solid red;
+        text-align: start;
+        margin-right: 5.65rem;
+        padding: 3rem; }
+        body.home section#how-we-work .container .row div.panel-container div.panel div.content h3 {
+          margin: 1.25rem 0; }
+        body.home section#how-we-work .container .row div.panel-container div.panel div.content img.icon {
+          max-width: 2.5rem; }
+      body.home section#how-we-work .container .row div.panel-container div.panel img.illustration {
         width: 30%;
-        padding-bottom: 30%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center; }
+        height: 30%; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;

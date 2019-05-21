@@ -35,6 +35,27 @@ get_header();
       </div><!--row-->
     </div><!--container-->
   </section><!--#introduction-->
+
+
+
+  <section id="how-we-work">
+    <div class="container">
+      <div class="row">
+        <h2 class="h3 m-auto col-12 col-md-8">How We Work</h2>
+        <p class="text col-12 col-md-8">With AbilityPlus, it’s easy to create an application, get exposure to recruiters and interview for your next job.</p>
+        <div class="panel-container col-12 col-md-10 m-auto">
+          <div class="panel">
+            <div class="content">
+              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-1.svg'); ?>" alt="How we Work Step One Icon" class="icon">
+              <h3 class="h5">Registering with AbilityPlus</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim aliquam, porttitor mauris sed, rhoncus lorem. In nibh enim, bibendum at lorem eu, condimentum tempor nisl.</p>
+            </div>
+            <img src="<?php echo get_theme_file_uri('/assets/illus-howwework-register.png'); ?>" alt="Register with ability plus illustration" class="illustration">
+          </div>
+        </div><!--panel-container-->
+      </div><!--row-->
+    </div><!--container-->
+  </section><!--#how-we-work-->
  
 </main>
 
