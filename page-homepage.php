@@ -41,16 +41,53 @@ get_header();
   <section id="how-we-work">
     <div class="container">
       <div class="row">
-        <h2 class="h3 m-auto col-12 col-md-8">How We Work</h2>
+        <h2 class="h3 m-auto col-12 col-lg-8 col-md-9">How We Work</h2>
         <p class="text col-12 col-md-8">With AbilityPlus, it’s easy to create an application, get exposure to recruiters and interview for your next job.</p>
         <div class="panel-container col-12 col-md-10 m-auto">
           <div class="panel">
             <div class="content">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-1.svg'); ?>" alt="How we Work Step One Icon" class="icon">
+              <div class="icon-wrapper" style="background-image: url(<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-1.svg'); ?>);"></div>
               <h3 class="h5">Registering with AbilityPlus</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim aliquam, porttitor mauris sed, rhoncus lorem. In nibh enim, bibendum at lorem eu, condimentum tempor nisl.</p>
             </div>
-            <img src="<?php echo get_theme_file_uri('/assets/illus-howwework-register.png'); ?>" alt="Register with ability plus illustration" class="illustration">
+            <div class="image-wrapper" style="background-image: url('<?php echo get_theme_file_uri('/assets/illus-howwework-register.png'); ?>');'"></div>
+          </div>
+
+          <div class="panel">
+            <div class="content">
+              <div class="icon-wrapper" style="background-image: url(<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-2.svg'); ?>);"></div>
+              <h3 class="h5">CV & Cover letter review</h3>
+              <p>Integer aliquam sem porttitor enim mollis finibus. Vestibulum metus odio, vulputate ac dapibus sit amet, posuere nec erat. Fusce bibendum risus eu mauris sollicitudin, in facilisis dui venenatis.<br />
+              Phasellus eget pretium neque. Sed eget nunc vitae eros venenatis mollis sed in ipsum. Donec egestas faucibus volutpat.</p>
+            </div>
+            <div class="image-wrapper" style="background-image: url('<?php echo get_theme_file_uri('/assets/illus-howwework-cv-cover.png'); ?>');'"></div>
+          </div>
+
+          <div class="panel">
+            <div class="content">
+              <div class="icon-wrapper" style="background-image: url(<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-3.svg'); ?>);"></div>
+              <h3 class="h5">Targeted job searches</h3>
+              <p>Vivamus mollis risus metus, eget imperdiet velit lacinia eu. Etiam ut consectetur massa. Donec facilisis, mauris ut sagittis fringilla, elit dolor malesuada nulla, at ultrices nibh risus id nisi. Mauris auctor posuere tortor non mattis.</p>
+            </div>
+            <div class="image-wrapper" style="background-image: url('<?php echo get_theme_file_uri('/assets/illus-howwework-job-search.png'); ?>');'"></div>
+          </div>
+
+          <div class="panel">
+            <div class="content">
+              <div class="icon-wrapper" style="background-image: url(<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-4.svg'); ?>);"></div>
+              <h3 class="h5">Interviews</h3>
+              <p>Vivamus mollis risus metus, eget imperdiet velit lacinia eu. Etiam ut consectetur massa. Donec facilisis, mauris ut sagittis fringilla, elit dolor malesuada nulla, at ultrices nibh risus id nisi. Mauris auctor posuere tortor non mattis.</p>
+            </div>
+            <div class="image-wrapper" style="background-image: url('<?php echo get_theme_file_uri('/assets/illus-howwework-interview.png'); ?>');'"></div>
+          </div>
+
+          <div class="panel">
+            <div class="content">
+              <div class="icon-wrapper" style="background-image: url(<?php echo get_theme_file_uri('/assets/svg/icon-howwework-number-5.svg'); ?>);"></div>
+              <h3 class="h5">Get the right job</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim aliquam, porttitor mauris sed, rhoncus lorem. In nibh enim, bibendum at lorem eu, condimentum tempor nisl.</p>
+            </div>
+            <div class="image-wrapper" style="background-image: url('<?php echo get_theme_file_uri('/assets/illus-howwework-handshake.png'); ?>');'"></div>
           </div>
         </div><!--panel-container-->
       </div><!--row-->
