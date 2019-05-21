@@ -53,6 +53,12 @@ body {
       padding-bottom: 3.75rem; }
       body .wrapper section:first-of-type {
         padding-top: 0; }
+  @media (max-width: 991px) {
+    body .wrapper {
+      padding-top: 8rem; } }
+  @media (max-width: 767px) {
+    body .wrapper {
+      padding-top: 6rem; } }
 
 .container {
   max-width: 1440px;
@@ -189,9 +195,18 @@ body {
   body h1, body .h1 {
     font-size: 3em;
     margin-bottom: 0; }
+    @media (max-width: 767px) {
+      body h1, body .h1 {
+        font-size: 2.75rem; } }
+    @media (max-width: 575px) {
+      body h1, body .h1 {
+        font-size: 2.5rem; } }
   body h2, body .h2 {
     font-size: 2.625em;
     margin-bottom: 0; }
+    @media (max-width: 767px) {
+      body h2, body .h2 {
+        font-size: 2.4rem; } }
   body h3, body .h3 {
     font-size: 2.25em;
     margin-bottom: 0; }
@@ -283,6 +298,10 @@ header#site-header {
           padding-left: 1.2rem; }
       header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         display: inline-block; } }
+  @media (max-width: 767px) {
+    header#site-header nav {
+      padding: 0.25rem 0;
+      border: 1px solid red; } }
 
 footer#site-footer {
   padding: 6rem 0;
@@ -306,12 +325,16 @@ footer#site-footer {
         border: 1px solid #d2d5d7;
         border-radius: 5px; }
         footer#site-footer .container div.information-container div.services div.content div.find-jobs, footer#site-footer .container div.information-container div.services div.content div.find-talent {
-          padding: 0 1rem; }
+          padding: 0 1rem;
+          display: flex;
+          flex-direction: column; }
           footer#site-footer .container div.information-container div.services div.content div.find-jobs p, footer#site-footer .container div.information-container div.services div.content div.find-talent p {
             color: rgba(28, 43, 56, 0.5);
             margin: 1rem 0; }
-          footer#site-footer .container div.information-container div.services div.content div.find-jobs a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-jobs a:focus svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:focus svg g path {
-            stroke: #0a468f; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs a, footer#site-footer .container div.information-container div.services div.content div.find-talent a {
+            margin-top: auto; }
+            footer#site-footer .container div.information-container div.services div.content div.find-jobs a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-jobs a:focus svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:hover svg g path, footer#site-footer .container div.information-container div.services div.content div.find-talent a:focus svg g path {
+              stroke: #0a468f; }
         footer#site-footer .container div.information-container div.services div.content div.find-jobs {
           border-right: 1px solid #d2d5d7; }
     footer#site-footer .container div.information-container div.company {

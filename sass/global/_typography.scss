@@ -16,11 +16,20 @@ body {
   h1, .h1 {
     font-size: 3em;
     margin-bottom: 0;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.75rem;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 2.5rem;
+    }
   }
   
   h2, .h2 {
     font-size: 2.625em;
     margin-bottom: 0;
+    @include media-breakpoint-down(sm) {
+      font-size: 2.4rem;
+    }
   }
   
   h3, .h3 {

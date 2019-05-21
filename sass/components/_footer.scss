@@ -25,11 +25,15 @@ footer#site-footer {
           border-radius: 5px;
           div.find-jobs, div.find-talent {
             padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
             p {
               color: $middle-grey;
               margin: 1rem 0;
             }
             a {
+              margin-top: auto;
+              
               &:hover, &:focus {
                 svg g {
                   path {
