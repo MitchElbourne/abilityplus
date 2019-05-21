@@ -57,10 +57,13 @@
       $('.sign-up-cta-modal').on('click', function() {
         $('#LogInModal').modal('hide');
       })
-
-      $('.log-in-cta-modal').on('click', function() {
-        $('#SignUpModal').modal('hide');
+      $('.forgot-password-cta-modal').on('click', function() {
+        $('#LogInModal').modal('hide');
       })
+
+      // $('.log-in-cta-modal').on('click', function() {
+      //   $('#SignUpModal').modal('hide');
+      // })
     }
     modalLogic();
 
@@ -68,18 +71,29 @@
       $("#job_specialisms").select2({
         dropdownParent: $("#SignUpModal")
       });
-      $("#user_type").select2({
-        dropdownParent: $("#SignUpModal")
-      });
+      // $("#user_type").select2({
+      //   dropdownParent: $("#SignUpModal")
+      // });
     });
 
-    function SignUpHandler() {
-      if($("#JB_Validate_Modal").hasClass('Not-Validated')) {
-        $('#SignUpModal').modal('show');
+    function passwordResetHandler() {
+      if($("#Password_Validate_Modal").hasClass('Not-Validated')) {
+        $('#PasswordModal').modal('show');
       }
     }
+    passwordResetHandler();
 
-    SignUpHandler();
+    function inputFocusHandler() {
+      $(document).ready(function() {
+        $('input').focus(function() {
+          $(this).parent().addClass("focus");
+        }).blur(function() {
+          $(this).parent().removeClass("focus");
+        })
+      });
+    } 
+
+    inputFocusHandler();
 
 	});
 

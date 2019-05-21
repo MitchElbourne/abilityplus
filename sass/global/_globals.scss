@@ -25,7 +25,7 @@ body {
   .wrapper {
     flex-grow: 1; 
     padding-top: 10rem;
-    max-width: 1400px;
+    // max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     section {
@@ -37,6 +37,9 @@ body {
   }
 }
 
+.container {
+  max-width: 1440px;
+}
 main > header > .container,
 main > section > .container,
 main > article > .container,
@@ -59,7 +62,6 @@ svg, svg g, svg g path {
 label {
   margin-bottom: 0;
 }
-
 // For controlling Modal open/close behaviour
 // Stops padding add and re-adds the scrollbar
 .modal-open, .modal {
@@ -74,9 +76,18 @@ label {
 .jobboard-notices {
   z-index: 9999999;
 }
+.jobboard-content {
+  .row {
+    margin: 0;
+  }
+}
 
 #bitnami-banner {
   display: none;
+}
+
+* {
+  // border: 1px solid red;
 }
 
 div.remember {
@@ -142,4 +153,14 @@ div.remember {
   &:hover, &:focus {
     background-color: rgba($primary-blue, 0.85);
   }
+}
+
+.select2-dropdown {
+  position: relative;
+}
+
+span.error {
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  color: $error;
 }

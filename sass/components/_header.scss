@@ -4,8 +4,8 @@ header#site-header {
   width: 100%;
   align-self: center;
   z-index: 199;
+  background-color: $white;
   nav {
-    background-color: $white;
     padding: 2rem 0;
     .navbar-brand {
       padding-bottom: 0.85rem;

@@ -1,0 +1,110 @@
+main[role="main"] {
+  section#sign-up-form {
+    .container {
+      div.introduction {
+        display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #a4aaaf;
+        h2.h1 {
+          display: inline-block;
+        }
+        span.modal-cta {
+          color: $middle-grey;
+          display: inline-block;
+          margin-left: auto;
+          align-self: flex-end;
+          a {
+            cursor: pointer;
+            color: $primary-blue;
+          }
+        }
+      }
+      div.information-container {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 2rem 0 3.5rem;
+        div.information {
+          flex: 1 1 calc(100%/2);
+          padding-right: 2rem;
+          p.text {
+            margin: 1.5rem 0;
+          }
+        }
+        img.illustration {
+          background-color: $lighter-grey;
+          width: 27rem;
+          border-radius: 12px;
+        }
+      }
+      form {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 2rem;
+        .form-fields {
+          .row {
+            .field { 
+              &.col-md-6 {
+                flex: 1 1 calc(100%/2 - 1rem);
+                &:nth-of-type(odd) {
+                  margin-right: 1rem;
+                }
+              }
+              margin-bottom: 1rem;
+              padding: 0 1rem;
+              background-color: $lightest-grey;
+              border-radius: 4px;
+              border: 2px solid transparent;
+              transition: all 200ms;
+              label {
+                color: $middle-grey;
+                margin-right: 0.2rem;
+              }
+              span {
+                font-size: 0.7rem;
+              }
+              input {
+                border: none;
+                font-size: 1.25rem;
+                background-color: $lightest-grey;
+              }
+              &.focus {
+                border-color: $primary-blue;
+                background-color: $white;
+                input {
+                  background-color: $white;
+                }
+              }
+            }
+            &:nth-last-of-type(1), &:nth-last-of-type(2) {
+              .field {
+                display: flex;
+                flex-wrap: wrap;
+                span.select2 {
+                  min-width: 100%;
+                  display: block;
+                  border: none;
+                  span.selection {
+                    span.select2-selection {
+                      border: none;
+                      background-color: $lightest-grey;
+                      span.select2-selection__rendered {
+                        font-size: 1rem;
+                        margin-top: 0.75rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        div.form-actions {
+          text-align: center;
+          input[type="submit"] {
+            padding: 0.75rem 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}
