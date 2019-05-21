@@ -132,17 +132,18 @@ get_header();
           if($blogposts->have_posts()) {
             while($blogposts->have_posts()) {
               $blogposts->the_post();
+              $image = get_the_post_thumbnail_url();
               ?>
             <article>
-              <div class="image-wrapper"></div>
-              <h3 class="title"><?php echo get_the_title(); ?></h3>
+              <div class="image-wrapper" style="background-image: url('<?php  echo $image; ?>)"></div>
+              <h3 class="h5 title"><?php echo get_the_title(); ?></h3>
               <p class="excerpt"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-              <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+              <a href="<?php echo get_the_permalink(); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
             </article>
-
-      <?php }
+      <?php } 
           } ?>
         </div>
+        <a href="" class="cta-blue">View all posts</a>
       </div>
     </div>
   </section><!--#blog-recommendations-->

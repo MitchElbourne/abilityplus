@@ -142,7 +142,6 @@ div.remember {
   display: flex;
   width: 3rem;
   height: 3rem;
-  margin-top: auto;
   padding: 1rem 1rem 0.95rem;
   border-radius: 100%;
   background-color: rgba($primary-blue, 0.12);
@@ -155,7 +154,6 @@ div.remember {
   }
 }
 
-
 .cta-blue {
   flex: 1 1 auto;
   display: inline-block;
@@ -167,8 +165,10 @@ div.remember {
   color: $white;
   background-color: $primary-blue;
   transition: all 200ms;
+  font-family: $tkusualbd;
   &:hover, &:focus {
     background-color: rgba($primary-blue, 0.85);
+    color: $white;
   }
 }
 

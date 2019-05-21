@@ -54,6 +54,9 @@ body.home {
             p.sub-text {
               margin: 1rem 0 2rem;
             }
+            a{
+              margin-top: auto;
+            }
           }
         }
       }
@@ -210,7 +213,7 @@ body.home {
 
 
   section#find-your-job {
-    padding: 0 0 2rem;
+    padding: 0 0 6rem;
     .container {
       .row {
         background-image: url('../wp-recruitment-child/assets/layout-blob.png');
@@ -244,7 +247,58 @@ body.home {
             padding: 3rem;
             border-radius: 4px;
             article {
+              display: flex;
+              flex-direction: column;
+              flex: 1 1 calc(100%/2);
+              text-align: left;
+              div.image-wrapper {
+                margin-bottom: 2rem;
+                width: 12.5rem;
+                height: 12.5rem;
+                border-radius: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 22rem;
+              }
+              p.excerpt {
+                margin: 0.75rem 0 1.5rem;
+              }
+              a {
+                margin-top: auto;
+              }
               
+              &:first-of-type {
+                border-right: 1px solid $lighter-grey;
+                padding-right: 2.25rem;
+                margin-right: 2.25rem;
+              }
+            }
+          }
+          a.cta-blue {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .container {
+        .row {
+          .content {
+            div.blog-container {
+              flex-direction: column;
+              article {
+                div.image-wrapper {
+                  margin: 0 auto 2rem;
+                }
+                &:first-of-type {
+                  border-right: none;
+                  border-bottom: 1px solid $lighter-grey;
+                  padding-right: 0;
+                  margin-right: 0;
+                  margin-bottom: 2.25rem;
+                  padding-bottom: 2.25rem;
+                }
+              }
             }
           }
         }
