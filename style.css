@@ -140,9 +140,10 @@ div.remember {
   display: flex;
   width: 3rem;
   height: 3rem;
-  padding: 1rem 1rem 0.95rem;
+  padding: 1.1rem 1rem 0.95rem;
   border-radius: 100%;
-  background-color: rgba(37, 120, 219, 0.12); }
+  background-color: rgba(37, 120, 219, 0.12);
+  transition: all 200ms; }
   .cta-arrow-right span.icon {
     display: flex;
     align-self: center; }
@@ -519,16 +520,27 @@ body.home section#how-we-work .container .row {
 body.home section#find-your-job {
   padding: 0 0 6rem; }
   body.home section#find-your-job .container .row {
-    background-image: url("../wp-recruitment-child/assets/layout-blob.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    position: relative;
     text-align: center;
     flex-direction: column;
     padding: 5rem 0; }
+    body.home section#find-your-job .container .row::before {
+      content: '';
+      background-image: url("../wp-recruitment-child/assets/layout-blob.png");
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.5; }
     body.home section#find-your-job .container .row p.text {
       display: inline-block;
       margin: 1.25rem auto 1.875rem; }
+    body.home section#find-your-job .container .row div.cta-container {
+      z-index: 1; }
 body.home section#blog-recommendations {
   background-color: rgba(37, 120, 219, 0.08); }
   body.home section#blog-recommendations .container .row .content {

@@ -216,16 +216,26 @@ body.home {
     padding: 0 0 6rem;
     .container {
       .row {
-        background-image: url('../wp-recruitment-child/assets/layout-blob.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
+        position: relative;
+        &::before {
+          content: '';
+          background-image: url('../wp-recruitment-child/assets/layout-blob.png');
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          opacity: 0.5;
+        }
         text-align: center;
         flex-direction: column;
         padding: 5rem 0;
         p.text {
           display: inline-block;
           margin: 1.25rem auto 1.875rem;
+        }
+        div.cta-container {
+          z-index: 1;
         }
       }
     }

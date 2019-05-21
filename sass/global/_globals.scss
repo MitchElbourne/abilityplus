@@ -142,9 +142,10 @@ div.remember {
   display: flex;
   width: 3rem;
   height: 3rem;
-  padding: 1rem 1rem 0.95rem;
+  padding: 1.1rem 1rem 0.95rem;
   border-radius: 100%;
   background-color: rgba($primary-blue, 0.12);
+  transition: all 200ms;
   span.icon {
     display: flex;
     align-self: center;
