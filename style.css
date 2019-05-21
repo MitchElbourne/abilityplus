@@ -501,10 +501,13 @@ body.home section#how-we-work .container .row {
         background-position: center;
         background-size: contain; }
 @media (max-width: 1199px) {
-  body.home section#how-we-work .container .row div.panel-container div.panel:nth-of-type(even) div.content {
-    margin-left: 3rem; }
-  body.home section#how-we-work .container .row div.panel-container div.panel div.content {
-    padding: 1rem; } }
+  body.home section#how-we-work .container .row div.panel-container div.panel {
+    margin: 1rem 0; }
+    body.home section#how-we-work .container .row div.panel-container div.panel:nth-of-type(even) div.content {
+      margin-left: 3rem; }
+    body.home section#how-we-work .container .row div.panel-container div.panel div.content {
+      padding: 1rem;
+      margin-right: 3rem; } }
 @media (max-width: 991px) {
   body.home section#how-we-work .container .row div.panel-container div.panel {
     flex-direction: column; }
@@ -523,6 +526,17 @@ body.home section#how-we-work .container .row {
 @media (max-width: 767px) {
   body.home section#how-we-work .container .row div.panel-container div.panel div.content {
     padding: 1rem; } }
+body.home section#find-your-job .container .row {
+  background-image: url("../wp-recruitment-child/assets/layout-blob.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  flex-direction: column;
+  padding: 5rem 0; }
+  body.home section#find-your-job .container .row p.text {
+    display: inline-block;
+    margin: 1.25rem auto 1.875rem; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;
@@ -604,7 +618,7 @@ main[role="main"] section#sign-up-form .container div.information-container {
 main[role="main"] section#sign-up-form .container form {
   background-color: white;
   border-radius: 8px;
-  padding: 2rem; }
+  padding: 0 15px; }
   main[role="main"] section#sign-up-form .container form .form-fields .row .field {
     margin-bottom: 1rem;
     padding: 0 1rem;

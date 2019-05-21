@@ -95,6 +95,27 @@ get_header();
   </section><!--#how-we-work-->
 
 
+  <section id="find-your-job">
+    <div class="container">
+      <div class="row">
+        <h2 class="h5 m-auto col-12 col-lg-8 col-md-9">Ready to find your next job?</h2>
+        <p class="text col-12 col-lg-8 col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim aliquam, porttitor mauris sed, rhoncus lorem. In nibh enim, bibendum at lorem eu, condimentum tempor nisl.</p>
+        <div class="cta-container">
+          <?php  
+            $urlCta;
+            if(!is_user_logged_in()) {
+              $urlCta = esc_url(site_url('/profile/sign-up'));
+            } else {
+              $urlCta = esc_url(site_url('/vacancies'));
+            }
+          ?>
+          <a href="<?php echo $urlCta; ?>" class="cta-blue"><?php if((!is_user_logged_in())) echo "Register today"; else echo "View vacancies" ?></a>
+        </div>
+      </div>
+    </div>
+  </section><!--#find-your-job-->
+
+
 
  
 </main>
