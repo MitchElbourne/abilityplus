@@ -56,6 +56,22 @@ if (function_exists("vc_set_shortcodes_templates_dir")) {
   vc_set_shortcodes_templates_dir(get_stylesheet_directory() . "/vc_templates/");
 }
 
+// add_filter('registration_errors', function($wp_error, $sanitized_user_login, $user_email){
+//   if(isset($wp_error->errors['empty_username'])){
+//       unset($wp_error->errors['empty_username']);
+//   }
+
+//   if(isset($wp_error->errors['username_exists'])){
+//       unset($wp_error->errors['username_exists']);
+//   }
+//   return $wp_error;
+// }, 10, 3);
+
+// add_action('login_form_register', function(){
+//   if(isset($_POST['user_login']) && isset($_POST['user_email']) && !empty($_POST['user_email'])){
+//       $_POST['user_login'] = $_POST['user_email'];
+//   }
+// });
 
 // Only show adming bar if the user is a job manager
 $user = wp_get_current_user();
@@ -123,12 +139,13 @@ add_filter('jobboard-register-fields', 'custom_form_fields');
 
 function custom_form_fields() {
   return $fields = array(
-    // 'user_login' => array(
-    //     'id'            => 'user_login',
-    //     'type'          => 'text',
-    //     'title'         => esc_html__('Username', 'jobboard-register'),
-    //     'require'       => true
-    // ),
+    'user_login' => array(
+        'id'            => 'user_login',
+        'type'          => 'text',
+        'value'         =>  '',
+        'title'         => esc_html__('Username', 'jobboard-register'),
+        'require'       => true
+    ),
     'first_name' => array(
         'id'            => 'first_name',
         'type'          => 'text',

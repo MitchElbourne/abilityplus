@@ -42,7 +42,11 @@ main[role="main"] {
         padding: 0 15px;
         .form-fields {
           .row {
+            &:first-of-type {
+              display: none;
+            }
             .field { 
+              
               &.col-md-6 {
                 flex: 1 1 calc(100%/2 - 1rem);
                 &:nth-of-type(odd) {
@@ -102,6 +106,7 @@ main[role="main"] {
           text-align: center;
           input[type="submit"] {
             padding: 0.75rem 1.25rem;
+            margin-right: 0;
           }
         }
       }

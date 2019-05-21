@@ -692,6 +692,8 @@ main[role="main"] section#sign-up-form .container form {
   background-color: white;
   border-radius: 8px;
   padding: 0 15px; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row:first-of-type {
+    display: none; }
   main[role="main"] section#sign-up-form .container form .form-fields .row .field {
     margin-bottom: 1rem;
     padding: 0 1rem;
@@ -733,7 +735,8 @@ main[role="main"] section#sign-up-form .container form {
   main[role="main"] section#sign-up-form .container form div.form-actions {
     text-align: center; }
     main[role="main"] section#sign-up-form .container form div.form-actions input[type="submit"] {
-      padding: 0.75rem 1.25rem; }
+      padding: 0.75rem 1.25rem;
+      margin-right: 0; }
 
 #LogInModal, #PasswordModal {
   z-index: 99999;
