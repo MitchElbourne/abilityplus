@@ -36,7 +36,7 @@
 
 header .container,
 footer .container {
-  max-width: 1400px; }
+  max-width: 1440px; }
 
 body {
   min-height: 100vh;
@@ -49,36 +49,22 @@ body {
     width: 100%;
     margin: 0 auto; }
     body .wrapper section {
-      padding: 3.75rem 0; }
+      padding-top: 3.75rem;
+      padding-bottom: 3.75rem; }
       body .wrapper section:first-of-type {
         padding-top: 0; }
 
 .container {
-  max-width: 1440px; }
-
-header > .container,
-main > section > .container,
-main > article > .container,
-footer > .container {
-  max-width: 1400px;
+  max-width: 1440px;
   padding: 0 7.8rem; }
   @media (max-width: 991px) {
-    header > .container,
-    main > section > .container,
-    main > article > .container,
-    footer > .container {
+    .container {
       padding: 0 5rem; } }
   @media (max-width: 767px) {
-    header > .container,
-    main > section > .container,
-    main > article > .container,
-    footer > .container {
+    .container {
       padding: 0 2rem; } }
   @media (max-width: 575px) {
-    header > .container,
-    main > section > .container,
-    main > article > .container,
-    footer > .container {
+    .container {
       padding: 1rem; } }
 
 button,
@@ -149,6 +135,20 @@ div.remember {
   div.remember span {
     font-size: 0.875rem;
     margin-left: 0.5rem; }
+
+.cta-arrow-right {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin-top: auto;
+  padding: 1rem 1rem 0.95rem;
+  border-radius: 100%;
+  background-color: rgba(37, 120, 219, 0.12); }
+  .cta-arrow-right span.icon {
+    display: flex;
+    align-self: center; }
+  .cta-arrow-right:hover, .cta-arrow-right:focus {
+    background-color: rgba(37, 120, 219, 0.2); }
 
 .cta-blue {
   flex: 1 1 auto;
@@ -433,19 +433,6 @@ body.home section#introduction .container .row {
         margin-bottom: 2.5rem; }
       body.home section#introduction .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0 2rem; }
-      body.home section#introduction .container .row div.panel-container div.panel a {
-        display: flex;
-        width: 3rem;
-        height: 3rem;
-        margin-top: auto;
-        padding: 1rem 1rem 0.95rem;
-        border-radius: 100%;
-        background-color: rgba(37, 120, 219, 0.12); }
-        body.home section#introduction .container .row div.panel-container div.panel a span.icon {
-          display: flex;
-          align-self: center; }
-        body.home section#introduction .container .row div.panel-container div.panel a:hover, body.home section#introduction .container .row div.panel-container div.panel a:focus {
-          background-color: rgba(37, 120, 219, 0.2); }
 @media (max-width: 767px) {
   body.home section#introduction .container .row div.cta-container {
     flex-direction: column; }
@@ -484,7 +471,7 @@ body.home section#how-we-work .container .row {
       body.home section#how-we-work .container .row div.panel-container div.panel div.content {
         text-align: start;
         margin-right: 5.65rem;
-        padding: 3rem; }
+        padding: 0 3rem; }
         body.home section#how-we-work .container .row div.panel-container div.panel div.content h3 {
           margin: 1.25rem 0; }
         body.home section#how-we-work .container .row div.panel-container div.panel div.content div.icon-wrapper {
@@ -526,17 +513,31 @@ body.home section#how-we-work .container .row {
 @media (max-width: 767px) {
   body.home section#how-we-work .container .row div.panel-container div.panel div.content {
     padding: 1rem; } }
-body.home section#find-your-job .container .row {
-  background-image: url("../wp-recruitment-child/assets/layout-blob.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  flex-direction: column;
-  padding: 5rem 0; }
-  body.home section#find-your-job .container .row p.text {
-    display: inline-block;
-    margin: 1.25rem auto 1.875rem; }
+body.home section#find-your-job {
+  padding: 0 0 2rem; }
+  body.home section#find-your-job .container .row {
+    background-image: url("../wp-recruitment-child/assets/layout-blob.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    flex-direction: column;
+    padding: 5rem 0; }
+    body.home section#find-your-job .container .row p.text {
+      display: inline-block;
+      margin: 1.25rem auto 1.875rem; }
+body.home section#blog-recommendations {
+  background-color: rgba(37, 120, 219, 0.08); }
+  body.home section#blog-recommendations .container .row .content {
+    text-align: center;
+    margin: 0 auto; }
+    body.home section#blog-recommendations .container .row .content p.text {
+      margin: 1.5rem 0 4rem; }
+    body.home section#blog-recommendations .container .row .content div.blog-container {
+      display: flex;
+      background-color: white;
+      padding: 3rem;
+      border-radius: 4px; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;

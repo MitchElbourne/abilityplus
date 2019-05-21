@@ -19,7 +19,6 @@ get_header(); ?>
 <main id="main" role="main" class="site-main">
   <div class="container">
   <!-- <div id="content" class="<?php recruitment_page_class(); ?> container"> -->
-      
 
       <?php
       // Start the loop.

@@ -54,22 +54,6 @@ body.home {
             p.sub-text {
               margin: 1rem 0 2rem;
             }
-            a {
-              display: flex;
-              width: 3rem;
-              height: 3rem;
-              margin-top: auto;
-              padding: 1rem 1rem 0.95rem;
-              border-radius: 100%;
-              background-color: rgba($primary-blue, 0.12);
-              span.icon {
-                display: flex;
-                align-self: center;
-              }
-              &:hover, &:focus {
-                background-color: rgba($primary-blue, 0.2);
-              }
-            }
           }
         }
       }
@@ -135,7 +119,7 @@ body.home {
             div.content {
               text-align: start;
               margin-right: 5.65rem;
-              padding: 3rem;
+              padding: 0 3rem;
               h3 {
                 margin: 1.25rem 0;
               }
@@ -226,6 +210,7 @@ body.home {
 
 
   section#find-your-job {
+    padding: 0 0 2rem;
     .container {
       .row {
         background-image: url('../wp-recruitment-child/assets/layout-blob.png');
@@ -238,6 +223,30 @@ body.home {
         p.text {
           display: inline-block;
           margin: 1.25rem auto 1.875rem;
+        }
+      }
+    }
+  }
+
+  section#blog-recommendations {
+    background-color: rgba($primary-blue, 0.08);
+    .container {
+      .row {
+        .content {
+          text-align: center;
+          margin: 0 auto;
+          p.text {
+            margin: 1.5rem 0 4rem;
+          }
+          div.blog-container {
+            display: flex;
+            background-color: $white;
+            padding: 3rem;
+            border-radius: 4px;
+            article {
+              
+            }
+          }
         }
       }
     }

@@ -17,19 +17,19 @@ get_header();
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Connect with proffessionals">
             <p class="h5 bold">Connect professionals to the best jobs</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
-            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-magnifying-glass.png'); ?>" alt="Search for jobs and positions talent">
             <p class="h5 bold">Find IOM talent for your open positions</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
-            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-newspaper.png'); ?>" alt="Find new jobs every week">
             <p class="h5 bold">New jobs every week</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
-            <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
         </div><!--panel-container-->
       </div><!--row-->
@@ -115,7 +115,37 @@ get_header();
     </div>
   </section><!--#find-your-job-->
 
+  <section id="blog-recommendations">
+    <div class="container">
+      <div class="row">
+        <div class="content col-12 col-md-10">
+        <h2 class="h3">5 Minute Reads</h2>
+        <p class="text">Snippet blog posts giving you advice and opinions on recruitment from both sides of the fence</p>
+        <div class="blog-container">
+          <?php
+          $blogposts = new WP_Query(array(
+            'post_type'       => 'post',
+            'posts_per_page'  => 2,
 
+          ));
+
+          if($blogposts->have_posts()) {
+            while($blogposts->have_posts()) {
+              $blogposts->the_post();
+              ?>
+            <article>
+              <div class="image-wrapper"></div>
+              <h3 class="title"><?php echo get_the_title(); ?></h3>
+              <p class="excerpt"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
+              <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            </article>
+
+      <?php }
+          } ?>
+        </div>
+      </div>
+    </div>
+  </section><!--#blog-recommendations-->
 
  
 </main>

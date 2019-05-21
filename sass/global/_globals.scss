@@ -12,7 +12,7 @@
 header,
 footer { 
 	.container {
-		max-width: 1400px;
+		max-width: 1440px;
 	}
 }
 
@@ -25,11 +25,11 @@ body {
   .wrapper {
     flex-grow: 1; 
     padding-top: 10rem;
-    // max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     section {
-      padding: 3.75rem 0;
+      padding-top: 3.75rem;
+      padding-bottom: 3.75rem;
       &:first-of-type {
         padding-top: 0;
       }
@@ -39,12 +39,6 @@ body {
 
 .container {
   max-width: 1440px;
-}
-header > .container,
-main > section > .container,
-main > article > .container,
-footer > .container {
-  max-width: 1400px;
   padding: 0 7.8rem;
   @include media-breakpoint-down(md) {
     padding: 0 5rem;
@@ -96,10 +90,6 @@ label {
   display: none;
 }
 
-* {
-  // border: 1px solid red;
-}
-
 div.remember {
   display: flex;
   input {
@@ -145,6 +135,23 @@ div.remember {
   span {
     font-size: 0.875rem;
     margin-left: 0.5rem;
+  }
+}
+
+.cta-arrow-right {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin-top: auto;
+  padding: 1rem 1rem 0.95rem;
+  border-radius: 100%;
+  background-color: rgba($primary-blue, 0.12);
+  span.icon {
+    display: flex;
+    align-self: center;
+  }
+  &:hover, &:focus {
+    background-color: rgba($primary-blue, 0.2);
   }
 }
 
