@@ -300,8 +300,7 @@ header#site-header {
         display: inline-block; } }
   @media (max-width: 767px) {
     header#site-header nav {
-      padding: 0.25rem 0;
-      border: 1px solid red; } }
+      padding: 0.25rem 0; } }
 
 footer#site-footer {
   padding: 6rem 0;
