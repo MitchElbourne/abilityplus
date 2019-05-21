@@ -186,9 +186,7 @@ function custom_form_fields() {
 }
 
 if(!function_exists('jb_parse_custom_fields')) {
-
-}
-function jb_parse_custom_fields($field)
+  function jb_parse_custom_fields($field)
 {
 
     if (!isset($field['type'])) {
@@ -245,3 +243,4 @@ function jb_parse_custom_fields($field)
 
     return $field;
   }
+}

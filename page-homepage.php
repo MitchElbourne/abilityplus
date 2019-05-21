@@ -14,29 +14,28 @@ get_header();
         </div>
         <div class="panel-container">
           <div class="panel">
-            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Connect with proffessionals">
             <p class="h5 bold">Connect professionals to the best jobs</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
             <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
-            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-magnifying-glass.png'); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-magnifying-glass.png'); ?>" alt="Search for jobs and positions talent">
             <p class="h5 bold">Find IOM talent for your open positions</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
             <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
-            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-newspaper.png'); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-newspaper.png'); ?>" alt="Find new jobs every week">
             <p class="h5 bold">New jobs every week</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
             <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
-        </div>
+        </div><!--panel-container-->
       </div><!--row-->
     </div><!--container-->
   </section><!--#introduction-->
-
-
+ 
 </main>
 
 <?php 
