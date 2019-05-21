@@ -488,24 +488,12 @@ body.home section#how-we-work .container .row {
         body.home section#how-we-work .container .row div.panel-container div.panel div.content h3 {
           margin: 1.25rem 0; }
         body.home section#how-we-work .container .row div.panel-container div.panel div.content div.icon-wrapper {
-          width: 2rem;
-          height: 3rem;
+          width: 4rem;
+          height: 4rem;
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
           position: relative; }
-          body.home section#how-we-work .container .row div.panel-container div.panel div.content div.icon-wrapper:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-image: url("../wp-recruitment-child/assets/layout-blob.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            z-index: -1; }
       body.home section#how-we-work .container .row div.panel-container div.panel div.image-wrapper {
         min-height: 100%;
         min-width: 20rem;

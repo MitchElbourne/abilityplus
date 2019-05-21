@@ -140,25 +140,12 @@ body.home {
                 margin: 1.25rem 0;
               }
               div.icon-wrapper {
-                width: 2rem;
-                height: 3rem;
+                width: 4rem;
+                height: 4rem;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
                 position: relative;
-                &:before {
-                  content: '';
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  left: 0;
-                  background-image: url('../wp-recruitment-child/assets/layout-blob.png');
-                  background-repeat: no-repeat;
-                  background-size: contain;
-                  background-position: center;
-                  z-index: -1;
-                }
               }
             }
             div.image-wrapper {

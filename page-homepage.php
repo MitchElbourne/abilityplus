@@ -6,7 +6,7 @@ get_header();
   <section id="introduction">
     <div class="container">
       <div class="row">
-        <h1 class="col-12 col-lg-7 col-md-9 m-auto">Planning your next career journey?</h1>
+        <h1 class="col-12 col-lg-8 col-md-9 m-auto">Planning your next career journey?</h1>
         <p class="text col-12 col-lg-6 col-md-9">We understand a small step in a new direction is a giant leap. You may be unsure of the destination, so let us assist with your direction.</p>
         <div class="cta-container col-12">
           <a title='Sign Up' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">Sign Up</a>
@@ -93,6 +93,9 @@ get_header();
       </div><!--row-->
     </div><!--container-->
   </section><!--#how-we-work-->
+
+
+
  
 </main>
 
