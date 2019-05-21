@@ -10,7 +10,7 @@ get_header();
         <p class="text col-12 col-lg-6 col-md-9">We understand a small step in a new direction is a giant leap. You may be unsure of the destination, so let us assist with your direction.</p>
         <div class="cta-container col-12">
           <a title='Sign Up' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">Sign Up</a>
-          <a title="How we work" href="#how-we-work" class="bold">How We Work</a>
+          <a title="How we work" href="javascript:;" class="bold how-we-work-cta">How We Work</a>
         </div>
         <div class="panel-container">
           <div class="panel">

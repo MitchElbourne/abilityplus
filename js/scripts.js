@@ -60,10 +60,6 @@
       $('.forgot-password-cta-modal').on('click', function() {
         $('#LogInModal').modal('hide');
       })
-
-      // $('.log-in-cta-modal').on('click', function() {
-      //   $('#SignUpModal').modal('hide');
-      // })
     }
     modalLogic();
 
@@ -71,9 +67,6 @@
       $("#job_specialisms").select2({
         dropdownParent: $("#SignUpModal")
       });
-      // $("#user_type").select2({
-      //   dropdownParent: $("#SignUpModal")
-      // });
     });
 
     function passwordResetHandler() {
@@ -94,6 +87,23 @@
     } 
 
     inputFocusHandler();
+
+
+    function howweworkCtaHandler() {
+			var cta = jQuery('.how-we-work-cta');
+			var navHeight = document.getElementById("site-header").offsetHeight;
+
+			cta.click(function(e) {
+				$(window).scrollTo(
+					"#how-we-work", {
+						duration: 1000,
+						offset: (-navHeight)
+					})
+			})
+		}
+    howweworkCtaHandler();
+    
+
 
 	});
 
