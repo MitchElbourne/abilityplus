@@ -441,6 +441,30 @@ body.home section#introduction .container .row {
         margin: 2rem auto 1rem; }
       body.home section#introduction .container .row div.panel-container div.panel a {
         margin: 0 auto 3rem; } }
+body.home section#how-we-work .container .row {
+  text-align: center; }
+  body.home section#how-we-work .container .row p.text {
+    font-size: 1.25rem;
+    margin: 2rem auto; }
+  body.home section#how-we-work .container .row div.panel-container {
+    display: flex;
+    flex-direction: column; }
+    body.home section#how-we-work .container .row div.panel-container div.panel {
+      display: flex;
+      margin: 3rem 0;
+      text-align: start; }
+      body.home section#how-we-work .container .row div.panel-container div.panel:nth-of-type(even) {
+        flex-direction: row-reverse; }
+      body.home section#how-we-work .container .row div.panel-container div.panel div.content {
+        border: 1px solid red;
+        flex: 1 1 calc(10%/2); }
+      body.home section#how-we-work .container .row div.panel-container div.panel div.image-wrapper {
+        border: 1px solid red;
+        width: 30%;
+        padding-bottom: 30%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;

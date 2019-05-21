@@ -111,4 +111,40 @@ body.home {
       }
     }
   }
+  
+  section#how-we-work {
+    .container {
+      .row {
+        text-align: center;
+        p.text {
+          font-size: 1.25rem;
+          margin: 2rem auto;
+        }
+        div.panel-container {
+          display: flex;
+          flex-direction: column;
+          div.panel {
+            display: flex;
+            margin: 3rem 0;
+            text-align: start;
+            &:nth-of-type(even) {
+              flex-direction: row-reverse;
+            }
+            div.content {
+              border: 1px solid red;
+              flex: 1 1 calc(10%/2);
+            }
+            div.image-wrapper {
+              border: 1px solid red;
+              width: 30%;
+              padding-bottom: 30%;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
 }
