@@ -45,7 +45,7 @@ body {
   padding-right: 0 !important; }
   body .wrapper {
     flex-grow: 1;
-    padding-top: 10rem;
+    padding-top: 6rem;
     width: 100%;
     margin: 0 auto; }
     body .wrapper section {
@@ -538,6 +538,65 @@ body.home section#blog-recommendations {
       background-color: white;
       padding: 3rem;
       border-radius: 4px; }
+
+main#blog-archive {
+  background: #e8eaeb; }
+  main#blog-archive header .container h1 {
+    display: block;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem; }
+  main#blog-archive .blog-filter {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem; }
+    main#blog-archive .blog-filter a {
+      color: #1a2733;
+      padding: 0.66rem 1.5rem;
+      border: solid 2px #d2d5d7;
+      border-radius: 2rem;
+      margin: 0.5rem 0.66rem; }
+      main#blog-archive .blog-filter a img {
+        display: inline;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem; }
+      main#blog-archive .blog-filter a.active {
+        border: 2px solid #2578db; }
+  main#blog-archive .blog-list .container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem 0; }
+    main#blog-archive .blog-list .container .row {
+      padding-left: 4rem;
+      padding-right: 0;
+      margin: 0; }
+      main#blog-archive .blog-list .container .row .col:nth-of-type(3) .blog-post {
+        border-right: 2px solid transparent; }
+      main#blog-archive .blog-list .container .row .col .blog-post {
+        border-right: 2px solid #e8e9eb;
+        padding-right: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem; }
+        main#blog-archive .blog-list .container .row .col .blog-post .blog-thumbnail {
+          display: block;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #f3f4f5;
+          margin-bottom: 2rem; }
+        main#blog-archive .blog-list .container .row .col .blog-post h2 {
+          margin-bottom: 1rem; }
+        main#blog-archive .blog-list .container .row .col .blog-post p {
+          margin-bottom: 0.75rem; }
+        main#blog-archive .blog-list .container .row .col .blog-post .arrow {
+          display: flex;
+          width: 3rem;
+          height: 3rem;
+          background-color: rgba(37, 120, 219, 0.2);
+          justify-content: center;
+          align-items: center;
+          border-radius: 1.5rem; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;
