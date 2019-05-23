@@ -35,87 +35,55 @@ get_header();
   <!-- Element: BLOG LIST -->
   <section class="blog-list">
     <div class="container">
-      <div class="row">
 
-        <div class="col col-12 col-md-4">
-          <div class="blog-post">
-            <a href="#">
-              <div class="blog-thumbnail"></div>
-            </a>
-            <a href="#">
-              <h2 class="h4">I Know Exactly What You Are, Always Alive To The Dark</h2>
-            </a>
-            <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="arrow">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-            </a>
-          </div><!--blog-post-->
-        </div><!--col-12-->
+        <?php
+          // the query
+          $wpb_all_query = new WP_Query(
+            array(
+              'post_type'   => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1));
+        ?>
+        <?php if ( $wpb_all_query->have_posts() ) : ?>
 
+          <div class="row">
 
-        <div class="col col-12 col-md-4">
-          <div class="blog-post">
-            <a href="#">
-              <div class="blog-thumbnail"></div>
-            </a>
-            <a href="#">
-              <h2 class="h4">Grounded</h2>
-            </a>
-            <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="arrow">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-            </a>
-          </div><!--blog-post-->
-        </div><!--col-12-->
+            <!-- the loop -->
+            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
-        <div class="col col-12 col-md-4">
-          <div class="blog-post">
-            <a href="#">
-              <div class="blog-thumbnail"></div>
-            </a>
-            <a href="#">
-              <h2 class="h4">Hello Russia, Hello America</h2>
-            </a>
-            <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="arrow">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-            </a>
-          </div><!--blog-post-->
-        </div><!--col-12-->
-
-        <div class="col col-12 col-md-4">
-          <div class="blog-post">
-            <a href="#">
-              <div class="blog-thumbnail"></div>
-            </a>
-            <a href="#">
-              <h2 class="h4">Hello Russia, Hello America</h2>
-            </a>
-            <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="arrow">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-            </a>
-          </div><!--blog-post-->
-        </div><!--col-12-->
-
-        <div class="col col-12 col-md-4">
-          <div class="blog-post">
-            <a href="#">
-              <div class="blog-thumbnail"></div>
-            </a>
-            <a href="#">
-              <h2 class="h4">Yet Another Challeger to the Crown</h2>
-            </a>
-            <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="arrow">
-              <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-            </a>
-          </div><!--blog-post-->
-        </div><!--col-12-->
+              <div class="col col-12 col-md-4 blog-post">
+                <!-- <div class="blog-post"> -->
 
 
+                  <a href="<?php the_permalink(); ?>">
+                    <div class="blog-thumbnail"></div>
+                  </a>
 
-      </div><!--row-->
+                  <a href="<?php the_permalink(); ?>">
+                    <h2><?php the_title(); ?></h2>
+                  </a>
+
+                  <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <a href="<?php the_permalink(); ?>" class="arrow">
+                    <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
+                  </a>
+
+
+    <!--            </div><!--blog-post-->
+              </div><!--col-->
+
+            <?php endwhile; ?>
+            <!-- end of the loop -->
+
+          </div><!--row-->
+
+          <?php wp_reset_postdata(); ?>
+
+        <?php else : ?>
+          <p><?php _e( 'Sorry, no blog posts to show at this time.' ); ?></p>
+        <?php endif; ?>
+
     </div><!--container-->
   </section><!--blog-list-->
 
