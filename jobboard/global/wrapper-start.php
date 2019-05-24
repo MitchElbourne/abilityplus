@@ -22,12 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php if(is_jb_profile()): ?>
 	<div class="jb-user-container"><div class="user-container">
 <?php else: ?>
-	<div class="container job-container"><div class="row">
+	<div class="container job-container">
+    <div class="row">
     <?php
     if(!is_single()) { ?>
       <h1 class="title m-auto col-12 col-md-8 text-center">Explore all our Isle of Man jobs with a simple search</h1>
       <div class="search-field col-12">
         <?php dynamic_sidebar('main sidebar'); ?>
       </div>
+      
     <?php } ?>
 <?php endif; ?>

@@ -94,12 +94,30 @@ label {
 .jobboard-content .row {
   margin: 0; }
 
+.md-overlay {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.md-content {
+  background-color: #e8eaeb;
+  padding: 2rem;
+  color: #1a2733; }
+  .md-content button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    background: none;
+    border: none; }
+    .md-content button span svg {
+      width: 1rem;
+      height: 1rem; }
+
 #bitnami-banner {
   display: none; }
 
-div.remember {
+.remember {
   display: flex; }
-  div.remember input {
+  .remember input {
     -webkit-appearance: none;
     display: inline-block;
     position: relative;
@@ -107,14 +125,14 @@ div.remember {
     border-radius: 3px;
     padding: 0.615rem;
     cursor: pointer;
-    trasition: all 250ms; }
-    div.remember input:active {
+    transition: all 250ms; }
+    .remember input:active {
       background-color: rgba(37, 120, 219, 0.25); }
-    div.remember input:checked:active {
+    .remember input:checked:active {
       background-color: rgba(37, 120, 219, 0.2); }
-    div.remember input:checked {
+    .remember input:checked {
       background-color: rgba(37, 120, 219, 0.25); }
-    div.remember input:checked:after {
+    .remember input:checked:after {
       content: '';
       position: absolute;
       top: 5.5px;
@@ -127,12 +145,12 @@ div.remember {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; }
-    div.remember input:checked:hover {
+    .remember input:checked:hover {
       background-color: rgba(37, 120, 219, 0.25); }
-    div.remember input:hover {
+    .remember input:hover {
       border-color: rgba(37, 120, 219, 0.18);
       background-color: rgba(37, 120, 219, 0.17); }
-  div.remember span {
+  .remember span {
     font-size: 0.875rem;
     margin-left: 0.5rem; }
 
@@ -630,15 +648,53 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
       padding-top: 0.5rem;
       margin-top: 0.5rem; }
       body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li {
-        display: flex; }
+        display: flex;
+        margin: 0.4rem 0; }
         body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input {
-          align-self: center;
-          margin-right: 0.75rem; }
+          margin-right: 0.75rem;
+          margin-top: 0.2rem;
+          -webkit-appearance: none;
+          display: inline-block;
+          position: relative;
+          background-color: white;
+          border: 1px solid #a4aaaf;
+          border-radius: 3px;
+          padding: 0.5rem;
+          height: 1rem;
+          width: 1rem;
+          cursor: pointer;
+          transition: all 250ms; }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:active {
+            background-color: rgba(26, 39, 51, 0.1); }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:active {
+            background-color: rgba(26, 39, 51, 0.1); }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked {
+            background-color: rgba(26, 39, 51, 0.1); }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 4.5px;
+            min-width: 8px;
+            min-height: 6px;
+            max-width: 8px;
+            max-height: 6px;
+            background-image: url("assets/svg/icon-checked.svg");
+            filter: grayscale(1);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:hover {
+            background-color: rgba(26, 39, 51, 0.04); }
+          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:hover {
+            background-color: rgba(26, 39, 51, 0.1); }
         body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li label {
           margin-right: auto; }
-body.job-listing-classic .wrapper .container .row #content .jobboard-archive-actions {
-  display: none; }
+body.job-listing-classic .wrapper .container .row #content .jobboard-not-found span.no-jobs {
+  font-size: 1.5rem;
+  color: rgba(28, 43, 56, 0.5); }
 body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row {
+  margin: 0;
   padding: 1.65rem 0 1.65rem 1rem;
   border: none;
   border-bottom: 2px solid #e8eaeb;
@@ -684,7 +740,7 @@ body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section
     order: 3;
     width: 100%; }
     body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta {
-      padding: 0.3rem 0.5rem;
+      padding: 0.4rem 0.5rem;
       border-radius: 2px;
       font-size: 0.75rem; }
       body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
@@ -692,6 +748,9 @@ body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section
         color: white; }
       body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
         border: 1px solid #e8eaeb; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
+          margin-bottom: 0.2rem;
+          margin-right: 0.3rem; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;

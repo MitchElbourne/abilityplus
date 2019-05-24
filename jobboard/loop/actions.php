@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     if($types) {
       foreach($types as $type) {
         ?>
-          <span class="job-meta types"><?php echo $type->name; ?></span>
+          <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-job-type.svg'); ?><?php echo $type->name; ?></span>
         <?php
       }
     }

@@ -61,7 +61,7 @@
         $('#LogInModal').modal('hide');
       })
 
-      $("body").on('click', '.md-trigger', function (e) {
+      $("body").on('click', '.md-trigger-ab', function (e) {
         // e.preventDefault();
         $('#LogInModal').modal('show');
       });

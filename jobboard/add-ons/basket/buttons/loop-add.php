@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 $require_login = jb_get_option('add-job-require-login',false);
 ?>
 
-<button class="btn btn-default basket-add<?php echo (!is_user_logged_in() && $require_login === '1') ? ' md-trigger': '' ?>"
+<button class="btn btn-default basket-add<?php echo (!is_user_logged_in() && $require_login === '1') ? ' md-trigger-ab': '' ?>"
         data-id="<?php the_ID(); ?>"<?php echo (!is_user_logged_in() && $require_login === '1') ?  ' data-modal="jobboard-login-add-job"' : ''?>>
     <?php echo get_template_part('/assets/svg/icon-bookmark.svg'); ?>
     <i class="cart"></i>

@@ -61,9 +61,51 @@ body.job-listing-classic {
                   margin-top: 0.5rem;
                   li {
                     display: flex;
+                    margin: 0.4rem 0;
                     input {
-                      align-self: center;
                       margin-right: 0.75rem;
+                      margin-top: 0.2rem;
+                      -webkit-appearance: none;
+                      display: inline-block;
+                      position: relative;
+                      background-color: $white;
+                      border: 1px solid #a4aaaf;
+                      border-radius: 3px;
+                      padding: 0.5rem;
+                      height: 1rem;
+                      width: 1rem;
+                      cursor: pointer;
+                      transition: all 250ms;
+                      &:active {
+                        background-color: rgba($black, 0.1);
+                      }
+                      &:checked:active {
+                        background-color: rgba($black, 0.1);
+                      }
+                      &:checked {
+                        background-color: rgba($black, 0.1);
+                      }
+                      &:checked:after {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 4.5px;
+                        min-width: 8px;
+                        min-height: 6px;
+                        max-width: 8px;
+                        max-height: 6px;
+                        background-image: url('assets/svg/icon-checked.svg');
+                        filter: grayscale(1);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                      }
+                      &:checked:hover {
+                        background-color: rgba($black, 0.04);
+                      }
+                      &:hover {
+                        background-color: rgba($black, 0.1)
+                      }
                     }
                     label {
                       margin-right: auto;
@@ -76,12 +118,19 @@ body.job-listing-classic {
         }
         #content {
           .jobboard-archive-actions {
-            display: none;
+            // display: none;
+          }
+          .jobboard-not-found {
+            span.no-jobs {
+              font-size: 1.5rem;
+              color: $middle-grey;
+            }
           }
           .jb-jobs-body {
             section {
               article {
                 .row {
+                  margin: 0;
                   padding: 1.65rem 0 1.65rem 1rem;
                   border: none;
                   border-bottom: 2px solid $lighter-grey;
@@ -144,7 +193,7 @@ body.job-listing-classic {
                     order: 3;
                     width: 100%;
                     .job-meta {
-                      padding: 0.3rem 0.5rem;
+                      padding: 0.4rem 0.5rem;
                       border-radius: 2px;
                       font-size: 0.75rem;
                       &.specialism {
@@ -153,6 +202,10 @@ body.job-listing-classic {
                       }
                       &.types {
                         border: 1px solid $lighter-grey;
+                        svg {
+                          margin-bottom: 0.2rem;
+                          margin-right: 0.3rem;
+                        }
                       }
                     }
                   }

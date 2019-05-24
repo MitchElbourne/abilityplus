@@ -86,11 +86,34 @@ label {
   }
 }
 
+.md-overlay {
+  background-color: rgba(black, 0.5);
+}
+.md-content {
+  background-color: $lighter-grey;
+  padding: 2rem;
+  color: $black;
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    background: none;
+    border: none;
+    span {
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
 #bitnami-banner {
   display: none;
 }
 
-div.remember {
+.remember {
   display: flex;
   input {
     -webkit-appearance: none;
@@ -100,7 +123,7 @@ div.remember {
     border-radius: 3px;
     padding: 0.615rem;
     cursor: pointer;
-    trasition: all 250ms;
+    transition: all 250ms;
     &:active {
       background-color: rgba($primary-blue, 0.25);
     }
