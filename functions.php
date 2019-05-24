@@ -11,11 +11,15 @@ function wp_recruitment_enqueue_styles()
   
   wp_dequeue_script( 'bootstrap' );
   wp_deregister_script( 'bootstrap' );
+  // wp_dequeue_script( 'modal-effects-js' );
+  // wp_deregister_script( 'modal-effects-js' );
   
   wp_dequeue_style( 'bootstrap' );
   wp_deregister_style( 'bootstrap' );
   wp_dequeue_style( 'jobboard-responsive-css' );
   wp_deregister_style( 'jobboard-responsive-css' );
+  // wp_dequeue_style( 'modal-effects-css' );
+  // wp_deregister_style( 'modal-effects-css' );
   wp_dequeue_style( 'poppins-google-font' );
   wp_deregister_style( 'poppins-google-font' );
   wp_dequeue_style( 'wp-recruitment-style' );
@@ -48,6 +52,35 @@ add_action( 'after_setup_theme', 'remove_parent_theme_locations', 20 );
 // Bootstrap NavWalker
 require_once get_stylesheet_directory() . '/navwalker.php';
 
+add_action('init', 'ability_plus_career_level_taxonomy', 0);
+
+function ability_plus_career_level_taxonomy() {
+  // Add new taxonomy, make it hierarchical like categories
+  //first do the translations part for GUI
+  $labels = array(
+    'name' => _x( 'career-levels', 'taxonomy general name' ),
+    'singular_name' => _x( 'Career-Level', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Career-Levels' ),
+    'all_items' => __( 'All Career-Levels' ),
+    'parent_item' => __( 'Parent Career-Level' ),
+    'parent_item_colon' => __( 'Parent Career-Level:' ),
+    'edit_item' => __( 'Edit Career-Level' ), 
+    'update_item' => __( 'Update Career-Level' ),
+    'add_new_item' => __( 'Add New Career-Level' ),
+    'new_item_name' => __( 'New Career-Level Name' ),
+    'menu_name' => __( 'Career-Levels' ),
+  );    
+
+  // Now register the taxonomy
+
+  register_taxonomy('career-levels',array('jobboard-post-jobs'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => false,
+    'query_var' => true,
+  ));
+}
 
 /**
  * Load vc template dir.s
@@ -55,23 +88,6 @@ require_once get_stylesheet_directory() . '/navwalker.php';
 if (function_exists("vc_set_shortcodes_templates_dir")) {
   vc_set_shortcodes_templates_dir(get_stylesheet_directory() . "/vc_templates/");
 }
-
-// add_filter('registration_errors', function($wp_error, $sanitized_user_login, $user_email){
-//   if(isset($wp_error->errors['empty_username'])){
-//       unset($wp_error->errors['empty_username']);
-//   }
-
-//   if(isset($wp_error->errors['username_exists'])){
-//       unset($wp_error->errors['username_exists']);
-//   }
-//   return $wp_error;
-// }, 10, 3);
-
-// add_action('login_form_register', function(){
-//   if(isset($_POST['user_login']) && isset($_POST['user_email']) && !empty($_POST['user_email'])){
-//       $_POST['user_login'] = $_POST['user_email'];
-//   }
-// });
 
 // Only show adming bar if the user is a job manager
 $user = wp_get_current_user();
@@ -262,4 +278,89 @@ if(!function_exists('jb_parse_custom_fields')) {
 
     return $field;
   }
+}
+
+function ability_plus_jobboard_widgets() {
+  include_once('jobboard/widgets/class-widget-career-level.php');
+	register_widget( 'JB_Widget_Search' );
+	register_widget( 'JB_Widget_Type' );
+	register_widget( 'JB_Widget_Date_Filters' );
+	register_widget( 'JB_Widget_Specialism_Filters' );
+	register_widget( 'JB_Widget_Jobs' );
+	register_widget( 'JB_Widget_Specialism_List' );
+  register_widget( 'JB_Widget_Salary_Filters' );
+  register_widget( 'JB_Widget_Career_Level' );
+}
+
+add_action( 'widgets_init', 'ability_plus_jobboard_widgets', 10, 3);
+
+remove_action('jobboard_archive_actions', 'jb_template_catalog_input', 50);
+
+
+add_action('jobboard_archive_actions', 'Ability_plus_custom_catalog_input', 50);
+
+function Ability_plus_custom_catalog_input() {
+  /* post type. */
+  $input['post_type'] = '<input type="hidden" name="post_type" value="jobboard-post-jobs" />';
+
+  /* tax filters. */
+  if (is_jb_taxonomy()) {
+
+      $current_term = get_queried_object();
+
+      unset($input['post_type']);
+
+      $input['type'] = '<input type="hidden" name="' . $current_term->taxonomy . '" value="' . $current_term->slug . '" />';
+
+  } elseif (is_author()) {
+
+      global $author;
+
+      unset($input['post_type']);
+
+      $input['author'] = '<input type="hidden" name="author" value="' . $author . '" />';
+
+  } elseif (is_jb_search() && !empty($_GET['s'])) {
+
+      $input['s'] = '<input type="hidden" name="s" value="' . esc_attr($_GET['s']) . '" />';
+  }
+
+  /* specialism filters */
+  if (!empty($_GET['specialism-filters'])) {
+      foreach ($_GET['specialism-filters'] as $specialism) {
+          $input['specialism-' . $specialism] = '<input type="hidden" name="specialism-filters[]" value="' . esc_attr($specialism) . '" />';
+      }
+  }
+
+  /* career level filters */
+  if (!empty($_GET['career-levels'])) {
+    foreach ($_GET['career-levels'] as $careerLevel) {
+        $input['career-level-' . $careerLevel] = '<input type="hidden" name="career-levels[]" value="' . esc_attr($careerLevel) . '" />';
+    }
+}
+
+  /* date filters. */
+  if (!empty($_GET['date-filters'])) {
+      $input['date-filters'] = '<input type="hidden" name="date-filters" value="' . esc_attr($_GET['date-filters']) . '" />';
+  }
+
+  echo implode('', apply_filters('jobboard_catalog_input_args', $input));
+}
+
+add_action('jobboard_loop_meta', 'ability_plus_job_loop_summary_career_level', 11);
+function ability_plus_job_loop_summary_career_level() {
+  jb_get_template('../../themes/wp-recruitment-child/jobboard/users/career-level.php');
+}
+
+
+$careerLevels = ab_get_career_level_options();
+
+function ab_get_career_level_options()
+{
+    jb_get_taxonomy_options(array('taxonomy' => 'career-levels', 'hide_empty' => false));
+}
+
+add_filter('jobboard_loop_actions', 'ability_plus_custom_job_data');
+function ability_plus_custom_job_data() {
+    
 }
