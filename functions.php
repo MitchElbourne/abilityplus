@@ -11,11 +11,15 @@ function wp_recruitment_enqueue_styles()
   
   wp_dequeue_script( 'bootstrap' );
   wp_deregister_script( 'bootstrap' );
+  // wp_dequeue_script( 'modal-effects-js' );
+  // wp_deregister_script( 'modal-effects-js' );
   
   wp_dequeue_style( 'bootstrap' );
   wp_deregister_style( 'bootstrap' );
   wp_dequeue_style( 'jobboard-responsive-css' );
   wp_deregister_style( 'jobboard-responsive-css' );
+  // wp_dequeue_style( 'modal-effects-css' );
+  // wp_deregister_style( 'modal-effects-css' );
   wp_dequeue_style( 'poppins-google-font' );
   wp_deregister_style( 'poppins-google-font' );
   wp_dequeue_style( 'wp-recruitment-style' );
@@ -347,9 +351,15 @@ function ability_plus_job_loop_summary_career_level() {
   jb_get_template('../../themes/wp-recruitment-child/jobboard/users/career-level.php');
 }
 
+
 $careerLevels = ab_get_career_level_options();
 
 function ab_get_career_level_options()
 {
     jb_get_taxonomy_options(array('taxonomy' => 'career-levels', 'hide_empty' => false));
+}
+
+add_filter('jobboard_loop_actions', 'ability_plus_custom_job_data');
+function ability_plus_custom_job_data() {
+    
 }

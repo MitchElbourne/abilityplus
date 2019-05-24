@@ -60,6 +60,11 @@
       $('.forgot-password-cta-modal').on('click', function() {
         $('#LogInModal').modal('hide');
       })
+
+      $("body").on('click', '.md-trigger', function (e) {
+        // e.preventDefault();
+        $('#LogInModal').modal('show');
+      });
     }
     modalLogic();
 
@@ -164,8 +169,6 @@
     }
 
     careerLevelHandler();
-
-
 	});
 
 })(jQuery, this);
