@@ -64,7 +64,7 @@
     modalLogic();
 
     $(document).ready(function() {
-      $("#job_specialisms").select2({
+      $("#job_career levels").select2({
         dropdownParent: $("#SignUpModal")
       });
     });
@@ -103,6 +103,67 @@
 		}
     howweworkCtaHandler();
     
+
+
+
+    function careerLevelHandler() {
+      /**
+       * Widgets career level filters.
+       */
+      var career_level_modal = false, career_level_timeout = false;
+
+      /* add inputs to form. */
+      $('.widget-career-level').on('change', 'input[name="career-levels[]"]', function () {
+        
+          $('.jobboard-archive-actions').find('input[name="career-levels[]"]').remove();
+
+          $('.widget-career-level input[type="checkbox"]:checked').each(function () {
+              $('.jobboard-archive-actions').append('<input type="hidden" name="career-levels[]" value="' + $(this).val() + '" />');
+          });
+          career_level_modal = true;
+      });
+
+      
+      /* click to career level inputs. */
+      $('.widget-career-level').on('click', '.widget-content > ul > li:not(:last-child)', function () {
+          if (career_level_timeout == true) {
+              return
+          }
+          setTimeout(function () {
+              submit_ordering_form()
+          }, 1000);
+          career_level_timeout = true;
+      });
+
+      /* click out side career level modal. */
+      $('.md-overlay').on('click', function () {
+          if (career_level_modal == true) {
+              submit_ordering_form();
+          }
+          career_level_modal = false;
+      });
+
+      /* click close career level modal. */
+      $('.widget-career-level').on('click', '.md-close', function () {
+          if (career_level_modal == true) {
+              submit_ordering_form();
+          }
+          career_level_modal = false;
+      });
+
+      /* enter key to career level. */
+      $('.widget-career-level').on('keypress', (function (e) {
+          if (e.which == 13) {
+              submit_ordering_form();
+          }
+      }));
+    }
+
+    function submit_ordering_form() {
+      $('.jobboard-archive-actions').submit();
+    }
+
+    careerLevelHandler();
 
 
 	});

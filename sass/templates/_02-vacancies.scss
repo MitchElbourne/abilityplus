@@ -1,0 +1,44 @@
+body.job-listing-classic {
+  .wrapper {
+    .container {
+      .row {
+        .search-field {
+          .widget-content {
+            form {
+              margin: 3rem 0 4rem;
+              div {
+                display: flex;
+                border-radius: 48px;
+                background-color: $lighter-grey;
+                img {
+                  width: 2rem;
+                  height: 2rem;
+                  align-self: center;
+                  margin-left: 1rem;
+                }
+                input[type="search"] {
+                  flex: 1 1 100%;
+                  border: none;
+                  padding: 1rem;
+                  background-color: $lighter-grey;
+                  font-size: 1.5rem;
+                  border-radius: 48px;
+                }
+                input[type="submit"] {
+                  font-family: $tkusualrg;
+                  align-self: center;
+                }
+              }
+            }
+          }
+        }
+        #sidebar {
+          background-color: $lighter-grey;
+        }
+        #content {
+          // border: 1px solid red;
+        }
+      }
+    }
+  }
+}

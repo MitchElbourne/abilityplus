@@ -166,9 +166,6 @@ div.remember {
     background-color: rgba(37, 120, 219, 0.85);
     color: white; }
 
-.select2-dropdown {
-  position: relative; }
-
 span.error {
   margin: 0 0 1rem 0;
   display: inline-block;
@@ -588,6 +585,30 @@ body.home section#blog-recommendations {
         margin-right: 0;
         margin-bottom: 2.25rem;
         padding-bottom: 2.25rem; } }
+
+body.job-listing-classic .wrapper .container .row .search-field .widget-content form {
+  margin: 3rem 0 4rem; }
+  body.job-listing-classic .wrapper .container .row .search-field .widget-content form div {
+    display: flex;
+    border-radius: 48px;
+    background-color: #e8eaeb; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div img {
+      width: 2rem;
+      height: 2rem;
+      align-self: center;
+      margin-left: 1rem; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="search"] {
+      flex: 1 1 100%;
+      border: none;
+      padding: 1rem;
+      background-color: #e8eaeb;
+      font-size: 1.5rem;
+      border-radius: 48px; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="submit"] {
+      font-family: "tkusual-reg", "system", "sans-serif";
+      align-self: center; }
+body.job-listing-classic .wrapper .container .row #sidebar {
+  background-color: #e8eaeb; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;
