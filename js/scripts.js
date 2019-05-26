@@ -169,6 +169,43 @@
     }
 
     careerLevelHandler();
+
+
+
+
+
+    function equalizeHeights() {
+      var pathname = window.location.pathname;
+      if (pathname.includes('about-us')) {
+        $(window).ready(function() {
+          var panels = document.querySelectorAll('.carousel-item');
+          var content = document.querySelectorAll('#testimonialCarousel')
+          var maxHeight = 0;
+    
+          panels.forEach(function(item) {
+            var tempHeight = item.offsetHeight;
+    
+            if (tempHeight > maxHeight) {
+              maxHeight = tempHeight;
+            }
+          });
+
+          var heightFinal = maxHeight + 96;
+    
+          content.forEach(function(item) {
+            item.style.height = heightFinal + "px";
+          });
+        });
+      };
+    }; 
+    
+    // Can be used without the jquery call below, calls the function on resize
+    
+    $(window).resize(lodash.debounce(function() {
+      equalizeHeights();
+    }, 300));
+    
+    equalizeHeights();
 	});
 
 })(jQuery, this);

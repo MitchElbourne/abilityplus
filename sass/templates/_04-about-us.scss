@@ -1,0 +1,189 @@
+main {
+  section#introduction {
+    .container {
+      .row {
+        text-align: center;
+        p {
+          margin: 2.5rem auto 4rem;
+        }
+      }
+    }
+  }
+
+  section#our-values {
+    .container {
+      .row {
+        text-align: left;
+        p.entry-text {
+          margin: 1.8rem auto 4rem;
+        }
+        div.panel-container {
+          display: flex;
+          width: 100%;
+          margin-top: 6rem;
+          text-align: start;
+          div.panel {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(100%/3);
+            padding: 0 3rem;
+            border-right: 1px solid $lighter-grey;
+            &:last-of-type {
+              border-right: none;
+            }
+            img {
+              max-width: 9rem;
+              margin-bottom: 2.5rem;
+            }
+            p.sub-text {
+              margin: 1rem 0 0;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .container {
+        .row {
+          div.panel-container {
+            flex-direction: column;
+            margin-top: 3rem;
+            div.panel {
+              text-align: center;
+              border-right: none;
+              border-top: 1px solid $lighter-grey;
+              &:last-of-type {
+                border-bottom: 1px solid $lighter-grey;
+              }
+              img {
+                margin: 2rem auto 1rem;
+              }
+              p.sub-text {
+                margin: 1rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#testimonials {
+    .container {
+      .row {
+        div.meta-container {
+          p {
+            margin: 1.25rem 0 0;
+          }
+        }
+        #testimonialCarousel {
+          padding: 3rem 6rem;
+          background-color: rgba($primary-blue, 0.08);
+          div.carousel-inner {
+            div.carousel-item {
+              p.cite {
+                margin-top: 1rem;
+              }
+            }
+          }
+          ol.carousel-indicators {
+            position: absolute;
+            margin: 0;
+            justify-content: flex-start;
+            bottom: -2.5rem;
+            left: 0;
+            li {
+              width:  0.75rem;
+              height: 0.75rem;
+              margin: 0 1rem 0 0;
+              border: none;
+              border-radius: 100%;
+              background-color: $lighter-grey;
+              transition: all 200ms;
+              &.active {
+                background-color: $primary-blue;
+              }
+            }
+          }
+          div.carousel-inner {
+
+          }
+          a.carousel-control-next {
+            img {
+              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#meet-the-team {
+    .container {
+      h2 {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .panel {
+        display: flex;
+        padding: 5rem;
+        border-radius: 0.5rem;
+        &:nth-of-type(odd) {
+          background-color: $lightest-grey;
+        }
+        div.meta-wrapper {
+          flex: 1 1 auto;         
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          img {           
+            border-radius: 100%;
+          }
+          h3 {
+            margin-top: 1rem;
+          }
+          span.title {
+            margin: 0.5rem 0 1rem;
+            color: $middle-grey;
+          }
+          div.connect-container {
+            display: flex;
+            justify-content: center;
+            p {
+              color: $middle-grey;
+              &.break {
+                color: $middle-grey;
+              }
+              a.linkedin {
+                
+              }
+            }
+          }
+        }
+        div.content {
+          position: relative;
+          span.quotemark {
+            background-image: url('../wp-recruitment-child/assets/svg/icon-quote.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -3rem;
+            height: 1.65rem;
+            width: 2rem;
+          }
+          p {
+            margin: 1rem 0;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          margin-left: 7.5rem;
+        }
+      }
+    }
+  }
+}

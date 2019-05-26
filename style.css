@@ -792,6 +792,32 @@ main section#our-values .container .row {
         margin: 2rem auto 1rem; }
       main section#our-values .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0; } }
+main section#testimonials .container .row div.meta-container p {
+  margin: 1.25rem 0 0; }
+main section#testimonials .container .row #testimonialCarousel {
+  padding: 3rem 6rem;
+  background-color: rgba(37, 120, 219, 0.08); }
+  main section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
+    margin-top: 1rem; }
+  main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
+    position: absolute;
+    margin: 0;
+    justify-content: flex-start;
+    bottom: -2.5rem;
+    left: 0; }
+    main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 1rem 0 0;
+      border: none;
+      border-radius: 100%;
+      background-color: #e8eaeb;
+      transition: all 200ms; }
+      main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li.active {
+        background-color: #2578db; }
+  main section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg); }
 main section#meet-the-team .container h2 {
   text-align: center;
   margin-bottom: 2.5rem; }
