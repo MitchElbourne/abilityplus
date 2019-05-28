@@ -19,8 +19,8 @@ get_header();
           <img src="" alt="" class="illustration">  
         </div>
         <?php echo do_shortcode('[jobboard_register_account]'); ?>
-    </div>
-  </section>
+    </div><!--contianer-->
+  </section><!--#sign-up-form-->
 </main>
 
 <?php
