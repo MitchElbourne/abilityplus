@@ -363,14 +363,12 @@ function ab_get_career_level_options()
 remove_action('wp_footer', 'jb_template_apply_form');
 add_action('wp_footer', 'ability_plus_apply_form');
 
-  function ability_plus_apply_form() {
-    if (!is_jb_job()) {
-      return;
-  }
+function ability_plus_apply_form() {
+  if (!is_jb_job()) {
+    return;
+}
 
-  
-  if (!is_user_logged_in()) {
-
+if (!is_user_logged_in()) {
   } elseif (is_jb_candidate()) {
       jb_get_template('modal/modal-start.php', array('modal' => 'jobboard-modal-apply'));
       jb_get_template('apply/apply.php', array('fields' => jb_job_apply_fields()));
@@ -381,7 +379,5 @@ add_action('wp_footer', 'ability_plus_apply_form');
     jb_get_template('apply/other.php', array('user' => $user));
     jb_get_template('modal/modal-end.php');
   }
-
-
 }
 
