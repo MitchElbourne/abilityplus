@@ -26,6 +26,7 @@ else {
 }
 
 $specialism = get_the_terms($post->ID, 'jobboard-tax-specialisms');
+// Link provided will display the current specialism in the vacancies page
 $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialism-filters%5B%5D=' . $specialism[0]->term_id;
 
 ?>
@@ -35,7 +36,6 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
     <div class="container">
       <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="flip-arrow"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span>Back to all jobs</a>
 
-      <?php print_r($specialism[0]->term_id); ?>
       <a href="<?php echo esc_url(site_url($specialismUrl)) ?>">See more <?php echo $specialism[0]->name; ?> jobs<span><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
     </div><!--container-->
   </section><!--#single-job-navigation-->
@@ -61,7 +61,9 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <div class="break"></div>
       <p class="share">
         Share with:
-        <span></span>
+        <a href="http://www.linkedin.com/shareArticle?mini=false&url=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin-grey.svg'); ?></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-facebook-grey.svg'); ?></a>
+        <a href="https://twitter.com/intent/tweet?url=click-to-tweet&text=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter-grey.svg'); ?></a>
       </p>
 
       <?php  

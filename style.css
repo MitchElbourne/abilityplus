@@ -810,6 +810,12 @@ body.is-job div.wrapper {
       body.is-job div.wrapper section#job-ctas .container p.share {
         display: flex;
         align-self: center; }
+        body.is-job div.wrapper section#job-ctas .container p.share a.social {
+          margin: 0 0.4rem; }
+          body.is-job div.wrapper section#job-ctas .container p.share a.social svg {
+            margin-bottom: 0.2rem; }
+          body.is-job div.wrapper section#job-ctas .container p.share a.social:hover svg path, body.is-job div.wrapper section#job-ctas .container p.share a.social:focus svg path {
+            fill: #2578db; }
       body.is-job div.wrapper section#job-ctas .container button.cta-blue {
         flex-grow: 0;
         margin: 0 0 0 auto; }

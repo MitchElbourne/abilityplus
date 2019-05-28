@@ -91,6 +91,19 @@ body.is-job {
         p.share {
           display: flex;
           align-self: center;
+          a.social {
+            margin: 0 0.4rem;
+            svg {
+              margin-bottom: 0.2rem;
+            }
+            &:hover, &:focus {
+             svg {
+               path {
+                 fill: $primary-blue;
+               }
+             }
+            }
+          }
         }
         button.cta-blue {
           flex-grow: 0;
