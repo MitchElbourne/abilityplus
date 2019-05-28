@@ -116,10 +116,25 @@ body.is-job {
         p.bookmark {
           align-self: center;
           display: flex;
-          button {
+          a {
             padding: 0;
             align-self: flex-start;
             margin-right: 0.9rem;
+          }
+          button, a.basket-added {
+            padding: 0;
+            svg {
+              width: 0.875rem;
+              height: 1rem;
+            }
+          }
+          button.basket-added, a.basket-added {
+            opacity: 1;
+            svg {
+              path {
+                fill: $primary-blue;
+              }
+            }
           }
         }
         div.break {

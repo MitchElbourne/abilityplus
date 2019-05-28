@@ -18,7 +18,7 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-$require_login = jb_get_option('add-job-require-login',false);
+$require_login = jb_get_option('add-job-require-login', true);
 ?>
 
 <button class="btn btn-default basket-add<?php echo (!is_user_logged_in() && $require_login === '1') ? ' md-trigger-ab': '' ?>"

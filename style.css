@@ -850,10 +850,19 @@ body.is-job div.wrapper {
       body.is-job div.wrapper section#job-ctas .container p.bookmark {
         align-self: center;
         display: flex; }
-        body.is-job div.wrapper section#job-ctas .container p.bookmark button {
+        body.is-job div.wrapper section#job-ctas .container p.bookmark a {
           padding: 0;
           align-self: flex-start;
           margin-right: 0.9rem; }
+        body.is-job div.wrapper section#job-ctas .container p.bookmark button, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added {
+          padding: 0; }
+          body.is-job div.wrapper section#job-ctas .container p.bookmark button svg, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added svg {
+            width: 0.875rem;
+            height: 1rem; }
+        body.is-job div.wrapper section#job-ctas .container p.bookmark button.basket-added, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added {
+          opacity: 1; }
+          body.is-job div.wrapper section#job-ctas .container p.bookmark button.basket-added svg path, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added svg path {
+            fill: #2578db; }
       body.is-job div.wrapper section#job-ctas .container div.break {
         border-right: 2px solid #e8eaeb;
         margin: 0 1.25rem; }
