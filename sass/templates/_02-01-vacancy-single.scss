@@ -1,0 +1,109 @@
+body.is-job {
+  div.wrapper {
+    padding-top: 8rem;
+    section#single-job-navigation {
+      background-color: $lightest-grey;
+      padding: 1rem 0;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        a {
+          transition-delay: 200ms;
+          &:nth-of-type(2) {
+            span {
+              margin-left: 0.5rem;
+            }
+          }
+          &:nth-of-type(1) {
+            span {
+              margin-right: 0.5rem;
+              svg {
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+              }
+            }
+          }
+          &:hover, &:focus {
+            span {
+              svg {
+                g {
+                  stroke: $dark-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  
+    section#job-single {
+      background-color: $primary-blue;
+      .container {
+        color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        h1 {
+          color: $white;
+        }
+        p.posttime {
+          margin-left: auto;
+          align-self: flex-end;
+          color: rgba($white, 0.5);
+        }
+        hr {
+          border-color: $white;
+          width: 100%;
+          margin: 1.5rem 0 1rem;
+        }
+        p.salary {
+          margin-right: 5rem; 
+        }
+        p.location {
+
+        }
+        p.job-id {
+          margin-left: auto;
+        }
+      }
+    }
+
+
+    section#job-ctas {
+      padding: 0;
+      .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        p.bookmark {
+          align-self: center;
+          display: flex;
+          button {
+            padding: 0;
+            align-self: flex-start;
+            margin-right: 0.9rem;
+          }
+        }
+        div.break {
+          border-right: 2px solid $lighter-grey;
+          margin: 0 1.25rem;
+        }
+        p.share {
+          display: flex;
+          align-self: center;
+        }
+        button.cta-blue {
+          flex-grow: 0;
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  
+  
+    section#single-job-content {
+      .container {
+  
+      }
+    }
+  }
+}

@@ -65,7 +65,7 @@ get_header();
             <span class="sr-only">Previous Testimonial</span>
           </a>
           <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
-          <img src="<?php echo get_theme_file_uri('/assets/svg/icon-carousel-arrow.svg'); ?>" alt="Carousel Icon Arrow">
+            <img src="<?php echo get_theme_file_uri('/assets/svg/icon-carousel-arrow.svg'); ?>" alt="Carousel Icon Arrow">
             <span class="sr-only">Next Testimonial</span>
           </a>
           <ol class="carousel-indicators">

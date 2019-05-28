@@ -752,6 +752,68 @@ body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section
           margin-bottom: 0.2rem;
           margin-right: 0.3rem; }
 
+body.is-job div.wrapper {
+  padding-top: 8rem; }
+  body.is-job div.wrapper section#single-job-navigation {
+    background-color: #f3f4f5;
+    padding: 1rem 0; }
+    body.is-job div.wrapper section#single-job-navigation .container {
+      display: flex;
+      justify-content: space-between; }
+      body.is-job div.wrapper section#single-job-navigation .container a {
+        transition-delay: 200ms; }
+        body.is-job div.wrapper section#single-job-navigation .container a:nth-of-type(2) span {
+          margin-left: 0.5rem; }
+        body.is-job div.wrapper section#single-job-navigation .container a:nth-of-type(1) span {
+          margin-right: 0.5rem; }
+          body.is-job div.wrapper section#single-job-navigation .container a:nth-of-type(1) span svg {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg); }
+        body.is-job div.wrapper section#single-job-navigation .container a:hover span svg g, body.is-job div.wrapper section#single-job-navigation .container a:focus span svg g {
+          stroke: #0a468f; }
+  body.is-job div.wrapper section#job-single {
+    background-color: #2578db; }
+    body.is-job div.wrapper section#job-single .container {
+      color: white;
+      display: flex;
+      flex-wrap: wrap; }
+      body.is-job div.wrapper section#job-single .container h1 {
+        color: white; }
+      body.is-job div.wrapper section#job-single .container p.posttime {
+        margin-left: auto;
+        align-self: flex-end;
+        color: rgba(255, 255, 255, 0.5); }
+      body.is-job div.wrapper section#job-single .container hr {
+        border-color: white;
+        width: 100%;
+        margin: 1.5rem 0 1rem; }
+      body.is-job div.wrapper section#job-single .container p.salary {
+        margin-right: 5rem; }
+      body.is-job div.wrapper section#job-single .container p.job-id {
+        margin-left: auto; }
+  body.is-job div.wrapper section#job-ctas {
+    padding: 0; }
+    body.is-job div.wrapper section#job-ctas .container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex; }
+      body.is-job div.wrapper section#job-ctas .container p.bookmark {
+        align-self: center;
+        display: flex; }
+        body.is-job div.wrapper section#job-ctas .container p.bookmark button {
+          padding: 0;
+          align-self: flex-start;
+          margin-right: 0.9rem; }
+      body.is-job div.wrapper section#job-ctas .container div.break {
+        border-right: 2px solid #e8eaeb;
+        margin: 0 1.25rem; }
+      body.is-job div.wrapper section#job-ctas .container p.share {
+        display: flex;
+        align-self: center; }
+      body.is-job div.wrapper section#job-ctas .container button.cta-blue {
+        flex-grow: 0;
+        margin: 0 0 0 auto; }
+
 main section#introduction .container .row {
   text-align: center; }
   main section#introduction .container .row p {
@@ -1106,3 +1168,12 @@ main[role="main"] section#sign-up-form .container form {
       padding: 1rem;
       background-color: white;
       border-radius: 4px; }
+
+#jobboard-modal-apply .md-content button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transition: all 200ms; }
+  #jobboard-modal-apply .md-content button span svg {
+    width: 2rem;
+    height: 2rem; }

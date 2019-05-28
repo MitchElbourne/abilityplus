@@ -5,7 +5,7 @@
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true"><?php echo get_template_part('/assets/svg/icon-cancel.svg');?></span>
       </button>
-
+  
       <?php jb_template_login_from(); ?>
 
     </div>
