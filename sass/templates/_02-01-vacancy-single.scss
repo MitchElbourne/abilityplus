@@ -1,6 +1,9 @@
 body.is-job {
   div.wrapper {
     padding-top: 8rem;
+    @include media-breakpoint-down(sm) {
+      padding-top: 10rem;
+    }
     section#single-job-navigation {
       background-color: $lightest-grey;
       padding: 1rem 0;
@@ -37,7 +40,7 @@ body.is-job {
     }
   
   
-    section#job-single {
+    section#title {
       background-color: $primary-blue;
       .container {
         color: $white;
@@ -66,8 +69,18 @@ body.is-job {
           margin-left: auto;
         }
       }
+      @include media-breakpoint-down(sm) {
+        .container {
+          h1 {
+            width: 100%;
+          }
+          p.posttime {
+            margin: 0;
+          }
+        }
+      }
     }
-
+ 
 
     section#job-ctas {
       padding: 0;
@@ -108,6 +121,27 @@ body.is-job {
         button.cta-blue {
           flex-grow: 0;
           margin: 0 0 0 auto;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+          p.bookmark {
+            margin-right: 1rem;
+            order: 2;
+          }
+          div.break {
+            display: none;
+          }
+          p.share {
+            order: 1;
+            margin: 1.5rem 0 0.5rem;
+          }
+          button.cta-blue {
+            order: 0;
+            margin: 0 auto;
+          }
         }
       }
     }

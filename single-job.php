@@ -40,7 +40,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
     </div><!--container-->
   </section><!--#single-job-navigation-->
 
-  <section id="job-single">
+  <section id="title">
     <div class="container">
       <h1><?php echo get_the_title(); ?></h1>
       <p class="posttime"><?php echo $timeposted; ?></p>

@@ -754,6 +754,9 @@ body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section
 
 body.is-job div.wrapper {
   padding-top: 8rem; }
+  @media (max-width: 767px) {
+    body.is-job div.wrapper {
+      padding-top: 10rem; } }
   body.is-job div.wrapper section#single-job-navigation {
     background-color: #f3f4f5;
     padding: 1rem 0; }
@@ -771,26 +774,31 @@ body.is-job div.wrapper {
             -webkit-transform: rotate(180deg); }
         body.is-job div.wrapper section#single-job-navigation .container a:hover span svg g, body.is-job div.wrapper section#single-job-navigation .container a:focus span svg g {
           stroke: #0a468f; }
-  body.is-job div.wrapper section#job-single {
+  body.is-job div.wrapper section#title {
     background-color: #2578db; }
-    body.is-job div.wrapper section#job-single .container {
+    body.is-job div.wrapper section#title .container {
       color: white;
       display: flex;
       flex-wrap: wrap; }
-      body.is-job div.wrapper section#job-single .container h1 {
+      body.is-job div.wrapper section#title .container h1 {
         color: white; }
-      body.is-job div.wrapper section#job-single .container p.posttime {
+      body.is-job div.wrapper section#title .container p.posttime {
         margin-left: auto;
         align-self: flex-end;
         color: rgba(255, 255, 255, 0.5); }
-      body.is-job div.wrapper section#job-single .container hr {
+      body.is-job div.wrapper section#title .container hr {
         border-color: white;
         width: 100%;
         margin: 1.5rem 0 1rem; }
-      body.is-job div.wrapper section#job-single .container p.salary {
+      body.is-job div.wrapper section#title .container p.salary {
         margin-right: 5rem; }
-      body.is-job div.wrapper section#job-single .container p.job-id {
+      body.is-job div.wrapper section#title .container p.job-id {
         margin-left: auto; }
+    @media (max-width: 767px) {
+      body.is-job div.wrapper section#title .container h1 {
+        width: 100%; }
+      body.is-job div.wrapper section#title .container p.posttime {
+        margin: 0; } }
   body.is-job div.wrapper section#job-ctas {
     padding: 0; }
     body.is-job div.wrapper section#job-ctas .container {
@@ -819,6 +827,21 @@ body.is-job div.wrapper {
       body.is-job div.wrapper section#job-ctas .container button.cta-blue {
         flex-grow: 0;
         margin: 0 0 0 auto; }
+    @media (max-width: 767px) {
+      body.is-job div.wrapper section#job-ctas .container {
+        flex-direction: column;
+        text-align: center; }
+        body.is-job div.wrapper section#job-ctas .container p.bookmark {
+          margin-right: 1rem;
+          order: 2; }
+        body.is-job div.wrapper section#job-ctas .container div.break {
+          display: none; }
+        body.is-job div.wrapper section#job-ctas .container p.share {
+          order: 1;
+          margin: 1.5rem 0 0.5rem; }
+        body.is-job div.wrapper section#job-ctas .container button.cta-blue {
+          order: 0;
+          margin: 0 auto; } }
 
 main section#introduction .container .row {
   text-align: center; }
