@@ -168,82 +168,17 @@
 }
 
 
-// #SignUpModal {
-//   .modal-dialog {
-//     .modal-content {
-//       flex-wrap: wrap;
-//       div.information-container {
-//         display: flex;
-//         flex-wrap: nowrap;
-//         padding: 2rem 0 3.5rem;
-//         div.information {
-//           flex: 1 1 calc(100%/2);
-//           padding-right: 2rem;
-//           p.text {
-//             margin: 1.5rem 0;
-//           }
-//         }
-//         img.illustration {
-//           background-color: $lighter-grey;
-//           width: 27rem;
-//           border-radius: 12px;
-//         }
-//       }
-//       form {
-//         background-color: $white;
-//         border-radius: 8px;
-//         padding: 2rem;
-//         .form-fields {
-//           .row {
-//             .field {
-              
-//               &.col-md-6 {
-//                 flex: 1 1 calc(100%/2 - 1rem);
-//                 &:nth-of-type(odd) {
-//                   margin-right: 1rem;
-//                 }
-//               }
-//               margin-bottom: 1rem;
-//               padding: 0 1rem;
-//               background-color: $lightest-grey;
-//               border-radius: 4px;
-//               label {
-//                 color: $middle-grey;
-//                 margin-right: 0.2rem;
-//               }
-//               span {
-//                 font-size: 0.7rem;
-//               }
-//               input {
-//                 border: none;
-//                 font-size: 1.25rem;
-//                 background-color: $lightest-grey;
-//               }
-//             }
-//             &:nth-last-of-type(1), &:nth-last-of-type(2) {
-//               .field {
-//                 display: flex;
-//                 flex-wrap: wrap;
-//                 span.select2 {
-//                   min-width: 100%;
-//                   display: block;
-//                   border: none;
-//                   span.selection {
-//                     span.select2-selection {
-//                       border: none;
-//                       background-color: $lightest-grey;
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//         div.form-actions {
-//           text-align: center;
-//           input[type="submit"] {
-//             padding: 0.75rem 1.25rem;
-//           }
+// #jobboard-modal-apply {
+//   .md-content {
+//     button {
+//       position: absolute;
+//       top: 1rem;
+//       right: 1rem;
+//       transition: all 200ms;
+//       span {
+//         svg {
+//           width: 2rem;
+//           height: 2rem;
 //         }
 //       }
 //     }
