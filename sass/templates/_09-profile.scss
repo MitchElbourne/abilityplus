@@ -1,0 +1,51 @@
+body.is-dashboard {
+  main[role="main"] {
+    .container {
+      article {
+        .entry-content {
+          .row {
+            .dashboard-navigations {
+              flex: 0 0 calc(100%/4);
+              margin-right: 2rem;
+              padding: 0;
+              background-color: $lightest-grey;
+              border-radius: 0.5rem;
+              div.profile-meta {
+                padding: 1rem;
+                border-bottom: 1px solid $white;
+                p.email {
+                  color: $middle-grey;
+                }
+              }
+              ul.navigations {
+                li {
+                  border-bottom: 1px solid $white;
+                  padding: 1rem;
+                  &:last-of-type {
+                    border-bottom: 0;
+                  }
+                  a {
+                    color: $middle-grey;
+                    &:hover {
+                      color: $black;
+                    }
+                  }
+                  &.is-active {
+                    background-color: $lighter-grey;
+                    a {
+                      color: $black;
+                    }
+                  }
+                }
+              }
+            }
+            .dashboard-content {
+              flex: 1 1 auto;
+              border: 1px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -57,7 +57,6 @@
 
         </nav>
       </div>
-
     </header><!--#site-header-->
     <?php 
     

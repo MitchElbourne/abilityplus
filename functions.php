@@ -151,73 +151,74 @@ function custom_login_logic($args = array()) {
     jb_get_template('global/login-form.php', array('args' => $args));
 }
 
-add_filter('jobboard-register-fields', 'custom_form_fields');
+// add_filter('jobboard-register-fields', 'custom_form_fields');
 
-function custom_form_fields() {
-  return $fields = array(
-    // 'user_login' => array(
-    //     'id'            => 'user_login',
-    //     'type'          => 'text',
-    //     'title'         => esc_html__('Username', 'jobboard-register'),
-    //     'require'       => true
-    // ),
-    'first_name' => array(
-        'id'            => 'first_name',
-        'type'          => 'text',
-        'title'         => esc_html__('First Name', 'jobboard-register'),
-        'col'           => 6,
-        'require'       => true
-    ),
-    'last_name' => array(
-        'id'            => 'last_name',
-        'type'          => 'text',
-        'title'         => esc_html__('Last Name', 'jobboard-register'),
-        'col'           => 6,
-        'require'       => true
-    ),
-    'user_email' => array(
-        'id'            => 'user_email',
-        'type'          => 'text',
-        'title'         => esc_html__('Email Address', 'jobboard-register'),
-        'input'         => 'email',
-        'require'       => true
-    ),
-    'user_pass' => array(
-        'id'            => 'user_pass',
-        'type'          => 'text',
-        'title'         => esc_html__('Password', 'jobboard-register'),
-        'input'         => 'password',
-        'col'           => 6,
-        'require'       => true
-    ),
-    'confirm_pass' => array(
-        'id'            => 'confirm_pass',
-        'type'          => 'text',
-        'title'         => esc_html__('Confirm Password', 'jobboard-register'),
-        'input'         => 'password',
-        'col'           => 6,
-        'require'       => true
-    ),
-    'user_type' => array(
-        'id'            => 'user_type',
-        'title'         => esc_html__('Account Type', 'jobboard-register' ),
-        'type'          => 'select',
-        'require'       => true,
-        'value'         => 'candidate',
-        'options'       => array(
-            'candidate' => esc_html__('Candidate', 'jobboard-register'),
-            'employer'  => esc_html__('Employer', 'jobboard-register'),
-        ),
-    ),
-    'job_specialisms' => array(
-        'id'            => 'job_specialisms',
-        'title'         => esc_html__('Specializations', 'jobboard-register' ),
-        'type'          => 'select',
-        'multi'         => true,
-        'options'       => jb_get_specialism_options(),
-    )
-  );
-}
+// function custom_form_fields() {
+//   return $fields = array(
+//     'user_login' => array(
+//         'id'            => 'user_login',
+//         'type'          => 'text',
+//         'value'         =>  '',
+//         'title'         => esc_html__('Username', 'jobboard-register'),
+//         'require'       => true
+//     ),
+//     'first_name' => array(
+//         'id'            => 'first_name',
+//         'type'          => 'text',
+//         'title'         => esc_html__('First Name', 'jobboard-register'),
+//         'col'           => 6,
+//         'require'       => true
+//     ),
+//     'last_name' => array(
+//         'id'            => 'last_name',
+//         'type'          => 'text',
+//         'title'         => esc_html__('Last Name', 'jobboard-register'),
+//         'col'           => 6,
+//         'require'       => true
+//     ),
+//     'user_email' => array(
+//         'id'            => 'user_email',
+//         'type'          => 'text',
+//         'title'         => esc_html__('Email Address', 'jobboard-register'),
+//         'input'         => 'email',
+//         'require'       => true
+//     ),
+//     'user_pass' => array(
+//         'id'            => 'user_pass',
+//         'type'          => 'text',
+//         'title'         => esc_html__('Password', 'jobboard-register'),
+//         'input'         => 'password',
+//         'col'           => 6,
+//         'require'       => true
+//     ),
+//     'confirm_pass' => array(
+//         'id'            => 'confirm_pass',
+//         'type'          => 'text',
+//         'title'         => esc_html__('Confirm Password', 'jobboard-register'),
+//         'input'         => 'password',
+//         'col'           => 6,
+//         'require'       => true
+//     ),
+//     'user_type' => array(
+//         'id'            => 'user_type',
+//         'title'         => esc_html__('Account Type', 'jobboard-register' ),
+//         'type'          => 'select',
+//         'require'       => true,
+//         'value'         => 'candidate',
+//         'options'       => array(
+//             'candidate' => esc_html__('Candidate', 'jobboard-register'),
+//             'employer'  => esc_html__('Employer', 'jobboard-register'),
+//         ),
+//     ),
+//     'job_specialisms' => array(
+//         'id'            => 'job_specialisms',
+//         'title'         => esc_html__('Specializations', 'jobboard-register' ),
+//         'type'          => 'select',
+//         'multi'         => true,
+//         'options'       => jb_get_specialism_options(),
+//     )
+//   );
+// }
 
 if(!function_exists('jb_parse_custom_fields')) {
   function jb_parse_custom_fields($field)
@@ -228,7 +229,7 @@ if(!function_exists('jb_parse_custom_fields')) {
     }
 
     $notices = JB()->session->get('jb_notices', array());
-    // var_dump($notices);
+
     $default = array(
         'id' => '',
         'name' => $field['id'],
@@ -380,4 +381,52 @@ if (!is_user_logged_in()) {
     jb_get_template('modal/modal-end.php');
   }
 }
+
+remove_action('jobboard_dashboard_candidate_navigation', 'jb_template_candidate_navigation');
+add_action('jobboard_dashboard_candidate_navigation', 'ability_plus_custom_candidate_navigation');
+
+function ability_plus_custom_candidate_navigation() {
+  $navigation = ability_plus_candidate_navigation_args();
+
+  if (!$navigation) {
+      return;
+  }
+
+  jb_get_template('dashboard/global/navigation.php', array(
+      'navigation' => $navigation,
+      'permalink' => jb_page_permalink('dashboard')
+  ));
+}
+
+function ability_plus_candidate_navigation_args() {
+  $endpoint_applied = jb_get_option( 'endpoint-applied', 'applied' );
+	$endpoint_profile = jb_get_option( 'endpoint-profile', 'profile' );
+
+	$navigation = apply_filters( 'jobboard_candidate_navigation_args', array(
+		array(
+			'id'       => 'dashboard',
+			'endpoint' => 'dashboard',
+			'title'    => esc_html__( 'Account Overview', JB_TEXT_DOMAIN )
+		),
+		array(
+      'id'       => 'profile',
+			'endpoint' => $endpoint_profile,
+			'title'    => esc_html__( 'Edit Profile', JB_TEXT_DOMAIN )
+		),
+    array(
+      'id'       => 'applied',
+      'endpoint' => $endpoint_applied,
+      'title'    => esc_html__( 'Application History', JB_TEXT_DOMAIN )
+    ),
+	) );
+
+	$navigation[] = array(
+		'id'       => 'logout',
+		'endpoint' => 'logout',
+		'title'    => esc_html__( 'Log Out', JB_TEXT_DOMAIN )
+	);
+
+	return $navigation;
+}
+
 

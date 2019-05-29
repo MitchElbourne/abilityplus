@@ -1177,6 +1177,34 @@ main[role="main"] section#sign-up-form .container form {
     main[role="main"] section#sign-up-form .container form div.form-actions input[type="submit"] {
       padding: 0.75rem 1.25rem; }
 
+body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations {
+  flex: 0 0 calc(100%/4);
+  margin-right: 2rem;
+  padding: 0;
+  background-color: #f3f4f5;
+  border-radius: 0.5rem; }
+  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta {
+    padding: 1rem;
+    border-bottom: 1px solid white; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta p.email {
+      color: rgba(28, 43, 56, 0.5); }
+  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li {
+    border-bottom: 1px solid white;
+    padding: 1rem; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:last-of-type {
+      border-bottom: 0; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
+      color: rgba(28, 43, 56, 0.5); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a:hover {
+        color: #1a2733; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active {
+      background-color: #e8eaeb; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active a {
+        color: #1a2733; }
+body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content {
+  flex: 1 1 auto;
+  border: 1px solid red; }
+
 #LogInModal, #PasswordModal {
   z-index: 99999;
   overflow: scroll; }
