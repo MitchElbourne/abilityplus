@@ -21,17 +21,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php $fields = jb_candidate_profile_custom_field(); ?>
 
-<div class="dashboard-navigations">
+<div class="dashboard-navigations col-xs-12 col-md-3">
   <div class="profile-meta">
-    <h1 class="h6"><?php echo $fields[4]['value']; echo ' '; echo $fields[5]['value']; ?></h1>
-    <p class='email caption'><?php echo $fields[3]['value']; ?></p>
+    <h1 class="h6"><?php echo $fields[2]['value']; echo ' '; echo $fields[3]['value']; ?></h1>
+    <p class='email caption'><?php echo $fields[4]['value']; ?></p>
   </div>
 
     <?php do_action("jobboard_dashboard_".jb_account_type()."_navigation"); ?>
 
 </div>
-<div class="dashboard-content">
 
+<div class="dashboard-content col-xs-12 col-md-8">
     <?php do_action("jobboard_dashboard_".jb_account_type()."_content"); ?>
 
+    <!-- <div class="content-progress">
+    <?php echo do_shortcode('[cms_progressbar color="#81d742" cms_template="cms_progressbar.php"]'); ?>
+    </div> -->
 </div>

@@ -428,5 +428,7 @@ function ability_plus_candidate_navigation_args() {
 
 	return $navigation;
 }
-
-
+// global $jobboard_admin;
+// remove_action('jobboard_admin_profile_sections', array($jobboard_admin, 'add_fields_video'), 8);
+// remove_filter('jobboard_candidate_profile_fields', array($jobboard_admin, 'fields_video'));
+// remove_filter('jobboard_employer_profile_fields', array($jobboard_admin, 'fields_video'), 8);

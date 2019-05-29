@@ -200,9 +200,19 @@ label {
   }
 }
 
-// .select2-dropdown {
-//   position: relative;
-// }
+.select2-dropdown {
+  background-color: $lightest-grey;
+  border: 1px solid $lighter-grey;
+  .select2-search__field {
+    display: none;
+  }
+}
+
+.select2-selection {
+  &:focus {
+    outline: none;
+  }
+}
 
 span.error {
   margin: 0 0 1rem 0;
