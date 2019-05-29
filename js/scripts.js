@@ -213,6 +213,40 @@
     }, 300));
     
     equalizeHeights();
-	});
+  });
+  
+
+  $('body').on('click', '.basket-add', function (e) {
+    e.preventDefault();
+    var _this = $(this);
+    var btn = $(this);
+    var id  = btn.data('id');
+    
+    if(id === ''){
+        return;
+    }
+
+    if(!_this.is('[data-modal]')){
+        btn.prop('disabled', true);
+        btn.find('.cart').css('display', 'none');
+        btn.find('.jobboard-loading').attr('style', '');
+        $.post(jobboard_localize_basket.ajaxurl, {'action': 'jobboard_basket_ajax_add', 'id': id}, function(response) {
+            jobboard_create_notices(response.message, response.type);
+            if(response.type === 'error'){
+                btn.prop('disabled', false);
+                btn.find('.cart').attr('style', '');
+                btn.find('.jobboard-loading').css('display', 'none');
+            } else {
+                update_basket();
+                console.log("Added to basket");
+                btn.removeClass('basket-add').addClass('basket-added');
+                btn.find('.cart').attr('style', '');
+                btn.find('.jobboard-loading').css('display', 'none');
+                btn.find('.add').css('display', 'none');
+                btn.find('.added').attr('style', '');
+            }
+        });
+    }
+});
 
 })(jQuery, this);
