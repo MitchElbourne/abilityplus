@@ -48,6 +48,48 @@ function remove_parent_theme_locations()
     unregister_nav_menu( 'pr_menu_right' );
 }
 add_action( 'after_setup_theme', 'remove_parent_theme_locations', 20 );
+add_action( 'after_setup_theme', 'wack_town', 20 );
+function wack_town() {
+  add_action('jobboard_main_before_content', 'recruitment', 6);
+}
+
+function recruitment() {
+  if ((is_jb_jobs() && (is_active_sidebar('job') || is_active_sidebar('job2'))) || (is_jb_account_listing() && (is_active_sidebar('jobboard-sidebar-employers') || is_active_sidebar('jobboard-sidebar-candidates') || is_active_sidebar('job')))) {
+    ?>
+    <div id="abilityPlusSidebar" class="col-xs-12 col-md-5 col-lg-4 col-xl-3">
+        <div id="widget-area" class="widget-area" role="complementary">
+          <h3 class="caption">NARROW YOUR CHOICES</h3>
+            <?php if (is_active_sidebar('job3')) { ?>
+                <div class="sidebar-job-default">
+                    <?php dynamic_sidebar('job3'); ?>
+                </div>
+            <?php } ?>
+
+            <?php if (is_jb_jobs() && is_active_sidebar('job2')) { ?>
+                <div class="sidebar-job-border">
+                    <?php dynamic_sidebar('job2'); ?>
+                </div>
+            <?php } elseif (is_jb_employer_listing() && is_active_sidebar('jobboard-sidebar-employers')) { ?>
+                <div class="sidebar-job-border">
+                    <?php dynamic_sidebar('jobboard-sidebar-employers'); ?>
+                </div>
+            <?php } elseif (is_jb_candidate_listing() && is_active_sidebar('jobboard-sidebar-candidates')) { ?>
+                <div class="sidebar-job-border">
+                    <?php dynamic_sidebar('jobboard-sidebar-candidates'); ?>
+                </div>
+            <?php } ?>
+
+            <?php if (is_active_sidebar('job')) { ?>
+                <div class="sidebar-job-default">
+                    <?php dynamic_sidebar('job'); ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php
+}
+}
+
 
 // Bootstrap NavWalker
 require_once get_stylesheet_directory() . '/navwalker.php';
@@ -116,7 +158,9 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
     return $menu_items . $new_li;
   } else {
     $currentuser = wp_get_current_user();
-    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Your Profile' href='" . esc_url(site_url('/profile')) . "' class='nav-link modal-button'>" . "Hey " . $currentuser->user_firstname . "!" . "</a></li>";
+    $firstName = $currentuser->user_firstname;
+    $lastName = $currentuser->user_lastname;
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item logged-in'><a title='Your Profile' href='" . esc_url(site_url('/profile')) . "' class='nav-link modal-button'>" . $firstName . " " . $lastName[0] . ".</a></li>";
     
     return $menu_items . $new_li;
   }
@@ -428,6 +472,9 @@ function ability_plus_candidate_navigation_args() {
 
 	return $navigation;
 }
+
+
+
 // global $jobboard_admin;
 // remove_action('jobboard_admin_profile_sections', array($jobboard_admin, 'add_fields_video'), 8);
 // remove_filter('jobboard_candidate_profile_fields', array($jobboard_admin, 'fields_video'));
