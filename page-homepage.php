@@ -9,7 +9,12 @@ get_header();
         <h1 class="col-12 col-lg-8 col-md-9 m-auto">Planning your next career journey?</h1>
         <p class="text col-12 col-lg-6 col-md-9">We understand a small step in a new direction is a giant leap. You may be unsure of the destination, so let us assist with your direction.</p>
         <div class="cta-container col-12">
-          <a title='Sign Up' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">Sign Up</a>
+          <?php
+            if(is_user_logged_in()) { ?>
+              <a title='View Jobs' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">View Vacancies</a>
+      <?php } else { ?>
+              <a title='Sign Up' href='<?php echo esc_url(site_url('/profile/sign-up')); ?>' class="bold">Sign Up</a>
+      <?php } ?>
           <a title="How we work" href="javascript:;" class="bold how-we-work-cta">How We Work</a>
         </div>
         <div class="panel-container">
@@ -17,13 +22,13 @@ get_header();
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Connect with proffessionals">
             <p class="h5 bold">Connect professionals to the best jobs</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
-            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-magnifying-glass.png'); ?>" alt="Search for jobs and positions talent">
             <p class="h5 bold">Find IOM talent for your open positions</p>
             <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.</p>
-            <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+            <a href="<?php echo esc_url(site_url('/employers')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
           </div>
           <div class="panel">
             <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-newspaper.png'); ?>" alt="Find new jobs every week">
@@ -143,7 +148,7 @@ get_header();
       <?php } 
           } ?>
         </div>
-        <a href="" class="cta-blue">View all posts</a>
+        <a href="<?php echo esc_url(site_url('/blog')); ?>" class="cta-blue">View all posts</a>
       </div>
     </div>
   </section><!--#blog-recommendations-->

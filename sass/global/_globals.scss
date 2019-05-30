@@ -35,6 +35,14 @@ body {
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    .wrapper {
+      padding-top: 7rem;
+      section {
+        padding: 2rem 0;
+      }
+    }
+  }
 }
 
 .container {
