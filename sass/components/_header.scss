@@ -88,6 +88,7 @@ header#site-header {
               &:hover, &:focus {
                 background-color: rgba($primary-blue, 0.1);
               }
+              text-transform: capitalize;
             }
           }
           a {

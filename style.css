@@ -342,7 +342,8 @@ header#site-header {
           background-color: rgba(37, 120, 219, 0.4); }
       header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
         background-color: white;
-        border: 2px solid rgba(37, 120, 219, 0.18); }
+        border: 2px solid rgba(37, 120, 219, 0.18);
+        text-transform: capitalize; }
         header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:focus {
           background-color: rgba(37, 120, 219, 0.1); }
       header#site-header nav div#primary-menu ul li a {
@@ -391,11 +392,8 @@ footer#site-footer {
           padding: 0 1rem;
           display: flex;
           flex-direction: column; }
-<<<<<<< HEAD
-=======
           footer#site-footer .container div.information-container div.services div.content div.find-jobs img, footer#site-footer .container div.information-container div.services div.content div.find-talent img {
             width: 1.25rem; }
->>>>>>> origin/development
           footer#site-footer .container div.information-container div.services div.content div.find-jobs p, footer#site-footer .container div.information-container div.services div.content div.find-talent p {
             color: rgba(28, 43, 56, 0.5);
             margin: 1rem 0; }
@@ -722,6 +720,21 @@ body.job-listing-classic .wrapper .container .row .search-field .widget-content 
     body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="submit"] {
       font-family: "tkusual-reg", "system", "sans-serif";
       align-self: center; }
+@media (max-width: 767px) {
+  body.job-listing-classic .wrapper .container .row .search-field .widget-content form div {
+    flex-wrap: wrap;
+    background-color: white; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div img {
+      width: 1rem;
+      height: 1rem;
+      display: none; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="search"] {
+      font-size: 1rem;
+      flex: 1 1 auto; }
+    body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="submit"] {
+      display: inline-block;
+      margin: 1rem auto 0;
+      max-width: 10rem; } }
 body.job-listing-classic .wrapper .container .row #sidebar {
   display: none; }
 body.job-listing-classic .wrapper .container .row #abilityPlusSidebar .caption {
@@ -893,6 +906,7 @@ body.job-listing-classic .wrapper .container .row #content {
         font-size: 0.75rem;
         margin-top: 0.5rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
+          border: 1px solid #1a2733;
           background-color: #1a2733;
           color: white; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
@@ -903,6 +917,9 @@ body.job-listing-classic .wrapper .container .row #content {
   @media (max-width: 1199px) {
     body.job-listing-classic .wrapper .container .row #content {
       flex: 1 1 50%; } }
+  @media (max-width: 767px) {
+    body.job-listing-classic .wrapper .container .row #content section {
+      padding-bottom: 0; } }
 
 body.is-job div.wrapper {
   padding-top: 8rem; }
@@ -1060,6 +1077,7 @@ body.is-job div.wrapper {
             border-radius: 2px;
             font-size: 0.75rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.specialism {
+              border: 1px solid #1a2733;
               background-color: #1a2733;
               color: white; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types {

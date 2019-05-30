@@ -274,6 +274,7 @@ body.is-job {
               border-radius: 2px;
               font-size: 0.75rem;
               &.specialism {
+                border: 1px solid $black;
                 background-color: $black;
                 color: $white;
               }
