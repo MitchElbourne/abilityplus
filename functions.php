@@ -39,7 +39,6 @@ function wp_recruitment_enqueue_styles()
 
 add_action('wp_enqueue_scripts', 'wp_recruitment_enqueue_styles', 20);
 
-
 // Remove Parent Theme locations(menus etc...)
 function remove_parent_theme_locations()
 {
@@ -49,6 +48,7 @@ function remove_parent_theme_locations()
 }
 add_action( 'after_setup_theme', 'remove_parent_theme_locations', 20 );
 
+remove_action('after_setup_theme', 'recruitment_user_skills', 20);
 
 
 
@@ -163,7 +163,7 @@ function custom_form_fields() {
     'user_login' => array(
         'id'            => 'user_login',
         'type'          => 'text',
-        'value'         =>  '',
+        'value'         =>  mt_rand(100000, 999999),
         'title'         => esc_html__('Username', 'jobboard-register'),
         'require'       => true
     ),
@@ -434,7 +434,12 @@ function ability_plus_candidate_navigation_args() {
 	return $navigation;
 }
 
-
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_start', 10);
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_title', 20);
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_salary', 30);
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_specialism', 40);
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_location', 50);
+remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_end', 100);
 
 // global $jobboard_admin;
 // remove_action('jobboard_admin_profile_sections', array($jobboard_admin, 'add_fields_video'), 8);

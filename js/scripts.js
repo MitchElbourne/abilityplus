@@ -108,14 +108,14 @@
 		}
     howweworkCtaHandler();
     
-    function signUpHandler() {
-      $('#create-my-account').on('click', function() {
-        document.getElementById('user_login').value = "";
-        document.getElementById('user_login').value = document.getElementById('user_email').value;
-      })
-    }
+    // function signUpHandler() {
+    //   $('#create-my-account').on('click', function() {
+    //     document.getElementById('user_login').value = "";
+    //     document.getElementById('user_login').value = document.getElementById('user_email').value;
+    //   })
+    // }
 
-    signUpHandler();
+    // signUpHandler();
 
 
     function careerLevelHandler() {

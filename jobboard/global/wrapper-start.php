@@ -18,9 +18,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+$user = wp_get_current_user();
+
 ?>
 <?php if(is_jb_profile()): ?>
-	<div class="jb-user-container"><div class="user-container">
+    <?php get_footer() ?>
+    <?php exit; ?>
 <?php else: ?>
 	<div class="container job-container">
     <div class="row">

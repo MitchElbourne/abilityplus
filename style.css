@@ -1524,11 +1524,13 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         resize: none;
         outline: none; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field {
+        padding: 0;
         background-color: white; }
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field h4 {
           border-bottom: 1px solid #e8eaeb;
           font-size: 1rem;
-          padding-bottom: 1rem; }
+          padding-bottom: 1rem;
+          margin-bottom: 1rem; }
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field span {
           font-size: 0.875rem; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
@@ -1556,6 +1558,35 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
                 font-size: 0.875rem; }
                 body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
                   margin: 0 0 0 0.9rem; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(13), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(14), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(15), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(16), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(17), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(18) {
+        display: none; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field {
+        padding: 0;
+        background-color: white; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field h3 {
+          border-bottom: 1px solid #e8eaeb;
+          font-size: 1rem;
+          padding-bottom: 1rem;
+          margin-bottom: 1rem; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field span {
+          font-size: 0.875rem; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions {
+      text-align: center; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"] {
+        flex: 1 1 auto;
+        display: inline-block;
+        margin: 2rem 0;
+        max-height: 3rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 28px;
+        border: none;
+        color: white;
+        background-color: #2578db;
+        transition: all 200ms;
+        font-family: "tkusual-bold", "system", "sans-serif"; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:focus {
+          background-color: rgba(37, 120, 219, 0.85);
+          color: white; }
 
 #LogInModal, #PasswordModal {
   z-index: 99999;

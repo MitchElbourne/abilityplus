@@ -259,11 +259,13 @@ body.is-dashboard {
                     // Specialisations title
                     &:nth-of-type(11) {
                       div.field {
+                        padding: 0;
                         background-color: $white;
                         h4 {
                           border-bottom: 1px solid $lighter-grey;
                           font-size: 1rem;
                           padding-bottom: 1rem;
+                          margin-bottom: 1rem;
                         }
                         span {
                           font-size: 0.875rem;
@@ -307,6 +309,45 @@ body.is-dashboard {
                           }
                         }
                       }
+                    }
+                    &:nth-of-type(13), &:nth-of-type(14), &:nth-of-type(15), &:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18) {
+                      display: none;
+                    }
+                    &:nth-of-type(19) {
+                      div.field {
+                        padding: 0;
+                        background-color: $white;
+                        h3 {
+                          border-bottom: 1px solid $lighter-grey;
+                          font-size: 1rem;
+                          padding-bottom: 1rem;
+                          margin-bottom: 1rem;
+                        }
+                        span {
+                          font-size: 0.875rem;
+                        }
+                      }
+                    }
+
+                  }
+                }
+                div.form-actions {
+                  text-align: center;
+                  input[type="submit"] {
+                    flex: 1 1 auto;
+                    display: inline-block;
+                    margin: 2rem 0;
+                    max-height: 3rem;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 28px;
+                    border: none;
+                    color: $white;
+                    background-color: $primary-blue;
+                    transition: all 200ms;
+                    font-family: $tkusualbd;
+                    &:hover, &:focus {
+                      background-color: rgba($primary-blue, 0.85);
+                      color: $white;
                     }
                   }
                 }
