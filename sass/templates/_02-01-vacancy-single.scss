@@ -268,7 +268,9 @@ body.is-job {
           div.job-meta-tags {
             margin-top: auto;
             .job-meta {
+              display: inline-block;
               padding: 0.4rem 0.5rem;
+              margin-top: 0.5rem;
               border-radius: 2px;
               font-size: 0.75rem;
               &.specialism {

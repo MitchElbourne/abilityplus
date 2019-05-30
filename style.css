@@ -287,13 +287,15 @@ header#site-header {
         width: 9.5rem; }
     header#site-header nav .navbar-toggler {
       border: none;
-      display: flex;
-      flex-direction: column;
       background: transparent !important; }
+      header#site-header nav .navbar-toggler .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0; }
       header#site-header nav .navbar-toggler:hover {
         background: transparent !important; }
       header#site-header nav .navbar-toggler .icon-bar {
-        min-width: 22px;
+        width: 20px;
         min-height: 2px;
         border: 2px solid #1a2733;
         -webkit-transition: all 0.2s;
@@ -321,13 +323,18 @@ header#site-header {
         margin-left: auto; }
         header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
           padding-left: 0; }
-      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
+      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"], header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
         color: #2578db;
         background-color: rgba(37, 120, 219, 0.18);
         padding: 0.5rem 1rem;
         border-radius: 1.2rem; }
-        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus {
+        header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:hover, header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"]:focus, header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:focus {
           background-color: rgba(37, 120, 219, 0.4); }
+      header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
+        background-color: white;
+        border: 2px solid rgba(37, 120, 219, 0.18); }
+        header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:focus {
+          background-color: rgba(37, 120, 219, 0.1); }
       header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
         color: #1a2733;
@@ -371,7 +378,11 @@ footer#site-footer {
         border: 1px solid #d2d5d7;
         border-radius: 5px; }
         footer#site-footer .container div.information-container div.services div.content div.find-jobs, footer#site-footer .container div.information-container div.services div.content div.find-talent {
-          padding: 0 1rem; }
+          padding: 0 1rem;
+          display: flex;
+          flex-direction: column; }
+          footer#site-footer .container div.information-container div.services div.content div.find-jobs img, footer#site-footer .container div.information-container div.services div.content div.find-talent img {
+            width: 1.25rem; }
           footer#site-footer .container div.information-container div.services div.content div.find-jobs p, footer#site-footer .container div.information-container div.services div.content div.find-talent p {
             color: rgba(28, 43, 56, 0.5);
             margin: 1rem 0; }
@@ -696,22 +707,26 @@ body.job-listing-classic .wrapper .container .row .search-field .widget-content 
     body.job-listing-classic .wrapper .container .row .search-field .widget-content form div input[type="submit"] {
       font-family: "tkusual-reg", "system", "sans-serif";
       align-self: center; }
-body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
+body.job-listing-classic .wrapper .container .row #sidebar {
+  display: none; }
+body.job-listing-classic .wrapper .container .row #abilityPlusSidebar .caption {
+  margin-bottom: 1rem; }
+body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area {
   border-radius: 1rem;
   background-color: #f3f4f5;
   padding: 1rem; }
-  body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside {
+  body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 8px;
     background-color: white;
     font-size: 0.875rem; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-title {
       position: relative;
       padding-left: 1.75rem; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title i {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-title i {
         display: none; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title:before {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-title:before {
         content: '';
         position: absolute;
         left: 0;
@@ -721,7 +736,7 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title:after {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-title:after {
         content: '';
         position: absolute;
         right: 0;
@@ -732,22 +747,22 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside:last-of-type {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside:last-of-type {
       margin-bottom: 0; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside h3 {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside h3 {
       font-size: 0.875rem;
       display: flex; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside h3 i {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside h3 i {
         margin-left: auto;
         font-size: 1rem; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul {
       border-top: 1px solid #f3f4f5;
       padding-top: 0.5rem;
       margin-top: 0.5rem; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li {
         display: flex;
         margin: 0.4rem 0; }
-        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input {
+        body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input {
           margin-right: 0.75rem;
           margin-top: 0.2rem;
           -webkit-appearance: none;
@@ -761,14 +776,14 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
           width: 1rem;
           cursor: pointer;
           transition: all 250ms; }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:active {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:active {
             background-color: rgba(37, 120, 219, 0.25); }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:active {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:checked:active {
             background-color: rgba(37, 120, 219, 0.25); }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:checked {
             background-color: rgba(37, 120, 219, 0.25);
             border-color: transparent; }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:after {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:checked:after {
             content: '';
             position: absolute;
             top: 5px;
@@ -781,78 +796,98 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center; }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:hover {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:checked:hover {
             background-color: rgba(37, 120, 219, 0.2); }
-          body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:hover {
+          body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li input:hover {
             background-color: rgba(37, 120, 219, 0.1); }
-        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li label {
+        body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li label {
           margin-right: auto; }
-        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li span.count {
+        body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside .wg-content ul li span.count {
           color: #1c2b38; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters .wg-title:before {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters .wg-title:before {
       background-image: url("../wp-recruitment-child/assets/svg/icon-briefcase.svg"); }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li:last-of-type {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters ul li:last-of-type {
       margin-bottom: 0; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more {
       margin-top: 0.5rem;
       font-family: "tkusual-bold", "system", "sans-serif";
       transition: all 200ms; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg {
         margin-right: 0.5rem; }
-        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg rect {
+        body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg rect {
           transition: all 200ms; }
-      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more:hover svg rect {
+      body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more:hover svg rect {
         fill: #0a468f; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-types .wg-title:before {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-types .wg-title:before {
       background-image: url("../wp-recruitment-child/assets/svg/icon-job-type.svg"); }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-types ul li span.count {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-types ul li span.count {
       margin-left: auto; }
-    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-salary-filters .wg-title:before {
+    body.job-listing-classic .wrapper .container .row #abilityPlusSidebar #widget-area aside.widget-salary-filters .wg-title:before {
       background-image: url("../wp-recruitment-child/assets/svg/icon-coins.svg"); }
-body.job-listing-classic .wrapper .container .row #content .jobboard-not-found span.no-jobs {
-  font-size: 1.5rem;
-  color: rgba(28, 43, 56, 0.5); }
-body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row {
-  margin: 0;
-  padding: 1.65rem 0 1.65rem 1rem;
-  border: none;
-  border-bottom: 2px solid #e8eaeb;
-  border-bottom-style: dotted; }
-  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary {
-    flex: 1 1 auto;
-    padding: 0;
-    order: 1; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations {
-      margin-top: 0.75rem; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title {
-      display: flex; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title span.posted-time {
-        margin-left: auto;
-        color: rgba(28, 43, 56, 0.5); }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations a, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title a {
-      color: #1a2733; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations a:hover, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title a:hover {
+body.job-listing-classic .wrapper .container .row #content {
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  flex: 1 1 70%; }
+  body.job-listing-classic .wrapper .container .row #content .jobboard-not-found span.no-jobs {
+    font-size: 1.5rem;
+    color: rgba(28, 43, 56, 0.5); }
+  body.job-listing-classic .wrapper .container .row #content .form-search {
+    padding: 0.5rem 1rem;
+    background-color: #f3f4f5; }
+    body.job-listing-classic .wrapper .container .row #content .form-search .clear-all {
+      color: #1a2733;
+      text-decoration: underline; }
+      body.job-listing-classic .wrapper .container .row #content .form-search .clear-all:hover, body.job-listing-classic .wrapper .container .row #content .form-search .clear-all:focus {
         color: #0a468f; }
-  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-price {
-    display: none; }
-  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row a.job-more {
-    display: none; }
-  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags {
-    margin-top: 1rem;
-    order: 3;
-    width: 100%; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta {
-      padding: 0.4rem 0.5rem;
-      border-radius: 2px;
-      font-size: 0.75rem; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
-        background-color: #1a2733;
-        color: white; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
-        border: 1px solid #e8eaeb; }
-        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
-          margin-bottom: 0.2rem;
-          margin-right: 0.3rem; }
+    @media (max-width: 767px) {
+      body.job-listing-classic .wrapper .container .row #content .form-search {
+        margin-top: 1rem; } }
+  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row {
+    margin: 0;
+    padding: 1.65rem 0 1.65rem 1rem;
+    border: none;
+    border-bottom: 2px solid #e8eaeb;
+    border-bottom-style: dotted; }
+    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary {
+      flex: 1 1 auto;
+      padding: 0;
+      order: 1; }
+      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations {
+        margin-top: 0.75rem; }
+      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title {
+        display: flex; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title span.posted-time {
+          margin-left: auto;
+          color: rgba(28, 43, 56, 0.5); }
+      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations a, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title a {
+        color: #1a2733; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-locations a:hover, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title a:hover {
+          color: #0a468f; }
+    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-price {
+      display: none; }
+    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row a.job-more {
+      display: none; }
+    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags {
+      order: 3;
+      width: 100%; }
+      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta {
+        padding: 0.4rem 0.5rem;
+        display: inline-block;
+        border-radius: 2px;
+        font-size: 0.75rem;
+        margin-top: 0.5rem; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
+          background-color: #1a2733;
+          color: white; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
+          border: 1px solid #e8eaeb; }
+          body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
+            margin-bottom: 0.2rem;
+            margin-right: 0.3rem; }
+  @media (max-width: 1199px) {
+    body.job-listing-classic .wrapper .container .row #content {
+      flex: 1 1 50%; } }
 
 body.is-job div.wrapper {
   padding-top: 8rem; }
@@ -1004,7 +1039,9 @@ body.is-job div.wrapper {
         body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags {
           margin-top: auto; }
           body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta {
+            display: inline-block;
             padding: 0.4rem 0.5rem;
+            margin-top: 0.5rem;
             border-radius: 2px;
             font-size: 0.75rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.specialism {

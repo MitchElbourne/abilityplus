@@ -33,6 +33,12 @@ body.job-listing-classic {
           }
         }
         #sidebar {
+          display: none;
+        }
+        #abilityPlusSidebar {
+          .caption {
+            margin-bottom: 1rem;
+          }
           #widget-area {
             border-radius: 1rem;
             background-color: $lightest-grey;
@@ -203,6 +209,10 @@ body.job-listing-classic {
           }
         }
         #content {
+          display: flex;
+          flex-direction: column;
+          max-width: none;
+          flex: 1 1 70%;
           .jobboard-archive-actions {
             // display: none;
           }
@@ -210,6 +220,20 @@ body.job-listing-classic {
             span.no-jobs {
               font-size: 1.5rem;
               color: $middle-grey;
+            }
+          }
+          .form-search {
+            padding: 0.5rem 1rem;
+            background-color: $lightest-grey;
+            .clear-all {
+              color: $black;
+              text-decoration: underline;
+              &:hover, &:focus {
+                color: $dark-blue;
+              }
+            }
+            @include media-breakpoint-down(sm) {
+              margin-top: 1rem;
             }
           }
           .jb-jobs-body {
@@ -274,14 +298,15 @@ body.job-listing-classic {
                     }
                   // }
                   .job-meta-tags {
-                    margin-top: 1rem;
                     // margin-left: 2rem;
                     order: 3;
                     width: 100%;
                     .job-meta {
                       padding: 0.4rem 0.5rem;
+                      display: inline-block;
                       border-radius: 2px;
                       font-size: 0.75rem;
+                      margin-top: 0.5rem;
                       &.specialism {
                         background-color: $black;
                         color: $white;
@@ -298,6 +323,9 @@ body.job-listing-classic {
                 }
               }
             }
+          }
+          @include media-breakpoint-down(lg) {
+            flex: 1 1 50%;
           }
         }
       }

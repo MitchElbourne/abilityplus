@@ -16,14 +16,17 @@ header#site-header {
 
     .navbar-toggler {
       border: none;
-      display: flex;
-      flex-direction: column;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+      }
       background: transparent !important;
       &:hover {
         background: transparent !important;
       }
       .icon-bar {
-        min-width: 22px;
+        width: 20px;
         min-height: 2px;
         border: 2px solid $black;
         -webkit-transition: all 0.2s;
@@ -70,13 +73,20 @@ header#site-header {
             }
           }
           &:last-of-type {
-            a[title="Sign Up | Log In"] {
+            a[title="Sign Up | Log In"], &.logged-in a {
               color: $primary-blue;
               background-color: rgba($primary-blue, 0.18);
               padding: 0.5rem 1rem;
               border-radius: 1.2rem;
               &:hover, &:focus {
                 background-color: rgba($primary-blue, 0.4);
+              }
+            }
+            &.logged-in a {
+              background-color: $white;
+              border: 2px solid rgba($primary-blue, 0.18);
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.1);
               }
             }
           }
