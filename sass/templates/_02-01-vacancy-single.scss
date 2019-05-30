@@ -113,6 +113,7 @@ body.is-job {
         padding-top: 2rem;
         padding-bottom: 2rem;
         display: flex;
+<<<<<<< Updated upstream
         p.bookmark {
           align-self: center;
           display: flex;
@@ -126,6 +127,36 @@ body.is-job {
           border-right: 2px solid $lighter-grey;
           margin: 0 1.25rem;
         }
+=======
+        // p.bookmark {
+        //   align-self: center;
+        //   display: flex;
+        //   a {
+        //     padding: 0;
+        //     align-self: flex-start;
+        //     margin-right: 0.9rem;
+        //   }
+        //   button, a.basket-added {
+        //     padding: 0;
+        //     svg {
+        //       width: 0.875rem;
+        //       height: 1rem;
+        //     }
+        //   }
+        //   button.basket-added, a.basket-added {
+        //     opacity: 1;
+        //     svg {
+        //       path {
+        //         fill: $primary-blue;
+        //       }
+        //     }
+        //   }
+        // }
+        // div.break {
+        //   border-right: 2px solid $lighter-grey;
+        //   margin: 0 1.25rem;
+        // }
+>>>>>>> Stashed changes
         p.share {
           display: flex;
           align-self: center;
@@ -152,13 +183,13 @@ body.is-job {
         .container {
           flex-direction: column;
           text-align: center;
-          p.bookmark {
-            margin-right: 1rem;
-            order: 2;
-          }
-          div.break {
-            display: none;
-          }
+          // p.bookmark {
+          //   margin-right: 1rem;
+          //   order: 2;
+          // }
+          // div.break {
+          //   display: none;
+          // }
           p.share {
             order: 1;
             margin: 1.5rem 0 0.5rem;

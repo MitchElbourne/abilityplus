@@ -55,11 +55,12 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
 
   <section id="job-ctas">
     <div class="container">
-      <p class="bookmark">
-        <?php jb_template_widget_basket_button_loop(); ?>
+
+      <!-- <p class="bookmark">
+        <?php /* jb_template_widget_basket_button_loop(); */?>
         Bookmark
-      </p>
-      <div class="break"></div>
+      </p> -->
+      <!-- <div class="break"></div> -->
       <p class="share">
         Share with:
         <a href="http://www.linkedin.com/shareArticle?mini=false&url=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin-grey.svg'); ?></a>
@@ -118,7 +119,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
           if($types) {
             foreach($types as $type) {
               ?>
-                <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-job-type.svg'); ?><?php echo $type->name; ?></span>
+                <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-inline-job-type.svg'); ?><?php echo $type->name; ?></span>
               <?php
             }
           } ?>
