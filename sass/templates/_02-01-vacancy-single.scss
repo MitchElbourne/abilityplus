@@ -2,7 +2,7 @@ body.is-job {
   div.wrapper {
     padding-top: 8rem;
     @include media-breakpoint-down(sm) {
-      padding-top: 10rem;
+      padding-top: 6rem;
     }
     section#single-job-navigation {
       background-color: $lightest-grey;
@@ -297,6 +297,21 @@ body.is-job {
           margin-right: 0;
           padding: 1rem 5rem;
           max-height: 4rem;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        padding-top: 0;
+        .container {
+          flex-wrap: wrap;
+          div.job-meta {
+            flex: 1 1 100%;
+            order: 2;
+            margin-right: 0;
+            margin-top: 1rem;
+          }
+          div.job-information {
+            padding: 0.5rem;
+          }
         }
       }
     }
