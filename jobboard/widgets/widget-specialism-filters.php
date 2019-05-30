@@ -53,8 +53,6 @@ $terms_count = count($terms);
 
                 <a class="specialism-filter-more md-trigger" data-modal="specialism-filter-modal" href="javascript:void(0)"><?php echo get_template_part('/assets/svg/icon-inline-add.svg');  ?><?php echo esc_html__('more', JB_TEXT_DOMAIN); ?></a>
                 
-
-
                 
 
                 <?php jb_get_template('modal/modal-start.php', array('modal' => 'specialism-filter-modal')); ?>
