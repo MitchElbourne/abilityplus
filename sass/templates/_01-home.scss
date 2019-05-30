@@ -198,9 +198,6 @@ body.home {
         .row {
           div.panel-container {
             div.panel {
-              &:nth-of-type(even) {
-                
-              }
               div.content {
                 padding: 1rem;
               }
@@ -308,6 +305,41 @@ body.home {
                   margin-bottom: 2.25rem;
                   padding-bottom: 2.25rem;
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  section#newsletter-signup {
+    .container {
+      .row {
+        text-align: center;
+        flex-direction: column;
+        p {
+          margin: 1.5rem auto 2.125rem;
+        }
+        .form-container {
+          margin: 0 auto;
+          form {
+            #mc_embed_signup_scroll {
+              display: flex;
+              background-color: $lighter-grey;
+              justify-content: space-between;
+              border-radius: 2rem;
+              padding: 0.5rem 0.5rem 0.5rem 1rem;
+              width: 100%;
+              input[type="submit"] {
+                display: inline-block;
+                margin-right: 0;
+              }
+              input[type="email"] {
+                background-color: transparent;
+                border: none;
+                width: 100%;
               }
             }
           }

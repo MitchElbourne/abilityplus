@@ -43,6 +43,36 @@ body.job-listing-classic {
               border-radius: 8px;
               background-color: $white;
               font-size: 0.875rem;
+              .wg-title {
+                position: relative;
+                padding-left: 1.75rem;
+                i {
+                  display: none;
+                }
+                &:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 1rem;
+                  height: 1rem;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+                }
+                &:after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 0.3rem;
+                  width: 0.9rem;
+                  height: 0.5rem;
+                  background-image: url('../wp-recruitment-child/assets/svg/icon-down-arrow.svg');
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+                }
+              }
               &:last-of-type {
                 margin-bottom: 0;
               }
@@ -56,7 +86,7 @@ body.job-listing-classic {
               }
               .wg-content {
                 ul {
-                  border-top: 1px solid $lighter-grey;
+                  border-top: 1px solid $lightest-grey;
                   padding-top: 0.5rem;
                   margin-top: 0.5rem;
                   li {
@@ -77,39 +107,95 @@ body.job-listing-classic {
                       cursor: pointer;
                       transition: all 250ms;
                       &:active {
-                        background-color: rgba($black, 0.1);
+                        background-color: rgba($primary-blue, 0.25);
                       }
                       &:checked:active {
-                        background-color: rgba($black, 0.1);
+                        background-color: rgba($primary-blue, 0.25);
                       }
                       &:checked {
-                        background-color: rgba($black, 0.1);
+                        background-color: rgba($primary-blue, 0.25);
+                        border-color: transparent;
                       }
                       &:checked:after {
                         content: '';
                         position: absolute;
                         top: 5px;
-                        left: 4.5px;
+                        left: 4px;
                         min-width: 8px;
                         min-height: 6px;
                         max-width: 8px;
                         max-height: 6px;
                         background-image: url('assets/svg/icon-checked.svg');
-                        filter: grayscale(1);
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;
                       }
                       &:checked:hover {
-                        background-color: rgba($black, 0.04);
+                        background-color: rgba($primary-blue, 0.2);
                       }
                       &:hover {
-                        background-color: rgba($black, 0.1)
+                        background-color: rgba($primary-blue, 0.1)
                       }
                     }
                     label {
                       margin-right: auto;
                     }
+                    span.count {
+                      color: $darker-grey;
+                    }
+                  }
+                }
+              }
+              &.widget-specialism-filters {
+                .wg-title {
+                  &:before {
+                    background-image: url('../wp-recruitment-child/assets/svg/icon-briefcase.svg')
+                  }
+                }
+                ul {
+                  li {
+                    &:last-of-type {
+                      margin-bottom: 0;
+                    }
+                    .specialism-filter-more {
+                      margin-top: 0.5rem;
+                      font-family: $tkusualbd;
+                      transition: all 200ms;
+                      svg {
+                        margin-right: 0.5rem;
+                        rect {
+                          transition: all 200ms;
+                        }
+                      }
+                      &:hover {
+                        svg {
+                          rect {
+                            fill: $dark-blue;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              &.widget-types {
+                .wg-title {
+                  &:before {
+                    background-image: url('../wp-recruitment-child/assets/svg/icon-job-type.svg');
+                  }
+                }
+                ul {
+                  li {
+                    span.count {
+                      margin-left: auto;
+                    }
+                  }
+                }
+              }
+              &.widget-salary-filters {
+                .wg-title {
+                  &:before {
+                    background-image: url('../wp-recruitment-child/assets/svg/icon-coins.svg');
                   }
                 }
               }
@@ -161,35 +247,35 @@ body.job-listing-classic {
                   .job-price {
                     display: none;
                   }
-                  .loop-actions {
-                    display: inline-block;
-                    max-width: none;
-                    flex: 0 1 2rem;
-                    order: 0;
-                    max-width: none;
-                    padding: 0;
-                    button, a.basket-added {
-                      padding: 0;
-                      svg {
-                        width: 0.875rem;
-                        height: 1rem;
-                      }
-                    }
-                    button.basket-added, a.basket-added {
-                      opacity: 1;
-                      svg {
-                        path {
-                          fill: $primary-blue;
-                        }
-                      }
-                    }
+                  // .loop-actions {
+                    // display: inline-block;
+                    // max-width: none;
+                    // flex: 0 1 2rem;
+                    // order: 0;
+                    // max-width: none;
+                    // padding: 0;
+                    // button, a.basket-added {
+                    //   padding: 0;
+                    //   svg {
+                    //     width: 0.875rem;
+                    //     height: 1rem;
+                    //   }
+                    // }
+                    // button.basket-added, a.basket-added {
+                    //   opacity: 1;
+                    //   svg {
+                    //     path {
+                    //       fill: $primary-blue;
+                    //     }
+                    //   }
+                    // }
                     a.job-more {
                       display: none;
                     }
-                  }
+                  // }
                   .job-meta-tags {
                     margin-top: 1rem;
-                    margin-left: 2rem;
+                    // margin-left: 2rem;
                     order: 3;
                     width: 100%;
                     .job-meta {

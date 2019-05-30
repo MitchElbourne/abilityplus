@@ -295,8 +295,38 @@ header#site-header {
       padding-bottom: 0.85rem; }
       header#site-header nav .navbar-brand img {
         width: 9.5rem; }
+    header#site-header nav .navbar-toggler {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      background: transparent !important; }
+      header#site-header nav .navbar-toggler:hover {
+        background: transparent !important; }
+      header#site-header nav .navbar-toggler .icon-bar {
+        min-width: 22px;
+        min-height: 2px;
+        border: 2px solid #1a2733;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        background-color: #1a2733; }
+        header#site-header nav .navbar-toggler .icon-bar:nth-of-type(1) {
+          transform: translate3d(0px, 6px, 0) rotate(90deg);
+          transform-origin: center center; }
+        header#site-header nav .navbar-toggler .icon-bar:nth-of-type(2) {
+          margin: 0.2rem 0; }
+        header#site-header nav .navbar-toggler .icon-bar:nth-of-type(3) {
+          transform: translate3d(0px, -6px, 0) rotate(-90deg);
+          transform-origin: center center; }
+      header#site-header nav .navbar-toggler.open .icon-bar:nth-of-type(1) {
+        transform: translate3d(0, 0, 0) rotate(0deg); }
+      header#site-header nav .navbar-toggler.open .icon-bar:nth-of-type(2) {
+        transform: translate3d(0, 0, 0) rotate(0deg); }
+      header#site-header nav .navbar-toggler.open .icon-bar:nth-of-type(3) {
+        transform: translate3d(0, 0, 0) rotate(0deg); }
     header#site-header nav div#primary-menu ul {
       flex-grow: 1; }
+      header#site-header nav div#primary-menu ul li.active a {
+        color: #0a468f; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
         margin-left: auto; }
         header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
@@ -637,6 +667,27 @@ body.home section#blog-recommendations {
         margin-right: 0;
         margin-bottom: 2.25rem;
         padding-bottom: 2.25rem; } }
+body.home section#newsletter-signup .container .row {
+  text-align: center;
+  flex-direction: column; }
+  body.home section#newsletter-signup .container .row p {
+    margin: 1.5rem auto 2.125rem; }
+  body.home section#newsletter-signup .container .row .form-container {
+    margin: 0 auto; }
+    body.home section#newsletter-signup .container .row .form-container form #mc_embed_signup_scroll {
+      display: flex;
+      background-color: #e8eaeb;
+      justify-content: space-between;
+      border-radius: 2rem;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+      width: 100%; }
+      body.home section#newsletter-signup .container .row .form-container form #mc_embed_signup_scroll input[type="submit"] {
+        display: inline-block;
+        margin-right: 0; }
+      body.home section#newsletter-signup .container .row .form-container form #mc_embed_signup_scroll input[type="email"] {
+        background-color: transparent;
+        border: none;
+        width: 100%; }
 
 body.job-listing-classic .wrapper .container .row .search-field .widget-content form {
   margin: 3rem 0 4rem; }
@@ -669,6 +720,32 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
     border-radius: 8px;
     background-color: white;
     font-size: 0.875rem; }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title {
+      position: relative;
+      padding-left: 1.75rem; }
+      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title i {
+        display: none; }
+      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1rem;
+        height: 1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center; }
+      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-title:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0.3rem;
+        width: 0.9rem;
+        height: 0.5rem;
+        background-image: url("../wp-recruitment-child/assets/svg/icon-down-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center; }
     body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside:last-of-type {
       margin-bottom: 0; }
     body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside h3 {
@@ -678,7 +755,7 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
         margin-left: auto;
         font-size: 1rem; }
     body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul {
-      border-top: 1px solid #e8eaeb;
+      border-top: 1px solid #f3f4f5;
       padding-top: 0.5rem;
       margin-top: 0.5rem; }
       body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li {
@@ -699,31 +776,53 @@ body.job-listing-classic .wrapper .container .row #sidebar #widget-area {
           cursor: pointer;
           transition: all 250ms; }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:active {
-            background-color: rgba(26, 39, 51, 0.1); }
+            background-color: rgba(37, 120, 219, 0.25); }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:active {
-            background-color: rgba(26, 39, 51, 0.1); }
+            background-color: rgba(37, 120, 219, 0.25); }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked {
-            background-color: rgba(26, 39, 51, 0.1); }
+            background-color: rgba(37, 120, 219, 0.25);
+            border-color: transparent; }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:after {
             content: '';
             position: absolute;
             top: 5px;
-            left: 4.5px;
+            left: 4px;
             min-width: 8px;
             min-height: 6px;
             max-width: 8px;
             max-height: 6px;
             background-image: url("assets/svg/icon-checked.svg");
-            filter: grayscale(1);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center; }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:checked:hover {
-            background-color: rgba(26, 39, 51, 0.04); }
+            background-color: rgba(37, 120, 219, 0.2); }
           body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li input:hover {
-            background-color: rgba(26, 39, 51, 0.1); }
+            background-color: rgba(37, 120, 219, 0.1); }
         body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li label {
           margin-right: auto; }
+        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside .wg-content ul li span.count {
+          color: #1c2b38; }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters .wg-title:before {
+      background-image: url("../wp-recruitment-child/assets/svg/icon-briefcase.svg"); }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li:last-of-type {
+      margin-bottom: 0; }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more {
+      margin-top: 0.5rem;
+      font-family: "tkusual-bold", "system", "sans-serif";
+      transition: all 200ms; }
+      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg {
+        margin-right: 0.5rem; }
+        body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more svg rect {
+          transition: all 200ms; }
+      body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-specialism-filters ul li .specialism-filter-more:hover svg rect {
+        fill: #0a468f; }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-types .wg-title:before {
+      background-image: url("../wp-recruitment-child/assets/svg/icon-job-type.svg"); }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-types ul li span.count {
+      margin-left: auto; }
+    body.job-listing-classic .wrapper .container .row #sidebar #widget-area aside.widget-salary-filters .wg-title:before {
+      background-image: url("../wp-recruitment-child/assets/svg/icon-coins.svg"); }
 body.job-listing-classic .wrapper .container .row #content .jobboard-not-found span.no-jobs {
   font-size: 1.5rem;
   color: rgba(28, 43, 56, 0.5); }
@@ -750,27 +849,10 @@ body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section
         color: #0a468f; }
   body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-price {
     display: none; }
-  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions {
-    display: inline-block;
-    max-width: none;
-    flex: 0 1 2rem;
-    order: 0;
-    max-width: none;
-    padding: 0; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions button, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions a.basket-added {
-      padding: 0; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions button svg, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions a.basket-added svg {
-        width: 0.875rem;
-        height: 1rem; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions button.basket-added, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions a.basket-added {
-      opacity: 1; }
-      body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions button.basket-added svg path, body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions a.basket-added svg path {
-        fill: #2578db; }
-    body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-actions a.job-more {
-      display: none; }
+  body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row a.job-more {
+    display: none; }
   body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags {
     margin-top: 1rem;
-    margin-left: 2rem;
     order: 3;
     width: 100%; }
     body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta {
@@ -856,25 +938,6 @@ body.is-job div.wrapper {
       padding-top: 2rem;
       padding-bottom: 2rem;
       display: flex; }
-      body.is-job div.wrapper section#job-ctas .container p.bookmark {
-        align-self: center;
-        display: flex; }
-        body.is-job div.wrapper section#job-ctas .container p.bookmark a {
-          padding: 0;
-          align-self: flex-start;
-          margin-right: 0.9rem; }
-        body.is-job div.wrapper section#job-ctas .container p.bookmark button, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added {
-          padding: 0; }
-          body.is-job div.wrapper section#job-ctas .container p.bookmark button svg, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added svg {
-            width: 0.875rem;
-            height: 1rem; }
-        body.is-job div.wrapper section#job-ctas .container p.bookmark button.basket-added, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added {
-          opacity: 1; }
-          body.is-job div.wrapper section#job-ctas .container p.bookmark button.basket-added svg path, body.is-job div.wrapper section#job-ctas .container p.bookmark a.basket-added svg path {
-            fill: #2578db; }
-      body.is-job div.wrapper section#job-ctas .container div.break {
-        border-right: 2px solid #e8eaeb;
-        margin: 0 1.25rem; }
       body.is-job div.wrapper section#job-ctas .container p.share {
         display: flex;
         align-self: center; }
@@ -891,11 +954,6 @@ body.is-job div.wrapper {
       body.is-job div.wrapper section#job-ctas .container {
         flex-direction: column;
         text-align: center; }
-        body.is-job div.wrapper section#job-ctas .container p.bookmark {
-          margin-right: 1rem;
-          order: 2; }
-        body.is-job div.wrapper section#job-ctas .container div.break {
-          display: none; }
         body.is-job div.wrapper section#job-ctas .container p.share {
           order: 1;
           margin: 1.5rem 0 0.5rem; }
@@ -980,60 +1038,60 @@ body.is-job div.wrapper {
         padding: 1rem 5rem;
         max-height: 4rem; }
 
-main section#introduction .container .row {
+.wrapper.About.Us section#introduction .container .row {
   text-align: center; }
-  main section#introduction .container .row p {
+  .wrapper.About.Us section#introduction .container .row p {
     margin: 2.5rem auto 4rem; }
-main section#our-values .container .row {
+.wrapper.About.Us section#our-values .container .row {
   text-align: left; }
-  main section#our-values .container .row p.entry-text {
+  .wrapper.About.Us section#our-values .container .row p.entry-text {
     margin: 1.8rem auto 4rem; }
-  main section#our-values .container .row div.panel-container {
+  .wrapper.About.Us section#our-values .container .row div.panel-container {
     display: flex;
     width: 100%;
     margin-top: 6rem;
     text-align: start; }
-    main section#our-values .container .row div.panel-container div.panel {
+    .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
       display: flex;
       flex-direction: column;
       flex: 1 1 calc(100%/3);
       padding: 0 3rem;
       border-right: 1px solid #e8eaeb; }
-      main section#our-values .container .row div.panel-container div.panel:last-of-type {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
         border-right: none; }
-      main section#our-values .container .row div.panel-container div.panel img {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
         max-width: 9rem;
         margin-bottom: 2.5rem; }
-      main section#our-values .container .row div.panel-container div.panel p.sub-text {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0 0; }
 @media (max-width: 991px) {
-  main section#our-values .container .row div.panel-container {
+  .wrapper.About.Us section#our-values .container .row div.panel-container {
     flex-direction: column;
     margin-top: 3rem; }
-    main section#our-values .container .row div.panel-container div.panel {
+    .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
       text-align: center;
       border-right: none;
       border-top: 1px solid #e8eaeb; }
-      main section#our-values .container .row div.panel-container div.panel:last-of-type {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
         border-bottom: 1px solid #e8eaeb; }
-      main section#our-values .container .row div.panel-container div.panel img {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
         margin: 2rem auto 1rem; }
-      main section#our-values .container .row div.panel-container div.panel p.sub-text {
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0; } }
-main section#testimonials .container .row div.meta-container p {
+.wrapper.About.Us section#testimonials .container .row div.meta-container p {
   margin: 1.25rem 0 0; }
-main section#testimonials .container .row #testimonialCarousel {
+.wrapper.About.Us section#testimonials .container .row #testimonialCarousel {
   padding: 3rem 6rem;
   background-color: rgba(37, 120, 219, 0.08); }
-  main section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
     margin-top: 1rem; }
-  main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
     position: absolute;
     margin: 0;
     justify-content: flex-start;
     bottom: -2.5rem;
     left: 0; }
-    main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li {
+    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li {
       width: 0.75rem;
       height: 0.75rem;
       margin: 0 1rem 0 0;
@@ -1041,43 +1099,43 @@ main section#testimonials .container .row #testimonialCarousel {
       border-radius: 100%;
       background-color: #e8eaeb;
       transition: all 200ms; }
-      main section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li.active {
+      .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li.active {
         background-color: #2578db; }
-  main section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
-main section#meet-the-team .container h2 {
+.wrapper.About.Us section#meet-the-team .container h2 {
   text-align: center;
   margin-bottom: 2.5rem; }
-main section#meet-the-team .container .panel {
+.wrapper.About.Us section#meet-the-team .container .panel {
   display: flex;
   padding: 5rem;
   border-radius: 0.5rem; }
-  main section#meet-the-team .container .panel:nth-of-type(odd) {
+  .wrapper.About.Us section#meet-the-team .container .panel:nth-of-type(odd) {
     background-color: #f3f4f5; }
-  main section#meet-the-team .container .panel div.meta-wrapper {
+  .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper {
     flex: 1 1 auto;
     text-align: center;
     display: flex;
     flex-direction: column; }
-    main section#meet-the-team .container .panel div.meta-wrapper img {
+    .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper img {
       border-radius: 100%; }
-    main section#meet-the-team .container .panel div.meta-wrapper h3 {
+    .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper h3 {
       margin-top: 1rem; }
-    main section#meet-the-team .container .panel div.meta-wrapper span.title {
+    .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper span.title {
       margin: 0.5rem 0 1rem;
       color: rgba(28, 43, 56, 0.5); }
-    main section#meet-the-team .container .panel div.meta-wrapper div.connect-container {
+    .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container {
       display: flex;
       justify-content: center; }
-      main section#meet-the-team .container .panel div.meta-wrapper div.connect-container p {
+      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container p {
         color: rgba(28, 43, 56, 0.5); }
-        main section#meet-the-team .container .panel div.meta-wrapper div.connect-container p.break {
+        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container p.break {
           color: rgba(28, 43, 56, 0.5); }
-  main section#meet-the-team .container .panel div.content {
+  .wrapper.About.Us section#meet-the-team .container .panel div.content {
     position: relative;
     margin-left: 7.5rem; }
-    main section#meet-the-team .container .panel div.content span.quotemark {
+    .wrapper.About.Us section#meet-the-team .container .panel div.content span.quotemark {
       background-image: url("../wp-recruitment-child/assets/svg/icon-quote.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -1088,9 +1146,9 @@ main section#meet-the-team .container .panel {
       left: -3rem;
       height: 1.65rem;
       width: 2rem; }
-    main section#meet-the-team .container .panel div.content p {
+    .wrapper.About.Us section#meet-the-team .container .panel div.content p {
       margin: 1rem 0; }
-      main section#meet-the-team .container .panel div.content p:last-of-type {
+      .wrapper.About.Us section#meet-the-team .container .panel div.content p:last-of-type {
         margin-bottom: 0; }
 
 body.is-dashboard .wrapper div.introduction {

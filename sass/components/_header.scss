@@ -13,13 +13,56 @@ header#site-header {
         width: 9.5rem;
       }
     }
-    button.navbar-toggler {
-      
+
+    .navbar-toggler {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      background: transparent !important;
+      &:hover {
+        background: transparent !important;
+      }
+      .icon-bar {
+        min-width: 22px;
+        min-height: 2px;
+        border: 2px solid $black;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        background-color: $black;
+        &:nth-of-type(1) {
+          transform: translate3d(0px,6px,0) rotate(90deg);
+          transform-origin: center center;
+        }
+        &:nth-of-type(2) {
+          margin: 0.2rem 0;
+        }
+        &:nth-of-type(3) {
+          transform: translate3d(0px,-6px,0) rotate(-90deg);
+          transform-origin: center center;
+        }
+      }
+      &.open {
+        .icon-bar:nth-of-type(1) {
+          transform: translate3d(0,0,0) rotate(0deg);
+        }
+        .icon-bar:nth-of-type(2) {
+          transform: translate3d(0,0,0) rotate(0deg);
+        }
+        .icon-bar:nth-of-type(3) {
+          transform: translate3d(0,0,0) rotate(0deg);
+        }
+      }
     }
+  
     div#primary-menu {
       ul {
         flex-grow: 1;
         li {
+          &.active {
+            a {
+              color: $dark-blue;
+            }
+          }
           &:nth-last-of-type(2) {
             margin-left: auto;
             a {

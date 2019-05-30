@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Layouts.1440" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AP.1440.02-00.vacancies-list" transform="translate(-468.000000, -923.000000)" fill="#A4AAAF">
+            <g id="Content" transform="translate(160.000000, 520.000000)">
+                <g id="side-bar">
+                    <g id="Filters">
+                        <g id="filter" transform="translate(16.000000, 384.000000)">
+                            <g id="top" transform="translate(12.000000, 8.000000)">
+                                <g id="down-arrow" transform="translate(280.000000, 11.000000)">
+                                    <polygon id="Path" points="8 9.6 0.3 1.9 1.7 0.4 8 6.7 14.3 0.4 15.7 1.9"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

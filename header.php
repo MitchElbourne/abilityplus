@@ -37,7 +37,9 @@
 
           <!-- Toggle button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
 
 
@@ -65,6 +67,6 @@
     // echo get_template_part('/templates/modal-sign-up');
     
     ?>
-    <div class="wrapper">
+    <div class="wrapper <?php echo get_the_title(); ?>">
 
     

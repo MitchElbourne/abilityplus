@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="loop-actions col-lg-3 col-md-12 col-sm-12 col-xs-12">
+<!-- <div class="loop-actions col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <?php do_action('jobboard_loop_actions'); ?>
-</div>
+</div> -->
 
 <div class="job-meta-tags">
   <?php 
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     if($types) {
       foreach($types as $type) {
         ?>
-          <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-job-type.svg'); ?><?php echo $type->name; ?></span>
+          <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-inline-job-type.svg'); ?><?php echo $type->name; ?></span>
         <?php
       }
     }
