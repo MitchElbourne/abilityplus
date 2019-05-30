@@ -52,11 +52,9 @@ get_header();
             <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
               <div class="col col-12 col-md-4 blog-post">
-                <!-- <div class="blog-post"> -->
-
 
                   <a href="<?php the_permalink(); ?>">
-                    <div class="blog-thumbnail"></div>
+                    <div class="blog-thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(''); ?>')"></div>
                   </a>
 
                   <a href="<?php the_permalink(); ?>">
@@ -69,8 +67,6 @@ get_header();
                     <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
                   </a>
 
-
-    <!--            </div><!--blog-post-->
               </div><!--col-->
 
             <?php endwhile; ?>

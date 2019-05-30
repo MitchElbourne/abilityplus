@@ -539,6 +539,11 @@ body.home section#blog-recommendations {
       padding: 3rem;
       border-radius: 4px; }
 
+/*
+  blog-archive
+  &&
+  blog-single
+*/
 main#blog-archive {
   background: #e8eaeb; }
   main#blog-archive header .container h1 {
@@ -626,7 +631,8 @@ main#blog-archive {
           height: 200px;
           border-radius: 50%;
           background-color: #f3f4f5;
-          margin-bottom: 2rem; }
+          margin-bottom: 2rem;
+          background-size: cover; }
         main#blog-archive .blog-list .container .row .blog-post h2 {
           font-size: 1.75rem;
           line-height: 1.5;
@@ -645,6 +651,15 @@ main#blog-archive {
           margin-top: 1rem; }
         main#blog-archive .blog-list .container .row .blog-post:nth-of-type(3) .blog-post {
           border-right: 2px solid transparent; }
+
+main#blog-single {
+  background: #e8eaeb; }
+  main#blog-single header {
+    /* TODO : Review global header heights */
+    margin-top: 4rem;
+    background: red; }
+    main#blog-single header .container .blog-back {
+      background-color: red; }
 
 body.is-dashboard .wrapper div.introduction {
   display: flex;

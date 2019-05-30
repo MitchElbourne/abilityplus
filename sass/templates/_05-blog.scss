@@ -1,3 +1,9 @@
+/*
+  blog-archive
+  &&
+  blog-single
+*/
+
 main#blog-archive {
   background: $lighter-grey;
   header {
@@ -55,6 +61,7 @@ main#blog-archive {
             border-radius: 50%;
             background-color: $lightest-grey;
             margin-bottom: 2rem;
+            background-size: cover;
           }
           h2 {
             font-size: 1.75rem;
@@ -130,4 +137,21 @@ main#blog-archive {
       }
     }
   }
+}
+
+
+main#blog-single {
+  background: $lighter-grey;
+  header {
+    /* TODO : Review global header heights */
+    margin-top: 4rem;
+    background: red;
+    .container {
+      .blog-back {
+
+        background-color: red;
+      }
+    }
+  }
+
 }
