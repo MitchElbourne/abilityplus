@@ -165,6 +165,13 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    .modal-dialog {
+      width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+  }
 }
 
 

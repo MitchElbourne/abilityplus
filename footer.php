@@ -46,10 +46,10 @@
             <h5 class="p">Contact Information</h5>
             <p>22 Athol Street, Douglas Isle of Man – 662165</p>
             <a href="mailto:employment@abilityplus.co.im" class="email">employment@abilityplus.co.im</a>
-            <a href="<?php echo esc_url('https://www.linkedin.com/company/ability-plus-isleofman/'); ?> " class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?>LinkedIn</a>
+            <a href="<?php echo esc_url('https://www.linkedin.com/company/ability-plus-isleofman/'); ?> " target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?>LinkedIn</a>
             <span class="break">|</span>
 
-            <a href="<?php echo esc_url('/http://twitter.com/abilityplusiom'); ?>" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter.svg'); ?>Twitter</a>
+            <a href="<?php echo esc_url('http://twitter.com/abilityplusiom'); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter.svg'); ?>Twitter</a>
           </div>
 
 
