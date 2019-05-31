@@ -29,9 +29,9 @@ get_header();
 
           <div class="connect-information">
             <h3 class="p">Connect with us:</h3>
-            <a href="<?php echo esc_url('https://www.linkedin.com/company/ability-plus-isleofman/'); ?> " class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?>LinkedIn</a>
+            <a href="<?php echo esc_url('https://www.linkedin.com/company/ability-plus-isleofman/'); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?>LinkedIn</a>
             <span class="break">|</span>
-            <a href="<?php echo esc_url('/http://twitter.com/abilityplusiom'); ?>" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter.svg'); ?>Twitter</a>
+            <a href="<?php echo esc_url('http://twitter.com/abilityplusiom'); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter.svg'); ?>Twitter</a>
             <h3 class="p">Contact points</h3>
             <div class="contact-point">
             <span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-avatar.svg');; ?></span> 
