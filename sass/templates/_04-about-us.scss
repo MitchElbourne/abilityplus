@@ -123,10 +123,6 @@
               -webkit-transform: rotate(180deg);
             }
           }
-          @include media-breakpoint-down(sm) {
-            padding: 1.5rem;
-
-          }
         }
       }
     }
@@ -140,6 +136,23 @@
             }
             p {
               margin: 0.5rem 0 3rem;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .container {
+        .row {
+          #testimonialCarousel  {
+            padding: 1.5rem;
+            ol.carousel-indicators {
+              justify-content: center;
+              li {
+                &:last-of-type {
+                  margin-right: 0;
+                }
+              }
             }
           }
         }
@@ -268,10 +281,10 @@
           }
           div.content {
             span.quotemark {
-              left: -1rem;
+              left: 0;
             }
             h4 {
-              padding-left: 2rem;
+              padding-top: 2.5rem;
             }
           }
         }
