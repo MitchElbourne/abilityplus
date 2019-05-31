@@ -1867,7 +1867,14 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     @media (max-width: 767px) {
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
         padding: 0;
-        border: none; } }
+        border: none; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
+          display: flex; }
+          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field label {
+            display: none; }
+          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
+            max-width: 100%;
+            width: 100% !important; } }
 @media (max-width: 767px) {
   body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }
