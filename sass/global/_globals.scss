@@ -33,6 +33,9 @@ body {
       &:first-of-type {
         padding-top: 0;
       }
+      @include media-breakpoint-down(sm) {
+        padding: 1.5rem 0;
+      }
     }
   }
   @include media-breakpoint-down(md) {
@@ -67,6 +70,10 @@ input {
   &:hover, &:focus {
     outline: none;
   }
+}
+
+textarea {
+  outline: none;
 }
 
 svg, svg g, svg g path {
@@ -228,4 +235,19 @@ span.error {
   margin: 0 0 1rem 0;
   display: inline-block;
   color: $error;
+}
+
+span.wpcf7-not-valid-tip {
+  float: left;
+  color: $error;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+}
+
+div.wpcf7-validation-errors {
+  float: left;
+  position: absolute;
+  bottom: -0.5rem;
+  border-color: $error;
 }
