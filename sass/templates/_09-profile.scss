@@ -356,6 +356,10 @@ body.is-dashboard {
                     }
                   }
                 }
+                @include media-breakpoint-down(sm) {
+                  padding: 0;
+                  border: none;
+                }
               }
             }
           }

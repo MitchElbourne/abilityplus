@@ -1864,6 +1864,10 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:focus {
           background-color: rgba(37, 120, 219, 0.85);
           color: white; }
+    @media (max-width: 767px) {
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
+        padding: 0;
+        border: none; } }
 @media (max-width: 767px) {
   body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }
