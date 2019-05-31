@@ -43,11 +43,11 @@ get_header();
   <section id="testimonials">
     <div class="container">
       <div class="row">
-        <div class="meta-container col-12 col-md-4">
+        <div class="meta-container col-12 col-lg-4">
           <h2 class="h3">Testimonials</h2>
           <p>Have a look at what some of our fantastic candidates have to say about us</p>
         </div>
-        <div id="testimonialCarousel" class="carousel slide col-12 col-md-8" data-ride="carousel">
+        <div id="testimonialCarousel" class="carousel slide col-lg-8 col-12" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <p>I went to Ability Plus a little over a year ago, I wasn't 100% sure at the time I wanted to move but I was starting to feel like I needed a change, Monique was incredibly helpful and immediately put me at ease, she offered me a few options, one of which I was keen on progressing and seeing how it went.  The process was great, I was kept well informed throughout, I was told about every step I would be going through during the hiring process, and not once was I left wondering what was going on.  A year on and I love my "new" job, I feel I was incredibly well matched to the company which is a good skill to have as a recruitment agency! In short I would definitely recommend them if you're thinking of a move.</p>
@@ -84,13 +84,13 @@ get_header();
       <h2 class="h3">Meet The Team</h2>
       <div class="panel">
         <div class="meta-wrapper">
-          <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Test">
+          <img src="<?php echo get_theme_file_uri('/assets/team-anne.jpg'); ?>" alt="Anne Marie Hanna Owner and Director">
           <h3 class="h5">Anne Marie Hanna</h3>
           <span class="title">Owner / Director</span>
           <div class="connect-container">
-            <p class="bold">Connect: <a href="<?php echo esc_url('#'); ?>" class="linkedin"></a></p>
+            <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/anne-hanna-5921514b/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
             <p class="break">|</p>
-            <p>Send Email</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
           </div>
         </div>
         <div class="content">
@@ -108,13 +108,13 @@ get_header();
 
       <div class="panel">
         <div class="meta-wrapper">
-          <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Test">
+          <img src="<?php echo get_theme_file_uri('/assets/team-clodagh.jpg'); ?>" alt="Clodagh Reeve Recruitment Consultant">
           <h3 class="h5">Clodagh Reeve</h3>
           <span class="title">Recruitment Consultant</span>
           <div class="connect-container">
-            <p class="bold">Connect: <a href="<?php echo esc_url('#'); ?>" class="linkedin"></a></p>
+            <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/clodagh-reeve-certrp-343817134/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
             <p class="break">|</p>
-            <p>Send Email</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
           </div>
         </div>
         <div class="content">
@@ -127,13 +127,13 @@ get_header();
 
       <div class="panel">
         <div class="meta-wrapper">
-          <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Test">
+          <img src="<?php echo get_theme_file_uri('/assets/team-gemma.jpg'); ?>" alt="Gemma Crossley Secretary">
           <h3 class="h5">Gemma Crossley</h3>
           <span class="title">Secretary</span>
           <div class="connect-container">
-            <p class="bold">Connect: <a href="<?php echo esc_url('#'); ?>" class="linkedin"></a></p>
+            <a class="bold linkedin" href="<?php echo esc_url('#'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
             <p class="break">|</p>
-            <p>Send Email</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
           </div>
         </div>
         <div class="content">
@@ -145,13 +145,13 @@ get_header();
 
       <div class="panel">
         <div class="meta-wrapper">
-          <img src="<?php echo get_theme_file_uri('/assets/icon-introduction-handshake.png'); ?>" alt="Test">
+          <img src="<?php echo get_theme_file_uri('/assets/team-megan.jpg'); ?>" alt="Megan French Juinior Recruitment Administrator">
           <h3 class="h5">Megan French</h3>
           <span class="title">Junior Recruitment Administrator</span>
           <div class="connect-container">
-            <p class="bold">Connect: <a href="<?php echo esc_url('#'); ?>" class="linkedin"></a></p>
+            <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/megan-french-697794186/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
             <p class="break">|</p>
-            <p>Send Email</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
           </div>
         </div>
         <div class="content">

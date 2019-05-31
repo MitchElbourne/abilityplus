@@ -241,8 +241,9 @@ span.wpcf7-not-valid-tip {
   float: left;
   color: $error;
   position: absolute;
-  top: -2rem;
-  right: 0;
+  top: -3.33rem;
+  font-size: 0.875rem;
+  left: 0;
 }
 
 div.wpcf7-validation-errors {
@@ -250,4 +251,7 @@ div.wpcf7-validation-errors {
   position: absolute;
   bottom: -0.5rem;
   border-color: $error;
+}
+div.wpcf7-mail-sent-ok {
+  border-color: $primary-green;
 }

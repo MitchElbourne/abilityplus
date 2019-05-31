@@ -4,7 +4,7 @@
       .row {
         text-align: center;
         p {
-          margin: 2.5rem auto 4rem;
+          margin: 2.5rem auto;
         }
       }
     }
@@ -53,6 +53,7 @@
               text-align: center;
               border-right: none;
               border-top: 1px solid $lighter-grey;
+              padding: 2rem 0;
               &:last-of-type {
                 border-bottom: 1px solid $lighter-grey;
               }
@@ -73,6 +74,10 @@
     .container {
       .row {
         div.meta-container {
+          align-self: center;
+          h2 {
+            font-size: 2rem;
+          }
           p {
             margin: 1.25rem 0 0;
           }
@@ -84,6 +89,12 @@
             div.carousel-item {
               p.cite {
                 margin-top: 1rem;
+              }
+              opacity: 0;
+              display: block;
+              &.active {
+                opacity: 1;
+                transition: all 800ms;
               }
             }
           }
@@ -118,6 +129,21 @@
         }
       }
     }
+    @include media-breakpoint-down(lg) {
+      .container {
+        .row {
+          div.meta-container {
+            text-align: center;
+            h2 {
+              margin-bottom: 0;
+            }
+            p {
+              margin: 0.5rem 0 3rem;
+            }
+          }
+        }
+      }
+    }
   }
 
   section#meet-the-team {
@@ -140,6 +166,7 @@
           flex-direction: column;
           img {           
             border-radius: 100%;
+            max-width: 18rem;
           }
           h3 {
             margin-top: 1rem;
@@ -151,13 +178,41 @@
           div.connect-container {
             display: flex;
             justify-content: center;
-            p {
+            svg {
+              max-width: 1rem;
+              margin-bottom: 0.1rem;
+            }
+            a.linkedin {
               color: $middle-grey;
-              &.break {
-                color: $middle-grey;
+              margin-right: 0.5rem;
+              svg {
+                margin-left: 0.3rem;
               }
-              a.linkedin {
-                
+              &:hover, &:focus {
+                color: $dark-blue;
+                svg {
+                  path {
+                    fill: $dark-blue;
+                  }
+                }
+              }
+            }
+            p.break {
+              color: $middle-grey;
+            }
+            a.email {
+              margin-left: 0.5rem;
+              color: #a4aaaf;
+              svg {
+                margin-right: 0.3rem;
+              }
+              &:hover, &:focus {
+                color: rgba($primary-blue, 0.8);
+                svg {
+                  path {
+                    fill: rgba($primary-blue, 0.8);
+                  }
+                }
               }
             }
           }
@@ -183,6 +238,36 @@
             }
           }
           margin-left: 7.5rem;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      .container {
+        div.panel {
+          flex-direction: column;
+          div.meta-wrapper {
+            img {
+              margin: 0 auto 1rem;
+            }
+          }
+          div.content {
+            margin: 1rem 0 0;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .container {
+        div.panel {
+          padding: 2rem;
+          div.content {
+            span.quotemark {
+              left: 0;
+            }
+            h4 {
+              padding-left: 3rem;
+            }
+          }
         }
       }
     }

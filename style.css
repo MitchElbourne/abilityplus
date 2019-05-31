@@ -217,14 +217,18 @@ span.wpcf7-not-valid-tip {
   float: left;
   color: #bb0f00;
   position: absolute;
-  top: -2rem;
-  right: 0; }
+  top: -3.33rem;
+  font-size: 0.875rem;
+  left: 0; }
 
 div.wpcf7-validation-errors {
   float: left;
   position: absolute;
   bottom: -0.5rem;
   border-color: #bb0f00; }
+
+div.wpcf7-mail-sent-ok {
+  border-color: #b3d40e; }
 
 html {
   font-size: 16px; }
@@ -1126,7 +1130,7 @@ body.is-job div.wrapper {
 .wrapper.About.Us section#introduction .container .row {
   text-align: center; }
   .wrapper.About.Us section#introduction .container .row p {
-    margin: 2.5rem auto 4rem; }
+    margin: 2.5rem auto; }
 .wrapper.About.Us section#our-values .container .row {
   text-align: left; }
   .wrapper.About.Us section#our-values .container .row p.entry-text {
@@ -1156,20 +1160,31 @@ body.is-job div.wrapper {
     .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
       text-align: center;
       border-right: none;
-      border-top: 1px solid #e8eaeb; }
+      border-top: 1px solid #e8eaeb;
+      padding: 2rem 0; }
       .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
         border-bottom: 1px solid #e8eaeb; }
       .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
         margin: 2rem auto 1rem; }
       .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
         margin: 1rem 0; } }
-.wrapper.About.Us section#testimonials .container .row div.meta-container p {
-  margin: 1.25rem 0 0; }
+.wrapper.About.Us section#testimonials .container .row div.meta-container {
+  align-self: center; }
+  .wrapper.About.Us section#testimonials .container .row div.meta-container h2 {
+    font-size: 2rem; }
+  .wrapper.About.Us section#testimonials .container .row div.meta-container p {
+    margin: 1.25rem 0 0; }
 .wrapper.About.Us section#testimonials .container .row #testimonialCarousel {
   padding: 3rem 6rem;
   background-color: rgba(37, 120, 219, 0.08); }
-  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
-    margin-top: 1rem; }
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item {
+    opacity: 0;
+    display: block; }
+    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
+      margin-top: 1rem; }
+    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item.active {
+      opacity: 1;
+      transition: all 800ms; }
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
     position: absolute;
     margin: 0;
@@ -1189,6 +1204,13 @@ body.is-job div.wrapper {
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
+@media (max-width: 1199px) {
+  .wrapper.About.Us section#testimonials .container .row div.meta-container {
+    text-align: center; }
+    .wrapper.About.Us section#testimonials .container .row div.meta-container h2 {
+      margin-bottom: 0; }
+    .wrapper.About.Us section#testimonials .container .row div.meta-container p {
+      margin: 0.5rem 0 3rem; } }
 .wrapper.About.Us section#meet-the-team .container h2 {
   text-align: center;
   margin-bottom: 2.5rem; }
@@ -1204,7 +1226,8 @@ body.is-job div.wrapper {
     display: flex;
     flex-direction: column; }
     .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper img {
-      border-radius: 100%; }
+      border-radius: 100%;
+      max-width: 18rem; }
     .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper h3 {
       margin-top: 1rem; }
     .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper span.title {
@@ -1213,10 +1236,29 @@ body.is-job div.wrapper {
     .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container {
       display: flex;
       justify-content: center; }
-      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container p {
+      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container svg {
+        max-width: 1rem;
+        margin-bottom: 0.1rem; }
+      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin {
+        color: rgba(28, 43, 56, 0.5);
+        margin-right: 0.5rem; }
+        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin svg {
+          margin-left: 0.3rem; }
+        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin:hover, .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin:focus {
+          color: #0a468f; }
+          .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin:hover svg path, .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.linkedin:focus svg path {
+            fill: #0a468f; }
+      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container p.break {
         color: rgba(28, 43, 56, 0.5); }
-        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container p.break {
-          color: rgba(28, 43, 56, 0.5); }
+      .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email {
+        margin-left: 0.5rem;
+        color: #a4aaaf; }
+        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email svg {
+          margin-right: 0.3rem; }
+        .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email:hover, .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email:focus {
+          color: rgba(37, 120, 219, 0.8); }
+          .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email:hover svg path, .wrapper.About.Us section#meet-the-team .container .panel div.meta-wrapper div.connect-container a.email:focus svg path {
+            fill: rgba(37, 120, 219, 0.8); }
   .wrapper.About.Us section#meet-the-team .container .panel div.content {
     position: relative;
     margin-left: 7.5rem; }
@@ -1235,6 +1277,20 @@ body.is-job div.wrapper {
       margin: 1rem 0; }
       .wrapper.About.Us section#meet-the-team .container .panel div.content p:last-of-type {
         margin-bottom: 0; }
+@media (max-width: 1199px) {
+  .wrapper.About.Us section#meet-the-team .container div.panel {
+    flex-direction: column; }
+    .wrapper.About.Us section#meet-the-team .container div.panel div.meta-wrapper img {
+      margin: 0 auto 1rem; }
+    .wrapper.About.Us section#meet-the-team .container div.panel div.content {
+      margin: 1rem 0 0; } }
+@media (max-width: 767px) {
+  .wrapper.About.Us section#meet-the-team .container div.panel {
+    padding: 2rem; }
+    .wrapper.About.Us section#meet-the-team .container div.panel div.content span.quotemark {
+      left: 0; }
+    .wrapper.About.Us section#meet-the-team .container div.panel div.content h4 {
+      padding-left: 3rem; } }
 
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }
@@ -1404,7 +1460,7 @@ body.is-dashboard .wrapper p.h5 {
 body.is-dashboard .wrapper form {
   width: 100%;
   background-color: white;
-  padding: 2rem;
+  padding: 2rem 0;
   border-radius: 8px; }
   body.is-dashboard .wrapper form div.login-username, body.is-dashboard .wrapper form div.login-password {
     margin-bottom: 1rem;
@@ -1446,7 +1502,8 @@ main[role="main"] section#sign-up-form .container div.introduction {
     align-self: flex-end; }
     main[role="main"] section#sign-up-form .container div.introduction span.modal-cta a {
       cursor: pointer;
-      color: #2578db; }
+      color: #2578db;
+      font-family: "tkusual-reg", "system", "sans-serif"; }
 main[role="main"] section#sign-up-form .container div.information-container {
   display: flex;
   flex-wrap: nowrap;
@@ -1466,6 +1523,27 @@ main[role="main"] section#sign-up-form .container form {
   padding: 0 15px; }
   main[role="main"] section#sign-up-form .container form .form-fields .row:first-of-type {
     display: none; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 {
+    margin: 1rem;
+    max-width: 100%;
+    background-color: transparent; }
+    main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection {
+      display: flex;
+      background-color: transparent;
+      border: none; }
+      main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection .select2-selection__rendered {
+        padding: 0; }
+        main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection .select2-selection__rendered .select2-selection__clear {
+          display: none; }
+        main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice {
+          display: flex;
+          flex-direction: row-reverse;
+          background-color: rgba(164, 170, 175, 0.3);
+          padding: 0.375rem 0.5rem;
+          border: none;
+          font-size: 0.875rem; }
+          main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+            margin: 0 0 0 0.9rem; }
   main[role="main"] section#sign-up-form .container form .form-fields .row .field {
     margin-bottom: 1rem;
     padding: 0 1rem;
@@ -1509,6 +1587,17 @@ main[role="main"] section#sign-up-form .container form {
     main[role="main"] section#sign-up-form .container form div.form-actions input[type="submit"] {
       padding: 0.75rem 1.25rem;
       margin-right: 0; }
+@media (max-width: 767px) {
+  main[role="main"] section#sign-up-form .container div.introduction {
+    flex-direction: column; }
+    main[role="main"] section#sign-up-form .container div.introduction h2.h1 {
+      font-size: 2rem; }
+    main[role="main"] section#sign-up-form .container div.introduction span.modal-cta {
+      margin: 1rem auto 0 0; }
+  main[role="main"] section#sign-up-form .container div.information-container {
+    flex-wrap: wrap; }
+    main[role="main"] section#sign-up-form .container div.information-container img.illustration {
+      height: 10rem; } }
 
 body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations {
   margin-right: 2rem;
@@ -1871,3 +1960,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       padding: 1rem;
       background-color: white;
       border-radius: 4px; }
+@media (max-width: 767px) {
+  #PasswordModal .modal-dialog {
+    width: 100%;
+    margin: 0;
+    max-width: none; } }
