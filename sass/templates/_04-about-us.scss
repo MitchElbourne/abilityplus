@@ -117,14 +117,15 @@
               }
             }
           }
-          div.carousel-inner {
-
-          }
           a.carousel-control-next {
             img {
               transform: rotate(180deg);
               -webkit-transform: rotate(180deg);
             }
+          }
+          @include media-breakpoint-down(sm) {
+            padding: 1.5rem;
+
           }
         }
       }
@@ -260,12 +261,17 @@
       .container {
         div.panel {
           padding: 2rem;
+          div.meta-wrapper {
+            img {
+              max-width: 12rem;
+            }
+          }
           div.content {
             span.quotemark {
-              left: 0;
+              left: -1rem;
             }
             h4 {
-              padding-left: 3rem;
+              padding-left: 2rem;
             }
           }
         }
