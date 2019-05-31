@@ -359,6 +359,25 @@ body.is-dashboard {
                 @include media-breakpoint-down(sm) {
                   padding: 0;
                   border: none;
+                  * {
+                    // border: 1px solid red;
+                  }
+                  .form-fields {
+                    .row {
+                      &:nth-of-type(12) {
+                        div.field {
+                          display: flex;
+                          label {
+                            display: none;
+                          }
+                          span.select2 {
+                            max-width: 100%;
+                            width: 100% !important;
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
