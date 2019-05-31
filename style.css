@@ -1497,6 +1497,14 @@ body.is-dashboard .wrapper form {
     cursor: pointer; }
     body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
       color: #0a468f; }
+@media (max-width: 767px) {
+  body.is-dashboard .wrapper div.introduction {
+    padding-bottom: 1rem;
+    flex-wrap: wrap; }
+    body.is-dashboard .wrapper div.introduction h2.h1 {
+      font-size: 1.8rem; }
+    body.is-dashboard .wrapper div.introduction span.sign-up-cta {
+      font-size: 0.8rem; } }
 
 main[role="main"] section#sign-up-form .container div.introduction {
   display: flex;
@@ -1680,6 +1688,11 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied a.cta-blue {
         margin-right: 0;
         font-size: 0.8rem; }
+    @media (max-width: 1199px) {
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account {
+        flex-direction: column; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied {
+          margin: 2rem 0 0 0; } }
   body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-progress {
     width: 100%;
     height: 4rem; }
@@ -1851,6 +1864,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:focus {
           background-color: rgba(37, 120, 219, 0.85);
           color: white; }
+@media (max-width: 767px) {
+  body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
+    margin: 0 0 2rem 0; }
+  body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-content {
+    padding: 0;
+    border: none; } }
 
 #LogInModal, #PasswordModal {
   z-index: 99999;
@@ -1952,7 +1971,11 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
             font-size: 1.8rem; }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
-            font-size: 0.8rem; } }
+            font-size: 0.8rem; }
+        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+          margin-top: 1rem;
+          width: 100%;
+          float: left; } }
 
 #PasswordModal .modal-dialog {
   max-width: 50%; }

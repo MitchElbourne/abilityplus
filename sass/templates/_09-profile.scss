@@ -97,6 +97,12 @@ body.is-dashboard {
                     font-size: 0.8rem;
                   }
                 }
+                @include media-breakpoint-down(lg) {
+                  flex-direction: column;
+                  .content-applied {
+                    margin: 2rem 0 0 0;
+                  }
+                }
               }
               .content-progress {
                 width: 100%;
@@ -353,8 +359,16 @@ body.is-dashboard {
               }
             }
           }
-          @include media-breakpoint-down(lg) {
-            // border: 1px solid red;
+          @include media-breakpoint-down(sm) {
+            .row {
+              div.dashboard-navigations {
+                margin: 0 0 2rem 0;
+              }
+              div.dashboard-content {
+                padding: 0;
+                border: none;
+              }
+            }
           }
         }
       }

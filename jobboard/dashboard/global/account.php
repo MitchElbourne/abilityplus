@@ -28,11 +28,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="account-content">
       <ul>
         <h3 class="p">Log-in Information</h3>
-          
+        <?php $loopCount = 0; ?>
         <?php foreach ($fields as $k => $field) { ?>
 
           <?php
-
+          if($loopCount == 3) {
+            break;
+          }
           if(empty($field['value']) || $field['type'] != 'text'){
               continue;
           }
@@ -43,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <p class="subheading"><?php echo esc_html($field['title']); ?>:</p>
             <p class="data"><?php echo esc_html($field['value']); ?></p>
           </li>
-
+          <?php $loopCount++; ?>
     <?php } ?>
 
     </ul>

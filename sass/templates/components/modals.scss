@@ -139,6 +139,15 @@
             font-size: 0.8rem;
           }
         }
+        form {
+          p.login-submit {
+            a.forgot-password-cta-modal {
+              margin-top: 1rem;
+              width: 100%;
+              float: left;
+            }
+          }
+        }
       }
     }
   }

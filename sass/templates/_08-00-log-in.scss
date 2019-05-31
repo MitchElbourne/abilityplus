@@ -66,4 +66,18 @@ body.is-dashboard {
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    .wrapper {
+      div.introduction {
+        padding-bottom: 1rem;
+        flex-wrap: wrap;
+        h2.h1 {
+          font-size: 1.8rem;
+        }
+        span.sign-up-cta {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
