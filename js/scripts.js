@@ -107,15 +107,6 @@
 			})
 		}
     howweworkCtaHandler();
-    
-    // function signUpHandler() {
-    //   $('#create-my-account').on('click', function() {
-    //     document.getElementById('user_login').value = "";
-    //     document.getElementById('user_login').value = document.getElementById('user_email').value;
-    //   })
-    // }
-
-    // signUpHandler();
 
 
     function careerLevelHandler() {
@@ -146,6 +137,15 @@
           }, 1000);
           career_level_timeout = true;
       });
+
+      $(document).ready(function() {
+        if($('body').hasClass('post-type-archive-jobboard-post-jobs') && $(window).width() < 561) {
+          $('.sidebar-job-border .wg-title').each(function() {
+            $(this).parent().find('.widget-content').slideToggle();
+            $(this).parent().toggleClass('sidebar-effect');
+          });
+        }
+      })
 
       /* click out side career level modal. */
       $('.md-overlay').on('click', function () {
