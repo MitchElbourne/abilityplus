@@ -1204,9 +1204,6 @@ body.is-job div.wrapper {
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
-  @media (max-width: 767px) {
-    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel {
-      padding: 1.5rem; } }
 @media (max-width: 1199px) {
   .wrapper.About.Us section#testimonials .container .row div.meta-container {
     text-align: center; }
@@ -1214,6 +1211,13 @@ body.is-job div.wrapper {
       margin-bottom: 0; }
     .wrapper.About.Us section#testimonials .container .row div.meta-container p {
       margin: 0.5rem 0 3rem; } }
+@media (max-width: 767px) {
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel {
+    padding: 1.5rem; }
+    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
+      justify-content: center; }
+      .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li:last-of-type {
+        margin-right: 0; } }
 .wrapper.About.Us section#meet-the-team .container h2 {
   text-align: center;
   margin-bottom: 2.5rem; }
@@ -1293,9 +1297,9 @@ body.is-job div.wrapper {
     .wrapper.About.Us section#meet-the-team .container div.panel div.meta-wrapper img {
       max-width: 12rem; }
     .wrapper.About.Us section#meet-the-team .container div.panel div.content span.quotemark {
-      left: -1rem; }
+      left: 0; }
     .wrapper.About.Us section#meet-the-team .container div.panel div.content h4 {
-      padding-left: 2rem; } }
+      padding-top: 2.5rem; } }
 
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }
