@@ -22,14 +22,14 @@
               </div>
             </div>
           </div>
-  
+
           <div class="company">
             <h5 class="p">Company</h5>
             <a href="<?php echo esc_url(site_url('/about-us')); ?>" class="grey">About us</a>
             <a href="<?php echo esc_url(site_url('/blog')); ?>" class="grey">Blog</a>
             <a href="<?php echo esc_url(site_url('/contact')); ?>" class="grey">Contact</a>
           </div>
-  
+
 
 
           <div class="resources">
@@ -41,7 +41,7 @@
           </div>
 
 
-  
+
           <div class="contact-information">
             <h5 class="p">Contact Information</h5>
             <p>22 Athol Street, Douglas Isle of Man – 662165</p>
@@ -58,11 +58,11 @@
 
 
         <div class="legal-row">
-          <span class="copyright">&copy; 2019, AbilityPlus All Rights Reserved.</span>
+          <span class="copyright">&copy; 2019 AbilityPlus All Rights Reserved.</span>
           <a href="<?php echo esc_url(site_url('/terms-privacy')); ?>" class="terms-and-policie bold dark">Terms and policies</a>
         </div>
       </div>
-    </footer><!--#site-footer--> 
+    </footer><!--#site-footer-->
 
 
 
