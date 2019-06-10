@@ -31,14 +31,14 @@
           </div>
 
 
-
-          <div class="resources">
+          <!-- Resources -->
+          <!-- <div class="resources">
             <h5 class="p">Resources</h5>
             <a href="<?php echo esc_url(site_url('/')); ?>" class="grey">Career Tools</a>
             <a href="<?php echo esc_url(site_url('/')); ?>" class="grey">Govt. Forms</a>
             <a href="<?php echo esc_url(site_url('/')); ?>" class="grey">Relocating</a>
             <a href="<?php echo esc_url(site_url('/')); ?>" class="grey">Time Sheet</a>
-          </div>
+          </div> -->
 
 
 

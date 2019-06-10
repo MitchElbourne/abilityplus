@@ -43,48 +43,81 @@
           }
         }
       }
-      form {
-        background-color: $white;
-        padding: 2rem;
-        border-radius: 8px;
-        span.error {
-          margin: 0 0 1rem 0;
-          display: inline-block;
-          color: $error;
-        }
-        div.login-username, div.login-password, div.password-forget {
-          margin-bottom: 1rem;
-          padding: 0 1rem;
-          background-color: $lightest-grey;
-          border-radius: 4px;
-          border: 2px solid transparent;
-          transition: all 200ms;
-          label {
-            width: 100%;
-            color: $middle-grey;
+      div.content-wrapper {
+        display: flex;
+        form {
+          flex: 1 1 60%;
+          background-color: $white;
+          padding: 2rem;
+          border-radius: 8px;
+          span.error {
+            margin: 0 0 1rem 0;
+            display: inline-block;
+            color: $error;
           }
-          input {
-            width: 100%;
-            border: none;
-            font-size: 1.25rem;
+          div.login-username, div.login-password, div.password-forget {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
             background-color: $lightest-grey;
-          }
-          &.focus {
-            border-color: $primary-blue;
-            background-color: $white;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            transition: all 200ms;
+            label {
+              width: 100%;
+              color: $middle-grey;
+            }
             input {
+              width: 100%;
+              border: none;
+              font-size: 1.25rem;
+              background-color: $lightest-grey;
+            }
+            &.focus {
+              border-color: $primary-blue;
               background-color: $white;
+              input {
+                background-color: $white;
+              }
+            }
+          }
+          div.remember {
+            margin-bottom: 2rem;
+          }
+          p.login-submit {
+            a.forgot-password-cta-modal {
+              cursor: pointer;
+              &:hover, &:focus {
+                color: $dark-blue;
+              }
             }
           }
         }
-        div.remember {
-          margin-bottom: 2rem;
+        div.image-wrapper {
+          flex: 1 1 40%;
+          margin-left: 3.75rem;
+          display: flex;
+          img {
+            width: 100%;
+            align-self: center;
+          }
         }
-        p.login-submit {
-          a.forgot-password-cta-modal {
-            cursor: pointer;
-            &:hover, &:focus {
-              color: $dark-blue;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .modal-dialog {
+      .modal-content {
+        div.content-wrapper {
+          form {
+            p.login-submit {
+              a.forgot-password-cta-modal {
+                display: block;
+              }
+            }
+          }
+          div.image-wrapper {
+            margin-left: 1rem;
+            img {
             }
           }
         }
@@ -103,6 +136,21 @@
           }
           span.sign-up-cta {
             font-size: 1rem;
+          }
+        }
+        div.content-wrapper {
+          flex-direction: column;
+          form {
+            order: 2;
+          }
+          div.image-wrapper {
+            order: 1;
+            margin-left: 0;
+            justify-content: center;
+            margin-bottom: 1rem;
+            img {
+              max-width: 60%;
+            }
           }
         }
       }
@@ -145,6 +193,19 @@
               margin-top: 1rem;
               width: 100%;
               float: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .modal-dialog {
+      .modal-content {
+        div.content-wrapper {
+          div.image-wrapper {
+            img {
+              max-width: 80%;  
             }
           }
         }

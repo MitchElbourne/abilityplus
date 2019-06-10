@@ -50,7 +50,12 @@ add_action( 'after_setup_theme', 'remove_parent_theme_locations', 20 );
 
 remove_action('after_setup_theme', 'recruitment_user_skills', 20);
 
-
+// Logout redirect
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
 
 // Bootstrap NavWalker
 require_once get_stylesheet_directory() . '/navwalker.php';
