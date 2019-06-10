@@ -27,8 +27,8 @@ $error = JB()->session->get('jb_notices', array());
 
   
 <p class="h5 bold">Welcome back to Ability Plus!</p>
-<div class="content-wrapper">
-  <form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
+
+  <form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form col-12 col-md-7" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
     <?php do_action('jobboard_form_login_before'); ?>
 
     <div class="login-username">
@@ -63,3 +63,6 @@ $error = JB()->session->get('jb_notices', array());
 
   </form>
 
+  <div class="image-wrapper col-12 col-md-5">
+    <img src="<?php echo get_theme_file_uri('/assets/illus-login.png'); ?>" alt="Log In Illustration, apply for vacancies">
+  </div>

@@ -65,6 +65,11 @@ body.is-dashboard {
         }
       }
     }
+    div.image-wrapper {
+      img {
+        width: 100%;
+      }
+    }
   }
   @include media-breakpoint-down(sm) {
     .wrapper {

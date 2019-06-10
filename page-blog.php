@@ -1,91 +1,48 @@
 <?php
 get_header();
+$postsUncat = new WP_Query(array(
+
+));
+
 ?>
 
-<main id="blog-archive">
 
-
-  <!-- Element: HEADER -->
-  <header>
+<main>
+  <section id="blog-listings">
     <div class="container">
-      <h1>AbilityPlus Blog</h1>
-    </div>
-  </header>
+      <h1 c;ass="title">AbilityPlus Blog</h1>
+      <nav class="blog-tabs">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item active" id="uncategorized-posts" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Uncatagorized</a>
+          <a class="nav-item" id="job-seekers-posts" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Job Seekers</a>
+          <a class="nav-item" id="hiring-managers-posts" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Hiring Managers</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="uncategorized-posts">
 
 
-
-  <!-- Element: BLOG FILTER -->
-  <div class="blog-filter container">
-    <a href="#" class="active">
-      <img src="<?php echo get_theme_file_uri('/assets/svg/icon-check-active.svg'); ?>" class="icon" />
-      All Articles
-    </a>
-    <a href="#">
-      <img src="<?php echo get_theme_file_uri('/assets/svg/icon-check-inactive.svg'); ?>" class="icon" />
-      Job Seekers
-    </a>
-    <a href="#">
-      <img src="<?php echo get_theme_file_uri('/assets/svg/icon-check-inactive.svg'); ?>" class="icon" />
-      Hiring Managers
-    </a>
-  </div><!--blog-filter-->
+        </div>
 
 
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="job-seekers-posts">
 
-  <!-- Element: BLOG LIST -->
-  <section class="blog-list">
-    <div class="container">
+        
+        </div>
 
-        <?php
-          // the query
-          $wpb_all_query = new WP_Query(
-            array(
-              'post_type'   => 'post',
-              'post_status' => 'publish',
-              'posts_per_page' => -1));
-        ?>
-        <?php if ( $wpb_all_query->have_posts() ) : ?>
 
-          <div class="row">
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="hiring-managers-posts">
 
-            <!-- the loop -->
-            <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
-              <div class="col col-12 col-md-4 blog-post">
-
-                  <a href="<?php the_permalink(); ?>">
-                    <div class="blog-thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(''); ?>')"></div>
-                  </a>
-
-                  <a href="<?php the_permalink(); ?>">
-                    <h2><?php the_title(); ?></h2>
-                  </a>
-
-                  <p>Requires clamping, yeah. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                  <a href="<?php the_permalink(); ?>" class="arrow">
-                    <img src="<?php echo get_theme_file_uri('/assets/svg/icon-arrow-right.svg'); ?>" class="icon" />
-                  </a>
-
-              </div><!--col-->
-
-            <?php endwhile; ?>
-            <!-- end of the loop -->
-
-          </div><!--row-->
-
-          <?php wp_reset_postdata(); ?>
-
-        <?php else : ?>
-          <p><?php _e( 'Sorry, no blog posts to show at this time.' ); ?></p>
-        <?php endif; ?>
-
+        </div>
+      </div>
     </div><!--container-->
-  </section><!--blog-list-->
-
-</main>
+  </section><!--#blog-listings-->
+</main><!--main-->
 
 
 <?php
+
 get_footer();
 ?>

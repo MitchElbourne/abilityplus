@@ -677,7 +677,7 @@ body.home section#blog-recommendations {
           border-radius: 100%;
           background-position: center;
           background-repeat: no-repeat;
-          background-size: 22rem; }
+          background-size: cover; }
         body.home section#blog-recommendations .container .row .content div.blog-container article p.excerpt {
           margin: 0.75rem 0 1.5rem; }
         body.home section#blog-recommendations .container .row .content div.blog-container article a {
@@ -1301,77 +1301,35 @@ body.is-job div.wrapper {
     .wrapper.About.Us section#meet-the-team .container div.panel div.content h4 {
       padding-top: 2.5rem; } }
 
-/*
-  blog-archive
-  &&
-  blog-single
-  &&
-  blog-recommendations
-*/
-main#blog-archive {
-  background: #e8eaeb; }
-  main#blog-archive header .container h1 {
-    display: block;
-    text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 2rem; }
-  main#blog-archive .blog-filter {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 3rem; }
-    main#blog-archive .blog-filter a {
-      color: #1a2733;
-      padding: 0.66rem 1.5rem;
-      border: solid 2px #d2d5d7;
-      border-radius: 2rem;
-      margin: 0.5rem 0.66rem; }
-      main#blog-archive .blog-filter a img {
-        display: inline;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 0.5rem; }
-      main#blog-archive .blog-filter a.active {
-        border: 2px solid #2578db; }
-  main#blog-archive .blog-list .container {
-    background-color: white;
-    border-radius: 5px;
-    padding: 2rem 0; }
-    main#blog-archive .blog-list .container .row {
-      padding-left: 4rem;
-      padding-right: 0;
-      margin: 0; }
-      main#blog-archive .blog-list .container .row .blog-post {
-        display: flex;
-        flex-direction: column;
-        border-right: 2px solid #e8e9eb;
-        padding-right: 4rem;
-        margin: 2rem 4rem 3rem; }
-        main#blog-archive .blog-list .container .row .blog-post .blog-thumbnail {
-          display: block;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background-color: #f3f4f5;
-          margin-bottom: 2rem;
-          background-size: cover; }
-        main#blog-archive .blog-list .container .row .blog-post h2 {
-          font-size: 1.75rem;
-          line-height: 1.5;
-          margin-bottom: 1rem; }
-        main#blog-archive .blog-list .container .row .blog-post p {
-          margin-bottom: 0.75rem;
-          margin-bottom: auto; }
-        main#blog-archive .blog-list .container .row .blog-post .arrow {
-          display: flex;
-          width: 3rem;
-          height: 3rem;
-          background-color: rgba(37, 120, 219, 0.2);
-          justify-content: center;
-          align-items: center;
-          border-radius: 1.5rem;
-          margin-top: 1rem; }
-        main#blog-archive .blog-list .container .row .blog-post:nth-of-type(3) .blog-post {
-          border-right: 2px solid transparent; }
+.wrapper.Blog {
+  padding-top: 7.75rem; }
+  .wrapper.Blog main section#blog-listings {
+    background-color: #e8eaeb;
+    padding: 6rem 0; }
+    .wrapper.Blog main section#blog-listings .container {
+      text-align: center; }
+      .wrapper.Blog main section#blog-listings .container .blog-tabs {
+        margin: 2.5rem 0 4rem; }
+        .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs {
+          border: none;
+          justify-content: center; }
+          .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #d2d5d7;
+            border-radius: 1.625rem;
+            color: #1a2733; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:nth-of-type(2) {
+              margin: 0 1.5rem; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a svg {
+              margin: 0 0.25rem 0.1rem 0; }
+              .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a svg path {
+                transition: all 200ms; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a.active {
+              border-color: rgba(37, 120, 219, 0.36); }
+              .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a.active svg path {
+                fill: #2578db; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:hover {
+              color: #0a468f; }
 
 main#blog-single {
   background: #e8eaeb;
@@ -1657,6 +1615,8 @@ body.is-dashboard .wrapper form {
     cursor: pointer; }
     body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
       color: #0a468f; }
+body.is-dashboard .wrapper div.image-wrapper img {
+  width: 100%; }
 @media (max-width: 767px) {
   body.is-dashboard .wrapper div.introduction {
     padding-bottom: 1rem;
@@ -2058,16 +2018,20 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     padding-left: 8px;
     margin: 1rem auto; }
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 7.5rem 10rem;
       background-color: #f3f4f5;
       border-radius: 0;
       border: none; }
       #LogInModal .modal-dialog .modal-content p.h5, #PasswordModal .modal-dialog .modal-content p.h5 {
-        margin: 2rem 0; }
+        margin: 2rem 0;
+        width: 100%; }
       #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
         display: flex;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #a4aaaf; }
+        border-bottom: 1px solid #a4aaaf;
+        width: 100%; }
         #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
         #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
@@ -2078,50 +2042,42 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta a, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta a {
             cursor: pointer;
             color: #2578db; }
-      #LogInModal .modal-dialog .modal-content div.content-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper {
-        display: flex; }
-        #LogInModal .modal-dialog .modal-content div.content-wrapper form, #PasswordModal .modal-dialog .modal-content div.content-wrapper form {
-          flex: 1 1 60%;
-          background-color: white;
-          padding: 2rem;
-          border-radius: 8px; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper form span.error, #PasswordModal .modal-dialog .modal-content div.content-wrapper form span.error {
-            margin: 0 0 1rem 0;
-            display: inline-block;
-            color: #bb0f00; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-username, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-password, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.password-forget, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-username, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-password, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.password-forget {
-            margin-bottom: 1rem;
-            padding: 0 1rem;
-            background-color: #f3f4f5;
-            border-radius: 4px;
-            border: 2px solid transparent;
-            transition: all 200ms; }
-            #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-username label, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-password label, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.password-forget label, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-username label, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-password label, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.password-forget label {
-              width: 100%;
-              color: rgba(28, 43, 56, 0.5); }
-            #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-username input, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-password input, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.password-forget input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-username input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-password input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.password-forget input {
-              width: 100%;
-              border: none;
-              font-size: 1.25rem;
-              background-color: #f3f4f5; }
-            #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-username.focus, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-password.focus, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.password-forget.focus, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-username.focus, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-password.focus, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.password-forget.focus {
-              border-color: #2578db;
-              background-color: white; }
-              #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-username.focus input, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.login-password.focus input, #LogInModal .modal-dialog .modal-content div.content-wrapper form div.password-forget.focus input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-username.focus input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.login-password.focus input, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.password-forget.focus input {
-                background-color: white; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper form div.remember, #PasswordModal .modal-dialog .modal-content div.content-wrapper form div.remember {
-            margin-bottom: 2rem; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
-            cursor: pointer; }
-            #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal:focus {
-              color: #0a468f; }
-        #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper {
-          flex: 1 1 40%;
-          margin-left: 3.75rem;
-          display: flex; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img {
+      #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px; }
+        #LogInModal .modal-dialog .modal-content form span.error, #PasswordModal .modal-dialog .modal-content form span.error {
+          margin: 0 0 1rem 0;
+          display: inline-block;
+          color: #bb0f00; }
+        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #LogInModal .modal-dialog .modal-content form div.password-forget, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.password-forget {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: #f3f4f5;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms; }
+          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #LogInModal .modal-dialog .modal-content form div.password-forget label, #PasswordModal .modal-dialog .modal-content form div.login-username label, #PasswordModal .modal-dialog .modal-content form div.login-password label, #PasswordModal .modal-dialog .modal-content form div.password-forget label {
             width: 100%;
-            align-self: center; }
+            color: rgba(28, 43, 56, 0.5); }
+          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #LogInModal .modal-dialog .modal-content form div.password-forget input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.password-forget input {
+            width: 100%;
+            border: none;
+            font-size: 1.25rem;
+            background-color: #f3f4f5; }
+          #LogInModal .modal-dialog .modal-content form div.login-username.focus, #LogInModal .modal-dialog .modal-content form div.login-password.focus, #LogInModal .modal-dialog .modal-content form div.password-forget.focus, #PasswordModal .modal-dialog .modal-content form div.login-username.focus, #PasswordModal .modal-dialog .modal-content form div.login-password.focus, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus {
+            border-color: #2578db;
+            background-color: white; }
+            #LogInModal .modal-dialog .modal-content form div.login-username.focus input, #LogInModal .modal-dialog .modal-content form div.login-password.focus input, #LogInModal .modal-dialog .modal-content form div.password-forget.focus input, #PasswordModal .modal-dialog .modal-content form div.login-username.focus input, #PasswordModal .modal-dialog .modal-content form div.login-password.focus input, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus input {
+              background-color: white; }
+        #LogInModal .modal-dialog .modal-content form div.remember, #PasswordModal .modal-dialog .modal-content form div.remember {
+          margin-bottom: 2rem; }
+        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+          cursor: pointer; }
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
+            color: #0a468f; }
+      #LogInModal .modal-dialog .modal-content div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.image-wrapper img {
+        max-width: 100%; }
   @media (max-width: 1199px) {
     #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
       display: block; }
@@ -2136,18 +2092,7 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           font-size: 2.85rem; }
         #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
-          font-size: 1rem; }
-      #LogInModal .modal-dialog .modal-content div.content-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper {
-        flex-direction: column; }
-        #LogInModal .modal-dialog .modal-content div.content-wrapper form, #PasswordModal .modal-dialog .modal-content div.content-wrapper form {
-          order: 2; }
-        #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper {
-          order: 1;
-          margin-left: 0;
-          justify-content: center;
-          margin-bottom: 1rem; }
-          #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img {
-            max-width: 60%; } }
+          font-size: 1rem; } }
   @media (max-width: 767px) {
     #LogInModal#LogInModal .modal-dialog, #PasswordModal#LogInModal .modal-dialog {
       margin: 0;
@@ -2169,13 +2114,14 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             font-size: 1.8rem; }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
             font-size: 0.8rem; }
-        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
-          margin-top: 1rem;
-          width: 100%;
-          float: left; } }
-  @media (max-width: 575px) {
-    #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper img {
-      max-width: 80%; } }
+        #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+          order: 3; }
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+            margin-top: 1rem;
+            width: 100%;
+            float: left; }
+        #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+          order: 2; } }
 
 #PasswordModal .modal-dialog {
   max-width: 50%; }

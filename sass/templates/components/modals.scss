@@ -18,17 +18,21 @@
     padding-left: 8px;
     margin: 1rem auto;
     .modal-content {
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 7.5rem 10rem;
       background-color: $lightest-grey;
       border-radius: 0;
       border: none;
       p.h5 {
         margin: 2rem 0;
+        width: 100%;
       }
       div.introduction {
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf;
+        width: 100%;
         h2.h1 {
           display: inline-block;
         }
@@ -43,63 +47,55 @@
           }
         }
       }
-      div.content-wrapper {
-        display: flex;
-        form {
-          flex: 1 1 60%;
-          background-color: $white;
-          padding: 2rem;
-          border-radius: 8px;
-          span.error {
-            margin: 0 0 1rem 0;
-            display: inline-block;
-            color: $error;
+      form {
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 8px;
+        span.error {
+          margin: 0 0 1rem 0;
+          display: inline-block;
+          color: $error;
+        }
+        div.login-username, div.login-password, div.password-forget {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: $lightest-grey;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms;
+          label {
+            width: 100%;
+            color: $middle-grey;
           }
-          div.login-username, div.login-password, div.password-forget {
-            margin-bottom: 1rem;
-            padding: 0 1rem;
+          input {
+            width: 100%;
+            border: none;
+            font-size: 1.25rem;
             background-color: $lightest-grey;
-            border-radius: 4px;
-            border: 2px solid transparent;
-            transition: all 200ms;
-            label {
-              width: 100%;
-              color: $middle-grey;
-            }
+          }
+          &.focus {
+            border-color: $primary-blue;
+            background-color: $white;
             input {
-              width: 100%;
-              border: none;
-              font-size: 1.25rem;
-              background-color: $lightest-grey;
-            }
-            &.focus {
-              border-color: $primary-blue;
               background-color: $white;
-              input {
-                background-color: $white;
-              }
-            }
-          }
-          div.remember {
-            margin-bottom: 2rem;
-          }
-          p.login-submit {
-            a.forgot-password-cta-modal {
-              cursor: pointer;
-              &:hover, &:focus {
-                color: $dark-blue;
-              }
             }
           }
         }
-        div.image-wrapper {
-          flex: 1 1 40%;
-          margin-left: 3.75rem;
-          display: flex;
-          img {
-            width: 100%;
-            align-self: center;
+        div.remember {
+          margin-bottom: 2rem;
+        }
+        p.login-submit {
+          a.forgot-password-cta-modal {
+            cursor: pointer;
+            &:hover, &:focus {
+              color: $dark-blue;
+            }
           }
+        }
+      }
+      div.image-wrapper {
+        img {
+          max-width: 100%;
         }
       }
     }
@@ -118,6 +114,7 @@
           div.image-wrapper {
             margin-left: 1rem;
             img {
+
             }
           }
         }
@@ -136,21 +133,6 @@
           }
           span.sign-up-cta {
             font-size: 1rem;
-          }
-        }
-        div.content-wrapper {
-          flex-direction: column;
-          form {
-            order: 2;
-          }
-          div.image-wrapper {
-            order: 1;
-            margin-left: 0;
-            justify-content: center;
-            margin-bottom: 1rem;
-            img {
-              max-width: 60%;
-            }
           }
         }
       }
@@ -188,6 +170,7 @@
           }
         }
         form {
+          order: 3;
           p.login-submit {
             a.forgot-password-cta-modal {
               margin-top: 1rem;
@@ -196,18 +179,8 @@
             }
           }
         }
-      }
-    }
-  }
-  @include media-breakpoint-down(xs) {
-    .modal-dialog {
-      .modal-content {
-        div.content-wrapper {
-          div.image-wrapper {
-            img {
-              max-width: 80%;  
-            }
-          }
+        div.image-wrapper {
+          order: 2;
         }
       }
     }
