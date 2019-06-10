@@ -28,38 +28,41 @@ $error = JB()->session->get('jb_notices', array());
   
 <p class="h5 bold">Welcome back to Ability Plus!</p>
 
-<form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
-  <?php do_action('jobboard_form_login_before'); ?>
+  <form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form col-12 col-md-7" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
+    <?php do_action('jobboard_form_login_before'); ?>
 
-  <div class="login-username">
-    <label for="log" class="caption">Account</label>
-    <input type="text" name="log" id="<?php echo esc_attr($args['form_id']) . '-log'; ?>" class="input" value="" size="20" />
-  </div>
-
-  <div class="login-password">
-    <label for="pwd" class="caption">Password</label>
-    <input type="password" name="pwd" id="<?php echo esc_attr($args['form_id']) . '-pwd'; ?>" class="input" value="" size="20" />
-  </div>
-  
-  <?php
-    if($error) {?>
-      <span class="error">Email or password incorrect</span>
-<?php }?>
-
-  <div class="login-remember clearfix">
-    <div class="remember">
-      <input name="rememberme" type="checkbox" id="<?php echo esc_attr($args['form_id']) . '-rememberme'; ?>" value="forever"/>
-      <span><?php echo esc_html($args['label_remember']); ?></span>
+    <div class="login-username">
+      <label for="log" class="caption">Account</label>
+      <input type="text" name="log" id="<?php echo esc_attr($args['form_id']) . '-log'; ?>" class="input" value="" size="20" />
     </div>
-  </div>
+
+    <div class="login-password">
+      <label for="pwd" class="caption">Password</label>
+      <input type="password" name="pwd" id="<?php echo esc_attr($args['form_id']) . '-pwd'; ?>" class="input" value="" size="20" />
+    </div>
     
+    <?php
+      if($error) {?>
+        <span class="error">Email or password incorrect</span>
+  <?php }?>
 
-  <p class="login-submit clearfix">
-    <input type="submit" name="wp-submit" id="<?php echo esc_attr($args['form_id']) . '-submit'; ?>" class="cta-blue bold" value="Log in" />
-    <a class="forgot-password-cta-modal modal-button" data-toggle="modal" data-target="#PasswordModal">Forget your password?</a>
-    <input type="hidden" name="redirect_to" value="<?php echo esc_url($args['redirect_to']); ?>" />
-    <input type="hidden" name="dashboard" value="<?php echo esc_attr($args['dashboard']); ?>">
-  </p>
+    <div class="login-remember clearfix">
+      <div class="remember">
+        <input name="rememberme" type="checkbox" id="<?php echo esc_attr($args['form_id']) . '-rememberme'; ?>" value="forever"/>
+        <span><?php echo esc_html($args['label_remember']); ?></span>
+      </div>
+    </div>
+      
 
-</form>
+    <p class="login-submit clearfix">
+      <input type="submit" name="wp-submit" id="<?php echo esc_attr($args['form_id']) . '-submit'; ?>" class="cta-blue bold" value="Log in" />
+      <a class="forgot-password-cta-modal modal-button" data-toggle="modal" data-target="#PasswordModal">Forget your password?</a>
+      <input type="hidden" name="redirect_to" value="<?php echo esc_url($args['redirect_to']); ?>" />
+      <input type="hidden" name="dashboard" value="<?php echo esc_attr($args['dashboard']); ?>">
+    </p>
 
+  </form>
+
+  <div class="image-wrapper col-12 col-md-5">
+    <img src="<?php echo get_theme_file_uri('/assets/illus-login.png'); ?>" alt="Log In Illustration, apply for vacancies">
+  </div>

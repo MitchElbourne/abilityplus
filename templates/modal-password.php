@@ -11,14 +11,13 @@
         <p class="text">Don't worry! Simply enter in your registered email address, and we'll help you out.</p>
       </div>
 
-      <?php echo do_shortcode('[jobboard_register_forgot_password]'); ?>
-      
-      <?php if($error['error'][0] == "Error : You need to enter an email address.") { ?>
-        <span id="Password_Validate_Modal" class="Not-Validated error">Please enter in an Email</span>
+        <?php echo do_shortcode('[jobboard_register_forgot_password]'); ?>
         
-      <?php } ?>
-      
-      
+        <?php if($error['error'][0] == "Error : You need to enter an email address.") { ?>
+          <span id="Password_Validate_Modal" class="Not-Validated error">Please enter in an Email</span>
+          
+        <?php } ?>
+
     </div>
   </div>
 </div>

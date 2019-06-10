@@ -303,7 +303,7 @@ body {
       body a.grey:hover, body a.grey:focus {
         color: #5e5e5e; }
   body .italic {
-    font-family: "tkususual-italic", "system", "sans-serif"; }
+    font-family: "tkusual-italic", "system", "sans-serif"; }
 
 header#site-header {
   position: fixed;
@@ -352,9 +352,9 @@ header#site-header {
       flex-grow: 1; }
       header#site-header nav div#primary-menu ul li.active a {
         color: #0a468f; }
-      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(1) {
         margin-left: auto; }
-        header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
+        header#site-header nav div#primary-menu ul li:nth-last-of-type(1) a {
           padding-left: 0; }
       header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"], header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
         color: #2578db;
@@ -380,9 +380,9 @@ header#site-header {
     header#site-header nav div#primary-menu ul {
       text-align: center;
       padding: 2rem; }
-      header#site-header nav div#primary-menu ul li:nth-last-of-type(2) {
+      header#site-header nav div#primary-menu ul li:nth-last-of-type(1) {
         margin-left: 0; }
-        header#site-header nav div#primary-menu ul li:nth-last-of-type(2) a {
+        header#site-header nav div#primary-menu ul li:nth-last-of-type(1) a {
           padding-left: 1.2rem; }
       header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
         display: inline-block; } }
@@ -677,7 +677,7 @@ body.home section#blog-recommendations {
           border-radius: 100%;
           background-position: center;
           background-repeat: no-repeat;
-          background-size: 22rem; }
+          background-size: cover; }
         body.home section#blog-recommendations .container .row .content div.blog-container article p.excerpt {
           margin: 0.75rem 0 1.5rem; }
         body.home section#blog-recommendations .container .row .content div.blog-container article a {
@@ -1301,6 +1301,201 @@ body.is-job div.wrapper {
     .wrapper.About.Us section#meet-the-team .container div.panel div.content h4 {
       padding-top: 2.5rem; } }
 
+.wrapper.Blog {
+  padding-top: 7.75rem; }
+  .wrapper.Blog main section#blog-listings {
+    background-color: #e8eaeb;
+    padding: 6rem 0; }
+    .wrapper.Blog main section#blog-listings .container {
+      text-align: center; }
+      .wrapper.Blog main section#blog-listings .container .blog-tabs {
+        margin: 2.5rem 0 4rem; }
+        .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs {
+          border: none;
+          justify-content: center; }
+          .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #d2d5d7;
+            border-radius: 1.625rem;
+            color: #1a2733; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:nth-of-type(2) {
+              margin: 0 1.5rem; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a svg {
+              margin: 0 0.25rem 0.1rem 0; }
+              .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a svg path {
+                transition: all 200ms; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a.active {
+              border-color: rgba(37, 120, 219, 0.36); }
+              .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a.active svg path {
+                fill: #2578db; }
+            .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:hover {
+              color: #0a468f; }
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container {
+        background-color: white;
+        padding: 3rem 3rem 0 3rem;
+        display: flex;
+        flex-wrap: wrap; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          padding: 0 2.25rem;
+          border-left: 2px solid #e8eaeb;
+          margin-bottom: 4.5rem;
+          flex: 0 1 calc(100%/3); }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(3n+1) {
+            border-left: none;
+            padding-left: 0; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(3n+2) {
+            margin: inherit 2.25rem; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(3n+3) {
+            padding-right: 0; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.image-title-cta-wrapper div.image-wrapper {
+            width: 12rem;
+            height: 12rem;
+            margin-bottom: 2rem;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 100%; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.image-title-cta-wrapper h2, .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.image-title-cta-wrapper div.image-wrapper {
+            transition: all 200ms; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.image-title-cta-wrapper:hover h2 {
+            color: #0a468f; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.image-title-cta-wrapper:hover div.image-wrapper {
+            opacity: 0.8; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article p.excerpt {
+            margin: 0.75rem 0 1.5rem; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.arrow-cta {
+            margin-top: auto; }
+    @media (max-width: 1199px) {
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
+        flex: 0 1 calc(100%/2); }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding-left: 0;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: 2px solid #e8eaeb;
+          padding-left: 2.25rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(3n+3) {
+          padding-right: 2.25rem; } }
+    @media (max-width: 991px) {
+      .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs {
+        flex-direction: column; }
+        .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a {
+          margin: 0 auto;
+          flex-grow: 0;
+          width: auto; }
+          .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:nth-of-type(2) {
+            margin: 1rem auto; }
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
+        flex: 1 1 100%; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article div.image-wrapper {
+          margin: 0 auto 1rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding-left: 2.25rem;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: none;
+          padding-left: 2.25rem; } }
+    @media (max-width: 575px) {
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container {
+        padding: 1rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding: 0;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: none;
+          padding: 0; } }
+
+main#blog-single {
+  background: #e8eaeb;
+  margin-top: 2rem;
+  padding-bottom: 4rem; }
+  main#blog-single article.blog-article header {
+    padding: 4rem 0 3rem;
+    text-align: center; }
+    main#blog-single article.blog-article header .container .blog-back {
+      margin: 0 0 1rem 0;
+      padding: 0.75rem 1.75rem 1.66rem; }
+    main#blog-single article.blog-article header .container h1 {
+      margin-bottom: 1rem; }
+    main#blog-single article.blog-article header .container h2, main#blog-single article.blog-article header .container h2 time {
+      text-transform: uppercase;
+      color: #5e5e5e;
+      font-size: 1rem;
+      font-family: "tkusual-reg", "system", "sans-serif";
+      font-weight: normal;
+      letter-spacing: 1px; }
+  main#blog-single article.blog-article .blog-img-container .blog-img-lead {
+    padding-bottom: 36%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0.5rem;
+    border: 1px solid #d2d5d7;
+    margin: 0 auto 2rem; }
+  main#blog-single article.blog-article .blog-content p, main#blog-single article.blog-article .blog-content li {
+    font-size: 1.123rem;
+    margin-bottom: 0.66rem; }
+  main#blog-single article.blog-article .blog-content h1, main#blog-single article.blog-article .blog-content h2, main#blog-single article.blog-article .blog-content h3, main#blog-single article.blog-article .blog-content h4, main#blog-single article.blog-article .blog-content h5, main#blog-single article.blog-article .blog-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem; }
+  main#blog-single article.blog-article .blog-content blockquote {
+    font-family: "tkusual-italic", "system", "sans-serif";
+    padding: 1rem 1rem 1rem 4rem; }
+    main#blog-single article.blog-article .blog-content blockquote::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 1rem;
+      border: 2px solid lime;
+      width: 2rem;
+      height: 2rem; }
+  main#blog-single article.blog-article footer {
+    text-transform: uppercase;
+    color: #5e5e5e;
+    font-size: 1rem;
+    font-family: "tkusual-reg", "system", "sans-serif";
+    font-weight: normal;
+    letter-spacing: 1px; }
+    main#blog-single article.blog-article footer .dotted-hr {
+      display: block;
+      border-top: 3.5px dotted #a4aaaf;
+      margin: 3rem 0 2rem; }
+
+section#blog-recommendations {
+  background-color: rgba(37, 120, 219, 0.08);
+  padding-top: 4rem; }
+  section#blog-recommendations .container .row .content {
+    text-align: center;
+    margin: 0 auto; }
+    section#blog-recommendations .container .row .content p.text {
+      margin: 1.5rem 0 4rem; }
+    section#blog-recommendations .container .row .content div.blog-container {
+      display: flex;
+      background-color: white;
+      padding: 3rem 0;
+      border-radius: 4px; }
+      section#blog-recommendations .container .row .content div.blog-container article {
+        padding: 0 3rem;
+        text-align: left; }
+        section#blog-recommendations .container .row .content div.blog-container article .blog-thumbnail {
+          display: block;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #f3f4f5;
+          margin-bottom: 2rem;
+          background-size: cover; }
+        section#blog-recommendations .container .row .content div.blog-container article h3 {
+          font-size: 1.5rem;
+          line-height: 1.5;
+          margin-bottom: 0.66rem; }
+        section#blog-recommendations .container .row .content div.blog-container article p {
+          margin-bottom: 1rem; }
+        section#blog-recommendations .container .row .content div.blog-container article:nth-of-type(1) {
+          border-right: 2px solid #e8e9eb; }
+
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }
   .wrapper.Contact section#introduction .container .row p.text {
@@ -1497,6 +1692,8 @@ body.is-dashboard .wrapper form {
     cursor: pointer; }
     body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
       color: #0a468f; }
+body.is-dashboard .wrapper div.image-wrapper img {
+  width: 100%; }
 @media (max-width: 767px) {
   body.is-dashboard .wrapper div.introduction {
     padding-bottom: 1rem;
@@ -1898,16 +2095,20 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     padding-left: 8px;
     margin: 1rem auto; }
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 7.5rem 10rem;
       background-color: #f3f4f5;
       border-radius: 0;
       border: none; }
       #LogInModal .modal-dialog .modal-content p.h5, #PasswordModal .modal-dialog .modal-content p.h5 {
-        margin: 2rem 0; }
+        margin: 2rem 0;
+        width: 100%; }
       #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
         display: flex;
         padding-bottom: 2rem;
-        border-bottom: 1px solid #a4aaaf; }
+        border-bottom: 1px solid #a4aaaf;
+        width: 100%; }
         #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
         #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
@@ -1952,6 +2153,13 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           cursor: pointer; }
           #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
             color: #0a468f; }
+      #LogInModal .modal-dialog .modal-content div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.image-wrapper img {
+        max-width: 100%; }
+  @media (max-width: 1199px) {
+    #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
+      display: block; }
+    #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper {
+      margin-left: 1rem; } }
   @media (max-width: 991px) {
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
       padding: 5rem; }
@@ -1983,10 +2191,14 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             font-size: 1.8rem; }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
             font-size: 0.8rem; }
-        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
-          margin-top: 1rem;
-          width: 100%;
-          float: left; } }
+        #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+          order: 3; }
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+            margin-top: 1rem;
+            width: 100%;
+            float: left; }
+        #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+          order: 2; } }
 
 #PasswordModal .modal-dialog {
   max-width: 50%; }

@@ -18,17 +18,21 @@
     padding-left: 8px;
     margin: 1rem auto;
     .modal-content {
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 7.5rem 10rem;
       background-color: $lightest-grey;
       border-radius: 0;
       border: none;
       p.h5 {
         margin: 2rem 0;
+        width: 100%;
       }
       div.introduction {
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf;
+        width: 100%;
         h2.h1 {
           display: inline-block;
         }
@@ -89,6 +93,32 @@
           }
         }
       }
+      div.image-wrapper {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .modal-dialog {
+      .modal-content {
+        div.content-wrapper {
+          form {
+            p.login-submit {
+              a.forgot-password-cta-modal {
+                display: block;
+              }
+            }
+          }
+          div.image-wrapper {
+            margin-left: 1rem;
+            img {
+
+            }
+          }
+        }
+      }
     }
   }
   @include media-breakpoint-down(md) {
@@ -140,6 +170,7 @@
           }
         }
         form {
+          order: 3;
           p.login-submit {
             a.forgot-password-cta-modal {
               margin-top: 1rem;
@@ -147,6 +178,9 @@
               float: left;
             }
           }
+        }
+        div.image-wrapper {
+          order: 2;
         }
       }
     }
