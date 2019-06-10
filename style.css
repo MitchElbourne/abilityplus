@@ -1368,6 +1368,17 @@ body.is-job div.wrapper {
             margin: 0.75rem 0 1.5rem; }
           .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.arrow-cta {
             margin-top: auto; }
+    @media (max-width: 1199px) {
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
+        flex: 0 1 calc(100%/2); }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding-left: 0;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: 2px solid #e8eaeb;
+          padding-left: 2.25rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(3n+3) {
+          padding-right: 2.25rem; } }
     @media (max-width: 991px) {
       .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs {
         flex-direction: column; }
@@ -1376,7 +1387,26 @@ body.is-job div.wrapper {
           flex-grow: 0;
           width: auto; }
           .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:nth-of-type(2) {
-            margin: 1rem auto; } }
+            margin: 1rem auto; }
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
+        flex: 1 1 100%; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article div.image-wrapper {
+          margin: 0 auto 1rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding-left: 2.25rem;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: none;
+          padding-left: 2.25rem; } }
+    @media (max-width: 575px) {
+      .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container {
+        padding: 1rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
+          padding: 0;
+          border-left: none; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
+          border-left: none;
+          padding: 0; } }
 
 main#blog-single {
   background: #e8eaeb;
