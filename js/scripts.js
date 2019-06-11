@@ -89,24 +89,33 @@
           $(this).parent().removeClass("focus");
         })
       });
-    } 
+    }
 
     inputFocusHandler();
 
 
-    function howweworkCtaHandler() {
-			var cta = jQuery('.how-we-work-cta');
+    function ctaScrollTo() {
+			var howwework = jQuery('.how-we-work-howwework');
+			var blogtotop = jQuery('.scroll-to-top');
 			var navHeight = document.getElementById("site-header").offsetHeight;
 
-			cta.click(function(e) {
+			howwework.click(function(e) {
 				$(window).scrollTo(
 					"#how-we-work", {
 						duration: 1000,
 						offset: (-navHeight)
 					})
 			})
+
+			blogtotop.click(function(e) {
+				$(window).scrollTo(
+					"#article-container", {
+						duration: 1000,
+						offset: (-navHeight)
+					})
+			})
 		}
-    howweworkCtaHandler();
+    ctaScrollTo();
 
 
     function careerLevelHandler() {
@@ -117,7 +126,7 @@
 
       /* add inputs to form. */
       $('.widget-career-level').on('change', 'input[name="career-levels[]"]', function () {
-        
+
           $('.jobboard-archive-actions').find('input[name="career-levels[]"]').remove();
 
           $('.widget-career-level input[type="checkbox"]:checked').each(function () {
@@ -126,7 +135,7 @@
           career_level_modal = true;
       });
 
-      
+
       /* click to career level inputs. */
       $('.widget-career-level').on('click', '.widget-content > ul > li:not(:last-child)', function () {
           if (career_level_timeout == true) {
@@ -188,40 +197,40 @@
           var panels = document.querySelectorAll('.carousel-item');
           var content = document.querySelectorAll('#testimonialCarousel')
           var maxHeight = 0;
-    
+
           panels.forEach(function(item) {
             var tempHeight = item.offsetHeight;
-    
+
             if (tempHeight > maxHeight) {
               maxHeight = tempHeight;
             }
           });
 
           var heightFinal = maxHeight + 96;
-    
+
           content.forEach(function(item) {
             item.style.height = heightFinal + "px";
           });
         });
       };
-    }; 
-    
+    };
+
     // Can be used without the jquery call below, calls the function on resize
-    
+
     $(window).resize(lodash.debounce(function() {
       equalizeHeights();
     }, 300));
-    
+
     equalizeHeights();
   });
-  
+
 
   $('body').on('click', '.basket-add', function (e) {
     e.preventDefault();
     var _this = $(this);
     var btn = $(this);
     var id  = btn.data('id');
-    
+
     if(id === ''){
         return;
     }

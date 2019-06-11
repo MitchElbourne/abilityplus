@@ -318,6 +318,9 @@ header#site-header {
       padding-bottom: 0.85rem; }
       header#site-header nav .navbar-brand img {
         width: 9.5rem; }
+      @media (max-width: 767px) {
+        header#site-header nav .navbar-brand {
+          padding-bottom: 0; } }
     header#site-header nav .navbar-toggler {
       border: none;
       background: transparent !important; }
@@ -1302,7 +1305,7 @@ body.is-job div.wrapper {
       padding-top: 2.5rem; } }
 
 .wrapper.Blog {
-  padding-top: 7.75rem; }
+  padding-top: 7rem; }
   .wrapper.Blog main section#blog-listings {
     background-color: #e8eaeb;
     padding: 6rem 0; }
@@ -1408,93 +1411,156 @@ body.is-job div.wrapper {
           border-left: none;
           padding: 0; } }
 
-main#blog-single {
-  background: #e8eaeb;
-  margin-top: 2rem;
-  padding-bottom: 4rem; }
-  main#blog-single article.blog-article header {
-    padding: 4rem 0 3rem;
-    text-align: center; }
-    main#blog-single article.blog-article header .container .blog-back {
-      margin: 0 0 1rem 0;
-      padding: 0.75rem 1.75rem 1.66rem; }
-    main#blog-single article.blog-article header .container h1 {
-      margin-bottom: 1rem; }
-    main#blog-single article.blog-article header .container h2, main#blog-single article.blog-article header .container h2 time {
-      text-transform: uppercase;
-      color: #5e5e5e;
-      font-size: 1rem;
-      font-family: "tkusual-reg", "system", "sans-serif";
-      font-weight: normal;
-      letter-spacing: 1px; }
-  main#blog-single article.blog-article .blog-img-container .blog-img-lead {
-    padding-bottom: 36%;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 0.5rem;
-    border: 1px solid #d2d5d7;
-    margin: 0 auto 2rem; }
-  main#blog-single article.blog-article .blog-content p, main#blog-single article.blog-article .blog-content li {
-    font-size: 1.123rem;
-    margin-bottom: 0.66rem; }
-  main#blog-single article.blog-article .blog-content h1, main#blog-single article.blog-article .blog-content h2, main#blog-single article.blog-article .blog-content h3, main#blog-single article.blog-article .blog-content h4, main#blog-single article.blog-article .blog-content h5, main#blog-single article.blog-article .blog-content h6 {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem; }
-  main#blog-single article.blog-article .blog-content blockquote {
-    font-family: "tkusual-italic", "system", "sans-serif";
-    padding: 1rem 1rem 1rem 4rem; }
-    main#blog-single article.blog-article .blog-content blockquote::before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      left: 1rem;
-      border: 2px solid lime;
-      width: 2rem;
-      height: 2rem; }
-  main#blog-single article.blog-article footer {
-    text-transform: uppercase;
-    color: #5e5e5e;
-    font-size: 1rem;
-    font-family: "tkusual-reg", "system", "sans-serif";
-    font-weight: normal;
-    letter-spacing: 1px; }
-    main#blog-single article.blog-article footer .dotted-hr {
-      display: block;
-      border-top: 3.5px dotted #a4aaaf;
-      margin: 3rem 0 2rem; }
-
-section#blog-recommendations {
-  background-color: rgba(37, 120, 219, 0.08);
-  padding-top: 4rem; }
-  section#blog-recommendations .container .row .content {
-    text-align: center;
-    margin: 0 auto; }
-    section#blog-recommendations .container .row .content p.text {
-      margin: 1.5rem 0 4rem; }
-    section#blog-recommendations .container .row .content div.blog-container {
-      display: flex;
+body.single-post .wrapper {
+  padding-top: 6rem; }
+  body.single-post .wrapper main section#article-container {
+    background-color: #e8eaeb;
+    padding-top: 4rem; }
+    body.single-post .wrapper main section#article-container .container .row article header {
+      margin-bottom: 4rem;
+      text-align: center; }
+      body.single-post .wrapper main section#article-container .container .row article header h1 {
+        padding: 4rem 0 1.5rem 0; }
+      body.single-post .wrapper main section#article-container .container .row article header a.cta-blue {
+        margin-right: 0;
+        font-family: "tkusual-reg", "system", "sans-serif"; }
+      body.single-post .wrapper main section#article-container .container .row article header span {
+        display: block;
+        color: rgba(28, 43, 56, 0.5);
+        letter-spacing: 1px;
+        text-transform: uppercase; }
+    body.single-post .wrapper main section#article-container .container .row article div.image-wrapper {
+      width: 100%;
+      height: 26rem;
+      margin: 0 0 3rem;
+      border-radius: 0.5rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    body.single-post .wrapper main section#article-container .container .row article div.content h2, body.single-post .wrapper main section#article-container .container .row article div.content h3, body.single-post .wrapper main section#article-container .container .row article div.content h4, body.single-post .wrapper main section#article-container .container .row article div.content h5 {
+      margin-bottom: 1.5rem; }
+    body.single-post .wrapper main section#article-container .container .row article div.content p {
+      margin-bottom: 1.5rem; }
+    body.single-post .wrapper main section#article-container .container .row article div.content strong {
+      font-family: "tkusual-bold", "system", "sans-serif";
+      font-weight: normal; }
+    body.single-post .wrapper main section#article-container .container .row article div.content ul {
+      margin: 1.5rem 0;
+      list-style: circle; }
+      body.single-post .wrapper main section#article-container .container .row article div.content ul li {
+        margin-bottom: 1rem; }
+        body.single-post .wrapper main section#article-container .container .row article div.content ul li:last-of-type {
+          margin-bottom: 0; }
+    body.single-post .wrapper main section#article-container .container .row article div.content ol {
+      margin: 1.5rem 0 1.5rem 0;
+      padding: 0; }
+      body.single-post .wrapper main section#article-container .container .row article div.content ol li {
+        margin-bottom: 1rem; }
+        body.single-post .wrapper main section#article-container .container .row article div.content ol li:last-of-type {
+          margin-bottom: 0; }
+    body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote {
+      position: relative;
+      margin: 3rem 0;
+      padding-left: 3.5rem;
+      font-family: "tkusual-italic", "system", "sans-serif"; }
+      body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 1.58rem;
+        background-image: url("../wp-recruitment-child/assets/svg/icon-quote.svg"); }
+      body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote p {
+        margin-bottom: 0.5rem; }
+      body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote cite {
+        padding-left: 1rem; }
+        body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote cite:before {
+          content: '-';
+          padding-right: 0.2rem; }
+    body.single-post .wrapper main section#article-container .container .row article p.post-meta {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 2px dotted #a4aaaf;
+      color: #a4aaaf; }
+      body.single-post .wrapper main section#article-container .container .row article p.post-meta span.author {
+        font-family: "tkusual-bold", "system", "sans-serif"; }
+    body.single-post .wrapper main section#article-container .container .row div.blog-recommendations {
       background-color: white;
-      padding: 3rem 0;
-      border-radius: 4px; }
-      section#blog-recommendations .container .row .content div.blog-container article {
-        padding: 0 3rem;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap; }
+      body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(100%/2 - 2rem);
         text-align: left; }
-        section#blog-recommendations .container .row .content div.blog-container article .blog-thumbnail {
-          display: block;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background-color: #f3f4f5;
+        body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article div.image-wrapper {
           margin-bottom: 2rem;
+          width: 12.5rem;
+          height: 12.5rem;
+          border-radius: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
           background-size: cover; }
-        section#blog-recommendations .container .row .content div.blog-container article h3 {
-          font-size: 1.5rem;
-          line-height: 1.5;
-          margin-bottom: 0.66rem; }
-        section#blog-recommendations .container .row .content div.blog-container article p {
-          margin-bottom: 1rem; }
-        section#blog-recommendations .container .row .content div.blog-container article:nth-of-type(1) {
-          border-right: 2px solid #e8e9eb; }
+        body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article h3 {
+          margin-bottom: 0.75rem; }
+        body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article p.excerpt {
+          margin: auto 0 1.5rem; }
+        body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article.with-border {
+          border-right: 2px solid #f3f4f5;
+          padding-right: 2rem;
+          margin-right: 2rem; }
+      @media (max-width: 767px) {
+        body.single-post .wrapper main section#article-container .container .row div.blog-recommendations {
+          flex-direction: column;
+          flex-wrap: nowrap; }
+          body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article.with-border {
+            padding-right: 0;
+            margin-right: 0;
+            border-right: none; } }
+    body.single-post .wrapper main section#article-container .container div.cta-wrapper {
+      width: 100%; }
+      body.single-post .wrapper main section#article-container .container div.cta-wrapper a.scroll-to-top {
+        margin: 4rem auto 0;
+        display: flex;
+        flex-direction: column; }
+        body.single-post .wrapper main section#article-container .container div.cta-wrapper a.scroll-to-top span.icon {
+          position: relative;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 100%;
+          border: 2px solid #2578db;
+          margin: 0 auto 0.75rem;
+          transition: all 200ms; }
+          body.single-post .wrapper main section#article-container .container div.cta-wrapper a.scroll-to-top span.icon:before {
+            content: '';
+            position: absolute;
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+            width: 2rem;
+            height: 2rem;
+            transform-origin: left;
+            -webkit-transform: translate(-50%, -50%);
+            background-image: url("../wp-recruitment-child/assets/svg/icon-arrow-right.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            -webkit-transform: rotate(270deg); }
+        body.single-post .wrapper main section#article-container .container div.cta-wrapper a.scroll-to-top span {
+          font-family: "tkusual-bold", "system", "sans-serif"; }
+        body.single-post .wrapper main section#article-container .container div.cta-wrapper a.scroll-to-top:hover span.icon {
+          border-color: #0a468f;
+          background-color: rgba(37, 120, 219, 0.18); }
+    @media (max-width: 767px) {
+      body.single-post .wrapper main section#article-container .container .row article div.image-wrapper {
+        height: 16rem; }
+      body.single-post .wrapper main section#article-container .container .row article div.content ol, body.single-post .wrapper main section#article-container .container .row article div.content ul {
+        margin-left: 1.5rem; } }
+  @media (max-width: 767px) {
+    body.single-post .wrapper {
+      padding-top: 3rem; } }
 
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }

@@ -106,7 +106,7 @@ get_header();
         <h2 class="h5 m-auto col-12 col-lg-8 col-md-9">Ready to find your next job?</h2>
         <p class="text col-12 col-lg-8 col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis enim aliquam, porttitor mauris sed, rhoncus lorem. In nibh enim, bibendum at lorem eu, condimentum tempor nisl.</p>
         <div class="cta-container">
-          <?php  
+          <?php
             $urlCta;
             if(!is_user_logged_in()) {
               $urlCta = esc_url(site_url('/profile/sign-up'));
@@ -123,7 +123,7 @@ get_header();
   <section id="blog-recommendations">
     <div class="container">
       <div class="row">
-        <div class="content col-12 col-md-10">
+        <div class="content col-12 col-lg-9 col-md-11">
         <h2 class="h3">5 Minute Reads</h2>
         <p class="text">Snippet blog posts giving you advice and opinions on recruitment from both sides of the fence</p>
         <div class="blog-container">
@@ -145,12 +145,12 @@ get_header();
               <p class="excerpt"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
               <a href="<?php echo get_the_permalink(); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
             </article>
-      <?php } 
+      <?php }
           } ?>
         </div>
         <a href="<?php echo esc_url(site_url('/blog')); ?>" class="cta-blue">View all posts</a>
-      </div>
-    </div>
+      </div><!--row-->
+    </div><!--container-->
   </section><!--#blog-recommendations-->
 
 
@@ -166,10 +166,10 @@ get_header();
     </div>
   </section><!--#newsletter-signup-->
 
- 
+
 </main>
 
-<?php 
+<?php
 
 get_footer();
 ?>
