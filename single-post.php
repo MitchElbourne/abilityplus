@@ -1,103 +1,106 @@
 <?php
 get_header();
+
+if(have_posts()) {
+  the_post();
+  $category = get_the_category();
+  $image = get_the_post_thumbnail_url();
+
+
+  $fname = get_the_author_meta('first_name');
+  $lname = get_the_author_meta('last_name');
+  $full_name = '';
+
+  if( empty($fname)){
+      $full_name = $lname;
+  } elseif( empty( $lname )){
+      $full_name = $fname;
+  } else {
+      //both first name and last name are present
+      $full_name = "{$fname} {$lname}";
+  }
 ?>
 
-<main id="blog-single" role="main">
+<main role="main">
+  <section id="article-container">
+    <div class="container">
+      <div class="row">
 
-  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+        <article class="col-12 col-lg-8 col-md-11 m-auto">
 
 
-    <article class="blog-article container">
+          <header>
+            <a href="<?php echo esc_url(site_url('/blog')); ?>" class="cta-blue">AbilityPlus Blog</a>
+            <h1><?php echo get_the_title(); ?></h1>
+            <span><?php print_r($category[0]->name); ?> / <?php echo date('M d, Y', strToTime(get_the_date())); ?></span>
+          </header><!--header-->
 
-      <header class="col-12 col-sm 10 offset-sm-1 col-md-8 offset-md-2">
-        <div class="container">
-          <a href="<?php echo home_url(); ?>/blog" class="blog-back cta-blue">AbilityPlus Blog</a>
+          <?php if($image) { ?>
+            <div class="image-wrapper" style="background-image: url('<?php echo $image ?>')">
+            </div>
+    <?php } ?>
 
-          <h1><?php the_title(); ?></h1>
+          <div class="content">
+            <?php the_content(); ?>
+          </div>
 
-          <h2><?php
-            $categories = get_the_category();
-            if ( ! empty( $categories ) ) {
-              echo esc_html( $categories[0]->name );
+          <footer>
+            <p class="post-meta"><span class="author"><?php echo $full_name ?></span> - <?php echo date('M d, Y', strToTime(get_the_date())); ?></p>
+          </footer><!--footer-->
+
+        </article>
+
+        <div class="blog-recommendations col-lg-9 col-md-11 m-auto">
+
+            <?php
+            $prevPost = get_previous_post(true);
+            $nextPost = get_next_post(true);
+            if(!$nextPost && !$prevPost) { ?>
+            <h4>No Posts to Recommend</h4>
+      <?php } else { ?>
+
+
+
+              <?php
+              if($nextPost) { ?>
+                <article class="<?php if($nextPost && $prevPost) echo "with-border" ?>">
+                  <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($nextPost->ID); ?>)"></div>
+                  <h3 class="h5 title"><?php echo get_the_title($nextPost->ID); ?></h3>
+                  <p class="excerpt"><?php echo wp_trim_words(get_the_content($nextPost->ID), 20); ?></p>
+                  <a href="<?php echo get_the_permalink($nextPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                </article>
+            <?php }
+
+
+              if($prevPost) { ?>
+                <article>
+                  <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($prevPost->ID); ?>)"></div>
+                  <h3 class="h5 title"><?php echo get_the_title($prevPost->ID); ?></h3>
+                  <p class="excerpt"><?php echo wp_trim_words(get_the_content($prevPost->ID), 20); ?></p>
+                  <a href="<?php echo get_the_permalink($prevPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                </article>
+            <?php }
+
+
+
             } ?>
-            /
-            <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('j F Y'); ?></time>
-          </h2>
-        </div><!--container-->
-      </header>
+        </div>
 
-      <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 blog-img-container">
-        <div class="blog-img-lead" style="background-image: url('<?php echo get_the_post_thumbnail_url(''); ?>')"></div>
+      </div><!--row-->
+      <div class="cta-wrapper text-center">
+        <a href="javascript:;" class="scroll-to-top">
+          <span class="icon"></span>
+          <span>Top</span>
+        </a>
       </div>
-
-
-      <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 blog-content">
-        <?php the_content(); ?>
-      </div>
-
-
-      <footer class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2">
-
-        <div class="dotted-hr"></div>
-        <span class="author"><?php echo get_the_author(); ?></span>
-
-        &mdash;
-        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('j F Y'); ?></time>
-      </footer>
-
-    </article>
-
-  <?php endwhile; ?>
-
-  <?php else: ?>
-
-  	<!-- article -->
-  	<article>
-  		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-  	</article>
-
-  <?php endif; ?>
-
+    </div><!--container-->
+  </section><!--#article-container-->
 </main>
 
-<section id="blog-recommendations">
-  <div class="container">
-    <div class="row">
-      <div class="content col-12 col-md-10">
-        <div class="blog-container">
-          <?php
-          $blogposts = new WP_Query(array(
-            'post_type'       => 'post',
-            'posts_per_page'  => 2,
-          ));
-
-          if($blogposts->have_posts()) {
-            while($blogposts->have_posts()) {
-              $blogposts->the_post();
-              ?>
-            <article>
-
-              <a href="<?php the_permalink(); ?>">
-                <div class="blog-thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(''); ?>')"></div>
-              </a>
-
-              <a href="<?php the_permalink(); ?>">
-                <h3><?php the_title(); ?></h3>
-              </a>
-
-              <p class="excerpt"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-
-              <a href="<?php echo esc_url(site_url('#')); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
-            </article>
-
-          <?php }
-          } ?>
-      </div><!--blog-container-->
-    </div><!--content-->
-  </div><!--row-->
-</section><!--#blog-recommendations-->
 
 
 <?php
+}
 get_footer();
 ?>

@@ -1,31 +1,9 @@
-// .blog-filter {
-//   display: flex;
-//   justify-content: center;
-//   padding-bottom: 3rem;
-//   a {
-//     color: $black;
-//     padding: 0.66rem 1.5rem;
-//     border: solid 2px $light-dark-grey;
-//     border-radius: 2rem;
-//     margin: 0.5rem 0.66rem;
-//     img {
-//       display: inline;
-//       width: 1.5rem;
-//       height: 1.5rem;
-//       margin-right: 0.5rem;
-//     }
-//     &.active {
-//       border: 2px solid #2578db;
-//     }
-//     // TODO: Hover, active
-//   }
-// }
-
 .wrapper.Blog {
-  padding-top: 7.75rem;
+  padding-top: 7rem;
   main {
     section#blog-listings {
       background-color: $lighter-grey;
+      border-radius: 4px;
       padding: 6rem 0;
       .container {
         text-align: center;
@@ -89,7 +67,7 @@
                 }
                 a.image-title-cta-wrapper {
                   div.image-wrapper {
-                    width: 12rem; 
+                    width: 12rem;
                     height: 12rem;
                     margin-bottom: 2rem;
                     background-position: center;
@@ -117,6 +95,44 @@
                 }
               }
             }
+          }
+        }
+        div.monthy-newsletter {
+          display: inline-block;
+          margin-top: 6rem;
+          background-color: $white;
+          border-radius: 0.5rem;
+          padding: 3rem 6rem;
+          text-align: center;
+          flex-direction: column;
+          p {
+            margin: 1.5rem auto 2.125rem;
+          }
+          .form-container {
+            margin: 0 auto;
+            min-width: 100%;
+            form {
+              #mc_embed_signup_scroll {
+                display: flex;
+                background-color: $lighter-grey;
+                justify-content: space-between;
+                border-radius: 2rem;
+                padding: 0.5rem 0.5rem 0.5rem 1rem;
+                width: 100%;
+                input[type="submit"] {
+                  display: inline-block;
+                  margin-right: 0;
+                }
+                input[type="email"] {
+                  background-color: transparent;
+                  border: none;
+                  width: 100%;
+                }
+              }
+            }
+          }
+          @include media-breakpoint-down(sm) {
+            padding: 1rem;
           }
         }
       }
