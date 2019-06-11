@@ -1441,6 +1441,11 @@ body.is-job div.wrapper {
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
           border-left: none;
           padding: 0; } }
+  @media (max-width: 767px) {
+    .wrapper.Blog {
+      padding-top: 5rem; }
+      .wrapper.Blog main section#blog-listings {
+        padding-top: 3rem; } }
 
 body.single-post .wrapper {
   padding-top: 6rem; }

@@ -220,4 +220,12 @@
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    padding-top: 5rem;
+    main {
+      section#blog-listings {
+        padding-top: 3rem;
+      }
+    }
+  }
 }
