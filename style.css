@@ -1308,6 +1308,7 @@ body.is-job div.wrapper {
   padding-top: 7rem; }
   .wrapper.Blog main section#blog-listings {
     background-color: #e8eaeb;
+    border-radius: 4px;
     padding: 6rem 0; }
     .wrapper.Blog main section#blog-listings .container {
       text-align: center; }
@@ -1371,6 +1372,36 @@ body.is-job div.wrapper {
             margin: 0.75rem 0 1.5rem; }
           .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article a.arrow-cta {
             margin-top: auto; }
+      .wrapper.Blog main section#blog-listings .container div.monthy-newsletter {
+        display: inline-block;
+        margin-top: 6rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 3rem 6rem;
+        text-align: center;
+        flex-direction: column; }
+        .wrapper.Blog main section#blog-listings .container div.monthy-newsletter p {
+          margin: 1.5rem auto 2.125rem; }
+        .wrapper.Blog main section#blog-listings .container div.monthy-newsletter .form-container {
+          margin: 0 auto;
+          min-width: 100%; }
+          .wrapper.Blog main section#blog-listings .container div.monthy-newsletter .form-container form #mc_embed_signup_scroll {
+            display: flex;
+            background-color: #e8eaeb;
+            justify-content: space-between;
+            border-radius: 2rem;
+            padding: 0.5rem 0.5rem 0.5rem 1rem;
+            width: 100%; }
+            .wrapper.Blog main section#blog-listings .container div.monthy-newsletter .form-container form #mc_embed_signup_scroll input[type="submit"] {
+              display: inline-block;
+              margin-right: 0; }
+            .wrapper.Blog main section#blog-listings .container div.monthy-newsletter .form-container form #mc_embed_signup_scroll input[type="email"] {
+              background-color: transparent;
+              border: none;
+              width: 100%; }
+        @media (max-width: 767px) {
+          .wrapper.Blog main section#blog-listings .container div.monthy-newsletter {
+            padding: 1rem; } }
     @media (max-width: 1199px) {
       .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
         flex: 0 1 calc(100%/2); }

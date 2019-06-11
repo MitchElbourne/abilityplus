@@ -51,6 +51,7 @@ get_header();
                 <p class="excerpt"><?php echo wp_trim_words($excerpt, 15); ?></p>
                 <a href="<?php echo get_the_permalink(); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
               </article>
+
               <?php
                 } ?> </div><!--article-container--> <?php
               } else {
@@ -148,13 +149,24 @@ get_header();
           wp_reset_query();
           ?>
         </div><!--tab-pane-->
+      </div><!--tab-content-->
+
+
+
+
+      <div class="monthy-newsletter">
+        <h3 class="h3 m-auto">Monthly Newsletter</h3>
+        <p class="text">Stay up to date with our latest news in recruitment and employment</p>
+        <div class="form-container">
+          <?php echo get_template_part('/templates/newsletter-signup'); ?>
+        </div>
       </div>
     </div><!--container-->
 
 
-    <div class="">
 
-    </div>
+
+
   </section><!--#blog-listings-->
 </main><!--main-->
 
