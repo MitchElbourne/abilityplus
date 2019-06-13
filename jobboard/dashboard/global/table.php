@@ -21,13 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 if (empty($table) || empty($columns)){
     return;
 }
+//
+// $jobs = new WP_Query(array(
+//   'post_type' => 'jobboard-post-jobs',
+//   'posts_per_page' => -1
+// ));
 
-$jobbers = new WP_Query(array(
-  'post_type' => 'jobboard-post-jobs',
-  'posts_per_page' => -1
-));
-
-$applied_count = $jobbers->post_count;
+$applied_count = $jobs->post_count;
 ?>
 
 <div class="<?php echo esc_attr($table); ?>-table jobboard-table">
@@ -42,9 +42,9 @@ $applied_count = $jobbers->post_count;
 
 
   <?php
-  if($jobbers->have_posts()) {
-    while($jobbers->have_posts()) {
-      $jobbers->the_post();
+  if($jobs->have_posts()) {
+    while($jobs->have_posts()) {
+      $jobs->the_post();
       ?>
 
       <div class="row">
@@ -86,7 +86,7 @@ $applied_count = $jobbers->post_count;
 
 
   } else { ?>
-    <h5>You haven't applied for any jobs yet, have a look at our <a href="<?php echo esc_url(site_url('/vacancies')); ?>">Vacancies</a> </h5>
+    <h5 class="h6 no-applications">You haven't applied for any jobs yet, why not have a look at our <a href="<?php echo esc_url(site_url('/vacancies')); ?>">Vacancies</a>?</h5>
   <?php } ?>
 
 </div>
