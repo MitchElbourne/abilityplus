@@ -6,6 +6,11 @@
         p {
           margin: 2.5rem auto;
         }
+        div.image-wrapper {
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -174,11 +179,11 @@
           background-color: $lightest-grey;
         }
         div.meta-wrapper {
-          flex: 1 1 auto;         
+          flex: 1 1 auto;
           text-align: center;
           display: flex;
           flex-direction: column;
-          img {           
+          img {
             border-radius: 100%;
             max-width: 18rem;
           }

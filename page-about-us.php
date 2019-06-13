@@ -9,7 +9,9 @@ get_header();
       <div class="row">
         <h1 class="col-12 col-lg-8 col-md-9 m-auto">About AbilityPlus</h1>
         <p class="col-12 col-lg-8 col-md-9">Being locally and independently owned since 1989 and not being part of a franchise allows us to be flexible to meet our clients' and candidates' every need.</p>
-        <img src="" alt="" class="image-wrapper">
+        <div class="image-wrapper col-12 col-lg-8 col-md-9 m-auto">
+          <img src="<?php echo get_theme_file_uri('/assets/illus-about-us-introduction.png'); ?>" alt="" class="image-wrapper">
+        </div>
       </div><!--row-->
     </div><!--container-->
   </section><!--#introduction-->
@@ -21,17 +23,17 @@ get_header();
         <p class="entry-text col-12 col-lg-8 col-md-9">Experience, Knowledge and Passion is at the core of what we do. We at Ability Plus have formed long-lasting and trusted relationships with many of the most successful companies on the Isle of Man since we were established in 1989.</p>
         <div class="panel-container">
           <div class="panel">
-           
+            <img src="<?php echo get_theme_file_uri('/assets/icon-about-us-bookshelf.png'); ?>" alt="Connect with proffessionals">
             <h3 class="h6">Connect professionals to the best jobs</h3>
             <p class="sub-text">We know that quality people are the key to our success and take pride in the fact that we are driven, hardworking and motivated Recruitment Consultants who offer personal, dedicated and professional support that you can rely on.</p>
           </div>
           <div class="panel">
-
+            <img src="<?php echo get_theme_file_uri('/assets/icon-about-us-teacups.png'); ?>" alt="Connect with proffessionals">
             <h3 class="h6">Find IOM talent for your open positions</h3>
             <p class="sub-text">We provide staffing solutions for companies that need to fill positions at all levels. So, when it comes to recruitment, when you work with Ability Plus it feels like we are an extension of your internal HR team. </p>
           </div>
           <div class="panel">
-           
+            <img src="<?php echo get_theme_file_uri('/assets/icon-about-us-pen-book.png'); ?>" alt="Connect with proffessionals">
             <h3 class="h6">New jobs every week</h3>
             <p class="sub-text">Every client - whether you are a small business, large market-leader, or somewhere in-between – is important to us and our blend of experience means that when it comes to recruiting your staff our focus is entirely on you.</p>
           </div>

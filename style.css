@@ -1134,6 +1134,8 @@ body.is-job div.wrapper {
   text-align: center; }
   .wrapper.About.Us section#introduction .container .row p {
     margin: 2.5rem auto; }
+  .wrapper.About.Us section#introduction .container .row div.image-wrapper img {
+    width: 100%; }
 .wrapper.About.Us section#our-values .container .row {
   text-align: left; }
   .wrapper.About.Us section#our-values .container .row p.entry-text {
