@@ -1805,7 +1805,18 @@ body.is-dashboard .wrapper div.image-wrapper img {
     body.is-dashboard .wrapper div.introduction h2.h1 {
       font-size: 1.8rem; }
     body.is-dashboard .wrapper div.introduction span.sign-up-cta {
-      font-size: 0.8rem; } }
+      font-size: 0.8rem; }
+  body.is-dashboard .wrapper p.h5 {
+    order: 0; }
+  body.is-dashboard .wrapper div.image-wrapper {
+    flex: 0 1 60%;
+    margin: 0 auto;
+    order: 1; }
+  body.is-dashboard .wrapper form {
+    order: 3; } }
+@media (max-width: 575px) {
+  body.is-dashboard .wrapper div.image-wrapper {
+    flex-basis: 80%; } }
 
 main[role="main"] section#sign-up-form .container div.introduction {
   display: flex;
@@ -2304,7 +2315,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             width: 100%;
             float: left; }
         #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
-          order: 2; } }
+          order: 2;
+          flex: 0 1 60%;
+          margin: 0 auto 1rem; } }
+  @media (max-width: 575px) {
+    #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+      flex-basis: 80%; } }
 
 #PasswordModal .modal-dialog {
   max-width: 50%; }
