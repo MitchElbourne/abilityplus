@@ -258,4 +258,10 @@
     }
 });
 
+	$(document).ready(function() {
+		if(window.location.pathname == "/profile/") {
+			$('.nav-dashboard').addClass('is-active');
+		}
+	});
+
 })(jQuery, this);

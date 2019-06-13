@@ -17,11 +17,11 @@ get_header();
             <p class="meta">Your data is safe with us. Please read our <a href="<?php echo esc_url(site_url('/terms-privacy')); ?>">Terms of Service and Privacy Policy</a> for more information.</p>
           </div>
           <div class="image-wrapper">
-            <img src="<?php echo get_theme_file_uri('/assets/illus-sign-up.png'); ?>" alt="Sign up illustration, woman with sign up form and pen">  
+            <img src="<?php echo get_theme_file_uri('/assets/illus-sign-up.png'); ?>" alt="Sign up illustration, woman with sign up form and pen">
           </div>
         </div>
         <?php echo do_shortcode('[jobboard_register_account]'); ?>
-    </div><!--contianer-->
+    </div><!--container-->
   </section><!--#sign-up-form-->
 </main>
 
