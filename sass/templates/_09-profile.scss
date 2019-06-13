@@ -188,7 +188,7 @@ body.is-dashboard {
                       }
                     }
 
-                    
+
                     // First Name and Last Name
                     &:nth-of-type(3) {
                       display: flex;
@@ -333,7 +333,6 @@ body.is-dashboard {
                         }
                       }
                     }
-
                   }
                 }
                 div.form-actions {
@@ -359,9 +358,6 @@ body.is-dashboard {
                 @include media-breakpoint-down(sm) {
                   padding: 0;
                   border: none;
-                  * {
-                    // border: 1px solid red;
-                  }
                   .form-fields {
                     .row {
                       &:nth-of-type(12) {
@@ -374,6 +370,63 @@ body.is-dashboard {
                             max-width: 100%;
                             width: 100% !important;
                           }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              div.applied-table {
+                div.title-wrapper {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-bottom: 2.25rem;
+                  h2 {
+                    margin: 0 auto 0 0;
+                  }
+                  span.applied {
+                    align-self: flex-end;
+                    color: $shamed-grey;
+                  }
+                }
+                div.row {
+                  flex-direction: column;
+                  margin-bottom: 1rem;
+                  padding: 1.65rem 0 1.65rem 1rem;
+                  border: 1px solid $lightest-grey;
+                  .loop-locations {
+                    margin: 1rem 0 0.5rem;
+                  }
+                  &:last-of-type {
+                    margin-bottom: 0;
+                  }
+                  .loop-locations, .loop-title {
+                    a {
+                      color: $black;
+                      &:hover {
+                        color: $dark-blue;
+                      }
+                    }
+                  }
+                  .job-meta-tags {
+                    order: 3;
+                    width: 100%;
+                    .job-meta {
+                      padding: 0.4rem 0.5rem;
+                      display: inline-block;
+                      border-radius: 2px;
+                      font-size: 0.75rem;
+                      margin-top: 0.5rem;
+                      &.specialism {
+                        border: 1px solid $black;
+                        background-color: $black;
+                        color: $white;
+                      }
+                      &.types {
+                        border: 1px solid $lighter-grey;
+                        svg {
+                          margin-bottom: 0.2rem;
+                          margin-right: 0.3rem;
                         }
                       }
                     }

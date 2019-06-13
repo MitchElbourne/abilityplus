@@ -119,7 +119,7 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
   $user_roles = $currentuser->roles;
   $profile_url_handler;
 
-  if(is_admin() || in_array('jobboard_role_jobs', $user_roles)) {
+  if(in_array('administrator', $user_roles) || in_array('jobboard_role_jobs', $user_roles)) {
     $profile_url_handler = esc_url(site_url('/wp-admin'));
   } else {
     $profile_url_handler = esc_url(site_url('/profile'));
