@@ -11,12 +11,12 @@
             <h5 class="p">Services</h5>
             <div class="content">
               <div class="find-jobs">
-                <img src="<?php echo get_theme_file_uri('/assets/svg/icon-list.svg'); ?>" alt="">
+                <img src="<?php echo get_theme_file_uri('/assets/svg/icon-list.svg'); ?>" alt="Job sheet icon showing vacancies">
                 <p>See the available jobs on our list</p>
                 <a href="<?php echo esc_url(site_url('/vacancies')); ?>">Find Jobs <?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></a>
               </div>
               <div class="find-talent">
-                <img src="<?php echo get_theme_file_uri('/assets/svg/icon-candidate.svg'); ?>" alt="">
+                <img src="<?php echo get_theme_file_uri('/assets/svg/icon-candidate.svg'); ?>" alt="Receptionist icon detailing candidates and their abiltity">
                 <p>Best candidates on the Isle of Man</p>
                 <a href="">Find Talent <?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></a>
               </div>
