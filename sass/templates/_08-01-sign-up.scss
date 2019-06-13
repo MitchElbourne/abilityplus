@@ -31,10 +31,11 @@ main[role="main"] {
             margin: 1.5rem 0;
           }
         }
-        img.illustration {
-          background-color: $lighter-grey;
-          width: 27rem;
-          border-radius: 12px;
+        div.image-wrapper {
+          flex: 1 1 50%;
+          img {
+            width: 100%;
+          }
         }
       }
       form {
@@ -55,7 +56,6 @@ main[role="main"] {
                   display: flex;
                   background-color: transparent;
                   border: none;
-                  // height: 5rem;
                   .select2-selection__rendered {
                     padding: 0;
                     .select2-selection__clear {
@@ -76,8 +76,8 @@ main[role="main"] {
                 }
               }
             }
-            .field { 
-              
+            .field {
+
               &.col-md-6 {
                 flex: 1 1 calc(100%/2 - 1rem);
                 &:nth-of-type(odd) {
@@ -155,8 +155,10 @@ main[role="main"] {
         }
         div.information-container {
           flex-wrap: wrap;
-          img.illustration {
-            height: 10rem;
+          div.image-wrapper {
+            flex: 0 1 60%;
+            order: -1;
+            margin: 0 auto 2rem;
           }
         }
       }
