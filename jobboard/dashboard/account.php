@@ -35,6 +35,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php do_action("jobboard_dashboard_".jb_account_type()."_content"); ?>
 
     <!-- <div class="content-progress">
-    <?php echo do_shortcode('[cms_progressbar color="#81d742" cms_template="cms_progressbar.php"]'); ?>
+    <?php // echo do_shortcode('[cms_progressbar color="#81d742" cms_template="cms_progressbar.php"]'); ?>
     </div> -->
 </div>

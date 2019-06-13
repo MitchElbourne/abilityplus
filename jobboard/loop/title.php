@@ -26,9 +26,7 @@ global $opt_theme_options;
     $layout = !empty($opt_theme_options['job_layout']) ? 'grid' : 'list' ;
     $value  = !empty($_GET['layout']) ? $_GET['layout'] : $layout ;
     ?>
-    <?php if($value == 'grid'): ?>
-        <div class="job-grid-feature-image" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>)"></div>
-    <?php endif; ?>
+
     <h2 class="h6 entry-title">
         <a href="<?php the_permalink(); ?>" rel="bookmark">
             <?php the_title(); ?>
@@ -67,7 +65,7 @@ global $opt_theme_options;
       $timeposted = human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' );
     }
 
-    
+
 
     ?>
     <span class="posted-time"><?php echo $timeposted; ?></span>

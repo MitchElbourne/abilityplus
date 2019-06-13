@@ -2189,6 +2189,48 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
             max-width: 100%;
             width: 100% !important; } }
+  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper h2 {
+      margin: 0 auto 0 0; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper span.applied {
+      align-self: flex-end;
+      color: #a4aaaf; }
+  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1.65rem 0 1.65rem 1rem;
+    border: 1px solid #f3f4f5; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations {
+      margin: 1rem 0 0.5rem; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row:last-of-type {
+      margin-bottom: 0; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a {
+      color: #1a2733; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a:hover {
+        color: #0a468f; }
+    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags {
+      order: 3;
+      width: 100%; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta {
+        padding: 0.4rem 0.5rem;
+        display: inline-block;
+        border-radius: 2px;
+        font-size: 0.75rem;
+        margin-top: 0.5rem; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.specialism {
+          border: 1px solid #1a2733;
+          background-color: #1a2733;
+          color: white; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types {
+          border: 1px solid #e8eaeb; }
+          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types svg {
+            margin-bottom: 0.2rem;
+            margin-right: 0.3rem; }
+  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table h5.no-applications {
+    opacity: 0.4; }
 @media (max-width: 767px) {
   body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }

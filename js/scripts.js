@@ -20,6 +20,13 @@
 		}
 		alterNavbarIcon();
 
+		// Add the active class to the top level menu item on the profile page
+		$(document).ready(function() {
+			if(window.location.pathname == "/profile/") {
+				$('.nav-dashboard').addClass('is-active');
+			}
+		});
+
 		// Closes the Navbar on scroll if it is open
 		function menuCloseOnScroll() {
 			var nav = jQuery('#primary-menu');
@@ -95,7 +102,7 @@
 
 
     function ctaScrollTo() {
-			var howwework = jQuery('.how-we-work-howwework');
+			var howwework = jQuery('.how-we-work-cta');
 			var blogtotop = jQuery('.scroll-to-top');
 			var navHeight = document.getElementById("site-header").offsetHeight;
 
@@ -256,6 +263,8 @@
             }
         });
     }
-});
+
+	});
+
 
 })(jQuery, this);

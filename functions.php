@@ -8,12 +8,12 @@ function wp_recruitment_enqueue_styles()
 {
   $parent_style = 'wp-recruitment-style';
   // wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
-  
+
   wp_dequeue_script( 'bootstrap' );
   wp_deregister_script( 'bootstrap' );
   // wp_dequeue_script( 'modal-effects-js' );
   // wp_deregister_script( 'modal-effects-js' );
-  
+
   wp_dequeue_style( 'bootstrap' );
   wp_deregister_style( 'bootstrap' );
   wp_dequeue_style( 'jobboard-responsive-css' );
@@ -24,7 +24,7 @@ function wp_recruitment_enqueue_styles()
   wp_deregister_style( 'poppins-google-font' );
   wp_dequeue_style( 'wp-recruitment-style' );
   wp_deregister_style( 'wp-recruitment-style' );
-  
+
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
 
   wp_enqueue_script('lodash', 'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js', array('jquery'), '1.14.3', true); // Lodash
@@ -32,7 +32,7 @@ function wp_recruitment_enqueue_styles()
   wp_enqueue_script('scrollto', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js', array('jquery'), '2.1.2', true); // ScrollTo
 
   wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array('jquery'), microtime(), true);
-  
+
   wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '4.3.1');
   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0');
 }
@@ -72,12 +72,12 @@ function ability_plus_career_level_taxonomy() {
     'all_items' => __( 'All Career-Levels' ),
     'parent_item' => __( 'Parent Career-Level' ),
     'parent_item_colon' => __( 'Parent Career-Level:' ),
-    'edit_item' => __( 'Edit Career-Level' ), 
+    'edit_item' => __( 'Edit Career-Level' ),
     'update_item' => __( 'Update Career-Level' ),
     'add_new_item' => __( 'Add New Career-Level' ),
     'new_item_name' => __( 'New Career-Level Name' ),
     'menu_name' => __( 'Career-Levels' ),
-  );    
+  );
 
   // Now register the taxonomy
 
@@ -115,19 +115,28 @@ register_nav_menus( array(
 // Initiate the Sign up and log in menu item, this avoids having to grab it from the loop to alter the attributes to trigger the modal
 add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
   $menu_name = $menu_object->menu->name;
+  $currentuser = wp_get_current_user();
+  $user_roles = $currentuser->roles;
+  $profile_url_handler;
+
+  if(in_array('administrator', $user_roles) || in_array('jobboard_role_jobs', $user_roles)) {
+    $profile_url_handler = esc_url(site_url('/wp-admin'));
+  } else {
+    $profile_url_handler = esc_url(site_url('/profile'));
+  }
 
   // Only append the new li to the 'Primary Navigation' menu.
   // Change 'Primary Navigation' for the name of the menu that you'd like to amend.
   if ( 'Navigation' === $menu_name && !is_user_logged_in()) {
     $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Sign Up | Log In' href='#' class='nav-link' data-target='#LogInModal' data-toggle='modal'>Sign Up | Log In</a></li>";
-    
+
     return $menu_items . $new_li;
+
   } else {
-    $currentuser = wp_get_current_user();
     $firstName = $currentuser->user_firstname;
     $lastName = $currentuser->user_lastname;
-    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item logged-in'><a title='Your Profile' href='" . esc_url(site_url('/profile')) . "' class='nav-link modal-button'>" . $firstName . " " . $lastName[0] . ".</a></li>";
-    
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item logged-in'><a title='Your Profile' href='" . $profile_url_handler . "' class='nav-link modal-button'>" . $firstName . " " . $lastName[0] . ".</a></li>";
+
     return $menu_items . $new_li;
   }
 
