@@ -181,6 +181,17 @@
         }
         div.image-wrapper {
           order: 2;
+          flex: 0 1 60%;
+          margin: 0 auto 1rem;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .modal-dialog {
+      .modal-content {
+        div.image-wrapper {
+          flex-basis: 80%;
         }
       }
     }

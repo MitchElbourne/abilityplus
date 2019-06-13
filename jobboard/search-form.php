@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <form role="search" method="get" class="jb-job-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
 	<div>
 		<label class="sr-only" for="jb-job-search-field"><?php esc_html_e( 'Job Search', 'wp-recruitment' ); ?></label>
-    <img src="<?php echo get_theme_file_uri('/assets/svg/icon-job-search.svg'); ?>" alt="job board search icon">
+    <img src="<?php echo get_theme_file_uri('/assets/svg/icon-job-search.svg'); ?>" alt="Search icon, find relevant jobs to match your portfolio">
 		<input type="search" id="jb-job-search-field" class="search-field" placeholder="<?php echo esc_attr_x( 'Search with keyword(s) e.g. web design', 'placeholder', 'wp-recruitment' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'wp-recruitment' ); ?>" />
 		<input type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'wp-recruitment' ); ?>" class="cta-blue"/>
 		<input type="hidden" name="post_type" value="jobboard-post-jobs" />

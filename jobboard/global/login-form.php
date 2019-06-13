@@ -25,7 +25,7 @@ $error = JB()->session->get('jb_notices', array());
   <span class="sign-up-cta">Don't have an account? <a href="<?php echo esc_url(site_url('/profile/sign-up')); ?>">Sign up instead</a></span>
 </div>
 
-  
+
 <p class="h5 bold">Welcome back to Ability Plus!</p>
 
   <form id="<?php echo esc_attr($args['form_id']); ?>" class="jobboard-form jb-form jb-login-form col-12 col-md-7" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
@@ -40,7 +40,7 @@ $error = JB()->session->get('jb_notices', array());
       <label for="pwd" class="caption">Password</label>
       <input type="password" name="pwd" id="<?php echo esc_attr($args['form_id']) . '-pwd'; ?>" class="input" value="" size="20" />
     </div>
-    
+
     <?php
       if($error) {?>
         <span class="error">Email or password incorrect</span>
@@ -52,7 +52,7 @@ $error = JB()->session->get('jb_notices', array());
         <span><?php echo esc_html($args['label_remember']); ?></span>
       </div>
     </div>
-      
+
 
     <p class="login-submit clearfix">
       <input type="submit" name="wp-submit" id="<?php echo esc_attr($args['form_id']) . '-submit'; ?>" class="cta-blue bold" value="Log in" />
@@ -64,5 +64,5 @@ $error = JB()->session->get('jb_notices', array());
   </form>
 
   <div class="image-wrapper col-12 col-md-5">
-    <img src="<?php echo get_theme_file_uri('/assets/illus-login.png'); ?>" alt="Log In Illustration, apply for vacancies">
+    <img src="<?php echo get_theme_file_uri('/assets/illus-login.png'); ?>" alt="Log in illustration, welcome back to Ability Plus Isle of Man">
   </div>

@@ -132,7 +132,7 @@ header#site-header {
   }
   @include media-breakpoint-down(sm) {
     nav {
-      padding: 0.25rem 0;
+      padding: 0.25rem 1rem;
     }
   }
 }

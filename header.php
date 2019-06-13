@@ -9,22 +9,22 @@
     * Print the <title> tag based on what is being viewed.
     */
     global $page, $paged;
-    
+
     wp_title( '|', true, 'right' );
-    
+
     // Add the blog name.
     bloginfo( 'name' );
-    
+
     // Add the blog description for the home/front page.
     $site_description = get_bloginfo( 'description', 'display' );
     if ( $site_description && ( is_home() || is_front_page() ) )
     echo " | $site_description";
-    
+
     ?></title>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <?php wp_head(); ?>
   </head>
-  
+
   <body <?php body_class(); ?>>
     <header id="site-header">
       <div class="container">
@@ -32,7 +32,7 @@
 
           <!-- Logo -->
           <a class="navbar-brand" href="<?php echo esc_url(site_url('/')) ?>">
-            <img src="<?php echo get_theme_file_uri('/assets/svg/logo-ability-plus.svg'); ?>" alt="Ability Plus Logo">
+            <img src="<?php echo get_theme_file_uri('/assets/svg/logo-ability-plus.svg'); ?>" alt="Ability Plus, career hiring managers and specialists">
           </a>
 
           <!-- Toggle button -->
@@ -45,7 +45,7 @@
           </button>
 
 
-          <?php 
+          <?php
             wp_nav_menu( array(
               'theme_location'  => 'Navigation',
               'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
@@ -56,19 +56,17 @@
               'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
               'walker'          => new WP_Bootstrap_Navwalker(),
             ) );
-            
+
           ?>
 
         </nav>
       </div>
     </header><!--#site-header-->
-    <?php 
-    
+    <?php
+
     echo get_template_part('/templates/modal-login');
     echo get_template_part('/templates/modal-password');
     // echo get_template_part('/templates/modal-sign-up');
-    
+
     ?>
     <div class="wrapper <?php echo get_the_title(); ?>">
-
-    

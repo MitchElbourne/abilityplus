@@ -83,6 +83,24 @@ body.is-dashboard {
           font-size: 0.8rem;
         }
       }
+      p.h5 {
+        order: 0;
+      }
+      div.image-wrapper {
+        flex: 0 1 60%;
+        margin: 0 auto;
+        order: 1;
+      }
+      form {
+        order: 3;
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .wrapper {
+      div.image-wrapper {
+        flex-basis: 80%;
+      }
     }
   }
 }
