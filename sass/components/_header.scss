@@ -109,7 +109,6 @@ header#site-header {
                 &:before {
                   content: '';
                   display: inline-block;
-                  margin-bottom: 0.5rem;
                   width: 1.5rem;
                   height: 1.5rem;
                   background-position: center;
@@ -123,6 +122,7 @@ header#site-header {
                     padding-top: 0.5rem;
                   }
                   &:before {
+                    margin-bottom: 0.5rem;
                     background-image: url('../wp-recruitment-child/assets/svg/icon-avatar.svg');
                   }
                   border-bottom: 1px solid rgba($primary-blue, 0.25);
@@ -132,6 +132,7 @@ header#site-header {
                     padding-bottom: 0.5rem;
                   }
                   &:before {
+                    margin-top: 0.5rem;
                     background-image: url('../wp-recruitment-child/assets/svg/icon-logout.svg')
                   }
                 }

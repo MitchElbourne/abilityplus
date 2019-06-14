@@ -387,7 +387,6 @@ header#site-header {
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li:before {
             content: '';
             display: inline-block;
-            margin-bottom: 0.5rem;
             width: 1.5rem;
             height: 1.5rem;
             background-position: center;
@@ -400,10 +399,12 @@ header#site-header {
             header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-dashboard a {
               padding-top: 0.5rem; }
             header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-dashboard:before {
+              margin-bottom: 0.5rem;
               background-image: url("../wp-recruitment-child/assets/svg/icon-avatar.svg"); }
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-log-out a {
             padding-bottom: 0.5rem; }
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-log-out:before {
+            margin-top: 0.5rem;
             background-image: url("../wp-recruitment-child/assets/svg/icon-logout.svg"); }
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a {
             padding: 1rem;
@@ -2273,8 +2274,6 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types svg {
             margin-bottom: 0.2rem;
             margin-right: 0.3rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table h5.no-applications {
-    opacity: 0.4; }
 @media (max-width: 767px) {
   body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }
