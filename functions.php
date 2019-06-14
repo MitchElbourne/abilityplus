@@ -135,12 +135,28 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
   } else {
     $firstName = $currentuser->user_firstname;
     $lastName = $currentuser->user_lastname;
-    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item logged-in'><a title='Your Profile' href='" . $profile_url_handler . "' class='nav-link modal-button'>" . $firstName . " " . $lastName[0] . ".</a></li>";
+    // $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item logged-in'><a title='Your Profile' href='" . $profile_url_handler . "' class='nav-link modal-button'>" . $firstName . " " . $lastName[0] . ".</a></li>";
+
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='logged-in-dropdown' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown logged-in logged-in-dropdown nav-item'>
+      <a href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='dropdown-toggle nav-link' id='logged-in-dropdown-menu'>" . $firstName . "." . $lastName[0] . "</a>
+
+      <ul class='dropdown-menu' aria-labelledby='logged-in-dropdown-menu' role='menu'>
+        <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-dashboard' class='menu-item menu-item-type-custom menu-item-object-custom menu-item-dashboard nav-item'>
+          <a title='Dashboard' href='" . $profile_url_handler . "' class='dropdown-item'>Dashboard</a>
+        </li>
+        <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-log-out' class='menu-item menu-item-type-custom menu-item-object-custom menu-item-log-out nav-item'>
+          <a title='Log Out' href='" . esc_url(wp_logout_url()) . "' class='dropdown-item'>Log Out</a>
+        </li>
+      </ul>
+    </li>";
 
     return $menu_items . $new_li;
   }
 
 }, 10, 2 );
+
+
+
 
 add_filter('jb_template_login_form', 'custom_login_logic', 10);
 
