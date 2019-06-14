@@ -1191,7 +1191,7 @@ body.is-job div.wrapper {
       margin-top: 1rem; }
     .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item.active {
       opacity: 1;
-      transition: all 800ms; }
+      transition: opacity 300ms; }
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
     position: absolute;
     margin: 0;

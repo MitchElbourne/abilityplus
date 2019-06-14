@@ -99,7 +99,7 @@
               display: block;
               &.active {
                 opacity: 1;
-                transition: all 800ms;
+                transition: opacity 300ms;
               }
             }
           }
