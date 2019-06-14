@@ -15,8 +15,8 @@
   }
   .modal-dialog {
     max-width: 90%;
-    padding-left: 8px;
     margin: 1rem auto;
+    padding-left: 8px;
     .modal-content {
       flex-direction: row;
       flex-wrap: wrap;
@@ -37,10 +37,10 @@
           display: inline-block;
         }
         span.sign-up-cta {
-          color: $middle-grey;
           display: inline-block;
-          margin-left: auto;
           align-self: flex-end;
+          margin-left: auto;
+          color: $middle-grey;
           a {
             cursor: pointer;
             color: $primary-blue;
@@ -48,12 +48,12 @@
         }
       }
       form {
-        background-color: $white;
         padding: 2rem;
+        background-color: $white;
         border-radius: 8px;
         span.error {
-          margin: 0 0 1rem 0;
           display: inline-block;
+          margin: 0 0 1rem 0;
           color: $error;
         }
         div.login-username, div.login-password, div.password-forget {
@@ -69,9 +69,9 @@
           }
           input {
             width: 100%;
+            background-color: $lightest-grey;
             border: none;
             font-size: 1.25rem;
-            background-color: $lightest-grey;
           }
           &.focus {
             border-color: $primary-blue;
@@ -113,9 +113,6 @@
           }
           div.image-wrapper {
             margin-left: 1rem;
-            img {
-
-            }
           }
         }
       }
@@ -126,8 +123,8 @@
       .modal-content {
         padding: 5rem;
         div.introduction {
-          padding-bottom: 1rem;
           flex-wrap: wrap;
+          padding-bottom: 1rem;
           h2.h1 {
             font-size: 2.85rem;
           }
@@ -160,8 +157,8 @@
       .modal-content {
         padding: 2rem;
         div.introduction {
-          padding-bottom: 1rem;
           flex-wrap: wrap;
+          padding-bottom: 1rem;
           h2.h1 {
             font-size: 1.8rem;
           }
@@ -180,9 +177,9 @@
           }
         }
         div.image-wrapper {
-          order: 2;
           flex: 0 1 60%;
           margin: 0 auto 1rem;
+          order: 2;
         }
       }
     }
@@ -231,10 +228,10 @@
 
 #specialism-filter-modal {
   .md-content {
-    border-radius: 0.5rem;
-    background-color: $white;
-    padding: 2rem;
     position: relative;
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 0.5rem;
     button {
       position: absolute;
       top: 0.5rem;
@@ -248,9 +245,9 @@
     }
     p {
       position: relative;
+      padding-left: 1.75rem;
       font-family: $tkusualbd;
       font-size: 0.875rem;
-      padding-left: 1.75rem;
       &:before {
         content: '';
         position: absolute;
@@ -266,9 +263,6 @@
     }
     ul.specialism-filter-extra {
       border-color: $lighter-grey;
-      li {
-
-      }
       a.specialism-filters-apply {
         margin-top: 1.5rem;
       }

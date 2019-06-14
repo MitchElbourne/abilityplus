@@ -73,12 +73,6 @@
         $('#LogInModal').modal('show');
       });
 
-			// var specialism_modal = false;
-			//
-			// $('.specialism-filter-more').on('click', function() {
-			// 	specialism_modal = true;
-			// });
-
 			$('.specialism-filters-apply').on('click', function () {
         submit_ordering_form()
 	    });
