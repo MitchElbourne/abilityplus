@@ -23,21 +23,75 @@ body.is-dashboard {
                 border-bottom-right-radius: 0.5rem;
                 border-bottom-left-radius: 0.5rem;
                 li {
-                  border-bottom: 1px solid $white;
+                  display: flex;
                   padding: 1rem;
-                  &:last-of-type {
-                    border-bottom: 0;
+                  border-bottom: 1px solid $white;
+                  &:before {
+                    content: '';
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 0.5rem;
+                    align-self: center;
+                    display: inline-block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                  }
+                  &:hover {
+                    transition: all 200ms;
+                    &:before {
+                      -webkit-filter: brightness(0);
+                    }
+                    a {
+                      color: $black;
+                    }
                   }
                   a {
                     color: $middle-grey;
-                    &:hover {
-                      color: $black;
-                    }
+                    width: 100%;
+                  }
+                  &:last-of-type {
+                    border-bottom: 0;
                   }
                   &.is-active {
                     background-color: $lighter-grey;
                     a {
                       color: $black;
+                    }
+                  }
+                  &.nav-dashboard {
+                    &:before {
+                      background-image: url('../wp-recruitment-child/assets/svg/icon-avatar.svg');
+                    }
+                    &.is-active {
+                      &:before {
+                        -webkit-filter: brightness(0);
+                      }
+                    }
+                  }
+                  &.nav-profile {
+                    &:before {
+                      background-image: url('../wp-recruitment-child/assets/svg/icon-edit-profile.svg');
+                    }
+                    &.is-active {
+                      &:before {
+                        -webkit-filter: brightness(0);
+                      }
+                    }
+                  }
+                  &.nav-applied {
+                    &:before {
+                      background-image: url('../wp-recruitment-child/assets/svg/icon-app-history.svg');
+                    }
+                    &.is-active {
+                      &:before {
+                        -webkit-filter: brightness(0);
+                      }
+                    }
+                  }
+                  &.nav-logout {
+                    &:before {
+                      background-image: url('../wp-recruitment-child/assets/svg/icon-logout.svg');
                     }
                   }
                 }
