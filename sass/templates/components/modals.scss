@@ -229,6 +229,54 @@
 }
 
 
+#specialism-filter-modal {
+  .md-content {
+    border-radius: 0.5rem;
+    background-color: $white;
+    padding: 2rem;
+    position: relative;
+    button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      svg {
+        display: none;
+      }
+      background-image: url('../wp-recruitment-child/assets/svg/icon-modal-close.svg')
+    }
+    p {
+      position: relative;
+      font-family: $tkusualbd;
+      font-size: 0.875rem;
+      padding-left: 1.75rem;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../wp-recruitment-child/assets/svg/icon-briefcase.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    ul.specialism-filter-extra {
+      border-color: $lighter-grey;
+      li {
+
+      }
+      a.specialism-filters-apply {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+
 // #jobboard-modal-apply {
 //   .md-content {
 //     button {

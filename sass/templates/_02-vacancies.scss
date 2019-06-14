@@ -346,6 +346,9 @@ body.job-listing-classic {
               }
             }
           }
+          .jb-specialism-wrap {
+            display: none;
+          }
           @include media-breakpoint-down(lg) {
             flex: 1 1 50%;
           }

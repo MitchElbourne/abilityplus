@@ -27,51 +27,52 @@ $terms_count = count($terms);
 ?>
 
 <div class="widget-content">
-    <ul>
+  <ul>
 
-        <?php foreach ($terms as $k => $term): ?>
+    <?php foreach ($terms as $k => $term): ?>
 
-        <?php $checked = in_array($term->term_id, $values) ? 'checked="checked"' : '' ;?>
+    <?php $checked = in_array($term->term_id, $values) ? 'checked="checked"' : '' ;?>
 
-        <li>
+    <li>
 
-            <input id="specialism-filter-<?php echo esc_attr($term->term_id); ?>" type="checkbox" name="specialism-filters[]" value="<?php echo esc_attr($term->term_id); ?>" <?php echo $checked; ?>/>
+      <input id="specialism-filter-<?php echo esc_attr($term->term_id); ?>" type="checkbox" name="specialism-filters[]" value="<?php echo esc_attr($term->term_id); ?>" <?php echo $checked; ?>/>
 
-            <label for="specialism-filter-<?php echo esc_attr($term->term_id); ?>"><?php echo esc_html($term->name); ?></label>
+      <label for="specialism-filter-<?php echo esc_attr($term->term_id); ?>"><?php echo esc_html($term->name); ?></label>
 
-            <?php if ($count): ?>
+      <?php if ($count): ?>
 
-                <span class="count">(<?php echo esc_html($term->count); ?>)</span>
+          <span class="count">(<?php echo esc_html($term->count); ?>)</span>
 
-            <?php endif; ?>
+      <?php endif; ?>
 
-            </li>
+    </li>
 
-            <?php if($k == 6 && $terms_count > 7): ?>
+    <?php if($k == 6 && $terms_count > 7): ?>
 
-            <li>
+      <li>
 
-                <a class="specialism-filter-more md-trigger" data-modal="specialism-filter-modal" href="javascript:void(0)"><?php echo get_template_part('/assets/svg/icon-inline-add.svg');  ?><?php echo esc_html__('more', JB_TEXT_DOMAIN); ?></a>
-                
-                
+        <a class="specialism-filter-more md-trigger" data-modal="specialism-filter-modal" href="javascript:void(0)"><?php echo get_template_part('/assets/svg/icon-inline-add.svg');  ?><?php echo esc_html__('more', JB_TEXT_DOMAIN); ?></a>
 
-                <?php jb_get_template('modal/modal-start.php', array('modal' => 'specialism-filter-modal')); ?>
+        <?php jb_get_template('modal/modal-start.php', array('modal' => 'specialism-filter-modal')); ?>
+        <p class="specialisms">Specialisms</p>
+        <ul class="specialism-filter-extra">
 
-                <ul class="specialism-filter-extra">
+      <?php endif;?>
 
-            <?php endif;?>
+    <?php endforeach;?>
 
-        <?php endforeach;?>
+    <?php if($terms_count > 7): ?>
 
-        <?php if($terms_count > 7): ?>
 
-            </ul>
+          <a href="javascript:void(0)" class="specialism-filters-apply cta-blue">Apply Filter(s)</a>
 
-            <?php jb_get_template('modal/modal-end.php'); ?>
+        </ul>
 
-            </li>
+      <?php jb_get_template('modal/modal-end.php'); ?>
 
-        <?php endif; ?>
+      </li>
 
-    </ul>
+    <?php endif; ?>
+
+  </ul>
 </div>
