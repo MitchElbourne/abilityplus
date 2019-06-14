@@ -3,7 +3,9 @@
     <footer id="site-footer">
       <div class="container">
         <!-- Logo -->
-        <img src="<?php echo get_theme_file_uri('/assets/svg/logo-ability-plus.svg'); ?>" alt="Ability Plus Logo" class="footer-logo">
+        <a href="<?php echo esc_url(site_url('/')); ?>">
+          <img src="<?php echo get_theme_file_uri('/assets/svg/logo-ability-plus.svg'); ?>" alt="Ability Plus Logo" class="footer-logo">
+        </a>
 
 
         <div class="information-container">
@@ -63,7 +65,6 @@
         </div>
       </div>
     </footer><!--#site-footer-->
-
 
 
     <?php wp_footer(); ?>

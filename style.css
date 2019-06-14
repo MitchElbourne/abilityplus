@@ -369,9 +369,52 @@ header#site-header {
       header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
         background-color: white;
         border: 2px solid rgba(37, 120, 219, 0.18);
+        font-family: "tkusual-bold", "system", "sans-serif";
         text-transform: capitalize; }
+        header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:after {
+          display: none; }
         header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in a:focus {
-          background-color: rgba(37, 120, 219, 0.1); }
+          background-color: rgba(37, 120, 219, 0.1);
+          border-color: #2578db; }
+      header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul {
+        margin-top: 0.5rem;
+        box-shadow: 4px 4px 6px 0 rgba(26, 39, 51, 0.18);
+        border-radius: 0.5rem;
+        border-color: #2578db;
+        left: -3rem; }
+        header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li {
+          display: flex; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li:before {
+            content: '';
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            align-self: center;
+            margin-left: 1rem; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-dashboard {
+            border-bottom: 1px solid rgba(37, 120, 219, 0.25); }
+            header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-dashboard a {
+              padding-top: 0.5rem; }
+            header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-dashboard:before {
+              margin-bottom: 0.5rem;
+              background-image: url("../wp-recruitment-child/assets/svg/icon-avatar.svg"); }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-log-out a {
+            padding-bottom: 0.5rem; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li.menu-item-log-out:before {
+            margin-top: 0.5rem;
+            background-image: url("../wp-recruitment-child/assets/svg/icon-logout.svg"); }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a {
+            padding: 1rem;
+            border: none;
+            border-radius: 0;
+            color: #1a2733;
+            font-family: "tkusual-reg", "system", "sans-serif"; }
+            header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a:focus {
+              background-color: white;
+              color: #0a468f; }
       header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
         color: #1a2733;
@@ -938,6 +981,8 @@ body.job-listing-classic .wrapper .container .row #content {
           body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
             margin-bottom: 0.2rem;
             margin-right: 0.3rem; }
+  body.job-listing-classic .wrapper .container .row #content .jb-specialism-wrap {
+    display: none; }
   @media (max-width: 1199px) {
     body.job-listing-classic .wrapper .container .row #content {
       flex: 1 1 50%; } }
@@ -1189,7 +1234,7 @@ body.is-job div.wrapper {
       margin-top: 1rem; }
     .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item.active {
       opacity: 1;
-      transition: all 800ms; }
+      transition: opacity 300ms; }
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
     position: absolute;
     margin: 0;
@@ -1947,18 +1992,48 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem; }
     body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li {
-      border-bottom: 1px solid white;
-      padding: 1rem; }
+      display: flex;
+      padding: 1rem;
+      border-bottom: 1px solid white; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:before {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        align-self: center;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover {
+        transition: all 200ms; }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover:before {
+          -webkit-filter: brightness(0); }
+        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover a {
+          color: #1a2733; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
+        color: rgba(28, 43, 56, 0.5);
+        width: 100%; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:last-of-type {
         border-bottom: 0; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
-        color: rgba(28, 43, 56, 0.5); }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a:hover {
-          color: #1a2733; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active {
         background-color: #e8eaeb; }
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active a {
           color: #1a2733; }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard:before {
+        background-image: url("../wp-recruitment-child/assets/svg/icon-avatar.svg"); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard.is-active:before {
+        -webkit-filter: brightness(0); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile:before {
+        background-image: url("../wp-recruitment-child/assets/svg/icon-edit-profile.svg"); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile.is-active:before {
+        -webkit-filter: brightness(0); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied:before {
+        background-image: url("../wp-recruitment-child/assets/svg/icon-app-history.svg"); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied.is-active:before {
+        -webkit-filter: brightness(0); }
+      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-logout:before {
+        background-image: url("../wp-recruitment-child/assets/svg/icon-logout.svg"); }
 body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content {
   padding: 2rem;
   border: 2px solid #e8eaeb;
@@ -2229,8 +2304,6 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types svg {
             margin-bottom: 0.2rem;
             margin-right: 0.3rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table h5.no-applications {
-    opacity: 0.4; }
 @media (max-width: 767px) {
   body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }
@@ -2251,8 +2324,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       height: 2rem; }
   #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
     max-width: 90%;
-    padding-left: 8px;
-    margin: 1rem auto; }
+    margin: 1rem auto;
+    padding-left: 8px; }
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
       flex-direction: row;
       flex-wrap: wrap;
@@ -2271,20 +2344,20 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
         #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
-          color: rgba(28, 43, 56, 0.5);
           display: inline-block;
+          align-self: flex-end;
           margin-left: auto;
-          align-self: flex-end; }
+          color: rgba(28, 43, 56, 0.5); }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta a, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta a {
             cursor: pointer;
             color: #2578db; }
       #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
-        background-color: white;
         padding: 2rem;
+        background-color: white;
         border-radius: 8px; }
         #LogInModal .modal-dialog .modal-content form span.error, #PasswordModal .modal-dialog .modal-content form span.error {
-          margin: 0 0 1rem 0;
           display: inline-block;
+          margin: 0 0 1rem 0;
           color: #bb0f00; }
         #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #LogInModal .modal-dialog .modal-content form div.password-forget, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.password-forget {
           margin-bottom: 1rem;
@@ -2298,9 +2371,9 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             color: rgba(28, 43, 56, 0.5); }
           #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #LogInModal .modal-dialog .modal-content form div.password-forget input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.password-forget input {
             width: 100%;
+            background-color: #f3f4f5;
             border: none;
-            font-size: 1.25rem;
-            background-color: #f3f4f5; }
+            font-size: 1.25rem; }
           #LogInModal .modal-dialog .modal-content form div.login-username.focus, #LogInModal .modal-dialog .modal-content form div.login-password.focus, #LogInModal .modal-dialog .modal-content form div.password-forget.focus, #PasswordModal .modal-dialog .modal-content form div.login-username.focus, #PasswordModal .modal-dialog .modal-content form div.login-password.focus, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus {
             border-color: #2578db;
             background-color: white; }
@@ -2323,8 +2396,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
       padding: 5rem; }
       #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
-        padding-bottom: 1rem;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        padding-bottom: 1rem; }
         #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
           font-size: 2.85rem; }
         #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
@@ -2344,8 +2417,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
         padding: 2rem; }
         #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
-          padding-bottom: 1rem;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+          padding-bottom: 1rem; }
           #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
             font-size: 1.8rem; }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
@@ -2357,9 +2430,9 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             width: 100%;
             float: left; }
         #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
-          order: 2;
           flex: 0 1 60%;
-          margin: 0 auto 1rem; } }
+          margin: 0 auto 1rem;
+          order: 2; } }
   @media (max-width: 575px) {
     #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
       flex-basis: 80%; } }
@@ -2384,3 +2457,38 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     width: 100%;
     margin: 0;
     max-width: none; } }
+
+#specialism-filter-modal .md-content {
+  position: relative;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem; }
+  #specialism-filter-modal .md-content button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("../wp-recruitment-child/assets/svg/icon-modal-close.svg"); }
+    #specialism-filter-modal .md-content button svg {
+      display: none; }
+  #specialism-filter-modal .md-content p {
+    position: relative;
+    padding-left: 1.75rem;
+    font-family: "tkusual-bold", "system", "sans-serif";
+    font-size: 0.875rem; }
+    #specialism-filter-modal .md-content p:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+      width: 1rem;
+      height: 1rem;
+      background-image: url("../wp-recruitment-child/assets/svg/icon-briefcase.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center; }
+  #specialism-filter-modal .md-content ul.specialism-filter-extra {
+    border-color: #e8eaeb; }
+    #specialism-filter-modal .md-content ul.specialism-filter-extra a.specialism-filters-apply {
+      margin-top: 1.5rem; }

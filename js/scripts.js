@@ -72,6 +72,11 @@
         // e.preventDefault();
         $('#LogInModal').modal('show');
       });
+
+			$('.specialism-filters-apply').on('click', function () {
+        submit_ordering_form()
+	    });
+
     }
     modalLogic();
 
@@ -192,10 +197,6 @@
     }
 
     careerLevelHandler();
-
-
-
-
 
     function equalizeHeights() {
       var pathname = window.location.pathname;
