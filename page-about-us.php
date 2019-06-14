@@ -16,17 +16,6 @@ get_header();
     </div><!--container-->
   </section><!--#introduction-->
 
-
-  <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='logged-in-dropdown' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown logged-in-dropdown nav-item'>
-    <a href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='dropdown-toggle nav-link' id='logged-in-dropdown-menu'>" . $firstName . $lastName[0] . "</a>
-
-    <ul class='dropdown-menu' aria-labelledby='logged-in-dropdown-menu' role='menu'>
-      <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-143' class='menu-item menu-item-type-custom menu-item-object-custom menu-item-143 nav-item'>
-        <a title='Custom LINK' href='http://google.com' class='dropdown-item'>Custom LINK</a>
-      </li>
-    </ul>
-  </li>
-
   <section id="our-values">
     <div class="container">
       <div class="row">
