@@ -52,14 +52,26 @@ get_header();
         <div id="testimonialCarousel" class="carousel slide col-lg-8 col-12" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <p>I went to Ability Plus a little over a year ago, I wasn't 100% sure at the time I wanted to move but I was starting to feel like I needed a change, Monique was incredibly helpful and immediately put me at ease, she offered me a few options, one of which I was keen on progressing and seeing how it went.  The process was great, I was kept well informed throughout, I was told about every step I would be going through during the hiring process, and not once was I left wondering what was going on.  A year on and I love my "new" job, I feel I was incredibly well matched to the company which is a good skill to have as a recruitment agency! In short I would definitely recommend them if you're thinking of a move.</p>
+              <p>I went to Ability Plus a little over a year ago, I wasn't 100% sure at the time I wanted to move but I was starting to feel like I needed a change, Monique was incredibly helpful and immediately put me at ease, she offered me a few options, one of which I was keen on progressing and seeing how it went.  The process was great, I was kept well informed throughout, I was told about every step I would be going through during the hiring process, and not once was I left wondering what was going on.  A year on and I love my "new" job, I feel I was incredibly well matched to the company which is a good skill to have as a recruitment agency!</p>
+              <br />
+              <p>In short I would definitely recommend them if you're thinking of a move.</p>
               <p class="cite bold">T. Hinkley</p>
             </div>
             <div class="carousel-item">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, eaque vitae! Aliquam, accusantium necessitatibus. Autem officiis, ipsa animi mollitia, repellendus esse id fuga, fugiat aliquam magnam vel adipisci? Quisquam, error?</p>
+              <p>Ability Plus is a very professional placement agency. They spent time talking to me about the type of job that I was looking for. Ability Plus went through job interview techniques and made sure that I was ready before they arranged job interviews. Every job interview that was arranged for me was for the type of job that I was looking for. In fact the job that they placed me with offered me a permanent placement after the second month of the three month trial.</p>
+              <p class="cite bold">G. Harrison</p>
             </div>
             <div class="carousel-item">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio modi magni autem. Repudiandae nihil laudantium officia ut explicabo dolor consectetur sunt autem quidem! Dignissimos suscipit consectetur quae veniam, quasi illo.</p>
+              <p>I found Ability Plus to be the most personable and helpful recruitment agency I have ever been signed up with, and that is across both UK and IOM agencies. They found me a temporary job almost instantly upon moving back to the island and then provided me with a tailor-made service to secure me in a permanent position that finally suits me and that I enjoy. I am extremely grateful; especially to Monique who went above and beyond to keep in touch with me and find me the above-mentioned roles. I continue to recommend Ability Plus and I remain blown away by the experience provided to me.</p>
+              <p class="cite bold">C. Jones</p>
+            </div>
+            <div class="carousel-item">
+              <p>My experience with Ability Plus has always been positive and helpful. You listened to what I wanted but also knew what would suit my profile. I was reluctant to go for the role I am currently in as I didn't think it was the right job for me but after reassurance from yourselves I am lucky enough to be with a business that I'm proud to be a part of and enjoy working there.</p>
+              <p class="cite bold">F. Corlett</p>
+            </div>
+            <div class="carousel-item">
+              <p>Earlier this year I was unexpectedly made redundant. &nbsp;Ability Plus came highly recommended and on registering with them it was easy to see why. Most of my contact was with Monique but the whole team were helpful, friendly and supportive. As it was 9 years since my last job interview, Monique helped me to prepare for potential interviews which was a huge help and I was lucky enough to be offered a new role within a week of registering. I have now been in my new position for almost 3 months and I absolutely love it. &nbsp;Ability Plus helped me to find the right job for me....not just any job!</p>
+              <p class="cite bold">W. Oates</p>
             </div>
           </div>
           <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
@@ -74,6 +86,8 @@ get_header();
             <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#testimonialCarousel" data-slide-to="1"></li>
             <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+            <li data-target="#testimonialCarousel" data-slide-to="3"></li>
+            <li data-target="#testimonialCarousel" data-slide-to="4"></li>
           </ol>
         </div>
       </div><!--row-->
