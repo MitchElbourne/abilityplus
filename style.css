@@ -1993,13 +1993,13 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     border-bottom-left-radius: 0.5rem; }
     body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li {
       display: flex;
-      padding: 1rem;
       border-bottom: 1px solid white; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:before {
         content: '';
         width: 1rem;
         height: 1rem;
         margin-right: 0.5rem;
+        margin-left: 1rem;
         align-self: center;
         display: inline-block;
         background-position: center;
@@ -2012,8 +2012,9 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover a {
           color: #1a2733; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
-        color: rgba(28, 43, 56, 0.5);
-        width: 100%; }
+        width: 100%;
+        padding: 1rem 1rem 1rem 0;
+        color: rgba(28, 43, 56, 0.5); }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:last-of-type {
         border-bottom: 0; }
       body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active {

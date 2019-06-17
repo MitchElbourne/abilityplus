@@ -24,13 +24,13 @@ body.is-dashboard {
                 border-bottom-left-radius: 0.5rem;
                 li {
                   display: flex;
-                  padding: 1rem;
                   border-bottom: 1px solid $white;
                   &:before {
                     content: '';
                     width: 1rem;
                     height: 1rem;
                     margin-right: 0.5rem;
+                    margin-left: 1rem;
                     align-self: center;
                     display: inline-block;
                     background-position: center;
@@ -47,8 +47,9 @@ body.is-dashboard {
                     }
                   }
                   a {
-                    color: $middle-grey;
                     width: 100%;
+                    padding: 1rem 1rem 1rem 0;
+                    color: $middle-grey;
                   }
                   &:last-of-type {
                     border-bottom: 0;
