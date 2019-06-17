@@ -1,5 +1,6 @@
 .wrapper.About.Us {
   section#introduction {
+    padding-bottom: 3rem;
     .container {
       .row {
         text-align: center;
@@ -15,18 +16,18 @@
     }
   }
 
-
   section#our-values {
+    padding-bottom: 3rem;
     .container {
       .row {
         text-align: left;
         p.entry-text {
-          margin: 1.8rem auto 4rem;
+          margin: 1.8rem auto 3rem;
         }
         div.panel-container {
           display: flex;
           width: 100%;
-          margin-top: 6rem;
+          margin-top: 3rem;
           text-align: start;
           div.panel {
             display: flex;
@@ -121,6 +122,9 @@
                 background-color: $primary-blue;
               }
             }
+          }
+          a.carousel-control-next, a.carousel-control-prev {
+            opacity: 1;
           }
           a.carousel-control-next {
             img {

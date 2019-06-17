@@ -52,7 +52,7 @@ body.home {
               margin-bottom: 2.5rem;
             }
             p.sub-text {
-              margin: 1rem 0 2rem;
+              margin: 1rem 0 0;
             }
             a {
               margin-top: auto;
@@ -98,7 +98,7 @@ body.home {
       }
     }
   }
-  
+
   section#how-we-work {
     .container {
       .row {
@@ -273,7 +273,7 @@ body.home {
               a {
                 margin-top: auto;
               }
-              
+
               &:first-of-type {
                 border-right: 1px solid $lighter-grey;
                 padding-right: 2.25rem;

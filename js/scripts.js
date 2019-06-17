@@ -27,6 +27,7 @@
 			}
 			if($('body').hasClass('single-post')) {
 				$('a[title="Blog"]').parent().addClass('active');
+				$('header#site-header').css('display', 'none');
 			}
 		});
 

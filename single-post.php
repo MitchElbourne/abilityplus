@@ -51,7 +51,7 @@ if(have_posts()) {
 
         </article>
 
-        <div class="blog-recommendations col-lg-9 col-md-11 m-auto">
+        <div class="blog-recommendations col-lg-9 col-md-11">
 
             <?php
             $prevPost = get_previous_post(true);

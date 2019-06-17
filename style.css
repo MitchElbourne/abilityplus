@@ -94,8 +94,7 @@ label {
   margin-bottom: 0; }
 
 .modal-open, .modal {
-  padding-right: 0 !important;
-  overflow: visible; }
+  padding-right: 0 !important; }
 
 .grecaptcha-badge {
   visibility: hidden; }
@@ -592,7 +591,7 @@ body.home section#introduction .container .row {
         max-width: 9rem;
         margin-bottom: 2.5rem; }
       body.home section#introduction .container .row div.panel-container div.panel p.sub-text {
-        margin: 1rem 0 2rem; }
+        margin: 1rem 0 0; }
       body.home section#introduction .container .row div.panel-container div.panel a {
         margin-top: auto; }
 @media (max-width: 767px) {
@@ -1224,49 +1223,53 @@ body.is-job div.wrapper {
           body.is-job div.wrapper section#single-job-content .container div.job-information {
             padding: 0.5rem; } }
 
-.wrapper.About.Us section#introduction .container .row {
-  text-align: center; }
-  .wrapper.About.Us section#introduction .container .row p {
-    margin: 2.5rem auto; }
-  .wrapper.About.Us section#introduction .container .row div.image-wrapper img {
-    width: 100%; }
-.wrapper.About.Us section#our-values .container .row {
-  text-align: left; }
-  .wrapper.About.Us section#our-values .container .row p.entry-text {
-    margin: 1.8rem auto 4rem; }
-  .wrapper.About.Us section#our-values .container .row div.panel-container {
-    display: flex;
-    width: 100%;
-    margin-top: 6rem;
-    text-align: start; }
-    .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
+.wrapper.About.Us section#introduction {
+  padding-bottom: 3rem; }
+  .wrapper.About.Us section#introduction .container .row {
+    text-align: center; }
+    .wrapper.About.Us section#introduction .container .row p {
+      margin: 2.5rem auto; }
+    .wrapper.About.Us section#introduction .container .row div.image-wrapper img {
+      width: 100%; }
+.wrapper.About.Us section#our-values {
+  padding-bottom: 3rem; }
+  .wrapper.About.Us section#our-values .container .row {
+    text-align: left; }
+    .wrapper.About.Us section#our-values .container .row p.entry-text {
+      margin: 1.8rem auto 3rem; }
+    .wrapper.About.Us section#our-values .container .row div.panel-container {
       display: flex;
+      width: 100%;
+      margin-top: 3rem;
+      text-align: start; }
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(100%/3);
+        padding: 0 3rem;
+        border-right: 1px solid #e8eaeb; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
+          border-right: none; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
+          max-width: 9rem;
+          margin-bottom: 2.5rem; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
+          margin: 1rem 0 0; }
+  @media (max-width: 991px) {
+    .wrapper.About.Us section#our-values .container .row div.panel-container {
       flex-direction: column;
-      flex: 1 1 calc(100%/3);
-      padding: 0 3rem;
-      border-right: 1px solid #e8eaeb; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
-        border-right: none; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
-        max-width: 9rem;
-        margin-bottom: 2.5rem; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
-        margin: 1rem 0 0; }
-@media (max-width: 991px) {
-  .wrapper.About.Us section#our-values .container .row div.panel-container {
-    flex-direction: column;
-    margin-top: 3rem; }
-    .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
-      text-align: center;
-      border-right: none;
-      border-top: 1px solid #e8eaeb;
-      padding: 2rem 0; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
-        border-bottom: 1px solid #e8eaeb; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
-        margin: 2rem auto 1rem; }
-      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
-        margin: 1rem 0; } }
+      margin-top: 3rem; }
+      .wrapper.About.Us section#our-values .container .row div.panel-container div.panel {
+        text-align: center;
+        border-right: none;
+        border-top: 1px solid #e8eaeb;
+        padding: 2rem 0; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel:last-of-type {
+          border-bottom: 1px solid #e8eaeb; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel img {
+          margin: 2rem auto 1rem; }
+        .wrapper.About.Us section#our-values .container .row div.panel-container div.panel p.sub-text {
+          margin: 1rem 0; } }
 .wrapper.About.Us section#testimonials .container .row div.meta-container {
   align-self: center; }
   .wrapper.About.Us section#testimonials .container .row div.meta-container h2 {
@@ -1300,6 +1303,8 @@ body.is-job div.wrapper {
       transition: all 200ms; }
       .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators li.active {
         background-color: #2578db; }
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-next, .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-prev {
+    opacity: 1; }
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel a.carousel-control-next img {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg); }
@@ -1544,7 +1549,7 @@ body.is-job div.wrapper {
         padding-top: 3rem; } }
 
 body.single-post .wrapper {
-  padding-top: 6rem; }
+  padding-top: 0; }
   body.single-post .wrapper main section#article-container {
     background-color: #e8eaeb;
     padding-top: 4rem; }
@@ -1621,7 +1626,8 @@ body.single-post .wrapper {
       background-color: white;
       padding: 3rem;
       display: flex;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      margin: 6rem auto 0; }
       body.single-post .wrapper main section#article-container .container .row div.blog-recommendations article {
         display: flex;
         flex-direction: column;
@@ -1703,7 +1709,10 @@ body.single-post .wrapper {
     display: flex;
     margin: 0 auto; }
     .wrapper.Contact section#introduction .container .row div.contact-information div.address-information {
-      flex: 1 1 calc(100%/2); }
+      flex: 0 1 calc(100%/2);
+      margin-right: 3rem;
+      border-right: 1px solid #f3f4f5;
+      padding-right: 3rem; }
       .wrapper.Contact section#introduction .container .row div.contact-information div.address-information div.address {
         display: flex;
         margin-bottom: 1rem; }
@@ -1723,9 +1732,10 @@ body.single-post .wrapper {
             margin-bottom: 0.2rem; }
         .wrapper.Contact section#introduction .container .row div.contact-information div.address-information p.email a, .wrapper.Contact section#introduction .container .row div.contact-information div.address-information p.telephone a {
           font-family: "tkusual-bold", "system", "sans-serif"; }
+    .wrapper.Contact section#introduction .container .row div.contact-information div.break {
+      margin: 0 auto; }
     .wrapper.Contact section#introduction .container .row div.contact-information div.connect-information {
-      flex: 1 1 calc(100%/2);
-      margin-left: 4rem; }
+      flex: 0 1 calc(100%/2); }
       .wrapper.Contact section#introduction .container .row div.contact-information div.connect-information h3 {
         margin-bottom: 1rem; }
         .wrapper.Contact section#introduction .container .row div.contact-information div.connect-information h3:last-of-type {
@@ -1748,10 +1758,13 @@ body.single-post .wrapper {
           margin-right: 0.5rem; }
         .wrapper.Contact section#introduction .container .row div.contact-information div.connect-information div.contact-point a {
           font-family: "tkusual-bold", "system", "sans-serif"; }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .wrapper.Contact section#introduction .container .row div.contact-information {
     flex-direction: column; }
     .wrapper.Contact section#introduction .container .row div.contact-information div.address-information {
+      border-right: none;
+      margin-right: 0;
+      padding-right: 0;
       margin-bottom: 2rem; }
     .wrapper.Contact section#introduction .container .row div.contact-information div.connect-information {
       margin-left: 0; } }
@@ -1913,6 +1926,9 @@ body.is-dashboard .wrapper div.image-wrapper img {
   body.is-dashboard .wrapper div.image-wrapper {
     flex-basis: 80%; } }
 
+.wrapper.Sign.Up {
+  background-color: #e8eaeb; }
+
 main[role="main"] section#sign-up-form .container div.introduction {
   display: flex;
   padding-bottom: 2rem;
@@ -1934,17 +1950,26 @@ main[role="main"] section#sign-up-form .container div.information-container {
   padding: 2rem 0 3.5rem; }
   main[role="main"] section#sign-up-form .container div.information-container div.information {
     flex: 1 1 calc(100%/2);
-    padding-right: 2rem; }
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     main[role="main"] section#sign-up-form .container div.information-container div.information p.text {
       margin: 1.5rem 0; }
+    main[role="main"] section#sign-up-form .container div.information-container div.information p.meta {
+      color: #a4aaaf; }
+      main[role="main"] section#sign-up-form .container div.information-container div.information p.meta a {
+        color: #1a2733; }
+        main[role="main"] section#sign-up-form .container div.information-container div.information p.meta a:hover {
+          color: #0a468f; }
   main[role="main"] section#sign-up-form .container div.information-container div.image-wrapper {
-    flex: 1 1 50%; }
+    flex: 1 1 30%; }
     main[role="main"] section#sign-up-form .container div.information-container div.image-wrapper img {
       width: 100%; }
 main[role="main"] section#sign-up-form .container form {
   background-color: white;
   border-radius: 8px;
-  padding: 0 15px; }
+  padding: 3rem; }
   main[role="main"] section#sign-up-form .container form .form-fields .row:first-of-type {
     display: none; }
   main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(5) {
@@ -2023,9 +2048,7 @@ main[role="main"] section#sign-up-form .container form {
   main[role="main"] section#sign-up-form .container div.information-container {
     flex-wrap: wrap; }
     main[role="main"] section#sign-up-form .container div.information-container div.image-wrapper {
-      flex: 0 1 60%;
-      order: -1;
-      margin: 0 auto 2rem; } }
+      display: none; } }
 
 body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations {
   margin-right: 2rem;
@@ -2386,10 +2409,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       width: 2rem;
       height: 2rem; }
   #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
-    max-width: 90%;
-    margin: 1rem auto;
-    padding-left: 8px; }
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0; }
     #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+      margin: 0;
       flex-direction: row;
       flex-wrap: wrap;
       padding: 7.5rem 10rem;
@@ -2448,8 +2473,11 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           cursor: pointer; }
           #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
             color: #0a468f; }
-      #LogInModal .modal-dialog .modal-content div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.image-wrapper img {
-        max-width: 100%; }
+      #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+        text-align: right; }
+        #LogInModal .modal-dialog .modal-content div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.image-wrapper img {
+          max-width: 100%;
+          max-height: 20rem; }
   @media (max-width: 1199px) {
     #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
       display: block; }
@@ -2480,11 +2508,14 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
         padding: 2rem; }
         #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
-          flex-wrap: wrap;
+          flex-direction: column;
           padding-bottom: 1rem; }
           #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
             font-size: 1.8rem; }
           #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
+            align-self: flex-start;
+            margin-top: 1rem;
+            margin-left: 0;
             font-size: 0.8rem; }
         #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
           order: 3; }
@@ -2493,15 +2524,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
             width: 100%;
             float: left; }
         #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
-          flex: 0 1 60%;
-          margin: 0 auto 1rem;
-          order: 2; } }
-  @media (max-width: 575px) {
-    #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
-      flex-basis: 80%; } }
+          display: none; } }
 
 #PasswordModal .modal-dialog {
-  max-width: 50%; }
+  max-width: 70%;
+  height: auto;
+  margin-top: 4rem; }
   #PasswordModal .modal-dialog .modal-content {
     padding: 3rem; }
     #PasswordModal .modal-dialog .modal-content div.introduction {

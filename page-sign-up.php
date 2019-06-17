@@ -14,7 +14,7 @@ get_header();
           <div class="information">
             <p class="h5 bold">Register and let us start assisting you in the next chapter in your career journey.</p>
             <p class="text">In order to personalise your experience and have a clear user profile, we need you to follow and complete the new candidate registration form below.</p>
-            <p class="meta">Your data is safe with us. Please read our <a href="<?php echo esc_url(site_url('/terms-privacy')); ?>">Terms of Service and Privacy Policy</a> for more information.</p>
+            <p class="meta small">Your data is safe with us. Please read our <a href="<?php echo esc_url(site_url('/terms-privacy')); ?>">Terms of Service and Privacy Policy</a> for more information.</p>
           </div>
           <div class="image-wrapper">
             <img src="<?php echo get_theme_file_uri('/assets/illus-sign-up.png'); ?>" alt="Sign up illustration, woman with sign up form and pen">

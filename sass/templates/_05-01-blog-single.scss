@@ -1,6 +1,6 @@
 body.single-post {
   .wrapper {
-    padding-top: 6rem;
+    padding-top: 0;
     main {
       section#article-container {
         background-color: $lighter-grey;
@@ -106,6 +106,7 @@ body.single-post {
               padding: 3rem;
               display: flex;
               flex-wrap: wrap;
+              margin: 6rem auto 0;
               article {
                 display: flex;
                 flex-direction: column;

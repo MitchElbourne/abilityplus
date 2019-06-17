@@ -11,7 +11,10 @@
           display: flex;
           margin: 0 auto;
           div.address-information {
-            flex: 1 1 calc(100%/2);
+            flex: 0 1 calc(100%/2);
+            margin-right: 3rem;
+            border-right: 1px solid $lightest-grey;
+            padding-right: 3rem;
             div.address {
               display: flex;
               margin-bottom: 1rem;
@@ -38,9 +41,11 @@
               }
             }
           }
+          div.break {
+            margin: 0 auto;
+          }
           div.connect-information {
-            flex: 1 1 calc(100%/2);
-            margin-left: 4rem;
+            flex: 0 1 calc(100%/2);
             h3 {
               margin-bottom: 1rem;
               &:last-of-type {
@@ -66,7 +71,6 @@
             }
             div.contact-point {
               display: flex;
-              // flex-wrap: wrap;
               span.icon {
                 display: inline-block;
                 min-height: 100%;
@@ -80,12 +84,15 @@
         }
       }
     }
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(sm) {
       .container {
         .row {
           div.contact-information {
             flex-direction: column;
             div.address-information {
+              border-right: none;
+              margin-right: 0;
+              padding-right: 0;
               margin-bottom: 2rem;
             }
             div.connect-information {

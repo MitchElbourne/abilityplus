@@ -1,4 +1,4 @@
-<?php 
+<?php
 get_header();
 
 ?>
@@ -20,13 +20,14 @@ get_header();
             </div>
 
             <p class="telephone"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-telephone.svg'); ?></span>01624 662165</p>
-              
+
             <p class="email"><span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?></span><a href="mailto:employment@abilityplus.co.im" class="email">employment@abilityplus.co.im</a></p>
 
             <span class="caption">*We are able to arrange interviews for candidates outside of normal office hours by prior arrangement.</span>
           </div><!--address-information-->
+          <div class="break">
 
-
+          </div>
           <div class="connect-information">
             <h3 class="p">Connect with us:</h3>
             <a href="<?php echo esc_url('https://www.linkedin.com/company/ability-plus-isleofman/'); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?>LinkedIn</a>
@@ -34,7 +35,7 @@ get_header();
             <a href="<?php echo esc_url('http://twitter.com/abilityplusiom'); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter.svg'); ?>Twitter</a>
             <h3 class="p">Contact points</h3>
             <div class="contact-point">
-            <span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-avatar.svg');; ?></span> 
+            <span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-avatar.svg');; ?></span>
               <p>Anne Marie Hanna | Managing Director<br /><a href="mailto:anne@abilityplus.co.im">anne@abilityplus.co.im</a></p>
             </div>
           </div><!--connect-information-->
@@ -56,7 +57,7 @@ get_header();
     </div>
   </section><!--#contact-form-->
 
-  
+
 </main>
 
 

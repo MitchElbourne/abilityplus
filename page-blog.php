@@ -10,7 +10,7 @@ get_header();
       <h1 class="title">AbilityPlus Blog</h1>
         <nav class="blog-tabs">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item active" id="uncategorized-posts" data-toggle="tab" href="#nav-uncategorized" role="tab" aria-controls="nav-uncategorized" aria-selected="true"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Uncatagorized</a>
+            <a class="nav-item active" id="uncategorized-posts" data-toggle="tab" href="#nav-uncategorized" role="tab" aria-controls="nav-uncategorized" aria-selected="true"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>All</a>
             <a class="nav-item" id="job-seekers-posts" data-toggle="tab" href="#nav-job-seekers" role="tab" aria-controls="nav-job-seekers" aria-selected="false"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Job Seekers</a>
             <a class="nav-item" id="hiring-managers-posts" data-toggle="tab" href="#nav-hiring-managers" role="tab" aria-controls="nav-hiring-managers" aria-selected="false"><?php echo get_template_part('/assets/svg/icon-inline-check-inactive.svg'); ?>Hiring Managers</a>
           </div>

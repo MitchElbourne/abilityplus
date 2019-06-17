@@ -1,3 +1,8 @@
+.wrapper.Sign {
+  &.Up {
+    background-color: $lighter-grey;
+  }
+}
 main[role="main"] {
   section#sign-up-form {
     .container {
@@ -27,12 +32,24 @@ main[role="main"] {
         div.information {
           flex: 1 1 calc(100%/2);
           padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           p.text {
             margin: 1.5rem 0;
           }
+          p.meta {
+            color: $shamed-grey;
+            a {
+              color: $black;
+              &:hover {
+                color: $dark-blue;
+              }
+            }
+          }
         }
         div.image-wrapper {
-          flex: 1 1 50%;
+          flex: 1 1 30%;
           img {
             width: 100%;
           }
@@ -41,7 +58,7 @@ main[role="main"] {
       form {
         background-color: $white;
         border-radius: 8px;
-        padding: 0 15px;
+        padding: 3rem;
         .form-fields {
           .row {
             &:first-of-type {
@@ -159,9 +176,7 @@ main[role="main"] {
         div.information-container {
           flex-wrap: wrap;
           div.image-wrapper {
-            flex: 0 1 60%;
-            order: -1;
-            margin: 0 auto 2rem;
+            display: none;
           }
         }
       }

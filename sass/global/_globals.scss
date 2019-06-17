@@ -89,7 +89,7 @@ label {
 // Stops padding add and re-adds the scrollbar
 .modal-open, .modal {
   padding-right: 0 !important;
-  overflow: visible;
+  // overflow: visible;
 }
 
 .grecaptcha-badge {
