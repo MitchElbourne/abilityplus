@@ -2269,10 +2269,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     flex-wrap: wrap;
     margin-bottom: 2.25rem; }
     body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper h2 {
-      margin: 0 auto 0 0; }
+      margin: 0 auto 0 0;
+      padding-right: 1rem; }
     body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper span.applied {
       align-self: flex-end;
-      color: #a4aaaf; }
+      color: #a4aaaf;
+      padding-top: 1rem; }
   body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row {
     flex-direction: column;
     margin-bottom: 1rem;
