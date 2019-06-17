@@ -469,6 +469,7 @@ remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_su
 remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_location', 50);
 remove_action('jobboard_users_loop_candidate_summary', 'jb_template_user_loop_summary_end', 100);
 
+remove_action('wp_footer', 'jb_template_apply_form', 10);
 // global $jobboard_admin;
 // remove_action('jobboard_admin_profile_sections', array($jobboard_admin, 'add_fields_video'), 8);
 // remove_filter('jobboard_candidate_profile_fields', array($jobboard_admin, 'fields_video'));

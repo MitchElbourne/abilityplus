@@ -14,7 +14,6 @@
             flex: 1 1 calc(100%/2);
             div.address {
               display: flex;
-              // flex-wrap: wrap;
               margin-bottom: 1rem;
               span.icon {
                 display: inline-block;
@@ -31,13 +30,14 @@
                 margin-right: 1rem;
                 svg {
                   max-width: 1rem;
+                  margin-bottom: 0.2rem;
                 }
               }
               a {
                 font-family: $tkusualbd;
               }
             }
-          } 
+          }
           div.connect-information {
             flex: 1 1 calc(100%/2);
             margin-left: 4rem;
@@ -116,10 +116,10 @@
               div.left-panel {
                 flex: 1 1 calc(100%/2 - 0.5rem);
                 margin-right: 0.5rem;
-                .field { 
+                .field {
                   margin-bottom: 1rem;
                   padding: 0 1rem;
-                  background-color: 
+                  background-color:
                   $lightest-grey;
                   border-radius: 4px;
                   border: 2px solid transparent;
@@ -161,7 +161,7 @@
                   display: flex;
                   flex-direction: column;
                   padding: 0 1rem;
-                  background-color: 
+                  background-color:
                   $lightest-grey;
                   border-radius: 4px;
                   border: 2px solid transparent;

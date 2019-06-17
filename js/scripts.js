@@ -25,7 +25,12 @@
 			if(window.location.pathname == "/profile/") {
 				$('.nav-dashboard').addClass('is-active');
 			}
+			if($('body').hasClass('single-post')) {
+				$('a[title="Blog"]').parent().addClass('active');
+			}
 		});
+
+
 
 		// Closes the Navbar on scroll if it is open
 		function menuCloseOnScroll() {
@@ -96,6 +101,11 @@
         dropdownParent: $("#SignUpModal")
       });
     });
+
+		$('.cta-cancel').on('click', function() {
+			console.log('wack');
+			$('#jobboard-modal-apply').modal('hide');
+		});
 
     function passwordResetHandler() {
       if($("#Password_Validate_Modal").hasClass('Not-Validated')) {

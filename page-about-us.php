@@ -91,8 +91,8 @@ get_header();
           <span class="title">Owner / Director</span>
           <div class="connect-container">
             <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/anne-hanna-5921514b/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
-            <p class="break">|</p>
-            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
+            <!-- <p class="break">|</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a> -->
           </div>
         </div>
         <div class="content">
@@ -115,8 +115,8 @@ get_header();
           <span class="title">Recruitment Consultant</span>
           <div class="connect-container">
             <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/clodagh-reeve-certrp-343817134/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
-            <p class="break">|</p>
-            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
+            <!-- <p class="break">|</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a> -->
           </div>
         </div>
         <div class="content">
@@ -134,8 +134,8 @@ get_header();
           <span class="title">Secretary</span>
           <div class="connect-container">
             <a class="bold linkedin" href="<?php echo esc_url('#'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
-            <p class="break">|</p>
-            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
+            <!-- <p class="break">|</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a> -->
           </div>
         </div>
         <div class="content">
@@ -152,8 +152,8 @@ get_header();
           <span class="title">Junior Recruitment Administrator</span>
           <div class="connect-container">
             <a class="bold linkedin" href="<?php echo esc_url('https://www.linkedin.com/in/megan-french-697794186/'); ?>">Connect: <?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin.svg'); ?></a>
-            <p class="break">|</p>
-            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a>
+            <!-- <p class="break">|</p>
+            <a href="<?php echo esc_url('#'); ?>" class="email bold"><?php echo get_template_part('/assets/svg/icon-inline-email.svg'); ?> Send Email</a> -->
           </div>
         </div>
         <div class="content">
