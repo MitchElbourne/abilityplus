@@ -346,6 +346,71 @@ body.job-listing-classic {
               }
             }
           }
+          .jobboard-pagination {
+            .nav-pagination {
+              ul {
+                margin-top: 3rem;
+                display: flex;
+                li {
+                  font-size: 0.875rem;
+                  a {
+                    &.prev {
+                      padding-right: 2rem;
+                      margin-right: 1rem;
+                      border-radius: 0;
+                      border: none;
+                      position: relative;
+                      &:after {
+                        content: '';
+                        height: 1rem;
+                        position: absolute;
+                        border-right: 2px solid $primary-blue;
+                        right: 0;
+                        top: 0.5rem;
+                      }
+                      &:hover {
+                        background-color: $white;
+                      }
+                    }
+                    &.next {
+                      padding-left: 2rem;
+                      border-left: 2px solid $primary-blue;
+                      margin-left: 0.5rem;
+                      border-radius: 0;
+                      border: none;
+                      position: relative;
+                      &:after {
+                        content: '';
+                        height: 1rem;
+                        position: absolute;
+                        border-right: 2px solid $primary-blue;
+                        left: 0;
+                        top: 0.5rem;
+                      }
+                      &:hover {
+                        background-color: $white;
+                      }
+                    }
+                    &:hover {
+                      background-color: rgba($primary-blue, 0.11);
+                    }
+                  }
+                  a, span {
+                    margin-right: 0.5rem;
+                    padding: 0.5rem 0.75rem;
+                    border-radius: 24px;
+                    border: 1px solid rgba($primary-blue, 0.15);
+                  }
+                  .current {
+                    color: $primary-blue;
+                    background-color: rgba($primary-blue, 0.15);
+                    border: none;
+                    font-family: $tkusualbd;
+                  }
+                }
+              }
+            }
+          }
           .jb-specialism-wrap {
             display: none;
           }

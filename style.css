@@ -981,6 +981,54 @@ body.job-listing-classic .wrapper .container .row #content {
           body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
             margin-bottom: 0.2rem;
             margin-right: 0.3rem; }
+  body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul {
+    margin-top: 3rem;
+    display: flex; }
+    body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li {
+      font-size: 0.875rem; }
+      body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.prev {
+        padding-right: 2rem;
+        margin-right: 1rem;
+        border-radius: 0;
+        border: none;
+        position: relative; }
+        body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.prev:after {
+          content: '';
+          height: 1rem;
+          position: absolute;
+          border-right: 2px solid #2578db;
+          right: 0;
+          top: 0.5rem; }
+        body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.prev:hover {
+          background-color: white; }
+      body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.next {
+        padding-left: 2rem;
+        border-left: 2px solid #2578db;
+        margin-left: 0.5rem;
+        border-radius: 0;
+        border: none;
+        position: relative; }
+        body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.next:after {
+          content: '';
+          height: 1rem;
+          position: absolute;
+          border-right: 2px solid #2578db;
+          left: 0;
+          top: 0.5rem; }
+        body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a.next:hover {
+          background-color: white; }
+      body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a:hover {
+        background-color: rgba(37, 120, 219, 0.11); }
+      body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li a, body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li span {
+        margin-right: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 24px;
+        border: 1px solid rgba(37, 120, 219, 0.15); }
+      body.job-listing-classic .wrapper .container .row #content .jobboard-pagination .nav-pagination ul li .current {
+        color: #2578db;
+        background-color: rgba(37, 120, 219, 0.15);
+        border: none;
+        font-family: "tkusual-bold", "system", "sans-serif"; }
   body.job-listing-classic .wrapper .container .row #content .jb-specialism-wrap {
     display: none; }
   @media (max-width: 1199px) {
