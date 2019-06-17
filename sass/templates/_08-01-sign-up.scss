@@ -47,6 +47,9 @@ main[role="main"] {
             &:first-of-type {
               display: none;
             }
+            &:nth-of-type(5) {
+              display: none;
+            }
             &:nth-of-type(6) {
               span.select2 {
                 margin: 1rem;

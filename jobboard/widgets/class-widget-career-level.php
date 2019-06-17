@@ -55,7 +55,7 @@ class JB_Widget_Career_Level extends JB_Widget {
 		$this->widget_start( $args, $instance );
 
         jb_get_template('../../themes/wp-recruitment-child/jobboard/widgets/widget-career-level.php', array('terms' => $terms, 'count' => $count, 'values' => $values));
-        
+
 		$this->widget_end( $args );
 	}
 }

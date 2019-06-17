@@ -37,7 +37,7 @@
 
           <!-- Toggle button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-menu" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="wrapper">
+            <div id="navbarIcon">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>

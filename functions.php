@@ -386,7 +386,6 @@ function ability_plus_job_loop_summary_career_level() {
   jb_get_template('../../themes/wp-recruitment-child/jobboard/users/career-level.php');
 }
 
-
 $careerLevels = ab_get_career_level_options();
 
 function ab_get_career_level_options()

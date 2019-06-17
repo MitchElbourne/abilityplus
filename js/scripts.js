@@ -59,6 +59,17 @@
 		}
 		menuCloseOnClick();
 
+		// Controlling the click animation for NavBar
+
+		var navbarOpen = false;
+		jQuery('#navbarIcon').click(function() {
+		  if (navbarOpen == false) {
+		    jQuery('#navbarIcon').addClass('open');
+		  } else {
+		    jQuery('#navbarIcon').removeClass('open');
+		  }
+		});
+
     // Controls the switching between the log in and sign up modals
     function modalLogic() {
       $('.sign-up-cta-modal').on('click', function() {
