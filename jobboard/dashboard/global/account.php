@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   </div>
   <?php
   $appliedAmount;
-  
+
   if(jb_candidate_count_applied()) {
     $appliedAmount = jb_candidate_count_applied();
   } else {
@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="applied-heading heading">
       <h3 class="p">Application History</h3>
         <span class="info"><?php echo sprintf(esc_html__('You have applied for %s jobs in the past 30 days.', JB_TEXT_DOMAIN), '<b>'.$appliedAmount.'</b>'); ?></span>
-        
+
         <a class="view cta-blue" href="<?php echo esc_url(jb_page_endpoint_url('applied')); ?>"><?php esc_html_e('View applications', JB_TEXT_DOMAIN); ?></a>
     </div>
   </div>
