@@ -438,10 +438,12 @@ body.is-dashboard {
                   margin-bottom: 2.25rem;
                   h2 {
                     margin: 0 auto 0 0;
+                    padding-right: 1rem;
                   }
                   span.applied {
                     align-self: flex-end;
                     color: $shamed-grey;
+                    padding-top: 1rem;
                   }
                 }
                 div.row {

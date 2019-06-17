@@ -21,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if (empty($table) || empty($columns)){
     return;
 }
+$applied_count = $jobs->post_count;
 if($table == 'applied') {
   ?>
   <div class="<?php echo esc_attr($table); ?>-table jobboard-table">
