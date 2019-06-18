@@ -7,13 +7,13 @@
 		var navbarOpen = false;
 
 		function alterNavbarIcon() {
-			jQuery('.navbar-toggler').click(function() {
+			$('.navbar-toggler').click(function() {
 				if (navbarOpen === false) {
-					jQuery('.navbar-toggler').addClass('open');
+					$('.navbar-toggler').addClass('open');
 					navbarOpen = true;
 					$()
 				} else {
-					jQuery('.navbar-toggler').removeClass('open');
+					$('.navbar-toggler').removeClass('open');
 					navbarOpen = false;
 				}
 			});
@@ -34,13 +34,13 @@
 
 		// Closes the Navbar on scroll if it is open
 		function menuCloseOnScroll() {
-			var nav = jQuery('#primary-menu');
+			var nav = $('#primary-menu');
 
-			jQuery(window).on('scroll', lodash.throttle(function() {
+			$(window).on('scroll', lodash.throttle(function() {
 				if (nav.hasClass('show')) {
 					nav.collapse('hide');
 					nav.removeClass('show');
-					jQuery('.navbar-toggler').removeClass('open');
+					$('.navbar-toggler').removeClass('open');
 					// navbarOpen = false;
 				}
 			}, 500));
@@ -49,14 +49,14 @@
 
 		// Closes Navbar when clicking outside of the menu
 		function menuCloseOnClick() {
-			var nav = jQuery('#primary-menu');
+			var nav = $('#primary-menu');
 
-			jQuery('body').bind('click', function(e) {
-				if(jQuery(e.target).closest('.collapse').length == 0) {
+			$('body').bind('click', function(e) {
+				if($(e.target).closest('.collapse').length == 0) {
 					if (nav.hasClass('show')) {
 						nav.collapse('hide');
 						nav.removeClass('show');
-						jQuery('.navbar-toggler').removeClass('open');
+						$('.navbar-toggler').removeClass('open');
 						navbarOpen = false;
 					}
 				}
@@ -67,11 +67,11 @@
 		// Controlling the click animation for NavBar
 
 		var navbarOpen = false;
-		jQuery('#navbarIcon').click(function() {
+		$('#navbarIcon').click(function() {
 		  if (navbarOpen == false) {
-		    jQuery('#navbarIcon').addClass('open');
+		    $('#navbarIcon').addClass('open');
 		  } else {
-		    jQuery('#navbarIcon').removeClass('open');
+		    $('#navbarIcon').removeClass('open');
 		  }
 		});
 

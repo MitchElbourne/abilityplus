@@ -56,12 +56,21 @@ body.single-post {
                   }
                 }
                 ol {
-                  margin: 1.5rem 0 1.5rem 0;
                   padding: 0;
+                  margin-left: -1.25rem;
+                  font-family: $tkusualbd;
+                  list-style: none;
+                  counter-reset: counter-list;
                   li {
+                    font-family: $tkusualrg;
                     margin-bottom: 1rem;
+                    counter-increment: counter-list;
                     &:last-of-type {
                       margin-bottom: 0;
+                    }
+                    &::before {
+                      content: counter(counter-list) ". ";
+                      font-family: $tkusualbd;
                     }
                   }
                 }
@@ -197,8 +206,11 @@ body.single-post {
                   height: 16rem;
                 }
                 div.content {
-                  ol, ul {
+                  ul {
                     margin-left: 1.5rem;
+                  }
+                  ol {
+                    margin-left: 0.25rem;
                   }
                 }
               }

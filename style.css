@@ -1568,6 +1568,9 @@ body.is-job div.wrapper {
         border-bottom: 1px solid #e8eaeb;
         padding: 0 0 2rem 0;
         margin-bottom: 2rem; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:last-of-type {
+          border-bottom: none;
+          padding-bottom: 0; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article div.image-wrapper {
           margin: 0 auto 1rem; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
@@ -1580,11 +1583,11 @@ body.is-job div.wrapper {
       .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container {
         padding: 1rem; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+1) {
-          padding: 0;
+          padding: 1rem 0;
           border-left: none; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article:nth-of-type(2n+2) {
           border-left: none;
-          padding: 0; } }
+          padding: 1rem 0; } }
     @media only screen and (max-width: 446px) {
       .wrapper.Blog main section#blog-listings .container .blog-tabs .nav-tabs a:nth-of-type(2) {
         margin-right: 0; }
@@ -1638,12 +1641,20 @@ body.single-post .wrapper {
         body.single-post .wrapper main section#article-container .container .row article div.content ul li:last-of-type {
           margin-bottom: 0; }
     body.single-post .wrapper main section#article-container .container .row article div.content ol {
-      margin: 1.5rem 0 1.5rem 0;
-      padding: 0; }
+      padding: 0;
+      margin-left: -1.25rem;
+      font-family: "tkusual-bold", "system", "sans-serif";
+      list-style: none;
+      counter-reset: counter-list; }
       body.single-post .wrapper main section#article-container .container .row article div.content ol li {
-        margin-bottom: 1rem; }
+        font-family: "tkusual-reg", "system", "sans-serif";
+        margin-bottom: 1rem;
+        counter-increment: counter-list; }
         body.single-post .wrapper main section#article-container .container .row article div.content ol li:last-of-type {
           margin-bottom: 0; }
+        body.single-post .wrapper main section#article-container .container .row article div.content ol li::before {
+          content: counter(counter-list) ". ";
+          font-family: "tkusual-bold", "system", "sans-serif"; }
     body.single-post .wrapper main section#article-container .container .row article blockquote.wp-block-quote {
       position: relative;
       margin: 3rem 0;
@@ -1743,8 +1754,10 @@ body.single-post .wrapper {
     @media (max-width: 767px) {
       body.single-post .wrapper main section#article-container .container .row article div.image-wrapper {
         height: 16rem; }
-      body.single-post .wrapper main section#article-container .container .row article div.content ol, body.single-post .wrapper main section#article-container .container .row article div.content ul {
-        margin-left: 1.5rem; } }
+      body.single-post .wrapper main section#article-container .container .row article div.content ul {
+        margin-left: 1.5rem; }
+      body.single-post .wrapper main section#article-container .container .row article div.content ol {
+        margin-left: 0.25rem; } }
   @media (max-width: 767px) {
     body.single-post .wrapper {
       padding-top: 3rem; } }
