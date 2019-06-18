@@ -68,7 +68,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
         <a href="https://twitter.com/intent/tweet?url=click-to-tweet&text=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter-grey.svg'); ?></a>
       </p>
 
-      <?php  
+      <?php
       if(!is_user_logged_in()) {
         ?>
         <button type="button" class="cta-blue" data-target="#LogInModal" data-toggle="modal">
@@ -124,7 +124,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
             }
           } ?>
         </div>
-     
+
 
 
       </div>
@@ -134,7 +134,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
 
 
         <div class="job-meta-tags">
-          <?php 
+          <?php
 
             $specialism = get_the_terms($post->ID, 'jobboard-tax-specialisms');
             if($specialism) {
@@ -154,13 +154,13 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
               }
             }
 
-          ?> 
+          ?>
         </div>
       </div>
 
     </div><!--container-->
     <div class="cta-container">
-      <?php  
+      <?php
       if(!is_user_logged_in()) {
         ?>
         <button type="button" class="cta-blue h6" data-target="#LogInModal" data-toggle="modal">
@@ -174,8 +174,21 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
         </button>
         <?php
       } ?>
+      <p class="share">
+        Share with:
+        <a href="http://www.linkedin.com/shareArticle?mini=false&url=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-linkedin-grey.svg'); ?></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-facebook-grey.svg'); ?></a>
+        <a href="https://twitter.com/intent/tweet?url=click-to-tweet&text=<?php echo get_the_permalink(); ?>" target="_blank" class="social dark"><?php echo get_template_part('/assets/svg/icon-inline-logo-twitter-grey.svg'); ?></a>
+      </p>
     </div>
   </section><!--#single-job-content-->
+
+
+  <section id="single-job-navigation-mobile">
+    <div class="container">
+      <a href="<?php echo esc_url(site_url('/vacancies')); ?>"><span class="flip-arrow"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span>Back to all jobs</a>
+    </div><!--container-->
+  </section><!--#single-job-navigation-mobile-->
 </main>
 
 

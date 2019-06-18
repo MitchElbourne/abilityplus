@@ -164,13 +164,11 @@
         .container {
           .blog-tabs {
             .nav-tabs {
-              flex-direction: column;
               a {
-                margin: 0 auto;
-                flex-grow: 0;
-                width: auto;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
                 &:nth-of-type(2) {
-                  margin: 1rem auto;
+                  margin: 0 0.5rem;
                 }
               }
             }
@@ -180,6 +178,9 @@
               .article-container {
                 article {
                   flex: 1 1 100%;
+                  border-bottom: 1px solid $lighter-grey;
+                  padding: 0 0 2rem 0;
+                  margin-bottom: 2rem;
                   div.image-wrapper {
                     margin: 0 auto 1rem;
                   }
@@ -212,6 +213,23 @@
                     border-left: none;
                     padding: 0;
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 446px) {
+        .container {
+          .blog-tabs {
+            .nav-tabs {
+              a {
+                &:nth-of-type(2) {
+                  margin-right: 0;
+                }
+                &:nth-of-type(3) {
+                  margin-top: 1rem;
+                  display: block;
                 }
               }
             }

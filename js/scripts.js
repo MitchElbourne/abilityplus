@@ -32,7 +32,6 @@
 		});
 
 
-
 		// Closes the Navbar on scroll if it is open
 		function menuCloseOnScroll() {
 			var nav = jQuery('#primary-menu');
