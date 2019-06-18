@@ -998,7 +998,8 @@ body.job-listing-classic .wrapper .container .row #content {
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
           border: 1px solid #1a2733;
           background-color: #1a2733;
-          color: white; }
+          color: white;
+          padding: 0.45rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
           border: 1px solid #e8eaeb; }
           body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
@@ -1214,7 +1215,8 @@ body.is-job div.wrapper {
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.specialism {
               border: 1px solid #1a2733;
               background-color: #1a2733;
-              color: white; }
+              color: white;
+              padding: 0.45rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types {
               border: 1px solid #e8eaeb; }
               body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types svg {

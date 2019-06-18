@@ -6,19 +6,45 @@
 
 		var navbarOpen = false;
 
-		function alterNavbarIcon() {
-			$('.navbar-toggler').click(function() {
-				if (navbarOpen === false) {
-					$('.navbar-toggler').addClass('open');
-					navbarOpen = true;
-					$()
-				} else {
-					$('.navbar-toggler').removeClass('open');
-					navbarOpen = false;
+		function navBarHandler() {
+			var nav = $('#primary-menu');
+			var navToggler = $('#navbarIcon');
+			console.log(navToggler);
+
+			navToggler.on('click', () => {
+				alterIcon();
+			})
+
+			$(window).on('scroll', lodash.throttle(function() {
+				if (nav.hasClass('show')) {
+					nav.collapse('hide');
+					nav.removeClass('show');
+					alterIcon();
+				}
+			}, 500));
+
+			$('body').bind('click', function(e) {
+				if($(e.target).closest('.navbar').parent().length == 0) {
+					if (nav.hasClass('show')) {
+						nav.collapse('hide');
+						nav.removeClass('show');
+						alterIcon();
+					}
 				}
 			});
+
+			function alterIcon() {
+				console.log('tag');
+				if(navbarOpen === false) {
+					navToggler.addClass('open');
+					navbarOpen = true;
+				} else {
+					navToggler.removeClass('open');
+					navbarOpen = false;
+				}
+			}
 		}
-		alterNavbarIcon();
+		navBarHandler();
 
 		// Add the active class to the top level menu item on the profile page
 		$(document).ready(function() {
@@ -31,49 +57,6 @@
 			}
 		});
 
-
-		// Closes the Navbar on scroll if it is open
-		function menuCloseOnScroll() {
-			var nav = $('#primary-menu');
-
-			$(window).on('scroll', lodash.throttle(function() {
-				if (nav.hasClass('show')) {
-					nav.collapse('hide');
-					nav.removeClass('show');
-					$('.navbar-toggler').removeClass('open');
-					// navbarOpen = false;
-				}
-			}, 500));
-		}
-		menuCloseOnScroll();
-
-		// Closes Navbar when clicking outside of the menu
-		function menuCloseOnClick() {
-			var nav = $('#primary-menu');
-
-			$('body').bind('click', function(e) {
-				if($(e.target).closest('.collapse').length == 0) {
-					if (nav.hasClass('show')) {
-						nav.collapse('hide');
-						nav.removeClass('show');
-						$('.navbar-toggler').removeClass('open');
-						navbarOpen = false;
-					}
-				}
-			});
-		}
-		menuCloseOnClick();
-
-		// Controlling the click animation for NavBar
-
-		var navbarOpen = false;
-		$('#navbarIcon').click(function() {
-		  if (navbarOpen == false) {
-		    $('#navbarIcon').addClass('open');
-		  } else {
-		    $('#navbarIcon').removeClass('open');
-		  }
-		});
 
     // Controls the switching between the log in and sign up modals
     function modalLogic() {
