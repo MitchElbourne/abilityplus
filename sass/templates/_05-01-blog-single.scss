@@ -113,6 +113,7 @@ body.single-post {
             div.blog-recommendations {
               background-color: $white;
               padding: 3rem;
+              border-radius: 0.25rem;
               display: flex;
               flex-wrap: wrap;
               margin: 6rem auto 0;
@@ -218,9 +219,6 @@ body.single-post {
           }
         }
       }
-    }
-    @include media-breakpoint-down(sm) {
-      padding-top: 3rem;
     }
   }
 }

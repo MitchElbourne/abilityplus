@@ -200,7 +200,8 @@ label {
 
 .select2-dropdown {
   background-color: #f3f4f5;
-  border: 1px solid #e8eaeb; }
+  border: 2px solid #a4aaaf;
+  border-top: 2px solid #a4aaaf; }
   .select2-dropdown .select2-search__field {
     display: none; }
 
@@ -322,6 +323,7 @@ header#site-header {
           padding-bottom: 0; } }
     header#site-header nav .navbar-toggler {
       border: none;
+      padding-right: 0;
       background: transparent !important; }
       header#site-header nav .navbar-toggler #navbarIcon {
         display: flex;
@@ -425,12 +427,15 @@ header#site-header {
     header#site-header nav div#primary-menu ul {
       text-align: center;
       padding: 2rem; }
+      header#site-header nav div#primary-menu ul li a {
+        display: inline-block; }
       header#site-header nav div#primary-menu ul li:nth-last-of-type(1) {
         margin-left: 0; }
         header#site-header nav div#primary-menu ul li:nth-last-of-type(1) a {
           padding-left: 1.2rem; }
-      header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
-        display: inline-block; } }
+      header#site-header nav div#primary-menu ul li:last-of-type ul {
+        max-width: 50%;
+        margin: 0 auto; } }
   @media (max-width: 767px) {
     header#site-header nav {
       padding: 1rem; }
@@ -619,9 +624,9 @@ body.home section#introduction .container .row {
     body.home section#introduction .container .row div.panel-container div.panel {
       text-align: center;
       border-right: none;
-      border-top: 1px solid #e8eaeb; }
+      border-bottom: 1px solid #e8eaeb; }
       body.home section#introduction .container .row div.panel-container div.panel:last-of-type {
-        border-bottom: 1px solid #e8eaeb; }
+        border-bottom: none; }
       body.home section#introduction .container .row div.panel-container div.panel img {
         margin: 2rem auto 1rem; }
       body.home section#introduction .container .row div.panel-container div.panel a {
@@ -1058,10 +1063,10 @@ body.job-listing-classic .wrapper .container .row #content {
       padding-bottom: 0; } }
 
 body.is-job div.wrapper {
-  padding-top: 8rem; }
+  padding-top: 6.5rem; }
   @media (max-width: 767px) {
     body.is-job div.wrapper {
-      padding-top: 6rem; } }
+      padding-top: 4rem; } }
   body.is-job div.wrapper section#single-job-navigation {
     background-color: #f3f4f5;
     padding: 1rem 0; }
@@ -1688,6 +1693,7 @@ body.single-post .wrapper {
     body.single-post .wrapper main section#article-container .container .row div.blog-recommendations {
       background-color: white;
       padding: 3rem;
+      border-radius: 0.25rem;
       display: flex;
       flex-wrap: wrap;
       margin: 6rem auto 0; }
@@ -1761,9 +1767,6 @@ body.single-post .wrapper {
         margin-left: 1.5rem; }
       body.single-post .wrapper main section#article-container .container .row article div.content ol {
         margin-left: 0.25rem; } }
-  @media (max-width: 767px) {
-    body.single-post .wrapper {
-      padding-top: 3rem; } }
 
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }
@@ -2682,61 +2685,64 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       background-repeat: no-repeat;
       background-image: url("../wp-recruitment-child/assets/svg/icon-modal-close.svg") svg;
         background-image-display: none; }
-    #jobboard-modal-apply .md-content form {
+    #jobboard-modal-apply .md-content form div.form-wrapper {
+      margin: 0.5rem;
       display: flex;
       flex-direction: column; }
-      #jobboard-modal-apply .md-content form div.form-title p {
+      #jobboard-modal-apply .md-content form div.form-wrapper div.form-title p {
         border-bottom: 1px solid #e8eaeb;
         padding-bottom: 0.75rem;
         margin-bottom: 1rem; }
-        #jobboard-modal-apply .md-content form div.form-title p svg {
+        #jobboard-modal-apply .md-content form div.form-wrapper div.form-title p svg {
           margin-right: 0.8rem;
           margin-bottom: 0.1rem; }
-      #jobboard-modal-apply .md-content form div.form-content {
+      #jobboard-modal-apply .md-content form div.form-wrapper div.form-content {
         padding: 1rem 0;
         display: flex;
         width: 100%; }
-        #jobboard-modal-apply .md-content form div.form-content .form-fields {
+        #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields {
           min-width: 100%; }
-          #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field {
-            padding: 0 1rem;
-            margin-bottom: 1rem;
-            background-color: #f3f4f5;
-            border-radius: 0.5rem;
-            border: 2px solid transparent;
-            transition: all 200ms; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field label {
-              color: rgba(28, 43, 56, 0.5);
-              margin-right: 0.2rem; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field span {
-              font-size: 0.7rem; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field input {
-              border: none;
-              font-size: 1.25rem;
-              background-color: #f3f4f5; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field.focus {
-              border-color: #2578db;
-              background-color: white; }
-              #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field.focus input {
+          #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row {
+            padding: 0 1rem; }
+            #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field {
+              padding: 0 1rem;
+              margin-bottom: 1rem;
+              background-color: #f3f4f5;
+              border-radius: 0.5rem;
+              border: 2px solid transparent;
+              transition: all 200ms; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field label {
+                color: rgba(28, 43, 56, 0.5);
+                margin-right: 0.2rem; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field span {
+                font-size: 0.7rem; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field input {
+                border: none;
+                font-size: 1.25rem;
+                background-color: #f3f4f5; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field.focus {
+                border-color: #2578db;
                 background-color: white; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field.col-md-6 {
-              flex: 1 1 calc(100%/2 - 1rem); }
-              #jobboard-modal-apply .md-content form div.form-content .form-fields .row .field.col-md-6:nth-of-type(odd) {
-                margin-right: 1rem; }
-          #jobboard-modal-apply .md-content form div.form-content .form-fields .row:nth-of-type(2) textarea {
-            height: 10rem;
-            resize: none;
-            border: none;
-            background-color: #f3f4f5; }
-          #jobboard-modal-apply .md-content form div.form-content .form-fields .row:nth-of-type(3) .field {
-            padding-bottom: 1rem; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row:nth-of-type(3) .field div.file-thumb {
-              display: none; }
-            #jobboard-modal-apply .md-content form div.form-content .form-fields .row:nth-of-type(3) .field button.file-select {
-              bottom: 0;
-              color: #2578db;
-              font-family: "tkusual-bold", "system", "sans-serif"; }
-      #jobboard-modal-apply .md-content form div.form-footer button {
+                #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field.focus input {
+                  background-color: white; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field.col-md-6 {
+                flex: 1 1 calc(100%/2 - 1rem); }
+                #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row .field.col-md-6:nth-of-type(odd) {
+                  margin-right: 1rem; }
+            #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row:nth-of-type(2) textarea {
+              height: 10rem;
+              resize: none;
+              border: none;
+              background-color: #f3f4f5; }
+            #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row:nth-of-type(3) .field {
+              padding-bottom: 1rem; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row:nth-of-type(3) .field div.file-thumb {
+                display: none; }
+              #jobboard-modal-apply .md-content form div.form-wrapper div.form-content .form-fields .row:nth-of-type(3) .field button.file-select {
+                bottom: 0;
+                color: #2578db;
+                font-family: "tkusual-bold", "system", "sans-serif"; }
+      #jobboard-modal-apply .md-content form div.form-wrapper div.form-footer button {
         top: 0;
         left: 0;
         position: relative;
@@ -2751,10 +2757,10 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         background-color: #2578db;
         transition: all 200ms;
         font-family: "tkusual-reg", "system", "sans-serif"; }
-        #jobboard-modal-apply .md-content form div.form-footer button:hover, #jobboard-modal-apply .md-content form div.form-footer button:focus {
+        #jobboard-modal-apply .md-content form div.form-wrapper div.form-footer button:hover, #jobboard-modal-apply .md-content form div.form-wrapper div.form-footer button:focus {
           background-color: rgba(37, 120, 219, 0.85);
           color: white; }
-      #jobboard-modal-apply .md-content form a.cta-cancel {
+      #jobboard-modal-apply .md-content form div.form-wrapper a.cta-cancel {
         flex: 1 1 auto;
         display: inline-block;
         max-height: 3rem;
@@ -2765,5 +2771,12 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         background-color: #f3f4f5;
         transition: all 200ms;
         font-family: "tkusual-reg", "system", "sans-serif"; }
-        #jobboard-modal-apply .md-content form a.cta-cancel:hover, #jobboard-modal-apply .md-content form a.cta-cancel:focus {
+        #jobboard-modal-apply .md-content form div.form-wrapper a.cta-cancel:hover, #jobboard-modal-apply .md-content form div.form-wrapper a.cta-cancel:focus {
           background-color: rgba(37, 120, 219, 0.18); }
+  @media (min-width: 768px) {
+    #jobboard-modal-apply {
+      max-width: 1000px;
+      min-width: 60%; }
+      #jobboard-modal-apply .modal-dialog {
+        min-width: 60%;
+        max-width: 60%; } }

@@ -156,7 +156,7 @@ get_header();
 
       <div class="monthy-newsletter">
         <h3 class="h3 m-auto">Monthly Newsletter</h3>
-        <p class="text">Stay up to date with our latest news in recruitment and employment</p>
+        <p class="text">Stay up to date with our latest news in recruitment and employment.</p>
         <div class="form-container">
           <?php echo get_template_part('/templates/newsletter-signup'); ?>
         </div>

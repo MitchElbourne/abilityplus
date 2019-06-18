@@ -18,6 +18,7 @@ header#site-header {
     }
     .navbar-toggler {
       border: none;
+      padding-right: 0;
       #navbarIcon {
         display: flex;
         flex-direction: column;
@@ -171,6 +172,9 @@ header#site-header {
           text-align: center;
           padding: 2rem;
           li {
+            a {
+              display: inline-block;
+            }
             &:nth-last-of-type(1) {
               margin-left: 0;
               a {
@@ -178,8 +182,9 @@ header#site-header {
               }
             }
             &:last-of-type {
-              a[title="Sign Up | Log In"] {
-                display: inline-block;
+              ul {
+                max-width: 50%;
+                margin: 0 auto;
               }
             }
           }

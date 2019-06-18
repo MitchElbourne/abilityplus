@@ -221,7 +221,8 @@ label {
 
 .select2-dropdown {
   background-color: $lightest-grey;
-  border: 1px solid $lighter-grey;
+  border: 2px solid $shamed-grey;
+	border-top: 2px solid $shamed-grey;
   .select2-search__field {
     display: none;
   }

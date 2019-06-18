@@ -158,7 +158,7 @@ get_header();
     <div class="container">
       <div class="row">
         <h2 class="h5 m-auto col-12 col-lg-8 col-md-9">Monthly Newsletter</h2>
-        <p class="text col-12 col-lg-8 col-md-9">Stay up to date with our latest news in recruitment and employment</p>
+        <p class="text col-12 col-lg-8 col-md-9">Stay up to date with our latest news in recruitment and employment.</p>
         <div class="form-container col-md-8 col-xs-12">
           <?php echo get_template_part('/templates/newsletter-signup'); ?>
         </div>

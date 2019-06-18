@@ -82,9 +82,10 @@ body.home {
             div.panel {
               text-align: center;
               border-right: none;
-              border-top: 1px solid $lighter-grey;
+              border-bottom: 1px solid $lighter-grey;
+
               &:last-of-type {
-                border-bottom: 1px solid $lighter-grey;
+                border-bottom: none;
               }
               img {
                 margin: 2rem auto 1rem;
