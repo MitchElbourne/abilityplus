@@ -8,7 +8,7 @@ header#site-header {
   nav {
     padding: 2rem 0;
     .navbar-brand {
-      padding-bottom: 0.85rem;
+      padding-top: 0;
       img {
         width: 9.5rem;
       }
@@ -16,7 +16,6 @@ header#site-header {
         padding-bottom: 0;
       }
     }
-
     .navbar-toggler {
       border: none;
       #navbarIcon {
@@ -190,7 +189,7 @@ header#site-header {
   }
   @include media-breakpoint-down(sm) {
     nav {
-      padding: 0.25rem 1rem;
+      padding: 1rem;
       div#primary-menu {
         transition: all 300ms;
         ul {
@@ -208,6 +207,11 @@ header#site-header {
           }
         }
       }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    nav {
+      padding: 0 1rem;
     }
   }
 }
