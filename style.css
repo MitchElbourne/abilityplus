@@ -338,19 +338,19 @@ header#site-header {
       header#site-header nav .navbar-toggler:hover {
         background: transparent !important; }
       header#site-header nav .navbar-toggler .icon-bar {
-        width: 20px;
+        width: 24px;
         min-height: 2px;
         border: 2px solid #1a2733;
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
         background-color: #1a2733; }
         header#site-header nav .navbar-toggler .icon-bar:nth-of-type(1) {
-          transform: translate3d(0px, 6px, 0) rotate(90deg);
+          transform: translate3d(0px, 10px, 0) rotate(90deg);
           transform-origin: center center; }
         header#site-header nav .navbar-toggler .icon-bar:nth-of-type(2) {
-          margin: 0.2rem 0; }
+          margin: 0.3rem 0; }
         header#site-header nav .navbar-toggler .icon-bar:nth-of-type(3) {
-          transform: translate3d(0px, -6px, 0) rotate(-90deg);
+          transform: translate3d(0px, -10px, 0) rotate(-90deg);
           transform-origin: center center; }
     header#site-header nav div#primary-menu ul {
       flex-grow: 1; }
@@ -998,7 +998,8 @@ body.job-listing-classic .wrapper .container .row #content {
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
           border: 1px solid #1a2733;
           background-color: #1a2733;
-          color: white; }
+          color: white;
+          padding: 0.45rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
           border: 1px solid #e8eaeb; }
           body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
@@ -1214,7 +1215,8 @@ body.is-job div.wrapper {
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.specialism {
               border: 1px solid #1a2733;
               background-color: #1a2733;
-              color: white; }
+              color: white;
+              padding: 0.45rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types {
               border: 1px solid #e8eaeb; }
               body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types svg {

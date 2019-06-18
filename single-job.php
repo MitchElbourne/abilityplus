@@ -91,14 +91,15 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <div class="job-meta">
       <?php
       $companyDisplayName = get_post_meta($post->ID, '_customer_display_name', true);
-      $companyWebsiteUrl = get_post_meta($post->ID, '_customer_url', true);
+      $companyWebsiteUrl = get_post_meta($post->ID, '_customer_url', false);
+
 
       if($companyDisplayName || $companyWebsiteUrl) { ?>
         <div class="company-info">
           <?php if($companyDisplayName) echo "<p class='bold'>" . $companyDisplayName . "</p>"; ?>
           <?php if($companyWebsiteUrl) {
             ?>
-            <a href="<?php echo $companyWebsiteUrl; ?>">
+            <a href="<?php echo esc_url($companyWebsiteUrl[0]); ?>">
               <span class='icon'>
                 <?php echo get_template_part('assets/svg/icon-inline-link.svg'); ?>
               </span>
