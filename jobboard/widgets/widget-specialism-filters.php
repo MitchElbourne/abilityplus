@@ -47,32 +47,32 @@ $terms_count = count($terms);
 
     </li>
 
-    <?php if($k == 6 && $terms_count > 7): ?>
+    <?php // if($k == 6 && $terms_count > 7): ?>
 
       <li>
 
-        <a class="specialism-filter-more md-trigger" data-modal="specialism-filter-modal" href="javascript:void(0)"><?php echo get_template_part('/assets/svg/icon-inline-add.svg');  ?><?php echo esc_html__('more', JB_TEXT_DOMAIN); ?></a>
+        <!-- <a class="specialism-filter-more md-trigger" data-modal="specialism-filter-modal" href="javascript:void(0)"><?php // echo get_template_part('/assets/svg/icon-inline-add.svg');  ?><?php // echo esc_html__('more', JB_TEXT_DOMAIN); ?></a> -->
 
-        <?php jb_get_template('modal/modal-start.php', array('modal' => 'specialism-filter-modal')); ?>
-        <p class="specialisms">Specialisms</p>
-        <ul class="specialism-filter-extra">
+        <?php //jb_get_template('modal/modal-start.php', array('modal' => 'specialism-filter-modal')); ?>
+        <!-- <p class="specialisms">Specialisms</p> -->
+        <!-- <ul class="specialism-filter-extra"> -->
 
-      <?php endif;?>
+      <?php // endif;?>
 
     <?php endforeach;?>
 
-    <?php if($terms_count > 7): ?>
+    <?php // if($terms_count > 7): ?>
 
 
-          <a href="javascript:void(0)" class="specialism-filters-apply cta-blue">Apply Filter(s)</a>
+          <!-- <a href="javascript:void(0)" class="specialism-filters-apply cta-blue">Apply Filter(s)</a> -->
 
-        </ul>
+        <!-- </ul> -->
 
-      <?php jb_get_template('modal/modal-end.php'); ?>
+      <?php // jb_get_template('modal/modal-end.php'); ?>
 
-      </li>
+      <!-- </li> -->
 
-    <?php endif; ?>
+    <?php // endif; ?>
 
   </ul>
 </div>

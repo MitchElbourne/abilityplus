@@ -1,8 +1,8 @@
 body.is-job {
   div.wrapper {
-    padding-top: 8rem;
+    padding-top: 6.5rem;
     @include media-breakpoint-down(sm) {
-      padding-top: 6rem;
+      padding-top: 4rem;
     }
     section#single-job-navigation {
       background-color: $lightest-grey;

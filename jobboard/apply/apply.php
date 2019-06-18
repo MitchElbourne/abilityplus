@@ -21,22 +21,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <form class="jobboard-form apply-form" method="post" action="<?php the_permalink(); ?>" enctype="multipart/form-data">
-
+  <div class="form-wrapper">
     <div class="form-title">
-        <p class="caption bold"><?php echo get_template_part('/assets/svg/icon-inline-application.svg'); ?>Application</p>
-        <h5><?php the_title(); ?></h5>
+      <p class="caption bold"><?php echo get_template_part('/assets/svg/icon-inline-application.svg'); ?>Application</p>
+      <h5><?php the_title(); ?></h5>
     </div>
 
     <div class="form-content">
-        <?php jb_template_form_dynamic($fields); ?>
+      <?php jb_template_form_dynamic($fields); ?>
     </div>
 
     <div class="form-footer">
-        <button type="submit" class="cta-blue"><?php esc_html_e('Apply For This Job', JB_TEXT_DOMAIN); ?></button>
-    </div>  
+      <button type="submit" class="cta-blue"><?php esc_html_e('Apply For This Job', JB_TEXT_DOMAIN); ?></button>
+    </div>
 
     <input type="hidden" name="id" value="<?php the_ID(); ?>">
     <input type="hidden" name="action" value="apply_job">
     <input type="hidden" name="form" value="jobboard-form">
     <?php wp_nonce_field( 'apply_job' ); ?>
+  </div>
 </form>

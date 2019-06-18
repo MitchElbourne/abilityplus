@@ -297,122 +297,134 @@
     }
 
     form {
-      display: flex;
-      flex-direction: column;
-      div.form-title {
-        p {
-          border-bottom: 1px solid $lighter-grey;
-          padding-bottom: 0.75rem;
-          margin-bottom: 1rem;
-          svg {
-            margin-right: 0.8rem;
-            margin-bottom: 0.1rem;
-          }
-        }
-      }
-      div.form-content {
-        padding: 1rem 0;
+      div.form-wrapper {
+        margin: 0.5rem;
         display: flex;
-        width: 100%;
-        .form-fields {
-          min-width: 100%;
-          .row {
-            .field {
+        flex-direction: column;
+        div.form-title {
+          p {
+            border-bottom: 1px solid $lighter-grey;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            svg {
+              margin-right: 0.8rem;
+              margin-bottom: 0.1rem;
+            }
+          }
+        }
+        div.form-content {
+          padding: 1rem 0;
+          display: flex;
+          width: 100%;
+          .form-fields {
+            min-width: 100%;
+            .row {
               padding: 0 1rem;
-              margin-bottom: 1rem;
-              background-color: $lightest-grey;
-              border-radius: 0.5rem;
-              border: 2px solid transparent;
-              transition: all 200ms;
-              label {
-                color: $middle-grey;
-                margin-right: 0.2rem;
-              }
-              span {
-                font-size: 0.7rem;
-              }
-              input {
-                border: none;
-                font-size: 1.25rem;
-                background-color: $lightest-grey;
-              }
-              &.focus {
-                border-color: $primary-blue;
-                background-color: $white;
-                input {
-                  background-color: $white;
-                }
-              }
-              &.col-md-6 {
-                flex: 1 1 calc(100%/2 - 1rem);
-                &:nth-of-type(odd) {
-                  margin-right: 1rem;
-                }
-              }
-            }
-            // Selecting the Cover letter
-            &:nth-of-type(2) {
-              textarea {
-                height: 10rem;
-                resize: none;
-                border: none;
-                background-color: $lightest-grey;
-              }
-            }
-            // Selecting the Resume selector
-            &:nth-of-type(3) {
               .field {
-                padding-bottom: 1rem;
-                div.file-thumb {
-                  display: none;
+                padding: 0 1rem;
+                margin-bottom: 1rem;
+                background-color: $lightest-grey;
+                border-radius: 0.5rem;
+                border: 2px solid transparent;
+                transition: all 200ms;
+                label {
+                  color: $middle-grey;
+                  margin-right: 0.2rem;
                 }
-                button.file-select {
-                  bottom: 0;
-                  color: $primary-blue;
-                  font-family: $tkusualbd;
+                span {
+                  font-size: 0.7rem;
+                }
+                input {
+                  border: none;
+                  font-size: 1.25rem;
+                  background-color: $lightest-grey;
+                }
+                &.focus {
+                  border-color: $primary-blue;
+                  background-color: $white;
+                  input {
+                    background-color: $white;
+                  }
+                }
+                &.col-md-6 {
+                  flex: 1 1 calc(100%/2 - 1rem);
+                  &:nth-of-type(odd) {
+                    margin-right: 1rem;
+                  }
+                }
+              }
+              // Selecting the Cover letter
+              &:nth-of-type(2) {
+                textarea {
+                  height: 10rem;
+                  resize: none;
+                  border: none;
+                  background-color: $lightest-grey;
+                }
+              }
+              // Selecting the Resume selector
+              &:nth-of-type(3) {
+                .field {
+                  padding-bottom: 1rem;
+                  div.file-thumb {
+                    display: none;
+                  }
+                  button.file-select {
+                    bottom: 0;
+                    color: $primary-blue;
+                    font-family: $tkusualbd;
+                  }
                 }
               }
             }
           }
         }
-      }
-      div.form-footer {
-        button {
-          top: 0;
-          left: 0;
-          position: relative;
+        div.form-footer {
+          button {
+            top: 0;
+            left: 0;
+            position: relative;
+            flex: 1 1 auto;
+            display: inline-block;
+            max-height: 3rem;
+            padding: 0.5rem 1.5rem;
+            margin-right: 0.75rem;
+            border-radius: 28px;
+            border: none;
+            color: $white;
+            background-color: $primary-blue;
+            transition: all 200ms;
+            font-family: $tkusualrg;
+            &:hover, &:focus {
+              background-color: rgba($primary-blue, 0.85);
+              color: $white;
+            }
+          }
+        }
+        a.cta-cancel {
           flex: 1 1 auto;
           display: inline-block;
           max-height: 3rem;
           padding: 0.5rem 1.5rem;
-          margin-right: 0.75rem;
+          margin-right: 1rem;
           border-radius: 28px;
-          border: none;
-          color: $white;
-          background-color: $primary-blue;
+          color: $black;
+          background-color: $lightest-grey;
           transition: all 200ms;
           font-family: $tkusualrg;
           &:hover, &:focus {
-            background-color: rgba($primary-blue, 0.85);
-            color: $white;
+            background-color: rgba($primary-blue, 0.18);
           }
         }
       }
-      a.cta-cancel {
-        flex: 1 1 auto;
-        display: inline-block;
-        max-height: 3rem;
-        padding: 0.5rem 1.5rem;
-        margin-right: 1rem;
-        border-radius: 28px;
-        color: $black;
-        background-color: $lightest-grey;
-        transition: all 200ms;
-        font-family: $tkusualrg;
-        &:hover, &:focus {
-          background-color: rgba($primary-blue, 0.18);
-        }
-      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 1000px;
+    min-width: 60%;
+    .modal-dialog {
+      min-width: 60%;
+      max-width: 60%;
     }
   }
 }

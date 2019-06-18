@@ -60,35 +60,35 @@ function auto_redirect_after_logout(){
 // Bootstrap NavWalker
 require_once get_stylesheet_directory() . '/navwalker.php';
 
-add_action('init', 'ability_plus_career_level_taxonomy', 0);
+// add_action('init', 'ability_plus_career_level_taxonomy', 0);
 
-function ability_plus_career_level_taxonomy() {
+// function ability_plus_career_level_taxonomy() {
   // Add new taxonomy, make it hierarchical like categories
   //first do the translations part for GUI
-  $labels = array(
-    'name' => _x( 'career-levels', 'taxonomy general name' ),
-    'singular_name' => _x( 'Career-Level', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Career-Levels' ),
-    'all_items' => __( 'All Career-Levels' ),
-    'parent_item' => __( 'Parent Career-Level' ),
-    'parent_item_colon' => __( 'Parent Career-Level:' ),
-    'edit_item' => __( 'Edit Career-Level' ),
-    'update_item' => __( 'Update Career-Level' ),
-    'add_new_item' => __( 'Add New Career-Level' ),
-    'new_item_name' => __( 'New Career-Level Name' ),
-    'menu_name' => __( 'Career-Levels' ),
-  );
+  // $labels = array(
+  //   'name' => _x( 'career-levels', 'taxonomy general name' ),
+  //   'singular_name' => _x( 'Career-Level', 'taxonomy singular name' ),
+  //   'search_items' =>  __( 'Search Career-Levels' ),
+  //   'all_items' => __( 'All Career-Levels' ),
+  //   'parent_item' => __( 'Parent Career-Level' ),
+  //   'parent_item_colon' => __( 'Parent Career-Level:' ),
+  //   'edit_item' => __( 'Edit Career-Level' ),
+  //   'update_item' => __( 'Update Career-Level' ),
+  //   'add_new_item' => __( 'Add New Career-Level' ),
+  //   'new_item_name' => __( 'New Career-Level Name' ),
+  //   'menu_name' => __( 'Career-Levels' ),
+  // );
 
   // Now register the taxonomy
 
-  register_taxonomy('career-levels',array('jobboard-post-jobs'), array(
-    'hierarchical' => true,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => false,
-    'query_var' => true,
-  ));
-}
+  // register_taxonomy('career-levels',array('jobboard-post-jobs'), array(
+  //   'hierarchical' => true,
+  //   'labels' => $labels,
+  //   'show_ui' => true,
+  //   'show_admin_column' => false,
+  //   'query_var' => true,
+  // ));
+// }
 
 /**
  * Load vc template dir.s
@@ -381,17 +381,17 @@ function Ability_plus_custom_catalog_input() {
   echo implode('', apply_filters('jobboard_catalog_input_args', $input));
 }
 
-add_action('jobboard_loop_meta', 'ability_plus_job_loop_summary_career_level', 11);
-function ability_plus_job_loop_summary_career_level() {
-  jb_get_template('../../themes/wp-recruitment-child/jobboard/users/career-level.php');
-}
+// add_action('jobboard_loop_meta', 'ability_plus_job_loop_summary_career_level', 11);
+// function ability_plus_job_loop_summary_career_level() {
+//   jb_get_template('../../themes/wp-recruitment-child/jobboard/users/career-level.php');
+// }
 
-$careerLevels = ab_get_career_level_options();
-
-function ab_get_career_level_options()
-{
-    jb_get_taxonomy_options(array('taxonomy' => 'career-levels', 'hide_empty' => false));
-}
+// $careerLevels = ab_get_career_level_options();
+//
+// function ab_get_career_level_options()
+// {
+//     jb_get_taxonomy_options(array('taxonomy' => 'career-levels', 'hide_empty' => false));
+// }
 
 
 remove_action('wp_footer', 'jb_template_apply_form');
