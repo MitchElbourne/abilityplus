@@ -42,7 +42,7 @@
 					nav.collapse('hide');
 					nav.removeClass('show');
 					jQuery('.navbar-toggler').removeClass('open');
-					navbarOpen = false;
+					// navbarOpen = false;
 				}
 			}, 500));
 		}

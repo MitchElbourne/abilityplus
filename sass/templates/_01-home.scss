@@ -61,7 +61,7 @@ body.home {
         }
       }
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       .container {
         .row {
           div.cta-container {
@@ -91,6 +91,9 @@ body.home {
               }
               a {
                 margin: 0 auto 3rem;
+              }
+              p.sub-text {
+                margin-bottom: 2rem;
               }
             }
           }
@@ -136,8 +139,10 @@ body.home {
               }
             }
             div.image-wrapper {
+              border-color: blue;
               min-height: 100%;
-              min-width: 20rem;
+              width: 100%;
+              // min-width: 20rem;
               background-repeat: no-repeat;
               background-position: center;
               background-size: contain;
