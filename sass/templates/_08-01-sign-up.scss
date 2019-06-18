@@ -88,9 +88,10 @@ main[role="main"] {
                       padding: 0.375rem 0.5rem;
                       border: none;
                       font-size: 0.875rem;
+                      align-items: center;
                       .select2-selection__choice__remove {
-                        margin: 0 0 0 0.9rem;
-                        font-size: 1rem;
+                        margin: 0.1rem 0 0 0.9rem;
+                        font-size: 1.2rem;
                       }
                       @include media-breakpoint-down(sm) {
                         align-items: center;

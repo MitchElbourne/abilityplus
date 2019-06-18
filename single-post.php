@@ -50,43 +50,38 @@ if(have_posts()) {
           </footer><!--footer-->
 
         </article>
+        <?php
+        $prevPost = get_previous_post(true);
+        $nextPost = get_next_post(true);
+        if(!$nextPost && !$prevPost) { ?>
+          <h4>No Posts to Recommend</h4>
+        <?php } else { ?>
 
-        <div class="blog-recommendations col-lg-9 col-md-11">
+        <div class="blog-recommendations col-md-11 <?php if($prevPost && $nextPost) echo 'col-lg-9'; else echo 'col-lg-5' ?>">
 
-            <?php
-            $prevPost = get_previous_post(true);
-            $nextPost = get_next_post(true);
-            if(!$nextPost && !$prevPost) { ?>
-            <h4>No Posts to Recommend</h4>
-      <?php } else { ?>
-
-
-
-              <?php
-              if($nextPost) { ?>
-                <article class="<?php if($nextPost && $prevPost) echo "with-border" ?>">
-                  <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($nextPost->ID); ?>)"></div>
-                  <h3 class="h5 title"><?php echo get_the_title($nextPost->ID); ?></h3>
-                  <p class="excerpt"><?php echo wp_trim_words(get_the_content($nextPost->ID), 20); ?></p>
-                  <a href="<?php echo get_the_permalink($nextPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
-                </article>
-            <?php }
+          <?php
+            if($nextPost) { ?>
+              <article class="<?php if($nextPost && $prevPost) echo "with-border" ?>">
+                <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($nextPost->ID); ?>)"></div>
+                <h3 class="h5 title"><?php echo get_the_title($nextPost->ID); ?></h3>
+                <p class="excerpt"><?php echo wp_trim_words(get_the_content($nextPost->ID), 20); ?></p>
+                <a href="<?php echo get_the_permalink($nextPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+              </article>
+          <?php }
 
 
-              if($prevPost) { ?>
-                <article>
-                  <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($prevPost->ID); ?>)"></div>
-                  <h3 class="h5 title"><?php echo get_the_title($prevPost->ID); ?></h3>
-                  <p class="excerpt"><?php echo wp_trim_words(get_the_content($prevPost->ID), 20); ?></p>
-                  <a href="<?php echo get_the_permalink($prevPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
-                </article>
-            <?php }
+            if($prevPost) { ?>
+              <article>
+                <div class="image-wrapper" style="background-image: url('<?php  echo get_the_post_thumbnail_url($prevPost->ID); ?>)"></div>
+                <h3 class="h5 title"><?php echo get_the_title($prevPost->ID); ?></h3>
+                <p class="excerpt"><?php echo wp_trim_words(get_the_content($prevPost->ID), 20); ?></p>
+                <a href="<?php echo get_the_permalink($prevPost->ID); ?>"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+              </article>
+          <?php }
 
+          } ?>
 
-
-            } ?>
-        </div>
-
+        </div><!--blog-recommendations-->
       </div><!--row-->
       <div class="cta-wrapper text-center">
         <a href="javascript:;" class="scroll-to-top">

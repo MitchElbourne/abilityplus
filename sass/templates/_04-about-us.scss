@@ -163,6 +163,13 @@
                 }
               }
             }
+            a.carousel-control-next, a.carousel-control-prev {
+              img {
+                vertical-align: none;
+                margin-top: auto;
+                margin-bottom: 1.5rem;
+              }
+            }
           }
         }
       }
