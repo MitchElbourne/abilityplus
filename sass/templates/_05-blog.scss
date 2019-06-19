@@ -1,5 +1,5 @@
 .wrapper.Blog {
-  padding-top: 7rem;
+  padding-top: 6.5rem;
   main {
     section#blog-listings {
       background-color: $lighter-grey;
@@ -243,7 +243,7 @@
     }
   }
   @include media-breakpoint-down(sm) {
-    padding-top: 5rem;
+    padding-top: 4rem;
     main {
       section#blog-listings {
         padding-top: 3rem;

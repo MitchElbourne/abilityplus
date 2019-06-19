@@ -133,17 +133,25 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
     return $menu_items . $new_li;
 
   } else {
-    $firstName = $currentuser->user_firstname;
-    $lastName = $currentuser->user_lastname;
+
+    if(current_user_can('administrator')) {
+      $firstName = "Admin";
+      $lastName = "";
+    } else {
+      $firstName = $currentuser->user_firstname;
+      $lastName = $currentuser->user_lastname;
+    }
+
+
 
     $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='logged-in-dropdown-mobile' class='menu-item menu-item-type-post_type menu-item-object-page logged-in-dropdown-mobile nav-item'>
       <p class='name'>" . $firstName . "." . $lastName[0] . "</p>
       <a href='" . $profile_url_handler . "' class='menu-item-dashboard'>Dashboard</a>
       <a href='" . esc_url(wp_logout_url()) . "' class='menu-item-log-out'>Logout</a>
     </li>
+
     <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='logged-in-dropdown' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown logged-in logged-in-dropdown nav-item'>
       <a href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='dropdown-toggle nav-link' id='logged-in-dropdown-menu'>" . $firstName . "." . $lastName[0] . "</a>
-
       <ul class='dropdown-menu' aria-labelledby='logged-in-dropdown-menu' role='menu'>
         <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-dashboard' class='menu-item menu-item-type-custom menu-item-object-custom menu-item-dashboard nav-item'>
           <a title='Dashboard' href='" . $profile_url_handler . "' class='dropdown-item'>Dashboard</a>
