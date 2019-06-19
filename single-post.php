@@ -31,7 +31,7 @@ if(have_posts()) {
 
 
           <header>
-            <a href="<?php echo esc_url(site_url('/blog')); ?>" class="cta-blue">AbilityPlus Blog</a>
+            <a href="<?php echo esc_url(site_url('/blog')); ?>" class="cta-blue"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?>AbilityPlus Blog</a>
             <h1><?php echo get_the_title(); ?></h1>
             <span><?php print_r($category[0]->name); ?> / <?php echo date('M d, Y', strToTime(get_the_date())); ?></span>
           </header><!--header-->

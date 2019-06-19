@@ -17,6 +17,13 @@ body.single-post {
                 a.cta-blue {
                   margin-right: 0;
                   font-family: $tkusualrg;
+                  svg {
+                    -webkit-transform: rotate(180deg);
+                    margin-bottom: 0.2rem;
+                    path {
+                      stroke: $white;
+                    }
+                  }
                 }
                 span {
                   display: block;

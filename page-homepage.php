@@ -41,8 +41,6 @@ get_header();
     </div><!--container-->
   </section><!--#introduction-->
 
-
-
   <section id="how-we-work">
     <div class="container">
       <div class="row">

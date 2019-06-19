@@ -47,16 +47,13 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <p class="posttime"><?php echo $timeposted; ?></p>
       <hr />
       <p class="salary"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?></span><?php echo jb_job_get_salary(); ?></p>
-      <p class="location"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>
+      <?php
+      if(jb_job_location_text()) { ?>
+        <p class="location"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>
+<?php } ?>
       <p class="job-id">ID: <?php echo get_the_ID(); ?></p>
     </div><!--container-->
   </section><!--#job-single-->
-
-  <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-dashboard-mobile' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-dashboard-mobile nav-item'>
-    <p class='name'>" . $firstName . "." . $lastName[0] . "</p>
-    <a href='" . $profile_url_handler . "'>Dashboard</a>
-    <a href='" . esc_url(wp_logout_url()) . "'>Logout</a>
-  </li>
 
   <section id="job-ctas">
     <div class="container">
@@ -116,7 +113,10 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
 
 
         <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?></span><?php echo jb_job_get_salary(); ?></p>
-        <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>
+        <?php
+        if (jb_job_location_text()) { ?>
+          <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>
+  <?php } ?>
         <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-briefcase.svg'); ?></span><?php echo $specialism[0]->name; ?></p>
 
         <div class="vacancy-type">

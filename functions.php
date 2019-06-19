@@ -53,7 +53,7 @@ remove_action('after_setup_theme', 'recruitment_user_skills', 20);
 // Logout redirect
 add_action('wp_logout','auto_redirect_after_logout');
 function auto_redirect_after_logout(){
-  wp_redirect( home_url() );
+  wp_redirect( esc_url(site_url('/profile')) );
   exit();
 }
 
@@ -168,8 +168,6 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
 }, 10, 2 );
 
 
-
-
 add_filter('jb_template_login_form', 'custom_login_logic', 10);
 
 function custom_login_logic($args = array()) {
@@ -189,7 +187,7 @@ function custom_login_logic($args = array()) {
         'label_log_in' => esc_html__('Login', JB_TEXT_DOMAIN),
         'value_username' => '',
         'value_remember' => false,
-        'redirect_to' => esc_url(site_url('/')),
+        'redirect_to' => site_url('/profile'),
         'dashboard' => $dashboard,
     );
 
@@ -197,6 +195,16 @@ function custom_login_logic($args = array()) {
 
     jb_get_template('global/login-form.php', array('args' => $args));
 }
+
+function my_registration_page_redirect()
+{
+    global $pagenow;
+    if ( ( strtolower($pagenow) == 'sign-up') && ( strtolower( $_GET['action']) == 'register' ) ) {
+        wp_redirect( home_url('/profile'));
+    }
+}
+
+add_filter( 'init', 'my_registration_page_redirect' );
 
 add_filter('jobboard-register-fields', 'custom_form_fields');
 

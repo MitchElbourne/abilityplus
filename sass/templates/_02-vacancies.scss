@@ -288,6 +288,9 @@ body.job-listing-classic {
                     }
                     .loop-title {
                       display: flex;
+                      .entry-title {
+                        padding-right: 1rem;
+                      }
                       span.posted-time {
                         margin-left: auto;
                         color: $middle-grey;

@@ -1015,6 +1015,8 @@ body.job-listing-classic .wrapper .container .row #content {
         margin-top: 0.75rem; }
       body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title {
         display: flex; }
+        body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title .entry-title {
+          padding-right: 1rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .loop-summary .loop-title span.posted-time {
           margin-left: auto;
           color: rgba(28, 43, 56, 0.5); }
@@ -1663,6 +1665,11 @@ body.single-post .wrapper {
       body.single-post .wrapper main section#article-container .container .row article header a.cta-blue {
         margin-right: 0;
         font-family: "tkusual-reg", "system", "sans-serif"; }
+        body.single-post .wrapper main section#article-container .container .row article header a.cta-blue svg {
+          -webkit-transform: rotate(180deg);
+          margin-bottom: 0.2rem; }
+          body.single-post .wrapper main section#article-container .container .row article header a.cta-blue svg path {
+            stroke: white; }
       body.single-post .wrapper main section#article-container .container .row article header span {
         display: block;
         color: rgba(28, 43, 56, 0.5);
