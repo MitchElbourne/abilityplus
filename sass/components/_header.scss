@@ -204,10 +204,22 @@ header#site-header {
               a[title="Sign Up | Log In"] {
                 margin-top: 0.75rem;
               }
+              &.logged-in {
+                a {
+                  width: 100%;
+                }
+                ul {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  max-width: none;
+                  margin: 0;
+                }
+              }
             }
             a {
-              font-size: 1.25rem;
               padding: 1rem 0;
+              font-size: 1.25rem;
             }
           }
         }
