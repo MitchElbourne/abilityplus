@@ -53,6 +53,9 @@
 				$('a[title="Blog"]').parent().addClass('active');
 				$('header#site-header').css('display', 'none');
 			}
+			if($('body').hasClass('single-jobboard-post-jobs')) {
+				$('a[title="Vacancies"]').parent().addClass('active');
+			}
 		});
 
 

@@ -2175,7 +2175,11 @@ main[role="main"] section#sign-up-form .container form {
   main[role="main"] section#sign-up-form .container div.information-container {
     flex-wrap: wrap; }
     main[role="main"] section#sign-up-form .container div.information-container div.image-wrapper {
-      display: none; } }
+      display: none; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(2) {
+    flex-direction: column; }
+  main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(4) {
+    flex-direction: column; } }
 
 body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations {
   margin-right: 2rem;
@@ -2550,8 +2554,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       border: none;
       background-color: transparent; }
       #LogInModal .modal-dialog .modal-content p.h5, #PasswordModal .modal-dialog .modal-content p.h5 {
-        margin: 2rem 0;
-        width: 100%; }
+        width: 100%;
+        margin: 2rem 0; }
       #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
         display: flex;
         padding-bottom: 2rem;
@@ -2793,14 +2797,14 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
                 color: #2578db;
                 font-family: "tkusual-bold", "system", "sans-serif"; }
       #jobboard-modal-apply .md-content form div.form-wrapper div.form-footer button {
-        top: 0;
-        left: 0;
+        display: inline-block;
         position: relative;
         flex: 1 1 auto;
-        display: inline-block;
+        top: 0;
+        left: 0;
+        margin-right: 0.75rem;
         max-height: 3rem;
         padding: 0.5rem 1.5rem;
-        margin-right: 0.75rem;
         border-radius: 28px;
         border: none;
         color: white;
@@ -2814,8 +2818,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         flex: 1 1 auto;
         display: inline-block;
         max-height: 3rem;
-        padding: 0.5rem 1.5rem;
         margin-right: 1rem;
+        padding: 0.5rem 1.5rem;
         border-radius: 28px;
         color: #1a2733;
         background-color: #f3f4f5;
@@ -2825,8 +2829,8 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           background-color: rgba(37, 120, 219, 0.18); }
   @media (min-width: 768px) {
     #jobboard-modal-apply {
-      max-width: 1000px;
-      min-width: 60%; }
+      min-width: 60%;
+      max-width: 1000px; }
       #jobboard-modal-apply .modal-dialog {
         min-width: 60%;
         max-width: 60%; } }

@@ -187,6 +187,18 @@ main[role="main"] {
             display: none;
           }
         }
+        form {
+          .form-fields {
+            .row {
+              &:nth-of-type(2) {
+                flex-direction: column;
+              }
+              &:nth-of-type(4) {
+                flex-direction: column;
+              }
+            }
+          }
+        }
       }
     }
   }

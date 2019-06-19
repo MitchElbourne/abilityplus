@@ -20,7 +20,6 @@
     margin: 0;
     background-color: $lightest-grey;
     .modal-content {
-      // min-height: 100%;
       margin: 0;
       flex-direction: row;
       flex-wrap: wrap;
@@ -29,8 +28,8 @@
       border: none;
       background-color: transparent;
       p.h5 {
-        margin: 2rem 0;
         width: 100%;
+        margin: 2rem 0;
       }
       div.introduction {
         display: flex;
@@ -383,14 +382,14 @@
         }
         div.form-footer {
           button {
-            top: 0;
-            left: 0;
+            display: inline-block;
             position: relative;
             flex: 1 1 auto;
-            display: inline-block;
+            top: 0;
+            left: 0;
+            margin-right: 0.75rem;
             max-height: 3rem;
             padding: 0.5rem 1.5rem;
-            margin-right: 0.75rem;
             border-radius: 28px;
             border: none;
             color: $white;
@@ -407,8 +406,8 @@
           flex: 1 1 auto;
           display: inline-block;
           max-height: 3rem;
-          padding: 0.5rem 1.5rem;
           margin-right: 1rem;
+          padding: 0.5rem 1.5rem;
           border-radius: 28px;
           color: $black;
           background-color: $lightest-grey;
@@ -422,8 +421,8 @@
     }
   }
   @include media-breakpoint-up(md) {
-    max-width: 1000px;
     min-width: 60%;
+    max-width: 1000px;
     .modal-dialog {
       min-width: 60%;
       max-width: 60%;
