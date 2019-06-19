@@ -481,6 +481,8 @@ header#site-header {
             margin-top: 0.75rem; }
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in {
             display: none; }
+          header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile p.name {
+            font-size: 1.25rem; }
           header#site-header nav div#primary-menu ul li a {
             padding: 1rem 0;
             font-size: 1.25rem; } }

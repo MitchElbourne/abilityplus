@@ -260,6 +260,11 @@ header#site-header {
                 display: none;
               }
             }
+            &.logged-in-dropdown-mobile {
+              p.name {
+                font-size: 1.25rem;
+              }
+            }
             a {
               padding: 1rem 0;
               font-size: 1.25rem;
