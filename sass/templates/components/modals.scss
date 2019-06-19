@@ -18,14 +18,16 @@
     height: 100%;
     width: 100%;
     margin: 0;
+    background-color: $lightest-grey;
     .modal-content {
+      // min-height: 100%;
       margin: 0;
       flex-direction: row;
       flex-wrap: wrap;
       padding: 7.5rem 10rem;
-      background-color: $lightest-grey;
       border-radius: 0;
       border: none;
+      background-color: transparent;
       p.h5 {
         margin: 2rem 0;
         width: 100%;

@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $error = JB()->session->get('jb_notices', array());
 ?>
+
+
 <div class="introduction">
   <h2 class="h1">Log In</h2>
   <span class="sign-up-cta">Don't have an account? <a href="<?php echo esc_url(site_url('/profile/sign-up')); ?>">Sign up instead</a></span>
