@@ -52,6 +52,11 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
     </div><!--container-->
   </section><!--#job-single-->
 
+  <li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' id='menu-item-dashboard-mobile' class='menu-item menu-item-type-post_type menu-item-object-page menu-item-dashboard-mobile nav-item'>
+    <p class='name'>" . $firstName . "." . $lastName[0] . "</p>
+    <a href='" . $profile_url_handler . "'>Dashboard</a>
+    <a href='" . esc_url(wp_logout_url()) . "'>Logout</a>
+  </li>
 
   <section id="job-ctas">
     <div class="container">

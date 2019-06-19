@@ -416,6 +416,37 @@ header#site-header {
             header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a:hover, header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li a:focus {
               background-color: white;
               color: #0a468f; }
+      header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile {
+        margin: 2rem auto 0;
+        max-width: 17rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        border: 1px solid #2578db; }
+        header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile p.name {
+          color: #a4aaaf;
+          border-bottom: 1px solid rgba(37, 120, 219, 0.25);
+          padding: 0.875rem; }
+        header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a {
+          width: 100%;
+          padding: 0.875rem; }
+          header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a:first-of-type {
+            border-bottom: 1px solid rgba(37, 120, 219, 0.25); }
+          header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a:before {
+            content: '';
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.75rem;
+            margin-bottom: -0.1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain; }
+          header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a.menu-item-dashboard {
+            border-bottom: 1px solid rgba(37, 120, 219, 0.25); }
+            header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a.menu-item-dashboard:before {
+              background-image: url("../wp-recruitment-child/assets/svg/icon-avatar.svg"); }
+          header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile a.menu-item-log-out:before {
+            background-image: url("../wp-recruitment-child/assets/svg/icon-logout.svg"); }
       header#site-header nav div#primary-menu ul li a {
         font-size: 0.95rem;
         color: #1a2733;
@@ -423,6 +454,9 @@ header#site-header {
         padding: 0.5rem 1.2rem; }
         header#site-header nav div#primary-menu ul li a:hover, header#site-header nav div#primary-menu ul li a:focus {
           color: #0a468f; }
+  @media (min-width: 1200px) {
+    header#site-header nav div#primary-menu ul li.logged-in-dropdown-mobile {
+      display: none; } }
   @media (max-width: 1199px) {
     header#site-header nav div#primary-menu ul {
       text-align: center;
@@ -433,26 +467,20 @@ header#site-header {
         margin-left: 0; }
         header#site-header nav div#primary-menu ul li:nth-last-of-type(1) a {
           padding-left: 1.2rem; }
-      header#site-header nav div#primary-menu ul li:last-of-type ul {
-        max-width: 50%;
-        margin: 0 auto; } }
+      header#site-header nav div#primary-menu ul li.logged-in {
+        display: none; } }
   @media (max-width: 767px) {
     header#site-header nav {
       padding: 1rem; }
       header#site-header nav div#primary-menu {
         transition: all 300ms; }
         header#site-header nav div#primary-menu ul {
-          min-height: 100vh; }
+          min-height: calc(100vh - 6.25rem);
+          display: block; }
           header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
             margin-top: 0.75rem; }
-          header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
-            width: 100%; }
-          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: none;
-            margin: 0; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in {
+            display: none; }
           header#site-header nav div#primary-menu ul li a {
             padding: 1rem 0;
             font-size: 1.25rem; } }
