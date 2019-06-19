@@ -1815,7 +1815,13 @@ body.single-post .wrapper {
       body.single-post .wrapper main section#article-container .container .row article div.content ul {
         margin-left: 1.5rem; }
       body.single-post .wrapper main section#article-container .container .row article div.content ol {
-        margin-left: 0.25rem; } }
+        margin-left: 0.25rem; }
+      body.single-post .wrapper main section#article-container .container .row article div.content blockquote {
+        margin-top: 4rem;
+        padding-left: 0; }
+        body.single-post .wrapper main section#article-container .container .row article div.content blockquote:before {
+          top: -2rem;
+          left: 0; } }
 
 .wrapper.Contact section#introduction .container .row {
   text-align: center; }
@@ -2095,7 +2101,7 @@ main[role="main"] section#sign-up-form .container form {
   main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(5) {
     display: none; }
   main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 {
-    margin: 1rem;
+    margin: 1rem 0;
     max-width: 100%;
     background-color: transparent; }
     main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(6) span.select2 span.select2-selection {

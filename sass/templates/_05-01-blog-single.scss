@@ -220,6 +220,14 @@ body.single-post {
                   ol {
                     margin-left: 0.25rem;
                   }
+                  blockquote {
+                    margin-top: 4rem;
+                    padding-left: 0;
+                    &:before {
+                      top: -2rem;
+                      left: 0;
+                    }
+                  }
                 }
               }
             }
