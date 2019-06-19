@@ -445,9 +445,17 @@ header#site-header {
           min-height: 100vh; }
           header#site-header nav div#primary-menu ul li:last-of-type a[title="Sign Up | Log In"] {
             margin-top: 0.75rem; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in a {
+            width: 100%; }
+          header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: none;
+            margin: 0; }
           header#site-header nav div#primary-menu ul li a {
-            font-size: 1.25rem;
-            padding: 1rem 0; } }
+            padding: 1rem 0;
+            font-size: 1.25rem; } }
   @media (max-width: 575px) {
     header#site-header nav {
       padding: 0 1rem; } }
