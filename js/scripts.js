@@ -9,7 +9,6 @@
 		function navBarHandler() {
 			var nav = $('#primary-menu');
 			var navToggler = $('#navbarIcon');
-			console.log(navToggler);
 
 			navToggler.on('click', () => {
 				alterIcon();
@@ -34,7 +33,6 @@
 			});
 
 			function alterIcon() {
-				console.log('tag');
 				if(navbarOpen === false) {
 					navToggler.addClass('open');
 					navbarOpen = true;
