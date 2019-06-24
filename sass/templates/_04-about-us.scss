@@ -92,6 +92,8 @@
           padding: 3rem 6rem;
           background-color: rgba($primary-blue, 0.08);
           div.carousel-inner {
+            display: flex;
+            align-items: center;
             div.carousel-item {
               p.cite {
                 margin-top: 1rem;

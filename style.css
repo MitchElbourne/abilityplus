@@ -42,7 +42,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-right: 0 !important; }
+  padding-right: 0 !important;
+  overflow-y: scroll; }
   body .wrapper {
     flex-grow: 1;
     padding-top: 10rem;
@@ -94,7 +95,8 @@ label {
   margin-bottom: 0; }
 
 .modal-open, .modal {
-  padding-right: 0 !important; }
+  padding-right: 0 !important;
+  overflow: scroll; }
 
 .grecaptcha-badge {
   visibility: hidden; }
@@ -229,6 +231,45 @@ div.wpcf7-validation-errors {
 
 div.wpcf7-mail-sent-ok {
   border-color: #b3d40e; }
+
+div.jobboard-notices {
+  width: 100%;
+  height: 3rem;
+  margin-left: 0;
+  top: 6.5rem;
+  left: 0;
+  z-index: 10; }
+  div.jobboard-notices div.messages {
+    padding: 1rem 5rem;
+    background-color: #2578db;
+    margin: 0; }
+    div.jobboard-notices div.messages.messages-error {
+      background-color: #bb0f00; }
+    div.jobboard-notices div.messages i.remove {
+      right: 5rem;
+      top: 1.4rem; }
+      div.jobboard-notices div.messages i.remove:before {
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        background-image: url("../wp-recruitment-child/assets/svg/icon-modal-close.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+  @media (max-width: 767px) {
+    div.jobboard-notices {
+      top: 4.23rem; }
+      div.jobboard-notices div.messages {
+        padding: 0.5rem 3rem; }
+        div.jobboard-notices div.messages i.remove {
+          top: 0.9rem;
+          right: 3rem; } }
+  @media (max-width: 575px) {
+    div.jobboard-notices div.messages {
+      padding: 0.5rem 2rem; }
+      div.jobboard-notices div.messages i.remove {
+        right: 2rem; } }
 
 html {
   font-size: 16px; }
@@ -1036,12 +1077,13 @@ body.job-listing-classic .wrapper .container .row #content {
         display: inline-block;
         border-radius: 2px;
         font-size: 0.75rem;
-        margin-top: 0.5rem; }
+        margin-top: 0.5rem;
+        margin-right: 0.5rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.specialism {
           border: 1px solid #1a2733;
           background-color: #1a2733;
           color: white;
-          padding: 0.45rem; }
+          padding-bottom: 0.5rem; }
         body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types {
           border: 1px solid #e8eaeb; }
           body.job-listing-classic .wrapper .container .row #content .jb-jobs-body section article .row .job-meta-tags .job-meta.types svg {
@@ -1253,12 +1295,13 @@ body.is-job div.wrapper {
             padding: 0.4rem 0.5rem;
             margin-top: 0.5rem;
             border-radius: 2px;
-            font-size: 0.75rem; }
+            font-size: 0.75rem;
+            margin-right: 0.5rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.specialism {
               border: 1px solid #1a2733;
               background-color: #1a2733;
               color: white;
-              padding: 0.45rem; }
+              padding-bottom: 0.5rem; }
             body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types {
               border: 1px solid #e8eaeb; }
               body.is-job div.wrapper section#single-job-content .container div.job-information div.job-meta-tags .job-meta.types svg {
@@ -1370,14 +1413,17 @@ body.is-job div.wrapper {
 .wrapper.About.Us section#testimonials .container .row #testimonialCarousel {
   padding: 3rem 6rem;
   background-color: rgba(37, 120, 219, 0.08); }
-  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item {
-    opacity: 0;
-    display: block; }
-    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
-      margin-top: 1rem; }
-    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item.active {
-      opacity: 1;
-      transition: opacity 300ms; }
+  .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner {
+    display: flex;
+    align-items: center; }
+    .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item {
+      opacity: 0;
+      display: block; }
+      .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item p.cite {
+        margin-top: 1rem; }
+      .wrapper.About.Us section#testimonials .container .row #testimonialCarousel div.carousel-inner div.carousel-item.active {
+        opacity: 1;
+        transition: opacity 300ms; }
   .wrapper.About.Us section#testimonials .container .row #testimonialCarousel ol.carousel-indicators {
     position: absolute;
     margin: 0;
@@ -1978,76 +2024,82 @@ body.single-post .wrapper {
     .wrapper.Contact section#contact-form .container .row div.form-wrapper form div.panel-container {
       flex-direction: column; } }
 
-body.is-dashboard .wrapper div.introduction {
-  display: flex;
-  width: 100%;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #a4aaaf; }
-  body.is-dashboard .wrapper div.introduction h2.h1 {
-    display: inline-block; }
-  body.is-dashboard .wrapper div.introduction span.sign-up-cta {
-    color: rgba(28, 43, 56, 0.5);
-    display: inline-block;
-    margin-left: auto;
-    align-self: flex-end; }
-    body.is-dashboard .wrapper div.introduction span.sign-up-cta a {
-      cursor: pointer;
-      color: #2578db; }
-body.is-dashboard .wrapper p.h5 {
-  width: 100%;
-  margin: 2rem 0; }
-body.is-dashboard .wrapper form {
-  width: 100%;
-  background-color: white;
-  padding: 2rem 0;
-  border-radius: 8px; }
-  body.is-dashboard .wrapper form div.login-username, body.is-dashboard .wrapper form div.login-password {
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    background-color: #f3f4f5;
-    border-radius: 4px;
-    border: 2px solid transparent;
-    transition: all 200ms; }
-    body.is-dashboard .wrapper form div.login-username label, body.is-dashboard .wrapper form div.login-password label {
-      width: 100%;
-      color: rgba(28, 43, 56, 0.5); }
-    body.is-dashboard .wrapper form div.login-username input, body.is-dashboard .wrapper form div.login-password input {
-      width: 100%;
-      border: none;
-      font-size: 1.25rem;
-      background-color: #f3f4f5; }
-    body.is-dashboard .wrapper form div.login-username.focus, body.is-dashboard .wrapper form div.login-password.focus {
-      border-color: #2578db;
-      background-color: white; }
-      body.is-dashboard .wrapper form div.login-username.focus input, body.is-dashboard .wrapper form div.login-password.focus input {
-        background-color: white; }
-  body.is-dashboard .wrapper form div.remember {
-    margin-bottom: 2rem; }
-  body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal {
-    cursor: pointer; }
-    body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
-      color: #0a468f; }
-body.is-dashboard .wrapper div.image-wrapper img {
-  width: 100%; }
-@media (max-width: 767px) {
+body.is-dashboard .wrapper {
+  background-color: #e8eaeb;
+  padding-bottom: 3rem; }
   body.is-dashboard .wrapper div.introduction {
-    padding-bottom: 1rem;
-    flex-wrap: wrap; }
+    display: flex;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #a4aaaf; }
     body.is-dashboard .wrapper div.introduction h2.h1 {
-      font-size: 1.8rem; }
+      display: inline-block; }
     body.is-dashboard .wrapper div.introduction span.sign-up-cta {
-      margin-left: 0;
-      margin-top: 1rem;
-      width: 100%;
-      font-size: 1rem; }
+      color: rgba(28, 43, 56, 0.5);
+      display: inline-block;
+      margin-left: auto;
+      align-self: flex-end; }
+      body.is-dashboard .wrapper div.introduction span.sign-up-cta a {
+        cursor: pointer;
+        color: #2578db; }
   body.is-dashboard .wrapper p.h5 {
-    order: 0; }
-  body.is-dashboard .wrapper div.image-wrapper {
-    flex: 0 1 60%;
-    margin: 0 auto;
-    order: 1; }
+    width: 100%;
+    margin: 2rem 0; }
   body.is-dashboard .wrapper form {
-    order: 3; } }
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    align-self: center; }
+    body.is-dashboard .wrapper form div.login-username, body.is-dashboard .wrapper form div.login-password {
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      background-color: #f3f4f5;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      transition: all 200ms; }
+      body.is-dashboard .wrapper form div.login-username label, body.is-dashboard .wrapper form div.login-password label {
+        width: 100%;
+        color: rgba(28, 43, 56, 0.5); }
+      body.is-dashboard .wrapper form div.login-username input, body.is-dashboard .wrapper form div.login-password input {
+        width: 100%;
+        border: none;
+        font-size: 1.25rem;
+        background-color: #f3f4f5; }
+      body.is-dashboard .wrapper form div.login-username.focus, body.is-dashboard .wrapper form div.login-password.focus {
+        border-color: #2578db;
+        background-color: white; }
+        body.is-dashboard .wrapper form div.login-username.focus input, body.is-dashboard .wrapper form div.login-password.focus input {
+          background-color: white; }
+    body.is-dashboard .wrapper form div.remember {
+      margin-bottom: 2rem; }
+    body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal {
+      cursor: pointer; }
+      body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:hover, body.is-dashboard .wrapper form p.login-submit a.forgot-password-cta-modal:focus {
+        color: #0a468f; }
+  body.is-dashboard .wrapper div.image-wrapper img {
+    width: 100%; }
+@media (max-width: 767px) {
+  body.is-dashboard .wrapper {
+    padding: 6rem 1rem 4rem; }
+    body.is-dashboard .wrapper div.introduction {
+      padding-bottom: 1rem;
+      flex-wrap: wrap; }
+      body.is-dashboard .wrapper div.introduction h2.h1 {
+        font-size: 1.8rem; }
+      body.is-dashboard .wrapper div.introduction span.sign-up-cta {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+        font-size: 1rem; }
+    body.is-dashboard .wrapper p.h5 {
+      order: 0; }
+    body.is-dashboard .wrapper div.image-wrapper {
+      flex: 0 1 60%;
+      margin: 0 auto;
+      order: 1; }
+    body.is-dashboard .wrapper form {
+      order: 3; } }
 @media (max-width: 575px) {
   body.is-dashboard .wrapper div.image-wrapper {
     flex-basis: 80%; } }
@@ -2092,7 +2144,10 @@ main[role="main"] section#sign-up-form .container div.information-container {
     flex: 1 1 30%; }
     main[role="main"] section#sign-up-form .container div.information-container div.image-wrapper img {
       width: 100%; }
+main[role="main"] section#sign-up-form .container span.meta-description {
+  margin-bottom: 0.5rem; }
 main[role="main"] section#sign-up-form .container form {
+  position: relative;
   background-color: white;
   border-radius: 8px;
   padding: 3rem; }
@@ -2187,26 +2242,28 @@ main[role="main"] section#sign-up-form .container form {
   main[role="main"] section#sign-up-form .container form .form-fields .row:nth-of-type(4) {
     flex-direction: column; } }
 
-body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations {
+body.is-dashboard.logged-in .wrapper {
+  background-color: white; }
+body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations {
   margin-right: 2rem;
   padding: 0; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta {
     padding: 1rem;
     background-color: #f3f4f5;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
     border-bottom: 1px solid white; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta p.email {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations div.profile-meta p.email {
       color: rgba(28, 43, 56, 0.5);
       word-wrap: break-word; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations {
     background-color: #f3f4f5;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li {
       display: flex;
       border-bottom: 1px solid white; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:before {
         content: '';
         width: 1rem;
         height: 1rem;
@@ -2217,134 +2274,134 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover {
         transition: all 200ms; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover:before {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover:before {
           -webkit-filter: brightness(0); }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover a {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:hover a {
           color: #1a2733; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li a {
         width: 100%;
         padding: 1rem 1rem 1rem 0;
         color: rgba(28, 43, 56, 0.5); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:last-of-type {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li:last-of-type {
         border-bottom: 0; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active {
         background-color: #e8eaeb; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active a {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.is-active a {
           color: #1a2733; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard:before {
         background-image: url("../wp-recruitment-child/assets/svg/icon-avatar.svg"); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard.is-active:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-dashboard.is-active:before {
         -webkit-filter: brightness(0); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile:before {
         background-image: url("../wp-recruitment-child/assets/svg/icon-edit-profile.svg"); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile.is-active:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-profile.is-active:before {
         -webkit-filter: brightness(0); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied:before {
         background-image: url("../wp-recruitment-child/assets/svg/icon-app-history.svg"); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied.is-active:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-applied.is-active:before {
         -webkit-filter: brightness(0); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-logout:before {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-navigations ul.navigations li.nav-logout:before {
         background-image: url("../wp-recruitment-child/assets/svg/icon-logout.svg"); }
-body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content {
+body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content {
   padding: 2rem;
   border: 2px solid #e8eaeb;
   border-radius: 0.5rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content h2 {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content h2 {
     margin-bottom: 1.5rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account h2 {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account h2 {
       margin-bottom: 1.5rem;
       width: 100%; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content {
       flex: 1 1 calc(100%/2 - 1.5rem);
       border: 2px solid #f3f4f5;
       border-radius: 0.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul {
         padding: 2rem; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li {
           padding: 1rem 0;
           border-bottom: 1px solid #e8eaeb; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li:last-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li:last-of-type {
             border-bottom: none;
             padding-bottom: 0; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li p.subheading {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .account-content ul li p.subheading {
             color: rgba(28, 43, 56, 0.5); }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied {
       flex: 1 1 calc(100%/3);
       display: flex;
       margin-left: 1.5rem;
       padding: 2rem;
       border: 2px solid #f3f4f5;
       border-radius: 0.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied h3 {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied h3 {
         margin-bottom: 0.75rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied span.info {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied span.info {
         display: inline-block;
         width: 100%;
         margin-bottom: 1.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied a.cta-blue {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied a.cta-blue {
         margin-right: 0;
         font-size: 0.8rem; }
     @media (max-width: 1199px) {
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account {
         flex-direction: column; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-account .content-applied {
           margin: 2rem 0 0 0; } }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content .content-progress {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content .content-progress {
     width: 100%;
     height: 4rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
     padding: 0 2rem;
     border: 2px solid #f3f4f5; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row {
       margin-top: 1rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field {
         background-color: #f3f4f5;
         border-radius: 0.5rem;
         padding: 0 1rem 0.5rem;
         border-radius: 4px;
         border: 2px solid transparent;
         transition: all 200ms; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field.focus {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field.focus {
           border-color: #2578db;
           background-color: white; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field.focus input {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field.focus input {
             background-color: white; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field label, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field input {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field label, body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field input {
           border: none;
           background-color: transparent; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field label {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row div.field label {
           font-size: 0.875rem;
           color: rgba(28, 43, 56, 0.5); }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) {
         padding: 1rem 0;
         border-bottom: 1px solid #e8eaeb; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) div.field {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) div.field {
           padding: 0;
           background-color: white; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) div.field h4 {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(1) div.field h4 {
             font-size: 1rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field {
         display: flex;
         flex-wrap: wrap;
         padding: 1rem;
         background-color: #f3f4f5;
         border-radius: 0.5rem; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field label {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field label {
           font-size: 1rem;
           color: #1a2733;
           order: 0; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field input::placeholder {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field input::placeholder {
           color: rgba(28, 43, 56, 0.5); }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field span.field-subtitle {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field span.field-subtitle {
           order: 1;
           color: rgba(28, 43, 56, 0.5); }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select {
           order: 2;
           display: inline-block;
           max-height: 3rem;
@@ -2355,111 +2412,111 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
           color: white;
           background-color: #2578db;
           transition: all 200ms; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select:focus {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select:hover, body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field button.file-select:focus {
             background-color: rgba(37, 120, 219, 0.85);
             color: white; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field div.type-file {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field div.type-file {
           margin-top: 1rem;
           order: 3;
           width: 100%; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field div.type-file div.file-thumb {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(2) div.field div.type-file div.file-thumb {
             display: none; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) {
         display: flex;
         flex-wrap: nowrap; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field {
           flex: 1 1 auto; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field:first-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field:first-of-type {
             margin-right: 0.5rem; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field:last-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(3) div.field:last-of-type {
             margin-left: 0.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) {
         display: flex;
         flex-wrap: nowrap; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field {
           flex: 1 1 auto;
           max-width: calc(100%/2 - 0.5rem); }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type {
             margin-right: 0.5rem;
             display: flex;
             flex-direction: column; }
-            body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 {
+            body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 {
               max-width: 100%;
               background-color: transparent; }
-              body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection {
+              body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection {
                 background-color: transparent;
                 border: none; }
-                body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection .select2-selection__rendered {
+                body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection .select2-selection__rendered {
                   padding: 0; }
-                  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection .select2-selection__rendered .select2-selection__clear {
+                  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:first-of-type span.select2 span.select2-selection .select2-selection__rendered .select2-selection__clear {
                     display: none; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:last-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:last-of-type {
             margin-left: 0.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) {
         display: flex;
         flex-wrap: nowrap; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field {
           flex: 1 1 auto; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field:first-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field:first-of-type {
             margin-right: 0.5rem; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field:last-of-type {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) div.field:last-of-type {
             margin-left: 0.5rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(10) div.field textarea {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(10) div.field textarea {
         background-color: transparent;
         border: none;
         height: 8rem;
         resize: none;
         outline: none; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field {
         padding: 0;
         background-color: white; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field h4 {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field h4 {
           border-bottom: 1px solid #e8eaeb;
           font-size: 1rem;
           padding-bottom: 1rem;
           margin-bottom: 1rem; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field span {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(11) div.field span {
           font-size: 0.875rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
         padding: 0; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field label {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field label {
           display: none; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
           margin: 1rem;
           max-width: 100%;
           background-color: transparent; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection {
             display: flex;
             background-color: transparent;
             border: none; }
-            body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered {
+            body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered {
               padding: 0; }
-              body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__clear {
+              body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__clear {
                 display: none; }
-              body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice {
+              body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice {
                 display: flex;
                 flex-direction: row-reverse;
                 background-color: rgba(164, 170, 175, 0.3);
                 padding: 0.375rem 0.5rem;
                 border: none;
                 font-size: 0.875rem; }
-                body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+                body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 span.select2-selection .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
                   margin: 0 0 0 0.9rem; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(13), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(14), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(15), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(16), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(17), body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(18) {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(13), body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(14), body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(15), body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(16), body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(17), body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(18) {
         display: none; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field {
         padding: 0;
         background-color: white; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field h3 {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field h3 {
           border-bottom: 1px solid #e8eaeb;
           font-size: 1rem;
           padding-bottom: 1rem;
           margin-bottom: 1rem; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field span {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(19) div.field span {
           font-size: 0.875rem; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions {
       text-align: center; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"] {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"] {
         flex: 1 1 auto;
         display: inline-block;
         margin: 2rem 0;
@@ -2471,87 +2528,87 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
         background-color: #2578db;
         transition: all 200ms;
         font-family: "tkusual-bold", "system", "sans-serif"; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:focus {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:hover, body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form div.form-actions input[type="submit"]:focus {
           background-color: rgba(37, 120, 219, 0.85);
           color: white; }
     @media (max-width: 767px) {
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form {
         padding: 0;
         border: none; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field {
           display: flex; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field label {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field label {
             display: none; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(12) div.field span.select2 {
             max-width: 100%;
             width: 100% !important; } }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 2.25rem; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper h2 {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper h2 {
       margin: 0 auto 0 0;
       padding-right: 1rem; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper span.applied {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.title-wrapper span.applied {
       align-self: flex-end;
       color: #a4aaaf;
       padding-top: 1rem; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row {
     flex-direction: column;
     margin-bottom: 1rem;
     padding: 1.65rem 0 1.65rem 1rem;
     border: 1px solid #f3f4f5; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations {
       margin: 1rem 0 0.5rem; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row:last-of-type {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row:last-of-type {
       margin-bottom: 0; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a, body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a {
       color: #1a2733; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a:hover, body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a:hover {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-locations a:hover, body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .loop-title a:hover {
         color: #0a468f; }
-    body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags {
+    body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags {
       order: 3;
       width: 100%; }
-      body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta {
+      body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta {
         padding: 0.4rem 0.5rem;
         display: inline-block;
         border-radius: 2px;
         font-size: 0.75rem;
         margin-top: 0.5rem; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.specialism {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.specialism {
           border: 1px solid #1a2733;
           background-color: #1a2733;
           color: white; }
-        body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types {
+        body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types {
           border: 1px solid #e8eaeb; }
-          body.is-dashboard main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types svg {
+          body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content div.applied-table div.row .job-meta-tags .job-meta.types svg {
             margin-bottom: 0.2rem;
             margin-right: 0.3rem; }
 @media (max-width: 767px) {
-  body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-navigations {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row div.dashboard-navigations {
     margin: 0 0 2rem 0; }
-  body.is-dashboard main[role="main"] .container article .entry-content .row div.dashboard-content {
+  body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row div.dashboard-content {
     padding: 0;
     border: none; } }
 
-#LogInModal, #PasswordModal {
+#LogInModal {
   z-index: 99999;
   overflow: scroll; }
-  #LogInModal button, #PasswordModal button {
+  #LogInModal button {
     position: absolute;
     top: 1rem;
     right: 1rem;
     transition: all 200ms; }
-    #LogInModal button span svg, #PasswordModal button span svg {
+    #LogInModal button span svg {
       width: 2rem;
       height: 2rem; }
-  #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
+  #LogInModal .modal-dialog {
     max-width: 100%;
     height: 100%;
     width: 100%;
     margin: 0;
     background-color: #f3f4f5; }
-    #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+    #LogInModal .modal-dialog .modal-content {
       margin: 0;
       flex-direction: row;
       flex-wrap: wrap;
@@ -2559,117 +2616,126 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
       border-radius: 0;
       border: none;
       background-color: transparent; }
-      #LogInModal .modal-dialog .modal-content p.h5, #PasswordModal .modal-dialog .modal-content p.h5 {
+      #LogInModal .modal-dialog .modal-content p.h5 {
         width: 100%;
         margin: 2rem 0; }
-      #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
+      #LogInModal .modal-dialog .modal-content div.introduction {
         display: flex;
         padding-bottom: 2rem;
         border-bottom: 1px solid #a4aaaf;
         width: 100%; }
-        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1 {
           display: inline-block; }
-        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
+        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
           display: inline-block;
           align-self: flex-end;
           margin-left: auto;
           color: rgba(28, 43, 56, 0.5); }
-          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta a, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta a {
+          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta a {
             cursor: pointer;
             color: #2578db; }
-      #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+      #LogInModal .modal-dialog .modal-content form {
         padding: 2rem;
         background-color: white;
         border-radius: 8px; }
-        #LogInModal .modal-dialog .modal-content form span.error, #PasswordModal .modal-dialog .modal-content form span.error {
+        #LogInModal .modal-dialog .modal-content form span.error {
           display: inline-block;
           margin: 0 0 1rem 0;
           color: #bb0f00; }
-        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #LogInModal .modal-dialog .modal-content form div.password-forget, #PasswordModal .modal-dialog .modal-content form div.login-username, #PasswordModal .modal-dialog .modal-content form div.login-password, #PasswordModal .modal-dialog .modal-content form div.password-forget {
+        #LogInModal .modal-dialog .modal-content form div.login-username, #LogInModal .modal-dialog .modal-content form div.login-password, #LogInModal .modal-dialog .modal-content form div.password-forget {
           margin-bottom: 1rem;
           padding: 0 1rem;
           background-color: #f3f4f5;
           border-radius: 4px;
           border: 2px solid transparent;
           transition: all 200ms; }
-          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #LogInModal .modal-dialog .modal-content form div.password-forget label, #PasswordModal .modal-dialog .modal-content form div.login-username label, #PasswordModal .modal-dialog .modal-content form div.login-password label, #PasswordModal .modal-dialog .modal-content form div.password-forget label {
+          #LogInModal .modal-dialog .modal-content form div.login-username label, #LogInModal .modal-dialog .modal-content form div.login-password label, #LogInModal .modal-dialog .modal-content form div.password-forget label {
             width: 100%;
             color: rgba(28, 43, 56, 0.5); }
-          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #LogInModal .modal-dialog .modal-content form div.password-forget input, #PasswordModal .modal-dialog .modal-content form div.login-username input, #PasswordModal .modal-dialog .modal-content form div.login-password input, #PasswordModal .modal-dialog .modal-content form div.password-forget input {
+          #LogInModal .modal-dialog .modal-content form div.login-username input, #LogInModal .modal-dialog .modal-content form div.login-password input, #LogInModal .modal-dialog .modal-content form div.password-forget input {
             width: 100%;
             background-color: #f3f4f5;
             border: none;
             font-size: 1.25rem; }
-          #LogInModal .modal-dialog .modal-content form div.login-username.focus, #LogInModal .modal-dialog .modal-content form div.login-password.focus, #LogInModal .modal-dialog .modal-content form div.password-forget.focus, #PasswordModal .modal-dialog .modal-content form div.login-username.focus, #PasswordModal .modal-dialog .modal-content form div.login-password.focus, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus {
+          #LogInModal .modal-dialog .modal-content form div.login-username.focus, #LogInModal .modal-dialog .modal-content form div.login-password.focus, #LogInModal .modal-dialog .modal-content form div.password-forget.focus {
             border-color: #2578db;
             background-color: white; }
-            #LogInModal .modal-dialog .modal-content form div.login-username.focus input, #LogInModal .modal-dialog .modal-content form div.login-password.focus input, #LogInModal .modal-dialog .modal-content form div.password-forget.focus input, #PasswordModal .modal-dialog .modal-content form div.login-username.focus input, #PasswordModal .modal-dialog .modal-content form div.login-password.focus input, #PasswordModal .modal-dialog .modal-content form div.password-forget.focus input {
+            #LogInModal .modal-dialog .modal-content form div.login-username.focus input, #LogInModal .modal-dialog .modal-content form div.login-password.focus input, #LogInModal .modal-dialog .modal-content form div.password-forget.focus input {
               background-color: white; }
-        #LogInModal .modal-dialog .modal-content form div.remember, #PasswordModal .modal-dialog .modal-content form div.remember {
+        #LogInModal .modal-dialog .modal-content form div.remember {
           margin-bottom: 2rem; }
-        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+        #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
           cursor: pointer; }
-          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:hover, #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal:focus {
             color: #0a468f; }
-      #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+      #LogInModal .modal-dialog .modal-content div.image-wrapper {
         text-align: right; }
-        #LogInModal .modal-dialog .modal-content div.image-wrapper img, #PasswordModal .modal-dialog .modal-content div.image-wrapper img {
+        #LogInModal .modal-dialog .modal-content div.image-wrapper img {
           max-width: 100%;
           max-height: 20rem; }
   @media (max-width: 1199px) {
-    #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
+    #LogInModal .modal-dialog .modal-content div.content-wrapper form p.login-submit a.forgot-password-cta-modal {
       display: block; }
-    #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper {
+    #LogInModal .modal-dialog .modal-content div.content-wrapper div.image-wrapper {
       margin-left: 1rem; } }
   @media (max-width: 991px) {
-    #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+    #LogInModal .modal-dialog .modal-content {
       padding: 5rem; }
-      #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
+      #LogInModal .modal-dialog .modal-content div.introduction {
         flex-wrap: wrap;
         padding-bottom: 1rem; }
-        #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
+        #LogInModal .modal-dialog .modal-content div.introduction h2.h1 {
           font-size: 2.85rem; }
-        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
+        #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
           font-size: 1rem; } }
   @media (max-width: 767px) {
-    #LogInModal#LogInModal .modal-dialog, #PasswordModal#LogInModal .modal-dialog {
+    #LogInModal#LogInModal .modal-dialog {
       margin: 0;
       padding-right: 0; }
-    #LogInModal button, #PasswordModal button {
+    #LogInModal button {
       transition: all 200ms; }
-      #LogInModal button span svg, #PasswordModal button span svg {
+      #LogInModal button span svg {
         width: 1.5rem;
         height: 1.5rem; }
-    #LogInModal .modal-dialog, #PasswordModal .modal-dialog {
+    #LogInModal .modal-dialog {
       max-width: 100%;
       padding-left: 0; }
-      #LogInModal .modal-dialog .modal-content, #PasswordModal .modal-dialog .modal-content {
+      #LogInModal .modal-dialog .modal-content {
         padding: 2rem; }
-        #LogInModal .modal-dialog .modal-content div.introduction, #PasswordModal .modal-dialog .modal-content div.introduction {
+        #LogInModal .modal-dialog .modal-content div.introduction {
           flex-direction: column;
           padding-bottom: 1rem; }
-          #LogInModal .modal-dialog .modal-content div.introduction h2.h1, #PasswordModal .modal-dialog .modal-content div.introduction h2.h1 {
+          #LogInModal .modal-dialog .modal-content div.introduction h2.h1 {
             font-size: 1.8rem; }
-          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta, #PasswordModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
+          #LogInModal .modal-dialog .modal-content div.introduction span.sign-up-cta {
             align-self: flex-start;
             margin-top: 1rem;
             margin-left: 0;
             font-size: 1rem; }
-        #LogInModal .modal-dialog .modal-content form, #PasswordModal .modal-dialog .modal-content form {
+        #LogInModal .modal-dialog .modal-content form {
           order: 3; }
-          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal, #PasswordModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
+          #LogInModal .modal-dialog .modal-content form p.login-submit a.forgot-password-cta-modal {
             margin-top: 1rem;
             width: 100%;
             float: left; }
-        #LogInModal .modal-dialog .modal-content div.image-wrapper, #PasswordModal .modal-dialog .modal-content div.image-wrapper {
+        #LogInModal .modal-dialog .modal-content div.image-wrapper {
           display: none; } }
 
+#PasswordModal button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  transition: all 200ms; }
+  #PasswordModal button span svg {
+    width: 2rem;
+    height: 2rem; }
 #PasswordModal .modal-dialog {
   max-width: 70%;
   height: auto;
   margin-top: 4rem; }
   #PasswordModal .modal-dialog .modal-content {
-    padding: 3rem; }
+    padding: 3rem;
+    width: 100%; }
     #PasswordModal .modal-dialog .modal-content div.introduction {
       flex-wrap: wrap; }
       #PasswordModal .modal-dialog .modal-content div.introduction p.text {
@@ -2678,9 +2744,28 @@ body.is-dashboard main[role="main"] .container article .entry-content .row .dash
     #PasswordModal .modal-dialog .modal-content form {
       margin-top: 2rem;
       margin-bottom: 1rem;
-      padding: 1rem;
       background-color: white;
       border-radius: 4px; }
+      #PasswordModal .modal-dialog .modal-content form div.password-forget {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+        background-color: #f3f4f5;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        transition: all 200ms; }
+        #PasswordModal .modal-dialog .modal-content form div.password-forget label {
+          width: 100%;
+          color: rgba(28, 43, 56, 0.5); }
+        #PasswordModal .modal-dialog .modal-content form div.password-forget input {
+          width: 100%;
+          background-color: #f3f4f5;
+          border: none;
+          font-size: 1.25rem; }
+        #PasswordModal .modal-dialog .modal-content form div.password-forget.focus {
+          border-color: #2578db;
+          background-color: white; }
+          #PasswordModal .modal-dialog .modal-content form div.password-forget.focus input {
+            background-color: white; }
 @media (max-width: 767px) {
   #PasswordModal .modal-dialog {
     width: 100%;

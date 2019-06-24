@@ -22,14 +22,7 @@ get_header();
           $postsUncat = new WP_Query(array(
             'post_type' => 'post',
             'posts_per_page' => -1,
-            'tax_query' => array(
-              array(
-                'taxonomy' => 'category',
-                'field' => 'slug',
-                'terms' => 'uncategorized'
-                )
-                )
-              ));
+            ));
               if ($postsUncat->have_posts()) {
                   ?>
                 <div class="article-container">

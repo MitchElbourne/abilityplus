@@ -8,7 +8,9 @@ get_header();
     <div class="container">
       <div class="introduction">
         <h2 class="h1">Sign Up</h2>
-        <span class="modal-cta">Already have an account? <a data-target="#LogInModal" data-toggle="modal" class="bold log-in-cta-modal">Log in instead</a></span>
+        <!-- Old log in modal cta -->
+        <!-- <span class="modal-cta">Already have an account? <a data-target="#LogInModal" data-toggle="modal" class="bold log-in-cta-modal">Log in instead</a></span> -->
+        <span class="modal-cta">Already have an account? <a href="<?php echo esc_url(site_url('/profile')); ?>" class="bold log-in-cta-modal">Log in instead</a></span>
         </div>
         <div class="information-container">
           <div class="information">

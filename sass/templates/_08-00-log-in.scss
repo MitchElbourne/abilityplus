@@ -1,5 +1,7 @@
 body.is-dashboard {
   .wrapper {
+    background-color: $lighter-grey;
+    padding-bottom: 3rem;
     div.introduction {
       display: flex;
       width: 100%;
@@ -26,8 +28,9 @@ body.is-dashboard {
     form {
       width: 100%;
       background-color: $white;
-      padding: 2rem 0;
+      padding: 2rem;
       border-radius: 8px;
+      align-self: center;
       div.login-username, div.login-password {
         margin-bottom: 1rem;
         padding: 0 1rem;
@@ -73,6 +76,7 @@ body.is-dashboard {
   }
   @include media-breakpoint-down(sm) {
     .wrapper {
+      padding: 6rem 1rem 4rem;
       div.introduction {
         padding-bottom: 1rem;
         flex-wrap: wrap;

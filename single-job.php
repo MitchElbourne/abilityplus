@@ -155,7 +155,7 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
             if($types) {
               foreach($types as $type) {
                 ?>
-                  <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-job-type.svg'); ?><?php echo $type->name; ?></span>
+                  <span class="job-meta types"><?php echo get_template_part('/assets/svg/icon-inline-job-type.svg'); ?><?php echo $type->name; ?></span>
                 <?php
               }
             }

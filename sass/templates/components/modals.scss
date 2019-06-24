@@ -1,4 +1,4 @@
-#LogInModal, #PasswordModal {
+#LogInModal {
   z-index: 99999;
   overflow: scroll;
   button {
@@ -193,12 +193,25 @@
 }
 
 #PasswordModal {
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    span {
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
   .modal-dialog {
     max-width: 70%;
     height: auto;
     margin-top: 4rem;
     .modal-content {
       padding: 3rem;
+      width: 100%;
       div.introduction {
         flex-wrap: wrap;
         p.text {
@@ -209,9 +222,33 @@
       form {
         margin-top: 2rem;
         margin-bottom: 1rem;
-        padding: 1rem;
         background-color: $white;
         border-radius: 4px;
+        div.password-forget {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: $lightest-grey;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms;
+          label {
+            width: 100%;
+            color: $middle-grey;
+          }
+          input {
+            width: 100%;
+            background-color: $lightest-grey;
+            border: none;
+            font-size: 1.25rem;
+          }
+          &.focus {
+            border-color: $primary-blue;
+            background-color: $white;
+            input {
+              background-color: $white;
+            }
+          }
+        }
       }
     }
   }

@@ -128,12 +128,14 @@ add_action ('wp_nav_menu_items', function( $menu_items, $menu_object ){
   // Only append the new li to the 'Primary Navigation' menu.
   // Change 'Primary Navigation' for the name of the menu that you'd like to amend.
   if ( 'Navigation' === $menu_name && !is_user_logged_in()) {
-    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Sign Up | Log In' href='#' class='nav-link' data-target='#LogInModal' data-toggle='modal'>Sign Up | Log In</a></li>";
+    // Old modal window opener
+
+    // $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Sign Up | Log In' href='#' class='nav-link' data-target='#LogInModal' data-toggle='modal'>Sign Up | Log In</a></li>";
+    $new_li = "<li itemscope='itemscope' itemtype='https://www.schema.org/SiteNavigationElement' class='menu-item menu-item-type-custom menu-item-object-custom nav-item'><a title='Sign Up | Log In' href='" . esc_url(site_url('/profile')) . "' class='nav-link'>Sign Up | Log In</a></li>";
 
     return $menu_items . $new_li;
 
   } else {
-
     if(current_user_can('administrator')) {
       $firstName = "Admin";
       $lastName = "";

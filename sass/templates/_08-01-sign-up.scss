@@ -55,7 +55,11 @@ main[role="main"] {
           }
         }
       }
+      span.meta-description {
+        margin-bottom: 0.5rem;
+      }
       form {
+        position: relative;
         background-color: $white;
         border-radius: 8px;
         padding: 3rem;
