@@ -274,6 +274,9 @@ div.jobboard-notices {
 		&.messages-error {
 			background-color: $error;
 		}
+		&.messages-success {
+			background-color: $primary-green;
+		}
 		i.remove {
 			right: 5rem;
 			top: 1.4rem;
@@ -288,15 +291,6 @@ div.jobboard-notices {
 				background-repeat: no-repeat;
 			}
 		}
-	}
-	// @include media-breakpoint-up(md) {
-	// 	// div.messages {
-	// 	// 	padding: 1rem calc(5rem + 8%);
-	// 	// }
-	// }
-	@include media-breakpoint-down(sm) {
-
-
 	}
 	@include media-breakpoint-down(xs) {
 		bottom: -0.3rem;

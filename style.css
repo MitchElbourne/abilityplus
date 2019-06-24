@@ -245,6 +245,8 @@ div.jobboard-notices {
     margin: 0; }
     div.jobboard-notices div.messages.messages-error {
       background-color: #bb0f00; }
+    div.jobboard-notices div.messages.messages-success {
+      background-color: #b3d40e; }
     div.jobboard-notices div.messages i.remove {
       right: 5rem;
       top: 1.4rem; }
@@ -418,7 +420,7 @@ header#site-header {
         box-shadow: 4px 4px 6px 0 rgba(26, 39, 51, 0.18);
         border-radius: 0.5rem;
         border-color: #2578db;
-        left: -3rem; }
+        right: 0; }
         header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li {
           display: flex; }
           header#site-header nav div#primary-menu ul li:last-of-type.logged-in ul li:before {
@@ -2450,6 +2452,10 @@ body.is-dashboard.logged-in main[role="main"] .container article .entry-content 
                     display: none; }
           body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:last-of-type {
             margin-left: 0.5rem; }
+            body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:last-of-type input::-webkit-calendar-picker-indicator {
+              display: none; }
+            body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(5) div.field:last-of-type input[type="date"]::-webkit-input-placeholder {
+              visibility: hidden !important; }
       body.is-dashboard.logged-in main[role="main"] .container article .entry-content .row .dashboard-content form.profile-form .form-fields .row:nth-of-type(8) {
         display: flex;
         flex-wrap: nowrap; }
