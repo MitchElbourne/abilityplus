@@ -54,7 +54,9 @@ if(have_posts()) {
         $prevPost = get_previous_post(true);
         $nextPost = get_next_post(true);
         if(!$nextPost && !$prevPost) { ?>
-          <h4>No Posts to Recommend</h4>
+          <div class="col-md-11 text-center no-blogposts">
+            <h4>No Posts to Recommend</h4>
+          </div>
         <?php } else { ?>
 
         <div class="blog-recommendations col-md-11 <?php if($prevPost && $nextPost) echo 'col-lg-9'; else echo 'col-lg-5' ?>">
