@@ -236,7 +236,7 @@ div.jobboard-notices {
   width: 100%;
   height: 3rem;
   margin-left: 0;
-  top: 6.5rem;
+  bottom: 0.5rem;
   left: 0;
   z-index: 10; }
   div.jobboard-notices div.messages {
@@ -257,19 +257,14 @@ div.jobboard-notices {
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat; }
-  @media (max-width: 767px) {
-    div.jobboard-notices {
-      top: 4.23rem; }
-      div.jobboard-notices div.messages {
-        padding: 0.5rem 3rem; }
-        div.jobboard-notices div.messages i.remove {
-          top: 0.9rem;
-          right: 3rem; } }
   @media (max-width: 575px) {
-    div.jobboard-notices div.messages {
-      padding: 0.5rem 2rem; }
-      div.jobboard-notices div.messages i.remove {
-        right: 2rem; } }
+    div.jobboard-notices {
+      bottom: -0.3rem; }
+      div.jobboard-notices div.messages {
+        padding: 0.5rem 2rem; }
+        div.jobboard-notices div.messages i.remove {
+          right: 2rem;
+          top: 0.9rem; } }
 
 html {
   font-size: 16px; }
@@ -1218,7 +1213,7 @@ body.is-job div.wrapper {
             margin-bottom: 0.2rem; }
           body.is-job div.wrapper section#job-ctas .container p.share a.social:hover svg path, body.is-job div.wrapper section#job-ctas .container p.share a.social:focus svg path {
             fill: #2578db; }
-      body.is-job div.wrapper section#job-ctas .container button.cta-blue {
+      body.is-job div.wrapper section#job-ctas .container a.cta-blue {
         flex-grow: 0;
         margin: 0 0 0 auto; }
     @media (max-width: 767px) {
@@ -2100,11 +2095,14 @@ body.is-dashboard .wrapper {
       order: 1; }
     body.is-dashboard .wrapper form {
       order: 3; } }
+@media (max-width: 767px) {
+  body.is-dashboard .wrapper div.image-wrapper {
+    display: none; } }
 @media (max-width: 575px) {
   body.is-dashboard .wrapper div.image-wrapper {
     flex-basis: 80%; } }
 
-.wrapper.Sign.Up {
+.wrapper.Sign {
   background-color: #e8eaeb; }
 
 main[role="main"] section#sign-up-form .container div.introduction {

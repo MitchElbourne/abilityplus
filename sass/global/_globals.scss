@@ -264,7 +264,7 @@ div.jobboard-notices {
 	width: 100%;
 	height: 3rem;
 	margin-left:0;
-	top: 6.5rem;
+	bottom: 0.5rem;
 	left: 0;
 	z-index: 10;
 	div.messages {
@@ -289,26 +289,22 @@ div.jobboard-notices {
 			}
 		}
 	}
-	@include media-breakpoint-up(md) {
-		// div.messages {
-		// 	padding: 1rem calc(5rem + 8%);
-		// }
-	}
+	// @include media-breakpoint-up(md) {
+	// 	// div.messages {
+	// 	// 	padding: 1rem calc(5rem + 8%);
+	// 	// }
+	// }
 	@include media-breakpoint-down(sm) {
-		top: 4.23rem;
-		div.messages {
-			padding: 0.5rem 3rem;
-			i.remove {
-				top: 0.9rem;
-				right: 3rem;
-			}
-		}
+
+
 	}
 	@include media-breakpoint-down(xs) {
+		bottom: -0.3rem;
 		div.messages {
 			padding: 0.5rem 2rem;
 			i.remove {
 				right: 2rem;
+				top: 0.9rem;
 			}
 		}
 	}

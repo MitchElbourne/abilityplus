@@ -73,9 +73,9 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <?php
       if(!is_user_logged_in()) {
         ?>
-        <button type="button" class="cta-blue" data-target="#LogInModal" data-toggle="modal">
-        <?php esc_html_e('Apply for job', JB_TEXT_DOMAIN); ?>
-        </button>
+        <a class="cta-blue top-apply" href="<?php echo esc_url(site_url('/profile')); ?>">
+          <?php esc_html_e('Apply for job', JB_TEXT_DOMAIN); ?>
+        </a>
         <?php
       } else {
         ?>
@@ -169,9 +169,9 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <?php
       if(!is_user_logged_in()) {
         ?>
-        <button type="button" class="cta-blue h6" data-target="#LogInModal" data-toggle="modal">
-        <?php esc_html_e('Apply for job', JB_TEXT_DOMAIN); ?>
-        </button>
+        <a class="cta-blue" href="<?php echo esc_url(site_url('/profile')); ?>">
+          <?php esc_html_e('Apply for job', JB_TEXT_DOMAIN); ?>
+        </a>
         <?php
       } else {
         ?>

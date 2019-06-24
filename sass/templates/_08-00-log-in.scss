@@ -103,6 +103,13 @@ body.is-dashboard {
       }
     }
   }
+  @include media-breakpoint-down(sm) {
+    .wrapper {
+      div.image-wrapper {
+        display: none;
+      }
+    }
+  }
   @include media-breakpoint-down(xs) {
     .wrapper {
       div.image-wrapper {
