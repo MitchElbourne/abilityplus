@@ -7,7 +7,7 @@ get_header();
   <section id="sign-up-form">
     <div class="container">
       <div class="introduction">
-        <h2 class="h1">Sign Up</h2>
+        <h1>Sign Up</h1>
         <!-- Old log in modal cta -->
         <!-- <span class="modal-cta">Already have an account? <a data-target="#LogInModal" data-toggle="modal" class="bold log-in-cta-modal">Log in instead</a></span> -->
         <span class="modal-cta">Already have an account? <a href="<?php echo esc_url(site_url('/profile')); ?>" class="bold log-in-cta-modal">Log in instead</a></span>
@@ -22,6 +22,13 @@ get_header();
             <img src="<?php echo get_theme_file_uri('/assets/illus-sign-up.png'); ?>" alt="Sign up illustration, woman with sign up form and pen">
           </div>
         </div>
+        <?php $success = JB()->session->get('jb_notices', array());
+          if(!$success['success']) {
+            ?>
+            <h2 class="mb-2 h4">Please fill out your details:</h2>
+            <?php
+          }
+        ?>
         <?php echo do_shortcode('[jobboard_register_account]'); ?>
     </div><!--container-->
   </section><!--#sign-up-form-->

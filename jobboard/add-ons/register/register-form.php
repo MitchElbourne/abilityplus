@@ -20,8 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<span class="meta-description">Please fill out your details:</span>
-
 <form class="jobboard-form register-form" method="post" enctype="multipart/form-data">
     <?php do_action("jobboard_register_form", $fields, $args); ?>
 </form>

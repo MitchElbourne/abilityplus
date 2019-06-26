@@ -46,7 +46,29 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
       <h1><?php echo get_the_title(); ?></h1>
       <p class="posttime"><?php echo $timeposted; ?></p>
       <hr />
-      <p class="salary"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?></span><?php echo jb_job_get_salary(); ?></p>
+      <p class="salary">
+        <span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?></span>
+        <?php
+
+
+        $salary = jb_job_get_salary();
+
+        if(strpos($salary, '-')) {
+          $temp = explode(' - ', $salary);
+          $count = 0;
+          foreach ($temp as $key) {
+            echo $finalKey = '£' . number_format((float) filter_var($key, FILTER_SANITIZE_NUMBER_INT));
+            if($count == 0) echo " - ";
+            $count++;
+          }
+        } elseif ($salary[0] == '&') {
+          echo $finalKey = '£' . number_format((float) filter_var($salary, FILTER_SANITIZE_NUMBER_INT));
+        } else {
+          echo $salary;
+        }
+        ?>
+
+      </p>
       <?php
       if(jb_job_location_text()) { ?>
         <p class="location"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>
@@ -112,7 +134,25 @@ $specialismUrl = '/vacancies/?layout=list&post_type=jobboard-post-jobs&specialis
 <?php } ?>
 
 
-        <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?></span><?php echo jb_job_get_salary(); ?></p>
+        <p class="meta-field">
+          <span class="icon"><?php echo get_template_part('assets/svg/icon-inline-coins.svg'); ?>
+          </span>
+          <?php
+            if(strpos($salary, '-')) {
+              $temp = explode(' - ', $salary);
+              $count = 0;
+              foreach ($temp as $key) {
+                echo $salary = '£' . number_format((float) filter_var($key, FILTER_SANITIZE_NUMBER_INT));
+                if($count == 0) echo " - ";
+                $count++;
+              }
+            } elseif ($salary[0] == '&') {
+              echo $salary = '£' . number_format((float) filter_var($salary, FILTER_SANITIZE_NUMBER_INT));
+            } else {
+              echo $salary;
+            }
+          ?>
+        </p>
         <?php
         if (jb_job_location_text()) { ?>
           <p class="meta-field"><span class="icon"><?php echo get_template_part('assets/svg/icon-inline-location.svg'); ?></span><?php echo jb_job_location_text(); ?></p>

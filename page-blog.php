@@ -1,6 +1,6 @@
 <?php
 get_header();
-
+$postsPerPage = 3;
 ?>
 
 
@@ -21,38 +21,153 @@ get_header();
           <?php
           $postsUncat = new WP_Query(array(
             'post_type' => 'post',
-            'posts_per_page' => -1,
-            ));
-              if ($postsUncat->have_posts()) {
-                  ?>
-                <div class="article-container">
-                  <?php
-                while ($postsUncat->have_posts()) {
-                    $postsUncat->the_post();
-                    $excerpt;
+            'posts_per_page' => 5,
+          ));
 
-                    if (get_the_excerpt()) {
-                        $excerpt = get_the_excerpt();
-                    } else {
-                        $excerpt = get_the_content();
-                    } ?>
-              <article class="blog-post">
-                <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink(); ?>">
-                  <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url(); ?>");'></div>
-                  <h2 class="h5"><?php echo get_the_title(); ?></h2>
-                </a>
-                <p class="excerpt"><?php echo wp_trim_words($excerpt, 15); ?></p>
-                <a href="<?php echo get_the_permalink(); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
-              </article>
+
+
+          $postUncatCount = $postsUncat->post_count;
+          $paginationCount = ($postUncatCount) / $postsPerPage;
+
+          $postsUncatArray = [];
+          if($postsUncat) {
+            for($i = 0; $i < $postUncatCount; $i++) {
+              $postsUncat->the_post();
+              $postsUncatArray[$i] = get_the_ID();
+            }
+          }
+
+          if ($postUncatCount) {
+              ?>
+            <div class="article-container">
+
+
 
               <?php
-                } ?> </div><!--article-container--> <?php
+
+              if($paginationCount == 1) {
+                while($postsUncat->have_posts()) {
+                  $postsUncat->the_post();
+                  $excerpt;
+
+                  if (get_the_excerpt()) {
+                      $excerpt = get_the_excerpt();
+                  } else {
+                      $excerpt = get_the_content();
+                  } ?>
+
+
+                  <article class="blog-post">
+                    <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink(); ?>">
+                      <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url(); ?>");'></div>
+                      <h2 class="h5"><?php echo get_the_title(); ?></h2>
+                    </a>
+                    <p class="excerpt"><?php echo wp_trim_words($excerpt, 15); ?></p>
+                    <a href="<?php echo get_the_permalink(); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                  </article>
+                  <?php
+                }
               } else {
-                  echo '<h3>No posts found</h3>';
+
+
+
+
+
+                ?> <ul class="nav nav-pills col-12" id="pills-tab" role="tablist"> <?php
+                for($i = 0; $i <= $paginationCount; $i++) { ?>
+                  <li class="nav-item">
+                    <a class="nav-link <?php if($i==0) echo "active" ?>" id="pills-<?php echo $i+1; ?>-tab" data-toggle="pill" href="#pills-<?php echo $i+1; ?>" role="tab" aria-controls="pills-contact" aria-selected="false"><?php echo $i+1; ?></a>
+                  </li>
+                  <?php
+                } ?> </ul> <?php
+
+
+                ?> <div class="tab-content" id="pills-tabContent"> <?php
+
+
+                for($i = 0; $i <= $paginationCount; $i++) { ?>
+                  <div class="tab-pane fade show <?php if($i==0) echo "active" ?>" id="pills-<?php echo $i+1; ?>" role="tabpanel" aria-labelledby="pills-<?php  echo $i+1; ?>-tab">
+                    <?php
+
+                      for($j = 0; $j < $postsPerPage; $j++) {
+                        if($postsUncatArray[$j]) {
+                          echo $j;
+                          unset($postsUncatArray[$j]);
+                        }
+                      }
+
+                    ?>
+                  </div>
+                  <?php
+                } ?> </div> <?php
+
               }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*
+              while ($postsUncat->have_posts()) {
+                $postsUncat->the_post();
+                $excerpt;
+
+                if (get_the_excerpt()) {
+                    $excerpt = get_the_excerpt();
+                } else {
+                    $excerpt = get_the_content();
+                } ?>
+
+
+                <article class="blog-post">
+                  <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink(); ?>">
+                    <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url(); ?>");'></div>
+                    <h2 class="h5"><?php echo get_the_title(); ?></h2>
+                  </a>
+                  <p class="excerpt"><?php echo wp_trim_words($excerpt, 15); ?></p>
+                  <a href="<?php echo get_the_permalink(); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                </article>
+
+              <?php
+
+            } */ ?>
+
+              <!-- <ul class="nav nav-pills col-12" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                </li>
+              </ul>
+
+
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+              </div> -->
+
+            </div><!--article-container-->
+
+            <?php
+            } else {
+                echo '<h3>No posts found</h3>';
+            }
           wp_reset_query();
           ?>
-
 
         </div><!--tab-pane-->
 

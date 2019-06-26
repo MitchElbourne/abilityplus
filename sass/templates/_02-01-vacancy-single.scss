@@ -150,8 +150,8 @@ body.is-job {
             }
           }
         }
-        a.cta-blue {
-          flex-grow: 0;
+        a.cta-blue, button.cta-blue {
+          flex-grow: 0; 
           margin: 0 0 0 auto;
         }
       }

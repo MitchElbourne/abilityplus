@@ -353,7 +353,8 @@ header#site-header {
   header#site-header nav {
     padding: 2rem 0; }
     header#site-header nav .navbar-brand {
-      padding-top: 0; }
+      padding-top: 0;
+      margin-top: -0.3rem; }
       header#site-header nav .navbar-brand img {
         width: 9.5rem; }
       @media (max-width: 767px) {
@@ -1215,7 +1216,7 @@ body.is-job div.wrapper {
             margin-bottom: 0.2rem; }
           body.is-job div.wrapper section#job-ctas .container p.share a.social:hover svg path, body.is-job div.wrapper section#job-ctas .container p.share a.social:focus svg path {
             fill: #2578db; }
-      body.is-job div.wrapper section#job-ctas .container a.cta-blue {
+      body.is-job div.wrapper section#job-ctas .container a.cta-blue, body.is-job div.wrapper section#job-ctas .container button.cta-blue {
         flex-grow: 0;
         margin: 0 0 0 auto; }
     @media (max-width: 767px) {

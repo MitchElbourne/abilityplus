@@ -36,7 +36,7 @@ get_header();
             <h3 class="p">Contact points</h3>
             <div class="contact-point">
             <span class="icon"><?php echo get_template_part('/assets/svg/icon-inline-avatar.svg');; ?></span>
-              <p>Anne Marie Hanna | Managing Director<br /><a href="mailto:anne@abilityplus.co.im">anne@abilityplus.co.im</a></p>
+            <p>Anne Marie Hanna | Managing Director</p>
             </div>
           </div><!--connect-information-->
         </div><!--contact-information-->
@@ -53,8 +53,8 @@ get_header();
           <h2>Send us your inquiry</h2>
           <?php echo do_shortcode('[contact-form-7 title="Contact"]'); ?>
         </div>
-      </div>
-    </div>
+      </div><!--row-->
+    </div><!--container-->
   </section><!--#contact-form-->
 
 
