@@ -43,7 +43,38 @@
         .tab-content {
           .tab-pane {
             .article-container {
+              ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                order: 2;
+                margin: 2rem 0;
+                li {
+                  font-size: 0.875rem;
+                  a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 0.5rem;
+                    padding: 0;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 100%;
+                    border: 1px solid rgba($primary-blue, 0.2);
+                    &:hover {
+                      background-color: rgba($primary-blue, 0.15);
+                    }
+                    &.active {
+                      color: $primary-blue;
+                      background-color: rgba($primary-blue, 0.14);
+                      border: none;
+                      font-family: $tkusualbd;
+                    }
+                  }
+                }
+              }
               div.tab-content {
+                order: 1;
                 div.tab-pane {
                   flex-wrap: wrap;
                   &.active {

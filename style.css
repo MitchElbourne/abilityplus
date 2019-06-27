@@ -1579,10 +1579,37 @@ body.is-job div.wrapper {
         padding: 3rem 3rem 0 3rem;
         display: flex;
         flex-wrap: wrap; }
-        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane {
-          flex-wrap: wrap; }
-          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane.active {
-            display: flex; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container ul {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          order: 2;
+          margin: 2rem 0; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container ul li {
+            font-size: 0.875rem; }
+            .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container ul li a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 0.5rem;
+              padding: 0;
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 100%;
+              border: 1px solid rgba(37, 120, 219, 0.2); }
+              .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container ul li a:hover {
+                background-color: rgba(37, 120, 219, 0.15); }
+              .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container ul li a.active {
+                color: #2578db;
+                background-color: rgba(37, 120, 219, 0.14);
+                border: none;
+                font-family: "tkusual-bold", "system", "sans-serif"; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content {
+          order: 1; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane {
+            flex-wrap: wrap; }
+            .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane.active {
+              display: flex; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
           display: flex;
           flex-direction: column;
