@@ -1,6 +1,6 @@
 <?php
 get_header();
-$postsPerPage = 3;
+$postsPerPage = 6;
 ?>
 
 
@@ -21,7 +21,7 @@ $postsPerPage = 3;
           <?php
           $postsUncat = new WP_Query(array(
             'post_type' => 'post',
-            'posts_per_page' => 4,
+            'posts_per_page' => -1,
             'order' => 'ASC'
           ));
 
@@ -37,7 +37,7 @@ $postsPerPage = 3;
               }
             }
 
-            $pageCount = floor((count($postIDArray) -1) / 3);
+            $pageCount = floor((count($postIDArray) -1) / $postsPerPage);
             echo $pageCount;
             print_r($postIDArray);
 
@@ -75,7 +75,7 @@ $postsPerPage = 3;
 
 
 
-              ?> <ul class="nav nav-pills col-12" id="paginationTab" role="tablist"> <?php
+              ?> <ul class="nav nav-pills" id="paginationTab" role="tablist"> <?php
               for($i = 0; $i <= $pageCount; $i++) {
                 $index = $i+1;
                 ?>
@@ -101,15 +101,24 @@ $postsPerPage = 3;
 
 
                   while(count($postIDArray) > 0 && $postCounter - $postsPerPage !== 0) {
-                    echo $postCounter;
-                    echo get_the_title($postIDArray[$postCounter]);
-                    array_shift($postIDArray);
-                    $postCounter+=1;
-                    echo $postIDArray[0];
+                    $excerpt = wp_trim_words(get_post($postIDArray[0])->post_content, 16);
+                    ?>
+
+                    <article class="blog-post">
+                      <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink($postIDArray[0]); ?>">
+                        <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url($postIDArray[0]); ?>");'></div>
+                        <h2 class="h5"><?php echo get_the_title($postIDArray[0]); ?></h2>
+                      </a>
+                      <p class="excerpt"><?php echo $excerpt; ?></p>
+                      <a href="<?php echo get_the_permalink($postIDArray[0]); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                    </article>
+
+
+
+                    <?php
+                    array_shift($postIDArray); // Remove the post ID from the array once displayed
+                    $postCounter+=1; // To keep track of how many posts have been displayed
                   }
-
-
-                  $postCounter = 0;
 
 
 
@@ -132,7 +141,7 @@ $postsPerPage = 3;
 
 
 
-            }
+            } // Loop for pagination
 
 
 

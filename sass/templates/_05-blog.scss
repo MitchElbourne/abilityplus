@@ -43,6 +43,14 @@
         .tab-content {
           .tab-pane {
             .article-container {
+              div.tab-content {
+                div.tab-pane {
+                  flex-wrap: wrap;
+                  &.active {
+                    display: flex;
+                  }
+                }
+              }
               background-color: $white;
               padding: 3rem 3rem 0 3rem;
               display: flex;

@@ -354,7 +354,7 @@ header#site-header {
     padding: 2rem 0; }
     header#site-header nav .navbar-brand {
       padding-top: 0;
-      margin-top: -0.3rem; }
+      margin-top: -0.25rem; }
       header#site-header nav .navbar-brand img {
         width: 9.5rem; }
       @media (max-width: 767px) {
@@ -1579,6 +1579,10 @@ body.is-job div.wrapper {
         padding: 3rem 3rem 0 3rem;
         display: flex;
         flex-wrap: wrap; }
+        .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane {
+          flex-wrap: wrap; }
+          .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container div.tab-content div.tab-pane.active {
+            display: flex; }
         .wrapper.Blog main section#blog-listings .container .tab-content .tab-pane .article-container article {
           display: flex;
           flex-direction: column;
