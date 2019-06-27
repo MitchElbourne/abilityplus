@@ -21,133 +21,83 @@ $postsPerPage = 3;
           <?php
           $postsUncat = new WP_Query(array(
             'post_type' => 'post',
-            'posts_per_page' => 4,
-            'order' => 'ASC'
+            'posts_per_page' => 3,
           ));
 
-          function getPostData($id) {
-            return get_post($id);
-          }
-          if($postsUncat->have_posts()) {
-            $postIDArray = [];
-            if($postsUncat) {
-              for($i = 0; $i < $postsUncat->post_count; $i++) {
-                $postsUncat->the_post();
-                $postIDArray[$i] = get_the_ID();
-              }
-            }
-
-            $pageCount = floor((count($postIDArray) -1) / 3);
-            echo $pageCount;
-            print_r($postIDArray);
-
           ?>
-          <div class="article-container">
-            <?php
+            <div class="article-container">
 
-            if($pageCount == 0) {
-              foreach($postIDArray as $postID) {
-                wp_reset_query();
-                $singlePost = get_post($postID);
+            </div>
+          <?php
 
-                if($singlePost->post_excerpt) {
-                  $excerpt = $singlePost->post_excerpt;
+
+
+
+          // $postUncatCount = $postsUncat->post_count;
+          // $paginationCount = floor(($postUncatCount) / $postsPerPage);
+          // echo $paginationCount;
+          //
+          // $postsUncatArray = [];
+          // if($postsUncat) {
+          //   for($i = 0; $i < $postUncatCount; $i++) {
+          //     $postsUncat->the_post();
+          //     $postsUncatArray[$i] = get_the_ID();
+          //   }
+          // }
+
+
+
+
+              /*
+              while ($postsUncat->have_posts()) {
+                $postsUncat->the_post();
+                $excerpt;
+
+                if (get_the_excerpt()) {
+                    $excerpt = get_the_excerpt();
                 } else {
-                  $excerpt = wp_trim_words($singlePost->post_content, 20);
-                }
-                ?>
+                    $excerpt = get_the_content();
+                } ?>
+
 
                 <article class="blog-post">
-                  <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink($postID); ?>">
-                    <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url($postID); ?>");'></div>
-                    <h2 class="h5"><?php echo get_the_title($postID); ?></h2>
+                  <a class="image-title-cta-wrapper" href="<?php echo get_the_permalink(); ?>">
+                    <div class="image-wrapper" style='background-image: url("<?php echo get_the_post_thumbnail_url(); ?>");'></div>
+                    <h2 class="h5"><?php echo get_the_title(); ?></h2>
                   </a>
-                  <p class="excerpt"><?php echo $excerpt; ?></p>
-                  <a href="<?php echo get_the_permalink($postID); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
+                  <p class="excerpt"><?php echo wp_trim_words($excerpt, 15); ?></p>
+                  <a href="<?php echo get_the_permalink(); ?>" class="arrow-cta"><span class="icon cta-arrow-right"><?php echo get_template_part('/assets/svg/icon-inline-arrow-right.svg'); ?></span></a>
                 </article>
 
-                <?php
-              } // For each loop if only one tab
-            } else {
+              <?php
 
+            } */ ?>
 
-
-
-
-
-              ?> <ul class="nav nav-pills col-12" id="paginationTab" role="tablist"> <?php
-              for($i = 0; $i <= $pageCount; $i++) {
-                $index = $i+1;
-                ?>
+              <!-- <ul class="nav nav-pills col-12" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link <?php if($index == 1) echo "active"; ?>" id="pills-<?php echo $index ?>-tab" data-toggle="pill" href="#pills-<?php echo $index; ?>" role="tab" aria-controls="pills-<?php echo $index; ?>" aria-selected="true"><?php echo $index; ?></a>
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
                 </li>
-                <?php
-              }
-              ?> </ul><!--nav-pills--><?php
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                </li>
+              </ul>
 
 
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+              </div> -->
 
-              ?> <div class="tab-content" id="paginationTabContent"> <?php
-              for($i = 0; $i <= $pageCount; $i++) {
-                $index = $i+1;
-                ?>
-                <div class="tab-pane fade show <?php if($index == 1) echo "active"; ?>" id="pills-<?php echo $index ?>" role="tabpanel" aria-labelledby="pills-<?php echo $index ?>-tab">
-                  <?php
-                  $postCounter = 0;
+            </div><!--article-container-->
 
-
-
-
-
-                  while(count($postIDArray) > 0 && $postCounter - $postsPerPage !== 0) {
-                    echo $postCounter;
-                    echo get_the_title($postIDArray[$postCounter]);
-                    array_shift($postIDArray);
-                    $postCounter+=1;
-                    echo $postIDArray[0];
-                  }
-
-
-                  $postCounter = 0;
-
-
-
-
-                  ?>
-                </div><!--tab-pane-->
-                <?php
-              }
-              ?> </div><!--nav-content--><?php
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <?php
+            } else {
+                echo '<h3>No posts found</h3>';
             }
-
-
-
-
-
-            ?>
-          </div><!--article-container-->
-
-          <?php
-          } else {
-              echo '<h3>No posts found</h3>';
-          }
-
-
-
           wp_reset_query();
           ?>
 
