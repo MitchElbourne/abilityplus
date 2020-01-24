@@ -1,0 +1,532 @@
+body.is-dashboard {
+  &.logged-in {
+    .wrapper {
+      background-color: $white;
+    }
+    main[role="main"] {
+      .container {
+        article {
+          .entry-content {
+            .row {
+              .dashboard-navigations {
+                margin-right: 2rem;
+                padding: 0;
+                div.profile-meta {
+                  padding: 1rem;
+                  background-color: $lightest-grey;
+                  border-top-right-radius: 0.5rem;
+                  border-top-left-radius: 0.5rem;
+                  border-bottom: 1px solid $white;
+                  p.email {
+                    color: $middle-grey;
+                    word-wrap: break-word;
+                  }
+                }
+                ul.navigations {
+                  background-color: $lightest-grey;
+                  border-bottom-right-radius: 0.5rem;
+                  border-bottom-left-radius: 0.5rem;
+                  li {
+                    display: flex;
+                    border-bottom: 1px solid $white;
+                    &:before {
+                      content: '';
+                      width: 1rem;
+                      height: 1rem;
+                      margin-right: 0.5rem;
+                      margin-left: 1rem;
+                      align-self: center;
+                      display: inline-block;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: contain;
+                    }
+                    &:hover {
+                      transition: all 200ms;
+                      &:before {
+                        -webkit-filter: brightness(0);
+                      }
+                      a {
+                        color: $black;
+                      }
+                    }
+                    a {
+                      width: 100%;
+                      padding: 1rem 1rem 1rem 0;
+                      color: $middle-grey;
+                    }
+                    &:last-of-type {
+                      border-bottom: 0;
+                    }
+                    &.is-active {
+                      background-color: $lighter-grey;
+                      a {
+                        color: $black;
+                      }
+                    }
+                    &.nav-dashboard {
+                      &:before {
+                        background-image: url('../wp-recruitment-child/assets/svg/icon-avatar.svg');
+                      }
+                      &.is-active {
+                        &:before {
+                          -webkit-filter: brightness(0);
+                        }
+                      }
+                    }
+                    &.nav-profile {
+                      &:before {
+                        background-image: url('../wp-recruitment-child/assets/svg/icon-edit-profile.svg');
+                      }
+                      &.is-active {
+                        &:before {
+                          -webkit-filter: brightness(0);
+                        }
+                      }
+                    }
+                    &.nav-applied {
+                      &:before {
+                        background-image: url('../wp-recruitment-child/assets/svg/icon-app-history.svg');
+                      }
+                      &.is-active {
+                        &:before {
+                          -webkit-filter: brightness(0);
+                        }
+                      }
+                    }
+                    &.nav-logout {
+                      &:before {
+                        background-image: url('../wp-recruitment-child/assets/svg/icon-logout.svg');
+                      }
+                    }
+                  }
+                }
+              }
+              .dashboard-content {
+                padding: 2rem;
+                border: 2px solid $lighter-grey;
+                border-radius: 0.5rem;
+                h2 {
+                  margin-bottom: 1.5rem;
+                }
+                .content-account {
+                  display: flex;
+                  flex-wrap: wrap;
+                  flex: 1 1 auto;
+                  h2 {
+                    margin-bottom: 1.5rem;
+                    width: 100%;
+                  }
+                  .account-content {
+                    flex: 1 1 calc(100%/2 - 1.5rem);
+                    border: 2px solid $lightest-grey;
+                    border-radius: 0.5rem;
+                    ul {
+                      padding: 2rem;
+                      li {
+                        padding: 1rem 0;
+                        border-bottom: 1px solid $lighter-grey;
+                        &:last-of-type {
+                          border-bottom: none;
+                          padding-bottom: 0;
+                        }
+                        p.subheading {
+                          color: $middle-grey;
+                        }
+                      }
+                    }
+                  }
+                  .content-applied {
+                    flex: 1 1 calc(100%/3);
+                    display: flex;
+                    margin-left: 1.5rem;
+                    padding: 2rem;
+                    border: 2px solid $lightest-grey;
+                    border-radius: 0.5rem;
+                    h3 {
+                      margin-bottom: 0.75rem;
+                    }
+                    span.info {
+                      display: inline-block;
+                      width: 100%;
+                      margin-bottom: 1.5rem;
+                    }
+                    a.cta-blue {
+                      margin-right: 0;
+                      font-size: 0.8rem;
+                    }
+                  }
+                  @include media-breakpoint-down(lg) {
+                    flex-direction: column;
+                    .content-applied {
+                      margin: 2rem 0 0 0;
+                    }
+                  }
+                }
+                .content-progress {
+                  width: 100%;
+                  height: 4rem;
+                }
+                form.profile-form {
+                  padding: 0 2rem;
+                  border: 2px solid $lightest-grey;
+                  .form-fields {
+                    .row {
+                      margin-top: 1rem;
+                      div.field {
+                        background-color: $lightest-grey;
+                        border-radius: 0.5rem;
+                        padding: 0 1rem 0.5rem;
+                        border-radius: 4px;
+                        border: 2px solid transparent;
+                        transition: all 200ms;
+                        &.focus {
+                          border-color: $primary-blue;
+                          background-color: $white;
+                          input {
+                            background-color: $white;
+                          }
+                        }
+                        label, input {
+                          border: none;
+                          background-color: transparent;
+                        }
+                        label {
+                          font-size: 0.875rem;
+                          color: $middle-grey;
+                        }
+                      }
+                      // Resume Title
+                      &:nth-of-type(1) {
+                        padding: 1rem 0;
+                        border-bottom: 1px solid $lighter-grey;
+                        div.field {
+                          padding: 0;
+                          background-color: $white;
+                          h4 {
+                            font-size: 1rem;
+                          }
+                        }
+                      }
+                      // Upload your resume file
+                      &:nth-of-type(2) {
+                        div.field {
+                          display: flex;
+                          flex-wrap: wrap;
+                          padding: 1rem;
+                          background-color: $lightest-grey;
+                          border-radius: 0.5rem;
+                          label {
+                            font-size: 1rem;
+                            color: $black;
+                            order: 0;
+                          }
+                          input {
+                            &::placeholder {
+                              color: $middle-grey;
+                            }
+                          }
+                          span.field-subtitle {
+                            order: 1;
+                            color: $middle-grey;
+                          }
+                          button.file-select {
+                            order: 2;
+                            display: inline-block;
+                            max-height: 3rem;
+                            padding: 0.5rem 1.5rem;
+                            margin-top: 1rem;
+                            border-radius: 28px;
+                            border: none;
+                            color: $white;
+                            background-color: $primary-blue;
+                            transition: all 200ms;
+                            &:hover, &:focus {
+                              background-color: rgba($primary-blue, 0.85);
+                              color: $white;
+                            }
+                          }
+                          div.type-file {
+                            margin-top: 1rem;
+                            order: 3;
+                            width: 100%;
+                            div.file-thumb {
+                              display: none;
+                            }
+                          }
+                        }
+                      }
+
+
+                      // First Name and Last Name
+                      &:nth-of-type(3) {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        div.field {
+                          flex: 1 1 auto;
+                          &:first-of-type {
+                            margin-right: 0.5rem;
+                          }
+                          &:last-of-type {
+                            margin-left: 0.5rem;
+                          }
+                        }
+                      }
+
+                      &:nth-of-type(5) {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        div.field {
+                          flex: 1 1 auto;
+                          max-width: calc(100%/2 - 0.5rem);
+                          &:first-of-type {
+                            margin-right: 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            span.select2 {
+                              max-width: 100%;
+                              background-color: transparent;
+                              span.select2-selection {
+                                background-color: transparent;
+                                border: none;
+                                .select2-selection__rendered {
+                                  padding: 0;
+                                  .select2-selection__clear {
+                                    display: none;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          &:last-of-type {
+                            margin-left: 0.5rem;
+                            input::-webkit-calendar-picker-indicator{
+                              display: none;
+                            }
+                            input[type="date"]::-webkit-input-placeholder{
+                              visibility: hidden !important;
+                            }
+                          }
+                        }
+                      }
+
+                      &:nth-of-type(8) {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        div.field {
+                          flex: 1 1 auto;
+                          &:first-of-type {
+                            margin-right: 0.5rem;
+                          }
+                          &:last-of-type {
+                            margin-left: 0.5rem;
+                          }
+                        }
+                      }
+
+                      &:nth-of-type(10) {
+                        div.field {
+                          textarea {
+                            background-color: transparent;
+                            border: none;
+                            height: 8rem;
+                            resize: none;
+                            outline: none;
+                          }
+                        }
+                      }
+
+                      // Specialisations title
+                      &:nth-of-type(11) {
+                        div.field {
+                          padding: 0;
+                          background-color: $white;
+                          h4 {
+                            border-bottom: 1px solid $lighter-grey;
+                            font-size: 1rem;
+                            padding-bottom: 1rem;
+                            margin-bottom: 1rem;
+                          }
+                          span {
+                            font-size: 0.875rem;
+                          }
+                        }
+                      }
+
+                      // Specialisations field
+                      &:nth-of-type(12) {
+                        div.field {
+                          padding: 0;
+                          label {
+                            display: none;
+                          }
+                          span.select2 {
+                            margin: 1rem;
+                            max-width: 100%;
+                            background-color: transparent;
+                            span.select2-selection {
+                              display: flex;
+                              background-color: transparent;
+                              border: none;
+                              // height: 5rem;
+                              .select2-selection__rendered {
+                                padding: 0;
+                                .select2-selection__clear {
+                                  display: none;
+                                }
+                                .select2-selection__choice {
+                                  display: flex;
+                                  flex-direction: row-reverse;
+                                  background-color: rgba(#a4aaaf, 0.3);
+                                  padding: 0.375rem 0.5rem;
+                                  border: none;
+                                  font-size: 0.875rem;
+                                  .select2-selection__choice__remove {
+                                    margin: 0 0 0 0.9rem;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      &:nth-of-type(13), &:nth-of-type(14), &:nth-of-type(15), &:nth-of-type(16), &:nth-of-type(17), &:nth-of-type(18) {
+                        display: none;
+                      }
+                      &:nth-of-type(19) {
+                        div.field {
+                          padding: 0;
+                          background-color: $white;
+                          h3 {
+                            border-bottom: 1px solid $lighter-grey;
+                            font-size: 1rem;
+                            padding-bottom: 1rem;
+                            margin-bottom: 1rem;
+                          }
+                          span {
+                            font-size: 0.875rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div.form-actions {
+                    text-align: center;
+                    input[type="submit"] {
+                      flex: 1 1 auto;
+                      display: inline-block;
+                      margin: 2rem 0;
+                      max-height: 3rem;
+                      padding: 0.5rem 1.5rem;
+                      border-radius: 28px;
+                      border: none;
+                      color: $white;
+                      background-color: $primary-blue;
+                      transition: all 200ms;
+                      font-family: $tkusualbd;
+                      &:hover, &:focus {
+                        background-color: rgba($primary-blue, 0.85);
+                        color: $white;
+                      }
+                    }
+                  }
+                  @include media-breakpoint-down(sm) {
+                    padding: 0;
+                    border: none;
+                    .form-fields {
+                      .row {
+                        &:nth-of-type(12) {
+                          div.field {
+                            display: flex;
+                            label {
+                              display: none;
+                            }
+                            span.select2 {
+                              max-width: 100%;
+                              width: 100% !important;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                div.applied-table {
+                  div.title-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 2.25rem;
+                    h2 {
+                      margin: 0 auto 0 0;
+                      padding-right: 1rem;
+                    }
+                    span.applied {
+                      align-self: flex-end;
+                      color: $shamed-grey;
+                      padding-top: 1rem;
+                    }
+                  }
+                  div.row {
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+                    padding: 1.65rem 0 1.65rem 1rem;
+                    border: 1px solid $lightest-grey;
+                    .loop-locations {
+                      margin: 1rem 0 0.5rem;
+                    }
+                    &:last-of-type {
+                      margin-bottom: 0;
+                    }
+                    .loop-locations, .loop-title {
+                      a {
+                        color: $black;
+                        &:hover {
+                          color: $dark-blue;
+                        }
+                      }
+                    }
+                    .job-meta-tags {
+                      order: 3;
+                      width: 100%;
+                      .job-meta {
+                        padding: 0.4rem 0.5rem;
+                        display: inline-block;
+                        border-radius: 2px;
+                        font-size: 0.75rem;
+                        margin-top: 0.5rem;
+                        &.specialism {
+                          border: 1px solid $black;
+                          background-color: $black;
+                          color: $white;
+                        }
+                        &.types {
+                          border: 1px solid $lighter-grey;
+                          svg {
+                            margin-bottom: 0.2rem;
+                            margin-right: 0.3rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            @include media-breakpoint-down(sm) {
+              .row {
+                div.dashboard-navigations {
+                  margin: 0 0 2rem 0;
+                }
+                div.dashboard-content {
+                  padding: 0;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon-list</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Elements/Footer/Large" transform="translate(-182.000000, -282.000000)" fill="#A4AAAF" fill-rule="nonzero">
+            <g id="Career" transform="translate(160.000000, 208.000000)">
+                <g id="col-1" transform="translate(16.000000, 70.000000)">
+                    <g id="icon">
+                        <g id="list" transform="translate(6.000000, 4.000000)">
+                            <path d="M19,0 L1,0 C0.4,0 0,0.4 0,1 L0,23 C0,23.6 0.4,24 1,24 L19,24 C19.6,24 20,23.6 20,23 L20,1 C20,0.4 19.6,0 19,0 Z M9,9 L14,9 L14,11 L9,11 L9,9 Z M7,19 L4,19 L4,17 L7,17 L7,19 Z M7,15 L4,15 L4,13 L7,13 L7,15 Z M7,11 L4,11 L4,9 L7,9 L7,11 Z M7,7 L4,7 L4,5 L7,5 L7,7 Z M13,19 L9,19 L9,17 L13,17 L13,19 Z M16,15 L9,15 L9,13 L16,13 L16,15 Z M16,7 L9,7 L9,5 L16,5 L16,7 Z" id="icon-list"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,305 @@
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+
+header,
+footer {
+	.container {
+		max-width: 1440px;
+	}
+}
+
+// Set a sicky footer
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0 !important;
+	overflow-y: scroll;
+  .wrapper {
+    flex-grow: 1;
+		padding-top: 10rem;
+    width: 100%;
+    margin: 0 auto;
+    section {
+      padding-top: 3.75rem;
+      padding-bottom: 3.75rem;
+      &:first-of-type {
+        padding-top: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        padding: 1.5rem 1rem;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .wrapper {
+      padding-top: 8rem;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .wrapper {
+      padding-top: 6rem;
+    }
+  }
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 7.8rem;
+  @include media-breakpoint-down(md) {
+    padding: 0 5rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 2rem;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 1rem;
+  }
+}
+
+button,
+input {
+  outline: none;
+  &:hover, &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  outline: none;
+}
+
+svg, svg g, svg g path {
+  transition: all 200ms;
+}
+
+label {
+  margin-bottom: 0;
+}
+
+
+// For controlling Modal open/close behaviour
+// Stops padding add and re-adds the scrollbar
+.modal-open, .modal {
+  padding-right: 0 !important;
+  overflow: scroll;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.jobboard-notices {
+  z-index: 9999999;
+}
+.jobboard-content {
+  .row {
+    margin: 0;
+  }
+}
+
+.md-overlay {
+  background-color: rgba(black, 0.5);
+}
+.md-content {
+  background-color: $lighter-grey;
+  padding: 2rem;
+  color: $black;
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    background: none;
+    border: none;
+    span {
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.jobboard-archive-actions {
+  display: none;
+}
+
+#bitnami-banner {
+  display: none;
+}
+
+.remember {
+  display: flex;
+  input {
+    -webkit-appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba($primary-blue, 0.12);
+    border-radius: 3px;
+    padding: 0.615rem;
+    cursor: pointer;
+    transition: all 250ms;
+    &:active {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:checked:active {
+      background-color: rgba($primary-blue, 0.2);
+    }
+    &:checked {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:checked:after {
+      content: '';
+      position: absolute;
+      top: 5.5px;
+      left: 5px;
+      min-width: 11px;
+      min-height: 9px;
+      max-width: 11px;
+      max-height: 9px;
+      background-image: url('assets/svg/icon-checked.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &:checked:hover {
+      background-color: rgba($primary-blue, 0.25);
+    }
+    &:hover {
+      border-color: rgba($primary-blue, 0.18);
+      background-color: rgba($primary-blue, 0.17)
+    }
+  }
+  span {
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.cta-arrow-right {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  padding: 1.1rem 1rem 0.95rem;
+  border-radius: 100%;
+  background-color: rgba($primary-blue, 0.12);
+  transition: all 200ms;
+  span.icon {
+    display: flex;
+    align-self: center;
+  }
+  &:hover, &:focus {
+    background-color: rgba($primary-blue, 0.2);
+  }
+}
+
+.cta-blue {
+  flex: 1 1 auto;
+  display: inline-block;
+  max-height: 3rem;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 28px;
+  border: none;
+  color: $white;
+  background-color: $primary-blue;
+  transition: all 200ms;
+  font-family: $tkusualbd;
+  &:hover, &:focus {
+    background-color: rgba($primary-blue, 0.85);
+    color: $white;
+  }
+}
+
+.select2-dropdown {
+  background-color: $lightest-grey;
+  border: 2px solid $shamed-grey;
+	border-top: 2px solid $shamed-grey;
+  .select2-search__field {
+    display: none;
+  }
+}
+
+.select2-selection {
+  &:focus {
+    outline: none;
+  }
+}
+
+span.error {
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  color: $error;
+}
+
+span.wpcf7-not-valid-tip {
+  float: left;
+  color: $error;
+  position: absolute;
+  top: -3.33rem;
+  font-size: 0.875rem;
+  left: 0;
+}
+
+div.wpcf7-validation-errors {
+  float: left;
+  position: absolute;
+  bottom: -0.5rem;
+  border-color: $error;
+}
+div.wpcf7-mail-sent-ok {
+  border-color: $primary-green;
+}
+
+div.jobboard-notices {
+	width: 100%;
+	height: 3rem;
+	margin-left:0;
+	bottom: 0.5rem;
+	left: 0;
+	z-index: 10;
+	div.messages {
+		padding: 1rem 5rem;
+		background-color: $primary-blue;
+		margin: 0;
+		&.messages-error {
+			background-color: $error;
+		}
+		&.messages-success {
+			background-color: $primary-green;
+		}
+		i.remove {
+			right: 5rem;
+			top: 1.4rem;
+			&:before {
+				content: '';
+				width: 1rem;
+				height: 1rem;
+				display: inline-block;
+				background-image: url('../wp-recruitment-child/assets/svg/icon-modal-close.svg');
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		bottom: -0.3rem;
+		div.messages {
+			padding: 0.5rem 2rem;
+			i.remove {
+				right: 2rem;
+				top: 0.9rem;
+			}
+		}
+	}
+}

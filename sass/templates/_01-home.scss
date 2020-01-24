@@ -1,0 +1,356 @@
+body.home {
+  section#introduction {
+    .container {
+      .row {
+        text-align: center;
+        p.text {
+          margin: 2.5rem auto;
+        }
+        div.cta-container {
+          display: flex;
+          justify-content: center;
+          a {
+            flex: 1 1 auto;
+            display: inline-block;
+            max-width: 12rem;
+            max-height: 3.5rem;
+            padding: 1rem 1.5rem;
+            border-radius: 28px;
+            transition: all 200ms;
+            &:first-of-type {
+              margin-right: 1rem;
+              color: $white;
+              background-color: $primary-blue;
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.85);
+              }
+            }
+            &:last-of-type {
+              background-color: rgba($primary-blue, 0.12);
+              &:hover, &:focus {
+                background-color: rgba($primary-blue, 0.2)
+              }
+            }
+          }
+        }
+        div.panel-container {
+          display: flex;
+          width: 100%;
+          margin-top: 6rem;
+          text-align: start;
+          div.panel {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(100%/3);
+            padding: 0 3rem;
+            border-right: 1px solid $lighter-grey;
+            &:last-of-type {
+              border-right: none;
+            }
+            img {
+              max-width: 9rem;
+              margin-bottom: 2.5rem;
+            }
+            p.sub-text {
+              margin: 1rem 0 0;
+            }
+            a {
+              margin-top: auto;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .container {
+        .row {
+          div.cta-container {
+            flex-direction: column;
+            a {
+              &:first-of-type {
+                margin: 0.5rem auto;
+
+              }
+              &:last-of-type {
+                margin: 0.5rem auto;
+              }
+            }
+          }
+          div.panel-container {
+            flex-direction: column;
+            margin-top: 3rem;
+            div.panel {
+              text-align: center;
+              border-right: none;
+              border-bottom: 1px solid $lighter-grey;
+
+              &:last-of-type {
+                border-bottom: none;
+              }
+              img {
+                margin: 2rem auto 1rem;
+              }
+              a {
+                margin: 0 auto 3rem;
+              }
+              p.sub-text {
+                margin-bottom: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#how-we-work {
+    .container {
+      .row {
+        text-align: center;
+        p.text {
+          font-size: 1.25rem;
+          margin: 2rem auto;
+        }
+        div.panel-container {
+          display: flex;
+          flex-direction: column;
+          div.panel {
+            display: flex;
+            margin: 2.5rem 0;
+            &:nth-of-type(even) {
+              flex-direction: row-reverse;
+              div.content {
+                margin: 0 0 0 5.65rem;
+              }
+            }
+            div.content {
+              text-align: start;
+              margin-right: 5.65rem;
+              padding: 0 3rem;
+              h3 {
+                margin: 1.25rem 0;
+              }
+              div.icon-wrapper {
+                width: 4rem;
+                height: 4rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: relative;
+              }
+            }
+            div.image-wrapper {
+              border-color: blue;
+              min-height: 100%;
+              width: 100%;
+              // min-width: 20rem;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      .container {
+        .row {
+          div.panel-container {
+            div.panel {
+              margin: 1rem 0;
+              &:nth-of-type(even) {
+                div.content {
+                  margin-left: 3rem;
+                }
+              }
+              div.content {
+                padding: 1rem;
+                margin-right: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .container {
+        .row {
+          div.panel-container {
+            div.panel {
+              flex-direction: column;
+              &:nth-of-type(even) {
+                flex-direction: column;
+                div.content {
+                  margin-left: 0;
+                }
+              }
+              div.content {
+                padding: 1rem;
+                margin-right: 3rem;
+                order: 1;
+              }
+              div.image-wrapper {
+                display: block;
+                height: 20rem;
+                order: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .container {
+        .row {
+          div.panel-container {
+            div.panel {
+              div.content {
+                padding: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  section#find-your-job {
+    padding: 0 0 6rem;
+    .container {
+      .row {
+        position: relative;
+        &::before {
+          content: '';
+          background-image: url('../wp-recruitment-child/assets/layout-blob.png');
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          opacity: 0.5;
+        }
+        text-align: center;
+        flex-direction: column;
+        padding: 5rem 0;
+        p.text {
+          display: inline-block;
+          margin: 1.25rem auto 1.875rem;
+        }
+        div.cta-container {
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  section#blog-recommendations {
+    background-color: rgba($primary-blue, 0.08);
+    .container {
+      .row {
+        .content {
+          text-align: center;
+          margin: 0 auto;
+          p.text {
+            margin: 1.5rem 0 4rem;
+          }
+          div.blog-container {
+            display: flex;
+            background-color: $white;
+            padding: 3rem;
+            border-radius: 4px;
+            article {
+              display: flex;
+              flex-direction: column;
+              flex: 1 1 calc(100%/2);
+              text-align: left;
+              div.image-wrapper {
+                margin-bottom: 2rem;
+                width: 12.5rem;
+                height: 12.5rem;
+                border-radius: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+              p.excerpt {
+                margin: 0.75rem 0 1.5rem;
+              }
+              a {
+                margin-top: auto;
+              }
+
+              &:first-of-type {
+                border-right: 1px solid $lighter-grey;
+                padding-right: 2.25rem;
+                margin-right: 2.25rem;
+              }
+            }
+          }
+          a.cta-blue {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .container {
+        .row {
+          .content {
+            div.blog-container {
+              flex-direction: column;
+              article {
+                div.image-wrapper {
+                  margin: 0 auto 2rem;
+                }
+                &:first-of-type {
+                  border-right: none;
+                  border-bottom: 1px solid $lighter-grey;
+                  padding-right: 0;
+                  margin-right: 0;
+                  margin-bottom: 2.25rem;
+                  padding-bottom: 2.25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  section#newsletter-signup {
+    .container {
+      .row {
+        text-align: center;
+        flex-direction: column;
+        p {
+          margin: 1.5rem auto 2.125rem;
+        }
+        .form-container {
+          margin: 0 auto;
+          form {
+            #mc_embed_signup_scroll {
+              display: flex;
+              background-color: $lighter-grey;
+              justify-content: space-between;
+              border-radius: 2rem;
+              padding: 0.5rem 0.5rem 0.5rem 1rem;
+              width: 100%;
+              input[type="submit"] {
+                display: inline-block;
+                margin-right: 0;
+              }
+              input[type="email"] {
+                background-color: transparent;
+                border: none;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

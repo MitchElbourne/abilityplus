@@ -1,0 +1,468 @@
+#LogInModal {
+  z-index: 99999;
+  overflow: scroll;
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    span {
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: $lightest-grey;
+    .modal-content {
+      margin: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 7.5rem 10rem;
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+      p.h5 {
+        width: 100%;
+        margin: 2rem 0;
+      }
+      div.introduction {
+        display: flex;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #a4aaaf;
+        width: 100%;
+        h2.h1 {
+          display: inline-block;
+        }
+        span.sign-up-cta {
+          display: inline-block;
+          align-self: flex-end;
+          margin-left: auto;
+          color: $middle-grey;
+          a {
+            cursor: pointer;
+            color: $primary-blue;
+          }
+        }
+      }
+      form {
+        padding: 2rem;
+        background-color: $white;
+        border-radius: 8px;
+        span.error {
+          display: inline-block;
+          margin: 0 0 1rem 0;
+          color: $error;
+        }
+        div.login-username, div.login-password, div.password-forget {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: $lightest-grey;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms;
+          label {
+            width: 100%;
+            color: $middle-grey;
+          }
+          input {
+            width: 100%;
+            background-color: $lightest-grey;
+            border: none;
+            font-size: 1.25rem;
+          }
+          &.focus {
+            border-color: $primary-blue;
+            background-color: $white;
+            input {
+              background-color: $white;
+            }
+          }
+        }
+        div.remember {
+          margin-bottom: 2rem;
+        }
+        p.login-submit {
+          a.forgot-password-cta-modal {
+            cursor: pointer;
+            &:hover, &:focus {
+              color: $dark-blue;
+            }
+          }
+        }
+      }
+      div.image-wrapper {
+        text-align: right;
+        img {
+          max-width: 100%;
+          max-height: 20rem;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .modal-dialog {
+      .modal-content {
+        div.content-wrapper {
+          form {
+            p.login-submit {
+              a.forgot-password-cta-modal {
+                display: block;
+              }
+            }
+          }
+          div.image-wrapper {
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .modal-dialog {
+      .modal-content {
+        padding: 5rem;
+        div.introduction {
+          flex-wrap: wrap;
+          padding-bottom: 1rem;
+          h2.h1 {
+            font-size: 2.85rem;
+          }
+          span.sign-up-cta {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &#LogInModal {
+      .modal-dialog {
+        margin: 0;
+        padding-right: 0;
+      }
+    }
+    button {
+      transition: all 200ms;
+      span {
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+    .modal-dialog {
+      max-width: 100%;
+      padding-left: 0;
+      .modal-content {
+        padding: 2rem;
+        div.introduction {
+          flex-direction: column;
+          padding-bottom: 1rem;
+          h2.h1 {
+            font-size: 1.8rem;
+          }
+          span.sign-up-cta {
+            align-self: flex-start;
+            margin-top: 1rem;
+            margin-left: 0;
+            font-size: 1rem;
+          }
+        }
+        form {
+          order: 3;
+          p.login-submit {
+            a.forgot-password-cta-modal {
+              margin-top: 1rem;
+              width: 100%;
+              float: left;
+            }
+          }
+        }
+        div.image-wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#PasswordModal {
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 200ms;
+    span {
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .modal-dialog {
+    max-width: 70%;
+    height: auto;
+    margin-top: 4rem;
+    .modal-content {
+      padding: 3rem;
+      width: 100%;
+      div.introduction {
+        flex-wrap: wrap;
+        p.text {
+          width: 100%;
+          margin-top: 1rem;
+        }
+      }
+      form {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        background-color: $white;
+        border-radius: 4px;
+        div.password-forget {
+          margin-bottom: 1rem;
+          padding: 0 1rem;
+          background-color: $lightest-grey;
+          border-radius: 4px;
+          border: 2px solid transparent;
+          transition: all 200ms;
+          label {
+            width: 100%;
+            color: $middle-grey;
+          }
+          input {
+            width: 100%;
+            background-color: $lightest-grey;
+            border: none;
+            font-size: 1.25rem;
+          }
+          &.focus {
+            border-color: $primary-blue;
+            background-color: $white;
+            input {
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .modal-dialog {
+      width: 100%;
+      margin: 0;
+      max-width: none;
+    }
+  }
+}
+
+
+#specialism-filter-modal {
+  .md-content {
+    position: relative;
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 0.5rem;
+    button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      svg {
+        display: none;
+      }
+      background-image: url('../wp-recruitment-child/assets/svg/icon-modal-close.svg')
+    }
+    p {
+      position: relative;
+      padding-left: 1.75rem;
+      font-family: $tkusualbd;
+      font-size: 0.875rem;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../wp-recruitment-child/assets/svg/icon-briefcase.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    ul.specialism-filter-extra {
+      border-color: $lighter-grey;
+      a.specialism-filters-apply {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+
+#jobboard-modal-apply {
+  display: flex;
+  max-width: 90%;
+  min-width: 90%;
+  max-height: 100%;
+  margin: 1rem auto;
+  .md-content {
+    min-width: 100%;
+    width: auto;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 2rem;
+    button.md-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url('../wp-recruitment-child/assets/svg/icon-modal-close.svg')
+      svg {
+        display: none;
+      }
+    }
+
+    form {
+      div.form-wrapper {
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        div.form-title {
+          p {
+            border-bottom: 1px solid $lighter-grey;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            svg {
+              margin-right: 0.8rem;
+              margin-bottom: 0.1rem;
+            }
+          }
+        }
+        div.form-content {
+          padding: 1rem 0;
+          display: flex;
+          width: 100%;
+          .form-fields {
+            min-width: 100%;
+            .row {
+              padding: 0 1rem;
+              .field {
+                padding: 0 1rem;
+                margin-bottom: 1rem;
+                background-color: $lightest-grey;
+                border-radius: 0.5rem;
+                border: 2px solid transparent;
+                transition: all 200ms;
+                label {
+                  color: $middle-grey;
+                  margin-right: 0.2rem;
+                }
+                span {
+                  font-size: 0.7rem;
+                }
+                input {
+                  border: none;
+                  font-size: 1.25rem;
+                  background-color: $lightest-grey;
+                }
+                &.focus {
+                  border-color: $primary-blue;
+                  background-color: $white;
+                  input {
+                    background-color: $white;
+                  }
+                }
+                &.col-md-6 {
+                  flex: 1 1 calc(100%/2 - 1rem);
+                  &:nth-of-type(odd) {
+                    margin-right: 1rem;
+                  }
+                }
+              }
+              // Selecting the Cover letter
+              &:nth-of-type(2) {
+                textarea {
+                  height: 10rem;
+                  resize: none;
+                  border: none;
+                  background-color: $lightest-grey;
+                }
+              }
+              // Selecting the Resume selector
+              &:nth-of-type(3) {
+                .field {
+                  padding-bottom: 1rem;
+                  div.file-thumb {
+                    display: none;
+                  }
+                  button.file-select {
+                    bottom: 0;
+                    color: $primary-blue;
+                    font-family: $tkusualbd;
+                  }
+                }
+              }
+            }
+          }
+        }
+        div.form-footer {
+          button {
+            display: inline-block;
+            position: relative;
+            flex: 1 1 auto;
+            top: 0;
+            left: 0;
+            margin-right: 0.75rem;
+            max-height: 3rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 28px;
+            border: none;
+            color: $white;
+            background-color: $primary-blue;
+            transition: all 200ms;
+            font-family: $tkusualrg;
+            &:hover, &:focus {
+              background-color: rgba($primary-blue, 0.85);
+              color: $white;
+            }
+          }
+        }
+        a.cta-cancel {
+          flex: 1 1 auto;
+          display: inline-block;
+          max-height: 3rem;
+          margin-right: 1rem;
+          padding: 0.5rem 1.5rem;
+          border-radius: 28px;
+          color: $black;
+          background-color: $lightest-grey;
+          transition: all 200ms;
+          font-family: $tkusualrg;
+          &:hover, &:focus {
+            background-color: rgba($primary-blue, 0.18);
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    min-width: 60%;
+    max-width: 1000px;
+    .modal-dialog {
+      min-width: 60%;
+      max-width: 60%;
+    }
+  }
+}
